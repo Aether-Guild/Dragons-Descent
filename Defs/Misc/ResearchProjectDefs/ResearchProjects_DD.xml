@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============================== Tier 1: pre-electricity ===================================-->
+
+  <ResearchProjectDef>
+    <defName>DraconicDrugProduction</defName>
+    <label>draconic drug production</label>
+    <description>Allows for the creation of dragon themed drugs. Draconic ambrosia assists in the aging of dragons and dragon's blood is a combat enchancing potion for your colonists.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>1.0</researchViewX>
+    <researchViewY>1.0</researchViewY>
+	<tab>DragonsDescent</tab>
+        <prerequisites>
+							<li>Pemmican</li>
+						</prerequisites>
+  </ResearchProjectDef>
+
+</Defs>

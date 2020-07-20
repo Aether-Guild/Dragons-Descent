@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67CDDB5E-C9DA-4A80-8F16-3A88A440C950}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DD</RootNamespace>
+    <AssemblyName>DDLib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Lib.Harmony.2.0.1\lib\net472\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompTargetable\CompTargetable_Reproductive.cs" />
+    <Compile Include="CompTargetable\CompTargetable_SingleReproductiveBody.cs" />
+    <Compile Include="HediffCompProperties\HediffCompProperties_ExitMap.cs" />
+    <Compile Include="HediffCompProperties\HediffCompProperties_RegenSeverityScaling.cs" />
+    <Compile Include="HediffComp\HediffComp_Aggressive.cs" />
+    <Compile Include="HediffComp\HediffComp_DisableTaming.cs" />
+    <Compile Include="HediffComp\HediffComp_ExitMap.cs" />
+    <Compile Include="HediffComp\HediffComp_HealScar.cs" />
+    <Compile Include="HediffComp\HediffComp_RegenSeverityScaling.cs" />
+    <Compile Include="HediffDefOf.cs" />
+    <Compile Include="HediffGiver\HediffGiver_Ferocity.cs" />
+    <Compile Include="JobGiver\JobGiver_PatientGoToBed.cs" />
+    <Compile Include="Patches\Extensions.cs" />
+    <Compile Include="Patches\Patches.cs" />
+    <Compile Include="Patches\CompatibilityPatches.cs" />
+    <Compile Include="CompProperties\CompProperties_CrossbredEggLayer.cs" />
+    <Compile Include="CompProperties\CompProperties_NextLifestage.cs" />
+    <Compile Include="CompProperties\CompProperties_SpawnMate.cs" />
+    <Compile Include="CompProperties\CompProperties_TargetableBody.cs" />
+    <Compile Include="CompProperties\CompProperties_Thing.cs" />
+    <Compile Include="CompProperties\CompProperties_Range.cs" />
+    <Compile Include="CompProperties\CompProperties_LifespanPercent.cs" />
+    <Compile Include="CompProperties\CompProperties_Value.cs" />
+    <Compile Include="CompTargetable\CompTargetable_AllBodiesOnTheMap.cs" />
+    <Compile Include="CompTargetable\CompTargetable_SingleAnimal.cs" />
+    <Compile Include="CompTargetable\CompTargetable_SingleBody.cs" />
+    <Compile Include="CompTargetEffect\CompTargetEffect_AddAge.cs" />
+    <Compile Include="CompTargetEffect\CompTargetEffect_HealNatural.cs" />
+    <Compile Include="CompTargetEffect\CompTargetEffect_HealPermanent.cs" />
+    <Compile Include="CompTargetEffect\CompTargetEffect_SetAge.cs" />
+    <Compile Include="CompTargetEffect\CompTargetEffect_SpawnMate.cs" />
+    <Compile Include="HediffCompProperties\HediffCompProperties_ModifyAge.cs" />
+    <Compile Include="HediffCompProperties\HediffCompProperties_Regen.cs" />
+    <Compile Include="HediffComp\HediffComp_ModifyAge.cs" />
+    <Compile Include="HediffComp\HediffComp_HealInjury.cs" />
+    <Compile Include="HediffGiver\HediffGiver_Regeneration.cs" />
+    <Compile Include="IncidentWorker\IncidentWorker_DragonPasses.cs" />
+    <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_DoIfBody.cs" />
+    <Compile Include="JobDefOf.cs" />
+    <Compile Include="JobDriver\JobDriver_LayCrossbredEgg.cs" />
+    <Compile Include="JobDriver\JobDriver_MateCrossbreed.cs" />
+    <Compile Include="JobGiver\JobGiver_LayCrossbredEgg.cs" />
+    <Compile Include="JobGiver\JobGiver_MateCrossbreed.cs" />
+    <Compile Include="GameComponent\GameComponent_DD.cs" />
+    <Compile Include="Projectile\AnimalProjectile.cs" />
+    <Compile Include="Projectile\ExplodeProjectile.cs" />
+    <Compile Include="Projectile\FireProjectile.cs" />
+    <Compile Include="Projectile\SiegeProjectile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThingComp\CompCrossBredEggLayer.cs" />
+    <Compile Include="ThinkNode\ThinkNode_ConditionalExitTimedOutOnce.cs" />
+    <Compile Include="ThinkNode\ThinkNode_ConditionalMustKeepLyingDownForRegen.cs" />
+    <Compile Include="Utility\AgeUtils.cs" />
+    <Compile Include="Utility\HealthUtils.cs" />
+    <Compile Include="Utility\MateUtils.cs" />
+    <Compile Include="Utility\TimeUtils.cs" />
+    <Compile Include="Utility\VerbUtils.cs" />
+    <Compile Include="VerbProperties\VerbProperties_Cooldown.cs" />
+    <Compile Include="Verb\Verb_MeleeAttackDamage_Resetting.cs" />
+    <Compile Include="Verb\Verb_Shoot_Cooldown.cs" />
+    <Compile Include="Verb\Verb_Shoot_Limited.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

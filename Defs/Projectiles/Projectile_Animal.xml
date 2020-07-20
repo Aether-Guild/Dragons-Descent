@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef>
+	<defName>Projectile_DragonBreath</defName>
+	<label>Breath</label>
+	<category>Projectile</category>
+	<tickerType>Normal</tickerType>
+	<altitudeLayer>Projectile</altitudeLayer>
+	<useHitPoints>False</useHitPoints>
+	<neverMultiSelect>True</neverMultiSelect>
+	<thingClass>DD.Projectile_Explode</thingClass>
+    <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
+	  <texPath>AnimalProjectile/DragonFire</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+	  <flyOverhead>false</flyOverhead>
+      <speed>32</speed>
+      <damageDef>Flame</damageDef>
+     <explosionRadius>2.3</explosionRadius>
+	<damageAmountBase>2</damageAmountBase>
+	  <soundExplode>DragonBreathFire</soundExplode>
+    </projectile>
+  </ThingDef>  
+  
+ 
+</Defs>

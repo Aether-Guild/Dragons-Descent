@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingCategoryDef>
+    <defName>Root</defName>
+    <label>root</label>
+  </ThingCategoryDef>
+
+  <!-- Foods -->
+
+  <ThingCategoryDef>
+    <defName>EggsDragon</defName>
+    <label>dragon eggs (fert.)</label>
+    <parent>Root</parent>
+    <resourceReadoutRoot>true</resourceReadoutRoot>
+    <iconPath>UI/Icons/ThingCategories/EggsFertilized</iconPath>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>DragonLeathers</defName>
+    <label>dragon leathers</label>
+    <parent>Textiles</parent>
+    <iconPath>UI/Icons/ThingCategories/Leathers</iconPath>
+  </ThingCategoryDef>
+
+</Defs>

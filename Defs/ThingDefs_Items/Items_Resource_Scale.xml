@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- 
+      <ThingDef ParentName="ResourceBase" Name="ScaleBase" Abstract="True">
+    <stackLimit>100</stackLimit>
+    <graphicData>
+      <texPath>Things/Item/Resource/Wool</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <MarketValue>12</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>3.1</DeteriorationRate>
+      <StuffPower_Armor_Heat>1.20</StuffPower_Armor_Heat>
+      <StuffPower_Armor_Blunt>0.20</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Sharp>0.80</StuffPower_Armor_Sharp>
+      <StuffPower_Insulation_Cold>14</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>12</StuffPower_Insulation_Heat>
+    </statBases>
+    <burnableByRecipe>true</burnableByRecipe>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <stuffProps>
+      <statFactors>
+        <Flammability>0.2</Flammability>
+        <Beauty>4</Beauty>
+        <commonality>0</commonality>
+      </statFactors>
+      <categories>
+        <li>Fabric</li>
+      </categories>
+    </stuffProps>
+    <thingCategories>
+      <li>DragonLeathers</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ScaleBase">
+    <defName>IgnisScale</defName>
+    <label>ignis scale</label>
+    <description>Tough, shiny, and fire resistant. More balanced towards hotter climates that certain dragons enjoy.</description>
+    <graphicData>
+      <color>(206,136,66)</color>
+    </graphicData>
+    <statBases>
+      <StuffPower_Armor_Heat>1.60</StuffPower_Armor_Heat>
+      <StuffPower_Armor_Sharp>0.80</StuffPower_Armor_Sharp>
+      <StuffPower_Insulation_Cold>5</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>34</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(206,136,66)</color>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="ScaleBase">
+    <defName>NixScale</defName>
+    <label>nix scale</label>
+    <description>Tough, shiny, and resistant to frost. More balanced towards colder climates that certain dragons enjoy.</description>
+    <graphicData>
+      <color>(72,141,161)</color>
+    </graphicData>
+    <statBases>
+      <StuffPower_Armor_Heat>1.10</StuffPower_Armor_Heat>
+      <StuffPower_Armor_Sharp>0.80</StuffPower_Armor_Sharp>
+      <StuffPower_Insulation_Cold>42</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>3</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(72,141,161)</color>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="ScaleBase">
+    <defName>FortisScale</defName>
+    <label>fortis scale</label>
+    <description>Tough, shiny, and resistant to damage. More balanced for defense since these scales come from dragons that don't specialize in extreme temperatures.</description>
+    <graphicData>
+      <color>(56,93,61)</color>
+    </graphicData>
+    <statBases>
+      <StuffPower_Armor_Blunt>0.50</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.20</StuffPower_Armor_Heat>
+      <StuffPower_Armor_Sharp>1.10</StuffPower_Armor_Sharp>
+      <StuffPower_Insulation_Cold>14</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>12</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(56,93,61)</color>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="ScaleBase">
+    <defName>GoldScale</defName>
+    <label>gold scale</label>
+    <description>Tough, shiny, and regal. Beautiful scales that have been shed by the gold dragon. While the scales themselves aren't incredibly strong they are very impressive.</description>
+    <graphicData>
+      <color>(194,183,80)</color>
+    </graphicData>
+    <stuffProps>
+      <color>(194,183,80)</color>
+      <statFactors>
+        <Flammability>0.1</Flammability>
+        <Beauty>16</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="ScaleBase">
+    <defName>SilverScale</defName>
+    <label>silver scale</label>
+    <description>Tough, shiny, and enchanting. Beautiful scales that have been shed by the silver dragon. While the scales themselves aren't incredibly strong they are very impressive.</description>
+    <graphicData>
+      <color>(201,205,206)</color>
+    </graphicData>
+    <stuffProps>
+      <color>(201,205,206)</color>
+      <statFactors>
+        <Flammability>0.1</Flammability>
+        <Beauty>16</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="ScaleBase">
+    <defName>JadeScale</defName>
+    <label>jade scale</label>
+    <description>Tough, shiny, and dazzling. Beautiful scales that have been shed by the jade dragon. While the scales themselves aren't incredibly strong they are very impressive.</description>
+    <graphicData>
+      <color>(33,152,92)</color>
+    </graphicData>
+    <stuffProps>
+      <color>(33,152,92)</color>
+      <statFactors>
+        <Flammability>0.1</Flammability>
+        <Beauty>16</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="ScaleBase">
+    <defName>TrueScale</defName>
+    <label>true scale</label>
+    <description>Tough, shiny, and dazzling. Beautiful scales that have been shed by the jade dragon. While the scales themselves aren't incredibly strong they are very impressive.</description>
+    <graphicData>
+      <color>(119,10,31)</color>
+    </graphicData>
+      <statBases>
+        <MarketValue>24</MarketValue>
+        <StuffPower_Armor_Blunt>0.80</StuffPower_Armor_Blunt>
+        <StuffPower_Armor_Heat>1.40</StuffPower_Armor_Heat>
+        <StuffPower_Armor_Sharp>1.40</StuffPower_Armor_Sharp>
+        <StuffPower_Insulation_Cold>24</StuffPower_Insulation_Cold>
+        <StuffPower_Insulation_Heat>32</StuffPower_Insulation_Heat>
+      </statBases>
+    <stuffProps>
+      <color>(119,10,31)</color>
+      <statFactors>
+        <Flammability>0.1</Flammability>
+        <Beauty>12</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef> -->
+</Defs>

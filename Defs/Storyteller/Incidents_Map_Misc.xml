@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- =========================== Neutral ============================-->
+	<IncidentDef>
+		<defName>DragonsPasses</defName>
+		<label>dragons pass</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>DD.IncidentWorker_DragonPasses</workerClass>
+		<baseChance>0.55</baseChance>
+		<minRefireDays>50</minRefireDays>
+		<minThreatPoints>500</minThreatPoints>
+		<modExtensions>
+			<li Class="DD.PassingIncidentExtension">
+				<minSpawn>1</minSpawn>
+				<maxSpawn>2</maxSpawn>
+				<minExit>
+					<days>2</days>
+				</minExit>
+				<maxExit>
+					<days>4</days>
+				</maxExit>
+			</li>
+			<li Class="DD.PawnPoolExtension">
+				<pawnPool>
+					  <li>
+						<thingDef>Black_Dragon</thingDef>
+						<kindDef>Black_Dragon</kindDef>
+						<temperature>31~62</temperature>
+					</li>
+					<li>
+						<thingDef>Red_Dragon</thingDef>
+						<kindDef>Red_Dragon</kindDef>
+						<temperature>31~62</temperature>
+					</li>
+					<li>
+						<thingDef>Blue_Dragon</thingDef>
+						<kindDef>Blue_Dragon</kindDef>
+						<temperature>-42~13</temperature>
+					</li>
+					<li>
+						<thingDef>Gold_Dragon</thingDef>
+						<kindDef>Gold_Dragon</kindDef>
+						<temperature>31~62</temperature>
+					</li>
+					<li>
+						<thingDef>Purple_Dragon</thingDef>
+						<kindDef>Purple_Dragon</kindDef>
+						<temperature>7~35</temperature>
+					</li>
+					<li>
+						<thingDef>Jade_Dragon</thingDef>
+						<kindDef>Jade_Dragon</kindDef>
+						<temperature>7~35</temperature>
+					</li>
+					<li>
+						<thingDef>True_Dragon</thingDef>
+						<kindDef>True_Dragon</kindDef>
+						<temperature>-50~80</temperature>
+					</li>
+					<li>
+						<thingDef>Green_Dragon</thingDef>
+						<kindDef>Green_Dragon</kindDef>
+						<temperature>7~35</temperature>
+					</li>
+					<li>
+						<thingDef>Yellow_Dragon</thingDef>
+						<kindDef>Yellow_Dragon</kindDef>
+						<temperature>31~62</temperature>
+					</li>
+					<li>
+						<thingDef>White_Dragon</thingDef>
+						<kindDef>White_Dragon</kindDef>
+						<temperature>-42~13</temperature>
+					</li>
+					<li>
+						<thingDef>Silver_Dragon</thingDef>
+						<kindDef>Silver_Dragon</kindDef>
+						<temperature>-42~13</temperature>
+					</li>
+				</pawnPool>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+
+</Defs>

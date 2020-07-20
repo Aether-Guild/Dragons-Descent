@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- =========================== Dragon =========================== -->
+ <ThingDef ParentName="AnimalThingBase" Name="BaseDragon" Abstract="True">
+    <race>
+		<!-- Overriding animal think tree -->
+		<thinkTreeMain>Dragon</thinkTreeMain>
+		<thinkTreeConstant>DragonConstant</thinkTreeConstant>
+	  
+		<!-- This clears any hediffgivers from its children -->
+		<hediffGiverSets Inherit="false">
+			<li>OrganicAgeless</li> <!-- Moved here since its the same on both common and rare dragons -->
+		</hediffGiverSets>
+	  
+		<!-- Moved here since its the same on both common and rare dragons -->
+		<lifeExpectancy>2000</lifeExpectancy>
+    </race>
+	<verbs>
+	   <li Class="DD.VerbProperties_Cooldown">
+			<verbClass>DD.Verb_Shoot_Cooldown</verbClass>
+			<cooldown>20</cooldown>
+			<accuracyTouch>0.95</accuracyTouch>
+			<accuracyShort>0.60</accuracyShort>
+			<accuracyMedium>0.50</accuracyMedium>
+			<accuracyLong>0.30</accuracyLong>
+			<hasStandardCommand>false</hasStandardCommand>
+			<defaultProjectile>Projectile_DragonBreath</defaultProjectile>
+			<warmupTime>0.5</warmupTime>
+			<range>35</range>
+			<burstShotCount>20</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<minRange>1</minRange>
+			<soundCast>DragonBreathShot</soundCast>
+			<muzzleFlashScale>1</muzzleFlashScale>
+		</li>
+	</verbs>
+  </ThingDef>
+
+  <!-- =========================== Common Dragon =========================== -->
+
+  <ThingDef ParentName="BaseDragon" Name="DragonRaceBase" Abstract="True">
+			<!-- Changed ParentName to BaseDragon -->
+    <comps>
+      <li Class="CompProperties_Milkable">
+        <milkDef>Chemfuel</milkDef>
+        <milkIntervalDays>3</milkIntervalDays>
+        <milkAmount>20</milkAmount>
+        <milkFemaleOnly>false</milkFemaleOnly>
+      </li>
+    </comps>
+    <statBases>
+      <MoveSpeed>8</MoveSpeed>
+      <ImmunityGainSpeed>2</ImmunityGainSpeed>
+      <ComfyTemperatureMin>-150</ComfyTemperatureMin>
+      <ComfyTemperatureMax>200</ComfyTemperatureMax>
+      <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+      <ArmorRating_Sharp>.9</ArmorRating_Sharp>
+      <ArmorRating_Heat>1.6</ArmorRating_Heat>
+      <PainShockThreshold>.85</PainShockThreshold>
+      <MeatAmount>200</MeatAmount>
+      <LeatherAmount>60</LeatherAmount>
+      <MarketValue>7600</MarketValue>
+	  <PsychicSensitivity>.5</PsychicSensitivity>
+	  <ToxicSensitivity>0.25</ToxicSensitivity>
+	  <Flammability>0</Flammability>
+    </statBases>
+	<uiIconScale>1.75</uiIconScale>
+    <race>
+      <packAnimal>true</packAnimal>
+      <herdAnimal>false</herdAnimal>
+      <body>QuadrupedeAnimalWithClawsDragon</body>
+      <baseBodySize>4</baseBodySize>
+      <baseHungerRate>1.3</baseHungerRate>
+      <baseHealthScale>18</baseHealthScale>
+      <predator>true</predator>
+      <foodType>OmnivoreAnimal</foodType>
+      <leatherDef>Dragon_Leather</leatherDef>
+      <meatLabel>Dragon meat</meatLabel>
+      <trainability>Advanced</trainability>
+      <manhunterOnDamageChance>5</manhunterOnDamageChance>
+      <nameOnTameChance>1</nameOnTameChance>
+      <gestationPeriodDays>60</gestationPeriodDays>
+      <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
+      <maxPreyBodySize>3</maxPreyBodySize>
+      <nuzzleMtbHours>275</nuzzleMtbHours>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>2000</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+          <soundWounded>Baby_Dragon_Wounded</soundWounded>
+          <soundDeath>Baby_Dragon_Death</soundDeath>
+          <soundCall>Baby_Dragon_Call</soundCall>
+          <soundAngry>Baby_Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>10</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>30</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalElder</def>
+          <minAge>700</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalAncient</def>
+          <minAge>1400</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Dragon_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Dragon_HitPawn</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+          <li>(20,0)</li>
+          <li>(40,25)</li>
+          <li>(50,30)</li>
+          <li>(200,100)</li>
+          <li>(700,100)</li>
+          <li>(1000,60</li>
+          <li>(1200,40)</li>
+          <li>(1500,20)</li>
+          <li>(1800,12)</li>
+          <li>(2000,0)</li>
+        </points>
+      </ageGenerationCurve>
+    </race>
+    <tradeTags>
+      <li>AnimalExotic</li>
+    </tradeTags>
+	<butcherProducts>
+    <DragonHorn>1</DragonHorn>
+    </butcherProducts>
+  </ThingDef>
+
+
+  <!-- =========================== Dragon =========================== -->
+
+  <ThingDef ParentName="BaseDragon" Name="RDragonRaceBase" Abstract="True">
+			<!-- Changed ParentName to BaseDragon -->
+    <comps>
+      <li Class="CompProperties_Milkable">
+        <milkDef>Chemfuel</milkDef>
+        <milkIntervalDays>3</milkIntervalDays>
+        <milkAmount>20</milkAmount>
+        <milkFemaleOnly>false</milkFemaleOnly>
+      </li>
+    </comps>
+    <statBases>
+      <MoveSpeed>8</MoveSpeed>
+      <ImmunityGainSpeed>2</ImmunityGainSpeed>
+      <ComfyTemperatureMin>-150</ComfyTemperatureMin>
+      <ComfyTemperatureMax>200</ComfyTemperatureMax>
+      <ArmorRating_Blunt>1.3</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.1</ArmorRating_Sharp>
+      <ArmorRating_Heat>1.8</ArmorRating_Heat>
+      <PainShockThreshold>.85</PainShockThreshold>
+      <MeatAmount>230</MeatAmount>
+      <LeatherAmount>75</LeatherAmount>
+      <MarketValue>8900</MarketValue>
+ 	  <PsychicSensitivity>.5</PsychicSensitivity>
+	  <ToxicSensitivity>0.25</ToxicSensitivity>
+	  <Flammability>0</Flammability>
+    </statBases>
+	<uiIconScale>1.75</uiIconScale>
+    <race>
+      <packAnimal>true</packAnimal>
+      <herdAnimal>false</herdAnimal>
+      <body>QuadrupedeAnimalWithClawsDragon</body>
+      <baseBodySize>4</baseBodySize>
+      <baseHungerRate>1.40</baseHungerRate>
+      <baseHealthScale>22</baseHealthScale>
+      <predator>true</predator>
+      <foodType>OmnivoreAnimal</foodType>
+      <leatherDef>Rich_Dragon_Leather</leatherDef>
+      <meatLabel>Dragon meat</meatLabel>
+      <trainability>Advanced</trainability>
+      <manhunterOnDamageChance>5</manhunterOnDamageChance>
+      <nameOnTameChance>1</nameOnTameChance>
+      <gestationPeriodDays>60</gestationPeriodDays>
+      <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
+      <maxPreyBodySize>3</maxPreyBodySize>
+      <nuzzleMtbHours>275</nuzzleMtbHours>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>2000</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+          <soundWounded>Baby_Dragon_Wounded</soundWounded>
+          <soundDeath>Baby_Dragon_Death</soundDeath>
+          <soundCall>Baby_Dragon_Call</soundCall>
+          <soundAngry>Baby_Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>10</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>30</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalElder</def>
+          <minAge>700</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalAncient</def>
+          <minAge>1400</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Dragon_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Dragon_HitPawn</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+          <li>(20,0)</li>
+          <li>(40,25)</li>
+          <li>(50,30)</li>
+          <li>(200,100)</li>
+          <li>(700,100)</li>
+          <li>(1000,60</li>
+          <li>(1200,40)</li>
+          <li>(1500,20)</li>
+          <li>(1800,12)</li>
+          <li>(2000,0)</li>
+        </points>
+      </ageGenerationCurve>
+    </race>
+    <tradeTags>
+      <li>AnimalExotic</li>
+    </tradeTags>
+		<butcherProducts>
+    <DragonHorn>1</DragonHorn>
+    </butcherProducts>
+  </ThingDef>
+
+
+</Defs>
