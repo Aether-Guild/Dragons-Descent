@@ -15,9 +15,16 @@
 			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
 		</li>
 	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+	</loadAfter>
 	<incompatibleWith>
-		<li>onyxae.dragonsdescent</li>
+		<!-- Release Version -->
+		<!-- <li>onyxae.dragonsdescent</li>  -->
+		<!-- WIP Version -->
 		<li>onyxae.ddsharedcode</li>
+		<!-- Testing Version -->
+		<li>onyxae.ddtestercode</li> 
 	</incompatibleWith>
 	<description>
   <![CDATA[
