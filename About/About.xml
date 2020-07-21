@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Dragon's Descent</name>
+	<name>Dragon's Descent [Testing]</name>
 	<author>Onyxae</author>
 	<supportedVersions>
 		<li>1.1</li>
 	</supportedVersions>
-	<packageId>onyxae.dragonsdescent</packageId>
+	<packageId>onyxae.ddtestercode</packageId>
 	<url></url>
 	<modDependencies>
 		<li>
@@ -15,13 +15,19 @@
 			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
 		</li>
 	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+	</loadAfter>
 	<incompatibleWith>
-		<li>onyxae.dragonsdescent</li>
+		<!-- Release Version -->
+		<li>onyxae.dragonsdescent</li> 
+		<!-- WIP Version -->
 		<li>onyxae.ddsharedcode</li>
+		<!-- Testing Version -->
+		<!-- <li>onyxae.ddtestercode</li>  -->
 	</incompatibleWith>
-	<description>
-  <![CDATA[
-
+  <description><![CDATA[
+  
 <color=#9E2611><size=26>The <b>Dragons</b> Have Come.</size></color>
 
 The Rimworld is a harsh and dangerous place. Its environment can be lush and giving or disasterous and desolate, and has such bred certain races to adapt to both. One such race is the dragon, these beasts are quite powerful and rare; making them valuable for any colony to capture and tame. Some curious offworld glittertech civilizations have even bred their own types which have recently escaped into the wild. Even if they were once in captivity taming any dragon is an extreme risk, fighting and angering one even moreso.
@@ -58,6 +64,5 @@ Special credits and thanks: It would have been far more difficult and a lot less
 Original mod found here http://steamcommunity.com/sharedfiles/filedetails/?id=1163162658
 
 Happy Rimming =)
-]]>
-	</description>
+]]></description>
 </ModMetaData>
