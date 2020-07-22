@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,69 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
-namespace DD.Utility
+namespace DD
 {
+    public class TimeKeeper : IExposable
+    {
+        public int ticks = 0;
+
+        public bool Expired => Remaining <= 0;
+
+        public int Remaining => ticks - Find.TickManager.TicksGame;
+
+        public TimeKeeper()
+        {
+        }
+
+        public TimeKeeper(int ticks)
+        {
+            this.ticks = ticks;
+        }
+
+        public void Update(int amount)
+        {
+            this.ticks = Find.TickManager.TicksGame + amount;
+        }
+
+        public void Clear()
+        {
+            this.ticks = 0;
+        }
+
+        public void ExposeData()
+        {
+            Scribe_Values.Look(ref ticks, "ticks", 0);
+        }
+    }
+
+    public class GameTime
+    {
+        public int ticks = 0;
+        public float seconds = 0;
+        public float hours = 0;
+        public float days = 0;
+        public float seasons = 0;
+        public float quadrums = 0;
+        public float years = 0;
+
+        public int Ticks
+        {
+            get
+            {
+                int aggregate = ticks;
+
+                aggregate += GenTicks.SecondsToTicks(seconds);
+                aggregate += Mathf.RoundToInt(hours * GenDate.TicksPerHour);
+                aggregate += Mathf.RoundToInt(days * GenDate.TicksPerDay);
+                aggregate += Mathf.RoundToInt(seasons * GenDate.TicksPerSeason);
+                aggregate += Mathf.RoundToInt(quadrums * GenDate.TicksPerQuadrum);
+                aggregate += Mathf.RoundToInt(years * GenDate.TicksPerYear);
+
+                return aggregate;
+            }
+        }
+    }
+
     public class TimeUtils
     {
         public struct TimeTickKeep

@@ -7,45 +7,59 @@ using System.Linq;
 
 namespace DD
 {
-    public class GameTime
+    public class TimedSpawnExtension : DefModExtension
     {
-        public int ticks = 0;
-        public float seconds = 0;
-        public float hours = 0;
-        public float days = 0;
-        public float seasons = 0;
-        public float quadrums = 0;
-        public float years = 0;
+        public GameTime minExit, maxExit;
 
-        public int Ticks
+        public bool HasExitTick => minExit != null || maxExit != null;
+        public int ExitTick
         {
             get
             {
-                int aggregate = ticks;
+                int ticks = Find.TickManager.TicksGame;
 
-                aggregate += GenTicks.SecondsToTicks(seconds);
-                aggregate += Mathf.RoundToInt(hours * GenDate.TicksPerHour);
-                aggregate += Mathf.RoundToInt(days * GenDate.TicksPerDay);
-                aggregate += Mathf.RoundToInt(seasons * GenDate.TicksPerSeason);
-                aggregate += Mathf.RoundToInt(quadrums * GenDate.TicksPerQuadrum);
-                aggregate += Mathf.RoundToInt(years * GenDate.TicksPerYear);
+                if (minExit != null)
+                {
+                    ticks += maxExit != null ? Rand.RangeInclusive(minExit.Ticks, maxExit.Ticks) : minExit.Ticks;
+                }
+                else
+                {
+                    if (maxExit != null)
+                    {
+                        ticks += maxExit.Ticks;
+                    }
+                    else
+                    {
+                        ticks = -1;
+                    }
+                }
 
-                return aggregate;
+                return ticks;
             }
         }
     }
 
+    public class PawnSpawnEntry
+    {
+        public ThingDef thingDef;
+        public PawnKindDef kindDef;
+        public FloatRange temperature = new FloatRange(-1000f, 1000f);
+
+        public float CombatPower => Mathf.Max(kindDef.combatPower * thingDef.race.baseBodySize, 1);
+
+        public bool CanSpawn(Map map) => temperature.Includes(map.mapTemperature.OutdoorTemp);
+    }
 
     public class PawnPoolExtension : DefModExtension
     {
-        public List<Entry> pawnPool;
+        public List<PawnSpawnEntry> pawnPool;
 
         public float MinimumCombatPower => pawnPool.Min(e => e.CombatPower);
 
-        public Entry PickEntry(Map map, PassingIncidentExtension settings)
+        public PawnSpawnEntry PickEntry(Map map, SpawnIncidentExtension settings)
         {
-            Entry entry = null;
-            IEnumerable<Entry> pawnPoolSelection = pawnPool;
+            PawnSpawnEntry entry = null;
+            IEnumerable<PawnSpawnEntry> pawnPoolSelection = pawnPool;
 
             if (!Rand.Chance(settings.chancesSpawnRandom))
             {
@@ -62,32 +76,25 @@ namespace DD
 
             return entry;
         }
-
-        public class Entry
-        {
-            public ThingDef thingDef;
-            public PawnKindDef kindDef;
-            public FloatRange temperature = new FloatRange(-1000f, 1000f);
-
-            public float CombatPower => Mathf.Max(kindDef.combatPower * thingDef.race.baseBodySize, 1);
-
-            public bool CanSpawn(Map map) => temperature.Includes(map.mapTemperature.OutdoorTemp);
-        }
     }
 
-    public class PassingIncidentExtension : DefModExtension
+    public class SpawnIncidentExtension : TimedSpawnExtension
     {
         public float chancesSpawnRandom = 0;
 
-        public int minSpawn, maxSpawn;
+        public float hungerPercentage = 1f;
 
-        public GameTime minExit, maxExit;
+        public IntRange spawnCount;
 
-        public int MinExit_Ticks => minExit.Ticks;
-        public int MaxExit_Ticks => maxExit.Ticks;
+        public int CalculateSpawnCount(Map map, PawnSpawnEntry entry)
+        {
+            int count = GenMath.RoundRandom(StorytellerUtility.DefaultThreatPointsNow(map) / entry.CombatPower); //How capable the colony of fending off this incident (if it were a threat)
+            count = Mathf.Clamp(count, spawnCount.TrueMin, spawnCount.RandomInRange); //Clamp the number above to between the minimum number of spawns and maximum number of spawns.
+            return count;
+        }
     }
 
-    public class IncidentWorker_DragonPasses : IncidentWorker
+    public class IncidentWorker_DragonPasses : TrackedIncidentWorker
     {
         protected override bool CanFireNowSub(IncidentParms parms)
         {
@@ -97,41 +104,42 @@ namespace DD
                 return false;
             }
 
-            if (!this.def.HasModExtension<PassingIncidentExtension>())
+            if (!this.def.HasModExtension<SpawnIncidentExtension>())
             {
                 //Doesn't have the settings for the incident defined.
                 return false;
             }
 
             PawnPoolExtension pool = this.def.GetModExtension<PawnPoolExtension>();
-            PassingIncidentExtension settings = this.def.GetModExtension<PassingIncidentExtension>();
+            SpawnIncidentExtension settings = this.def.GetModExtension<SpawnIncidentExtension>();
 
             Map map = (Map)parms.target;
-            IntVec3 intVec;
 
-            if (!map.gameConditionManager.ConditionIsActive(GameConditionDefOf.ToxicFallout))
+            if (map.gameConditionManager.ConditionIsActive(GameConditionDefOf.ToxicFallout))
             {
                 //No toxic fallout
-                if (TryFindEntryCell(map, out intVec))
-                {
-                    //Map not blocked from all sides
-                    return pool.PickEntry(map, settings) != null;
-                }
+                return false;
             }
 
-            return false;
+            if (!TryFindEntryCell(map, out IntVec3 _) || pool.PickEntry(map, settings) == null)
+            {
+                //Settings valid
+                return false;
+            }
+
+            return true;
         }
 
-        protected override bool TryExecuteWorker(IncidentParms parms)
+        protected override bool TryExecuteWorkerSub(IncidentParms parms)
         {
-            if (!this.def.HasModExtension<PawnPoolExtension>() || !this.def.HasModExtension<PassingIncidentExtension>())
+            if (!this.def.HasModExtension<PawnPoolExtension>() || !this.def.HasModExtension<SpawnIncidentExtension>())
             {
                 //Doesn't have a pawn pool to spawn pawns from OR Doesn't have the settings for the incident defined.
                 return false;
             }
 
             PawnPoolExtension pool = this.def.GetModExtension<PawnPoolExtension>();
-            PassingIncidentExtension settings = this.def.GetModExtension<PassingIncidentExtension>();
+            SpawnIncidentExtension settings = this.def.GetModExtension<SpawnIncidentExtension>();
 
             Map map = (Map)parms.target;
             IntVec3 intVec;
@@ -142,7 +150,7 @@ namespace DD
                 return false;
             }
 
-            PawnPoolExtension.Entry entry = pool.PickEntry(map, settings);
+            PawnSpawnEntry entry = pool.PickEntry(map, settings);
             if (entry == null)
             {
                 //No pawns to pick from?
@@ -152,11 +160,7 @@ namespace DD
             PawnKindDef def = entry.kindDef;
 
             //Number of pawns to spawn
-            int count = GenMath.RoundRandom(StorytellerUtility.DefaultThreatPointsNow(map) / entry.CombatPower); //How capable the colony of fending off this incident (if it were a threat)
-            count = Mathf.Clamp(count, settings.minSpawn, Rand.RangeInclusive(settings.minSpawn, settings.maxSpawn)); //Clamp the number above to between the minimum number of spawns and maximum number of spawns.
-
-            //Number of ticks to stay
-            int ticksToStayOnMap = Rand.RangeInclusive(settings.MinExit_Ticks, settings.MaxExit_Ticks);
+            int count = settings.CalculateSpawnCount(map, entry);
 
             //Try to find a spot near the center of the map (outside the colony) to wander in.
             IntVec3 invalid = IntVec3.Invalid;
@@ -167,23 +171,30 @@ namespace DD
             }
 
             //Actually spawn the pawn.
-            Pawn pawn = null;
+            List<Pawn> spawnedPawns = new List<Pawn>();
             for (int i = 0; i < count; i++)
             {
-                IntVec3 loc = CellFinder.RandomClosewalkCellNear(intVec, map, 10, null);
+                IntVec3 loc = CellFinder.RandomClosewalkCellNear(intVec, map, 10);
 
-                pawn = PawnGenerator.GeneratePawn(def, null);
-                GenSpawn.Spawn(pawn, loc, map, Rot4.Random, WipeMode.Vanish, false);
+                Pawn pawn = PawnGenerator.GeneratePawn(def);
+                GenSpawn.Spawn(pawn, loc, map, Rot4.Random);
 
-                pawn.mindState.exitMapAfterTick = Find.TickManager.TicksGame + ticksToStayOnMap;
+                pawn.needs.food.CurLevelPercentage = settings.hungerPercentage;
+
+                if (settings.HasExitTick)
+                {
+                    pawn.mindState.exitMapAfterTick = settings.ExitTick;
+                }
 
                 if (invalid.IsValid)
                 {
                     pawn.mindState.forcedGotoPosition = CellFinder.RandomClosewalkCellNear(invalid, map, 10);
                 }
+
+                spawnedPawns.Add(pawn);
             }
 
-            base.SendStandardLetter("LetterLabelDragonsPasses".Translate(def.label).CapitalizeFirst(), "LetterDragonsPasses".Translate(def.label), LetterDefOf.NeutralEvent, parms, pawn, Array.Empty<NamedArgument>());
+            SendStandardLetter("LetterLabelDragonsPasses".Translate(def.label).CapitalizeFirst(), "LetterDragonsPasses".Translate(def.label.Named("DRAGON")), LetterDefOf.NeutralEvent, parms, spawnedPawns);
             return true;
         }
 

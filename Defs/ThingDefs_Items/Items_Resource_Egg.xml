@@ -32,7 +32,12 @@
 				<progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
 			</li>
 		</comps>
-		<stackLimit>6</stackLimit>
+		<stackLimit>1</stackLimit>
+		<modExtensions>
+			<li Class="DD.LegacyModExtension">
+				<allowStackLimitExceed>true</allowStackLimitExceed>
+			</li>
+		</modExtensions>
 	</ThingDef>
   
         <!-- ================================== Unfertilized Egg ================================== -->
@@ -310,7 +315,7 @@
     <graphicData>
       <texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
       <color>(234,208,182)</color>
-      <drawSize>1.4</drawSize>
+      <drawSize>1.15</drawSize>
     </graphicData>
     <statBases>
       <Beauty>12</Beauty>

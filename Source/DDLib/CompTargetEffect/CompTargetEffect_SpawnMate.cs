@@ -13,13 +13,14 @@ namespace DD
             if (!pawn.Dead && pawn.ageTracker.CurLifeStage.reproductive)
             {
                 //Penalty is only considered when the targeted pawn has the hediff and theres a penalty mental state def set.
-                bool penalty = HasHediff(pawn) && smProps.penaltyMentalDef != null;
+                bool penalty = FerocityUtils.HasAnyHediff(pawn) && smProps.penaltyMentalDef != null;
                 Pawn mate = null;
 
                 //If (allowed to spawn during penalty then spawn) or (not allowed to spawn and not in penalty)
                 if (smProps.spawnDuringPenalty || !penalty)
                 {
                     mate = MateUtils.SpawnMate(pawn, smProps.spawnTamed, smProps.spawnedAgeRange.RandomInRange);
+                    Messages.Message("DragonMateSpawnMessage".Translate(mate.Named("MATE")), mate, MessageTypeDefOf.CautionInput);
                 }
 
                 //Handle the target's effects.
@@ -30,7 +31,13 @@ namespace DD
                 else
                 {
                     //If the we should give the target hediff, give it the normal hediff, otherwise, give it the pack hediff.
-                    TryApplyHediff(pawn, !smProps.targetHediff); //The targetted pawn.
+                    //The targetted pawn.
+                    if (smProps.targetHediff)
+                    {
+                        FerocityUtils.AddHediff(pawn);
+                    } else {
+                        FerocityUtils.AddPackHediff(pawn);
+                    }
                 }
 
                 //If the mate has been spawned, process the mate's effects.
@@ -43,7 +50,15 @@ namespace DD
                     else
                     {
                         //If the we should give the mate hediff, give it the normal hediff, otherwise, give it the pack hediff.
-                        TryApplyHediff(mate, !smProps.mateHediff); //The spawned pawn.
+                        //The spawned pawn.
+                        if (smProps.mateHediff)
+                        {
+                            FerocityUtils.AddHediff(mate);
+                        }
+                        else
+                        {
+                            FerocityUtils.AddPackHediff(mate);
+                        }
                     }
                 }
             }

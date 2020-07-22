@@ -45,6 +45,11 @@ namespace DD
                     base.Fertilize(dominant.Donor); //Set the parent to be the selected donor.
                     egg = base.ProduceEgg(); //Produce the egg.
 
+                    if(egg != null && dominant.notify)
+                    {
+                        Messages.Message("DragonLayingEggMessage".Translate(parent.Named("PARENT"), egg.LabelNoCount.Named("EGG")), new LookTargets(egg), MessageTypeDefOf.PositiveEvent);
+                    }
+                    
                     donors.Clear(); //Clear the previous round of donors.
                 }
                 finally

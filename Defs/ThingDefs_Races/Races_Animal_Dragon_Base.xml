@@ -35,6 +35,12 @@
 			<muzzleFlashScale>1</muzzleFlashScale>
 		</li>
 	</verbs>
+	<modExtensions>
+		<li Class="DD.SettingControlledExtension_AnimalBiome" />
+		<li Class="DD.LegacyModExtension">
+			<hasOwnership>true</hasOwnership>
+		</li>
+	</modExtensions>
   </ThingDef>
 
   <!-- =========================== Common Dragon =========================== -->

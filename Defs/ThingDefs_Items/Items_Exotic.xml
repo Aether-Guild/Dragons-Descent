@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ThingDef ParentName="ResourceVerbBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>DragonHorn</defName>
     <label>Dragon horn</label>
     <description>A dragon horn. It's razor-sharp, very hard, and priceless in most markets. This is a true trophy.</description>
@@ -8,7 +8,7 @@
       <texPath>Things/Item/Special/DragonHorn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <equippedAngleOffset>70</equippedAngleOffset>
+    <equippedAngleOffset>-20</equippedAngleOffset>
     <statBases>
       <MarketValue>2100</MarketValue>
       <MaxHitPoints>1500</MaxHitPoints>
@@ -44,4 +44,11 @@
       <li>Exotic</li>
     </tradeTags>
   </ThingDef>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Neolithic</techLevel>
+    <comps>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+    </comps>
 </Defs>

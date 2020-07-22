@@ -19,7 +19,7 @@ namespace DD
                 {
                     Pawn p = x.Thing as Pawn;
                     CompProperties_TargetableBody bodyProps = (CompProperties_TargetableBody)props;
-                    if (p != null && p.RaceProps.body.defName.Equals(bodyProps.targetDef))
+                    if (p != null && p.RaceProps.body == bodyProps.targetDef)
                     {
                         return this.BaseTargetValidator(x.Thing);
                     }

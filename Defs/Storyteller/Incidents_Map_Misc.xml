@@ -10,19 +10,116 @@
 		  <li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>DD.IncidentWorker_DragonPasses</workerClass>
-		<baseChance>0.55</baseChance>
+		<baseChance>0.7</baseChance>
 		<minRefireDays>50</minRefireDays>
 		<minThreatPoints>500</minThreatPoints>
 		<modExtensions>
-			<li Class="DD.PassingIncidentExtension">
-				<minSpawn>1</minSpawn>
-				<maxSpawn>2</maxSpawn>
+			<li Class="DD.SettingControlledExtension_IncidentChance" />
+			<li Class="DD.TrackedIncidentExtension">
+				<maxRefireDays>65</maxRefireDays>
+				<watcherCooldownDays>7~14</watcherCooldownDays>
+			</li>
+			<li Class="DD.SpawnIncidentExtension">
+				<spawnCount>1~2</spawnCount>
 				<minExit>
 					<days>2</days>
 				</minExit>
 				<maxExit>
 					<days>4</days>
 				</maxExit>
+			</li>
+			<li Class="DD.PawnPoolExtension">
+				<pawnPool>
+					  <li>
+						<thingDef>Black_Dragon</thingDef>
+						<kindDef>Black_Dragon</kindDef>
+						<temperature>31~62</temperature>
+					</li>
+					<li>
+						<thingDef>Red_Dragon</thingDef>
+						<kindDef>Red_Dragon</kindDef>
+						<temperature>31~62</temperature>
+					</li>
+					<li>
+						<thingDef>Blue_Dragon</thingDef>
+						<kindDef>Blue_Dragon</kindDef>
+						<temperature>-42~13</temperature>
+					</li>
+					<li>
+						<thingDef>Gold_Dragon</thingDef>
+						<kindDef>Gold_Dragon</kindDef>
+						<temperature>31~62</temperature>
+					</li>
+					<li>
+						<thingDef>Purple_Dragon</thingDef>
+						<kindDef>Purple_Dragon</kindDef>
+						<temperature>7~35</temperature>
+					</li>
+					<li>
+						<thingDef>Jade_Dragon</thingDef>
+						<kindDef>Jade_Dragon</kindDef>
+						<temperature>7~35</temperature>
+					</li>
+					<li>
+						<thingDef>True_Dragon</thingDef>
+						<kindDef>True_Dragon</kindDef>
+						<temperature>-50~80</temperature>
+					</li>
+					<li>
+						<thingDef>Green_Dragon</thingDef>
+						<kindDef>Green_Dragon</kindDef>
+						<temperature>7~35</temperature>
+					</li>
+					<li>
+						<thingDef>Yellow_Dragon</thingDef>
+						<kindDef>Yellow_Dragon</kindDef>
+						<temperature>31~62</temperature>
+					</li>
+					<li>
+						<thingDef>White_Dragon</thingDef>
+						<kindDef>White_Dragon</kindDef>
+						<temperature>-42~13</temperature>
+					</li>
+					<li>
+						<thingDef>Silver_Dragon</thingDef>
+						<kindDef>Silver_Dragon</kindDef>
+						<temperature>-42~13</temperature>
+					</li>
+				</pawnPool>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>DragonHunting</defName>
+		<label>dragon hunting</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>DD.IncidentWorker_DragonHunting</workerClass>
+		<baseChance>0.55</baseChance>
+		<minRefireDays>90</minRefireDays>
+		<minThreatPoints>500</minThreatPoints>
+		<modExtensions>
+			<li Class="DD.SettingControlledExtension_IncidentChance" />
+			<li Class="DD.TrackedIncidentExtension">
+				<maxRefireDays>125</maxRefireDays>
+				<watcherCooldownDays>14~28</watcherCooldownDays>
+			</li>
+			<li Class="DD.SpawnIncidentExtension">
+				<spawnCount>1~4</spawnCount>
+				<hungerPercentage>0.25</hungerPercentage>
+				<minExit>
+					<days>4</days>
+				</minExit>
+				<maxExit>
+					<days>6</days>
+				</maxExit>
+			</li>
+			<li Class="DD.SpawnHerdIncidentExtension">
+				<maxWildness>0.35</maxWildness>
+				<baseHerdNutrition>50</baseHerdNutrition>
 			</li>
 			<li Class="DD.PawnPoolExtension">
 				<pawnPool>

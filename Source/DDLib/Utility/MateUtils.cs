@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using Verse;
+using Verse.AI;
 
 namespace DD
 {
@@ -86,8 +87,24 @@ namespace DD
         {
             Pawn newPawn = PawnGenerator.GeneratePawn(request);
 
+            IntVec3 cell;
+            if(!RCellFinder.TryFindRandomPawnEntryCell(out cell, map, CellFinder.EdgeRoadChance_Animal + 0.2f))
+            {
+                //Couldn't find entry cell
+                cell = location;
+            }
+
             //Actually spawn it on screen.
-            GenSpawn.Spawn(newPawn, location, map);
+            GenSpawn.Spawn(newPawn, cell, map);
+
+            cell = CellFinder.RandomClosewalkCellNear(location, map, 10);
+            if (!cell.IsValid)
+            {
+                cell = location;
+            }
+
+            //Move to the location where the mate call happened.
+            newPawn.mindState.forcedGotoPosition = cell;
 
             return newPawn;
         }

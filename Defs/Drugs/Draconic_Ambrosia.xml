@@ -51,6 +51,7 @@
 			<researchPrerequisite>DraconicDrugProduction</researchPrerequisite>
 			<recipeUsers>
 				<li>CraftingSpot</li>
+				<li>DrugLab</li>
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
