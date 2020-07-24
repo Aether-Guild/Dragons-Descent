@@ -6,7 +6,7 @@
 		<li>1.1</li>
 	</supportedVersions>
 	<packageId>onyxae.dragonsdescent</packageId>
-	<url></url>
+	<url>https://github.com/Aether-Guild/Dragons-Descent/</url>
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
