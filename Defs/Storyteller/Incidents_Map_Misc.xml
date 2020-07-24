@@ -11,7 +11,7 @@
 		</targetTags>
 		<workerClass>DD.IncidentWorker_DragonPasses</workerClass>
 		<baseChance>0.7</baseChance>
-		<minRefireDays>50</minRefireDays>
+		<minRefireDays>40</minRefireDays>
 		<minThreatPoints>500</minThreatPoints>
 		<modExtensions>
 			<li Class="DD.SettingControlledExtension_IncidentChance" />
@@ -99,22 +99,22 @@
 		</targetTags>
 		<workerClass>DD.IncidentWorker_DragonHunting</workerClass>
 		<baseChance>0.55</baseChance>
-		<minRefireDays>90</minRefireDays>
+		<minRefireDays>60</minRefireDays>
 		<minThreatPoints>500</minThreatPoints>
 		<modExtensions>
 			<li Class="DD.SettingControlledExtension_IncidentChance" />
 			<li Class="DD.TrackedIncidentExtension">
-				<maxRefireDays>125</maxRefireDays>
+				<maxRefireDays>100</maxRefireDays>
 				<watcherCooldownDays>14~28</watcherCooldownDays>
 			</li>
 			<li Class="DD.SpawnIncidentExtension">
 				<spawnCount>1~4</spawnCount>
 				<hungerPercentage>0.25</hungerPercentage>
 				<minExit>
-					<days>4</days>
+					<days>5</days>
 				</minExit>
 				<maxExit>
-					<days>6</days>
+					<days>7</days>
 				</maxExit>
 			</li>
 			<li Class="DD.SpawnHerdIncidentExtension">
