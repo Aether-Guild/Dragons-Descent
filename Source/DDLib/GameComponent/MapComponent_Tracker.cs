@@ -46,7 +46,7 @@ namespace DD
             ferocious.Tick();
 
             //Only process this in player's maps.
-            if(map.ParentFaction.IsPlayer)
+            if (map.ParentFaction != null && map.ParentFaction.IsPlayer)
             {
                 if (incidents.CooledDown && incidents.NextTick <= Find.TickManager.TicksGame)
                 {

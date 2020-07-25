@@ -63,8 +63,7 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\DDLib\Bill\Bills.cs">
+  <ItemGroup>    <Compile Include="..\DDLib\Bill\Bills.cs">
       <Link>Bill\Bills.cs</Link>
     </Compile>
     <Compile Include="..\DDLib\Building\Building_StorageBed.cs">
@@ -82,20 +81,11 @@
     <Compile Include="..\DDLib\CompProperties\CompProperties_Ritual.cs">
       <Link>CompProperties\CompProperties_Ritual.cs</Link>
     </Compile>
-    <Compile Include="..\DDLib\CompTargetableLocation\CompTargetableLocation.cs">
-      <Link>CompTargetableLocation\CompTargetableLocation.cs</Link>
-    </Compile>
     <Compile Include="..\DDLib\CompTargetable\CompTargetable_Reproductive.cs">
       <Link>CompTargetable\CompTargetable_Reproductive.cs</Link>
     </Compile>
     <Compile Include="..\DDLib\CompTargetable\CompTargetable_SingleReproductiveBody.cs">
       <Link>CompTargetable\CompTargetable_SingleReproductiveBody.cs</Link>
-    </Compile>
-    <Compile Include="..\DDLib\CompTargetLocationEffect\CompTargetLocationEffect.cs">
-      <Link>CompTargetLocationEffect\CompTargetLocationEffect.cs</Link>
-    </Compile>
-    <Compile Include="..\DDLib\CompTargetLocationEffect\CompTargetLocationEffect_Teleport.cs">
-      <Link>CompTargetLocationEffect\CompTargetLocationEffect_Teleport.cs</Link>
     </Compile>
     <Compile Include="..\DDLib\GameComponent\MapComponent_Tracker.cs">
       <Link>GameComponent\MapComponent_Tracker.cs</Link>
@@ -190,9 +180,6 @@
     <Compile Include="..\DDLib\CompTargetEffect\CompTargetEffect_HealPermanent.cs">
       <Link>CompTargetEffect\CompTargetEffect_HealPermanent.cs</Link>
     </Compile>
-    <Compile Include="..\DDLib\CompTargetEffect\CompTargetEffect_PawnEquipper.cs">
-      <Link>CompTargetEffect\CompTargetEffect_PawnEquipper.cs</Link>
-    </Compile>
     <Compile Include="..\DDLib\CompTargetEffect\CompTargetEffect_SetAge.cs">
       <Link>CompTargetEffect\CompTargetEffect_SetAge.cs</Link>
     </Compile>
@@ -228,9 +215,6 @@
     </Compile>
     <Compile Include="..\DDLib\JobDriver\JobDriver_MateCrossbreed.cs">
       <Link>JobDriver\JobDriver_MateCrossbreed.cs</Link>
-    </Compile>
-    <Compile Include="..\DDLib\JobGiver\JobGiver_HostilityResponse.cs">
-      <Link>JobGiver\JobGiver_HostilityResponse.cs</Link>
     </Compile>
     <Compile Include="..\DDLib\JobGiver\JobGiver_LayCrossbredEgg.cs">
       <Link>JobGiver\JobGiver_LayCrossbredEgg.cs</Link>
