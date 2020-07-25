@@ -223,7 +223,7 @@ namespace DD
 
                     extraDescription += " ";
 
-                    if(ritual is Ritual_Targeting)
+                    if (ritual is Ritual_Targeting)
                     {
                         extraDescription += "(Single Target)";
                     }
@@ -234,7 +234,7 @@ namespace DD
 
                     extraDescription += "\n";
 
-                    if(ritual is ITickingRitual)
+                    if (ritual is ITickingRitual)
                     {
                         extraDescription += "Duration: " + ritual.Duration.ToStringTicksToPeriod() + "\n";
                     }
@@ -242,7 +242,7 @@ namespace DD
                     extraDescription += "Cost: " + ritual.Cost + " favor.\n";
                     extraDescription += "Cooldown: " + ritual.Cooldown.ToStringTicksToPeriod();
                 }
-                else 
+                else
                 {
                     if (!ritual.CooledDown)
                     {
@@ -297,19 +297,30 @@ namespace DD
 
             Widgets.DrawWindowBackground(rect);
 
-            Text.Font = GameFont.Medium;
-            Text.Anchor = TextAnchor.UpperCenter;
-            Widgets.Label(insetRect, "Favor");
+            if (rituals != null)
+            {
+                Text.Font = GameFont.Medium;
+                Text.Anchor = TextAnchor.UpperCenter;
+                Widgets.Label(insetRect, "Favor");
 
-            Rect barRect = insetRect;
-            barRect.yMin = insetRect.y + insetRect.height / 2f;
+                Rect barRect = insetRect;
+                barRect.yMin = insetRect.y + insetRect.height / 2f;
 
-            float fillPercent = rituals.Current / rituals.Max;
-            Widgets.FillableBar(barRect, fillPercent, FullBarTex, EmptyBarTex, doBorder: false);
-            Text.Font = GameFont.Small;
-            Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(barRect, (rituals.Current).ToString("F0") + " / " + (rituals.Max).ToString("F0"));
-            Text.Anchor = TextAnchor.UpperLeft;
+                float fillPercent = rituals.Current / rituals.Max;
+                Widgets.FillableBar(barRect, fillPercent, FullBarTex, EmptyBarTex, doBorder: false);
+                Text.Font = GameFont.Small;
+                Text.Anchor = TextAnchor.MiddleCenter;
+                Widgets.Label(barRect, (rituals.Current).ToString("F0") + " / " + (rituals.Max).ToString("F0"));
+                Text.Anchor = TextAnchor.UpperLeft;
+            }
+            else
+            {
+                Text.Font = GameFont.Small;
+                Text.Anchor = TextAnchor.UpperCenter;
+                Widgets.Label(insetRect, "Rituals\nUnsupported");
+                Text.Anchor = TextAnchor.UpperLeft;
+            }
+
             return new GizmoResult(GizmoState.Clear);
         }
     }

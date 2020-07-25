@@ -13,5 +13,9 @@ namespace DD
 
         public SimpleCurve cost;
         public SimpleCurve cooldown;
+
+        public FloatRange initialCooldown;
+
+        public int InitialCooldown => GenTicks.SecondsToTicks(initialCooldown.RandomInRange);
     }
 }

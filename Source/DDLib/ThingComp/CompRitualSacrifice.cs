@@ -58,55 +58,58 @@ namespace DD
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             yield return gRInfo;
-            foreach(RitualReference ri in Props.rituals)
-            {
-                yield return ri.GetGizmo(parent);
-            }
-            if (Prefs.DevMode)
-            {
-                RitualTracker rituals = parent.Map.GetComponent<MapComponent_Tracker>().Rituals;
 
-                yield return new Command_Action()
+            RitualTracker rituals = parent.Map.GetComponent<MapComponent_Tracker>().Rituals;
+            if(rituals != null)
+            {
+                foreach (RitualReference ri in Props.rituals)
                 {
-                    defaultLabel = "Debug: Add Favor",
-                    action = () =>
-                    {
-                        rituals.Current++;
-                    }
-                };
-                yield return new Command_Action()
+                    yield return ri.GetGizmo(parent);
+                }
+                if (Prefs.DevMode)
                 {
-                    defaultLabel = "Debug: Increment Activation Count",
-                    action = () =>
+                    yield return new Command_Action()
                     {
-                        foreach (Ritual ritual in rituals)
+                        defaultLabel = "Debug: Add Favor",
+                        action = () =>
                         {
-                            ritual.IncrementCount();
+                            rituals.Current++;
                         }
-                    }
-                };
-                yield return new Command_Action()
-                {
-                    defaultLabel = "Debug: Reset Activation Count",
-                    action = () =>
+                    };
+                    yield return new Command_Action()
                     {
-                        foreach (Ritual ritual in rituals)
+                        defaultLabel = "Debug: Increment Activation Count",
+                        action = () =>
                         {
-                            ritual.Reset(true);
+                            foreach (Ritual ritual in rituals)
+                            {
+                                ritual.IncrementCount();
+                            }
                         }
-                    }
-                };
-                yield return new Command_Action()
-                {
-                    defaultLabel = "Debug: Finish Cooldowns",
-                    action = () =>
+                    };
+                    yield return new Command_Action()
                     {
-                        foreach (Ritual ritual in rituals)
+                        defaultLabel = "Debug: Reset Activation Count",
+                        action = () =>
                         {
-                            ritual.Reset();
+                            foreach (Ritual ritual in rituals)
+                            {
+                                ritual.Reset(true);
+                            }
                         }
-                    }
-                };
+                    };
+                    yield return new Command_Action()
+                    {
+                        defaultLabel = "Debug: Finish Cooldowns",
+                        action = () =>
+                        {
+                            foreach (Ritual ritual in rituals)
+                            {
+                                ritual.Reset();
+                            }
+                        }
+                    };
+                }
             }
         }
     }

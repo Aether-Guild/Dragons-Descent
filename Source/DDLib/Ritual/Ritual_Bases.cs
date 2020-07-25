@@ -34,7 +34,7 @@ namespace DD
         {
             this.map = map;
             this.def = def;
-            cooldown.Update(Cooldown);
+            cooldown.Update(def.InitialCooldown);
         }
 
         public virtual float Cost => Def.cost.Evaluate(activationCount);
