@@ -21,25 +21,19 @@ namespace DD
 
         public virtual float GetProgressIncrease(CompEggIncubator incubator) => basePercentageDailyProgress.RandomInRange * incubator.BaseProgress;
 
-        private Gizmo gizmo;
-
-        public Gizmo GetGizmo(CompEggIncubator compIncubator)
+        public Gizmo CreateGizmo(CompEggIncubator compIncubator)
         {
             if (compIncubator is CompEggIncubator_Container compContainer)
             {
-                if (gizmo == null)
+                Command_Action action_ExtractEgg = new Command_Action();
+                action_ExtractEgg.defaultLabel = gizmoLabel;
+                action_ExtractEgg.defaultDesc = gizmoDesc;
+                if (!gizmoIconPath.NullOrEmpty())
                 {
-                    Command_Action action_ExtractEgg = new Command_Action();
-                    action_ExtractEgg.defaultLabel = gizmoLabel;
-                    action_ExtractEgg.defaultDesc = gizmoDesc;
-                    if (!gizmoIconPath.NullOrEmpty())
-                    {
-                        action_ExtractEgg.icon = ContentFinder<Texture2D>.Get(gizmoIconPath);
-                    }
-                    action_ExtractEgg.action = () => compContainer.PlaceEggOnGround(compIncubator.parent.Map);
-                    gizmo = action_ExtractEgg;
+                    action_ExtractEgg.icon = ContentFinder<Texture2D>.Get(gizmoIconPath);
                 }
-                return gizmo;
+                action_ExtractEgg.action = () => compContainer.PlaceEggOnGround(compIncubator.parent.Map);
+                return action_ExtractEgg;
             }
             return null;
         }

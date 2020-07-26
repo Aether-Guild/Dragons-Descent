@@ -262,6 +262,8 @@ namespace DD
 
         public override Thing Egg => incubatedEgg.FirstOrFallback();
 
+        private Gizmo gizmoRetrieveEgg;
+
         public CompEggIncubator_Container()
         {
             incubatedEgg = new ThingOwner<Thing>(this, true, LookMode.Deep);
@@ -411,11 +413,12 @@ namespace DD
 
             if (IsIncubatingEgg())
             {
-                Gizmo gizmoRetrieveEgg = Props.GetGizmo(this);
-                if(gizmoRetrieveEgg != null)
+                if (gizmoRetrieveEgg == null)
                 {
-                    yield return gizmoRetrieveEgg;
+                    gizmoRetrieveEgg = Props.CreateGizmo(this);
                 }
+
+                yield return gizmoRetrieveEgg;
             }
         }
 
