@@ -6,3 +6,6 @@ Source			export-ignore
 
 *.psd			export-ignore
 *.clip			export-ignore
+
+LICENSE			export-ignore
+README.md		export-ignore
