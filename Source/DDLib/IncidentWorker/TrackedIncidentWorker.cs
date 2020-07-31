@@ -85,6 +85,10 @@ namespace DD
                 //Failsafe; Only cooldown and exit from loop if the incident reports that it successfully triggered.
                 if (def.Worker.TryExecute(parms))
                 {
+                    if(def.HasModExtension<LegacyModExtension>())
+                    {
+                        Log.Message("IncidentWatcher: Started Incident [{0}] @{1}".Formatted(def.LabelCap, Find.TickManager.TicksGame));
+                    }
                     TrackedIncidentExtension ext = def.GetModExtension<TrackedIncidentExtension>();
                     cooldownTimer.Update(ext.CooldownTicks);
                     break;

@@ -14,6 +14,8 @@
 		<minRefireDays>40</minRefireDays>
 		<minThreatPoints>500</minThreatPoints>
 		<modExtensions>
+			<!-- Debug flag -->
+			<li Class="DD.LegacyModExtension" />
 			<li Class="DD.SettingControlledExtension_IncidentChance" />
 			<li Class="DD.TrackedIncidentExtension">
 				<maxRefireDays>65</maxRefireDays>
@@ -102,6 +104,8 @@
 		<minRefireDays>60</minRefireDays>
 		<minThreatPoints>500</minThreatPoints>
 		<modExtensions>
+			<!-- Debug flag -->
+			<li Class="DD.LegacyModExtension" />
 			<li Class="DD.SettingControlledExtension_IncidentChance" />
 			<li Class="DD.TrackedIncidentExtension">
 				<maxRefireDays>100</maxRefireDays>
