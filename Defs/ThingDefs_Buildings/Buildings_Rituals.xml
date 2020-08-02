@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=========================== Rituals ===============================-->
+  <DD.RitualDef>
+    <defName>Ritual_BanishSingleDragon</defName>
+    <label>Banish Dragon</label>
+    <description>Forces the selected dragon to exit the map if it is wild, or removes all mental states if the dragon is tamed.</description>
+    <cost>
+      <points>
+        <li>(0, 1)</li>
+        <li>(6, 3)</li>
+        <li>(12, 6)</li>
+        <li>(20, 18)</li>
+      </points>
+    </cost>
+    <cooldown>
+      <points>
+        <li>(0, 1000)</li>
+        <li>(100, 10000)</li>
+      </points>
+    </cooldown>
+    <initialCooldown>1000~3000</initialCooldown>
+    <ritualClass>DD.Ritual_BanishPawn</ritualClass>
+  </DD.RitualDef>
+  
+  <DD.RitualDef>
+    <defName>Ritual_BanishAllDragon</defName>
+    <label>Banish All Dragons</label>
+    <description>Forces all wild dragons to exit the map, and removes all mental states from tamed dragons.</description>
+    <cost>
+      <points>
+        <li>(0, 7)</li>
+        <li>(5, 10)</li>
+        <li>(10, 15)</li>
+        <li>(45, 70)</li>
+      </points>
+    </cost>
+    <cooldown>
+      <points>
+        <li>(0, 10000)</li>
+        <li>(50, 100000)</li>
+      </points>
+    </cooldown>
+    <initialCooldown>7500~12500</initialCooldown>
+    <ritualClass>DD.Ritual_BanishAllPawns</ritualClass>
+  </DD.RitualDef>
+  
+  <DD.RitualDef>
+    <defName>Ritual_RemoveFerocity</defName>
+    <label>Calm Ferocity</label>
+    <description>Calms down a ferocious dragon.</description>
+    <cost>
+      <points>
+        <li>(0, 1)</li>
+        <li>(6, 3)</li>
+        <li>(12, 6)</li>
+        <li>(20, 18)</li>
+      </points>
+    </cost>
+    <cooldown>
+      <points>
+        <li>(0, 3000)</li>
+        <li>(100, 60000)</li>
+      </points>
+    </cooldown>
+    <initialCooldown>500~1500</initialCooldown>
+    <ritualClass>DD.Ritual_RemoveHediff</ritualClass>
+    <modExtensions>
+      <li Class="DD.RitualHediffModExtension">
+        <hediffs>
+            <li>DraconicFerocity_Male</li>
+            <li>DraconicFerocity_Female</li>
+        </hediffs>
+      </li>
+    </modExtensions>
+  </DD.RitualDef>
+  
+  <DD.RitualDef>
+    <defName>Ritual_RemoveFerocityAll</defName>
+    <label>Calm All Ferocity</label>
+    <description>Calms down all ferocious dragons in the vicinity.</description>
+    <cost>
+      <points>
+        <li>(0, 7)</li>
+        <li>(5, 10)</li>
+        <li>(10, 15)</li>
+        <li>(45, 70)</li>
+      </points>
+    </cost>
+    <cooldown>
+      <points>
+        <li>(0, 12000)</li>
+        <li>(50, 120000)</li>
+      </points>
+    </cooldown>
+    <initialCooldown>5000~10000</initialCooldown>
+    <ritualClass>DD.Ritual_RemoveHediffAll</ritualClass>
+    <modExtensions>
+      <li Class="DD.RitualHediffModExtension">
+        <hediffs>
+          <li>DraconicFerocity_Male</li>
+          <li>DraconicFerocity_Female</li>
+          <li>DraconicPackFerocity_Male</li>
+          <li>DraconicPackFerocity_Female</li>
+        </hediffs>
+      </li>
+    </modExtensions>
+  </DD.RitualDef>
+  
+  <DD.RitualDef>
+    <defName>Ritual_MaintainDragonNeeds</defName>
+    <label>Sustain Dragon</label>
+    <description>Fills up and maintains the dragon's food.</description>
+    <cost>
+      <points>
+        <li>(0, 1)</li>
+        <li>(6, 3)</li>
+        <li>(12, 6)</li>
+        <li>(20, 18)</li>
+      </points>
+    </cost>
+    <cooldown>
+      <points>
+        <li>(0, 7000)</li>
+        <li>(100, 14000)</li>
+      </points>
+    </cooldown>
+    <initialCooldown>3000~5000</initialCooldown>
+    <ritualClass>DD.Ritual_MaintainNeeds</ritualClass>
+    <modExtensions>
+      <li Class="DD.RitualNeedsModExtension">
+        <food>0.75~1.0</food>
+      </li>
+      <li Class="DD.RitualTickingModExtension">
+        <duration>
+          <points>
+            <li>(0, 7000)</li>
+            <li>(20, 14000)</li>
+          </points>
+        </duration>
+        <tickerType>Long</tickerType>
+      </li>
+    </modExtensions>
+  </DD.RitualDef>
+  
+  <DD.RitualDef>
+    <defName>Ritual_MaintainAllDragonNeeds</defName>
+    <label>Sustain All Dragons</label>
+    <description>Fills up and maintains all dragons food.</description>
+    <cost>
+      <points>
+        <li>(0, 7)</li>
+        <li>(5, 10)</li>
+        <li>(10, 57)</li>
+        <li>(50, 70)</li>
+      </points>
+    </cost>
+    <cooldown>
+      <points>
+        <li>(0, 14000)</li>
+        <li>(50, 28000)</li>
+      </points>
+    </cooldown>
+    <initialCooldown>10000~15000</initialCooldown>
+    <ritualClass>DD.Ritual_MaintainAllNeeds</ritualClass>
+    <modExtensions>
+      <li Class="DD.RitualNeedsModExtension">
+        <food>0.75~1.0</food>
+      </li>
+      <li Class="DD.RitualTickingModExtension">
+        <duration>
+          <points>
+            <li>(0, 7000)</li>
+            <li>(30, 20000)</li>
+          </points>
+        </duration>
+        <tickerType>Long</tickerType>
+      </li>
+    </modExtensions>
+  </DD.RitualDef>
+  
+  <DD.RitualDef>
+    <defName>Ritual_WardAllDragon</defName>
+    <label>Dragon Ward</label>
+    <description>Automatically calms down tamed dragons and banish wild dragons for a period of time.</description>
+    <cost>
+      <points>
+        <li>(0, 10)</li>
+        <li>(5, 25)</li>
+        <li>(25, 50)</li>
+        <li>(50, 75)</li>
+        <li>(100, 90)</li>
+      </points>
+    </cost>
+    <cooldown>
+      <points>
+        <li>(0, 45000)</li>
+        <li>(5, 50000)</li>
+        <li>(10, 160000)</li>
+        <li>(25, 180000)</li>
+      </points>
+    </cooldown>
+    <initialCooldown>10000~15000</initialCooldown>
+    <ritualClass>DD.Ritual_BanishAllPawnsWard</ritualClass>
+    <modExtensions>
+      <li Class="DD.RitualTickingModExtension">
+        <duration>
+          <points>
+            <li>(0, 45000)</li>
+            <li>(25, 90000)</li>
+          </points>
+        </duration>
+        <tickerType>Rare</tickerType>
+      </li>
+      <li Class="DD.RitualHediffModExtension">
+        <hediffs>
+            <li>DraconicFerocity_Male</li>
+            <li>DraconicFerocity_Female</li>
+            <li>DraconicPackFerocity_Male</li>
+            <li>DraconicPackFerocity_Female</li>
+        </hediffs>
+      </li>
+    </modExtensions>
+  </DD.RitualDef>
+  
+  <!--=========================== Altar ===============================-->
+
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>Altar</defName>
+    <thingClass>Building_WorkTable</thingClass>
+    <label>dragon altar</label>
+    <description>An altar to worship dragons. While dragons themselves aren't as intelligent as humans, they do respect offers and gifts in their name and will in turn give favor.\n\nHowever over time they will require more offerings for the same amount of favor, and more favor for your requests...</description>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Misc</designationCategory>
+    <surfaceType>Item</surfaceType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <rotatable>true</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>true</castEdgeShadows>
+    <uiIconScale>0.80</uiIconScale>
+    <fillPercent>0.15</fillPercent>
+    <pathCost>40</pathCost>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>DraconicRituals</li>
+    </researchPrerequisites>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <size>(3,2)</size>
+    <costList>
+        <Gold>120</Gold>
+    </costList>
+    <recipes>
+        <li>Ritual_Weak</li>
+        <li>Ritual_Moderate</li>
+        <li>Ritual_Large</li>
+        <li>Ritual_Major</li>
+    </recipes>
+    <inspectorTabs>
+        <li>ITab_Bills</li>
+    </inspectorTabs>
+    <graphicData>
+        <texPath>Things/Building/Misc/DragonAltar/DragonAltar</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <shaderType>CutoutComplex</shaderType>
+        <drawSize>3.7</drawSize>
+    <shadowData>
+      <volume>(2.22, 0.8, 0.62)</volume>
+      <offset>(0, 0, 0)</offset>
+    </shadowData>
+    </graphicData>
+    <stuffCategories>
+        <li>Stony</li>
+        <li>Woody</li>
+        <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <statBases>
+        <MaxHitPoints>100</MaxHitPoints>
+        <Flammability>0</Flammability>
+        <WorkToBuild>1000</WorkToBuild>
+        <Mass>20</Mass>
+    <Beauty>75</Beauty>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <comps>
+        <li Class="DD.CompProperties_Ritual">
+        <rituals>
+          <li>
+            <def>Ritual_BanishSingleDragon</def>
+            <iconPath>UI/Rituals/BanishDragon</iconPath>
+            <moteOnTarget>Mote_PsycastPsychicEffect</moteOnTarget>
+            <moteOnSource>Mote_LightningGlow</moteOnSource>
+            <moteConnecting>Mote_LineEMP</moteConnecting>
+            <sound>PsychicInsanityLanceCast</sound>
+            <shakeCamera>true</shakeCamera>
+            <targetBody>QuadrupedeAnimalWithClawsDragon</targetBody>
+          </li>
+          <li>
+            <def>Ritual_RemoveFerocity</def>
+            <iconPath>UI/Rituals/CalmDragon</iconPath>
+            <moteOnTarget>Mote_SparkFlash</moteOnTarget>
+            <moteOnSource>Mote_HeatGlow</moteOnSource>
+            <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
+            <sound>MechSerumUsed</sound>
+            <targetBody>QuadrupedeAnimalWithClawsDragon</targetBody>
+          </li>
+          <li>
+            <def>Ritual_MaintainDragonNeeds</def>
+            <iconPath>UI/Rituals/FulfillDragon</iconPath>
+            <moteOnTarget>Mote_SparkFlash</moteOnTarget>
+            <moteOnSource>Mote_HeatGlow</moteOnSource>
+            <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
+            <sound>MechSerumUsed</sound>
+            <targetBody>QuadrupedeAnimalWithClawsDragon</targetBody>
+          </li>
+          <li>
+            <def>Ritual_BanishAllDragon</def>
+            <iconPath>UI/Rituals/BanishDragons</iconPath>
+            <moteOnTarget>Mote_PsycastPsychicEffect</moteOnTarget>
+            <moteOnSource>Mote_LightningGlow</moteOnSource>
+            <moteConnecting>Mote_LineEMP</moteConnecting>
+            <sound>PsychicInsanityLanceCast</sound>
+            <shakeCamera>true</shakeCamera>
+            <targetBody>QuadrupedeAnimalWithClawsDragon</targetBody>
+          </li>
+          <li>
+            <def>Ritual_RemoveFerocityAll</def>
+      <iconPath>UI/Rituals/CalmDragons</iconPath>
+            <moteOnTarget>Mote_SparkFlash</moteOnTarget>
+            <moteOnSource>Mote_HeatGlow</moteOnSource>
+            <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
+            <sound>MechSerumUsed</sound>
+            <targetBody>QuadrupedeAnimalWithClawsDragon</targetBody>
+          </li>
+          <li>
+            <def>Ritual_MaintainAllDragonNeeds</def>
+            <iconPath>UI/Rituals/FulfillDragons</iconPath>
+            <moteOnTarget>Mote_SparkFlash</moteOnTarget>
+            <moteOnSource>Mote_HeatGlow</moteOnSource>
+            <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
+            <sound>MechSerumUsed</sound>
+            <targetBody>QuadrupedeAnimalWithClawsDragon</targetBody>
+          </li>
+          <li>
+            <def>Ritual_WardAllDragon</def>
+            <iconPath>UI/Rituals/DragonWard</iconPath>
+            <moteOnTarget>Mote_PsycastPsychicEffect</moteOnTarget>
+            <moteOnSource>Mote_LightningGlow</moteOnSource>
+            <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
+            <sound>PsychicAnimalPulserCast</sound>
+            <targetBody>QuadrupedeAnimalWithClawsDragon</targetBody>
+                </li>
+            </rituals>
+        </li>
+    <li Class="CompProperties_Art">
+      <nameMaker>NamerArtSculpture</nameMaker>
+      <descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+      <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+    </li>
+        <li Class="DD.CompProperties_FireOverlay_Multiple">
+            <fireSize>0.6</fireSize>
+            <rotationOffsets>
+                <li>
+                    <rotation>North</rotation>
+                    <offsets>
+                        <li>(0.82, 0, 0.95)</li>
+                        <li>(-0.82, 0, 0.95)</li>
+                    </offsets>
+                </li>
+                <li>
+                    <rotation>East</rotation>
+                    <offsets>
+                        <li>(0.3, 0, 1.22)</li>
+                        <li>(0.3, 0, -0.45)</li>
+                    </offsets>
+                </li>
+                <li>
+                    <rotation>West</rotation>
+                    <offsets>
+                        <li>(-0.3, 0, -0.45)</li>
+                        <li>(-0.3, 0, 1.22)</li>
+                    </offsets>
+                </li>
+                <li>
+                    <rotation>South</rotation>
+                    <offsets>
+                        <li>(-0.84, 0, 0.4)</li>
+                        <li>(0.85, 0, 0.4)</li>
+                    </offsets>
+                </li>
+            </rotationOffsets>
+        </li>
+    <li Class="CompProperties_MeditationFocus">
+      <statDef>MeditationFocusStrength</statDef>
+      <focusTypes>
+        <li>Artistic</li>
+      </focusTypes>
+      <offsets>
+        <li Class="FocusStrengthOffset_Quality">
+          <curve>
+            <points>
+              <li>(0,0.12)</li>
+              <!-- awful -->
+              <li>(1,0.16)</li>
+              <!-- poor -->
+              <li>(2,0.20)</li>
+              <!-- normal -->
+              <li>(3,0.22)</li>
+              <!-- good -->
+              <li>(4,0.24)</li>
+              <!-- excellent -->
+              <li>(5,0.26)</li>
+              <!-- masterwork -->
+              <li>(6,0.28)</li>
+              <!-- legendary -->
+            </points>
+          </curve>
+        </li>
+      </offsets>
+    </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

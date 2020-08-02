@@ -20,26 +20,13 @@ namespace DD
         public override void StartedNewGame()
         {
             base.StartedNewGame();
-            CompatibilityPatcher.Patch();
-            ResetHediffGivers();
+            DraconicOverseer.Settings.Apply();
         }
 
         public override void LoadedGame()
         {
             base.LoadedGame();
-            CompatibilityPatcher.Patch();
-            ResetHediffGivers();
-        }
-
-        private void ResetHediffGivers()
-        {
-            foreach (HediffGiverSetDef def in DefDatabase<HediffGiverSetDef>.AllDefs)
-            {
-                foreach (HediffGiver_Ferocity giver in def.hediffGivers.OfType<HediffGiver_Ferocity>())
-                {
-                    giver.Clear();
-                }
-            };
+            DraconicOverseer.Settings.Apply();
         }
     }
 }

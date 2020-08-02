@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67CDDB5E-C9DA-4A80-8F16-3A88A440C950}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DD</RootNamespace>
+    <AssemblyName>DDLib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Lib.Harmony.2.0.1\lib\net472\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>    <Compile Include="..\DDLib\Bill\Bills.cs">
+      <Link>Bill\Bills.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Building\Building_StorageBed.cs">
+      <Link>Building\Building_StorageBed.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompProperties\CompProperties_AssignableToPawn_Body.cs">
+      <Link>CompProperties\CompProperties_AssignableToPawn_Body.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompProperties\CompProperties_EggIncubator.cs">
+      <Link>CompProperties\CompProperties_EggIncubator.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompProperties\CompProperties_FireOverlay.cs">
+      <Link>CompProperties\CompProperties_FireOverlay.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompProperties\CompProperties_Ritual.cs">
+      <Link>CompProperties\CompProperties_Ritual.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompTargetable\CompTargetable_Reproductive.cs">
+      <Link>CompTargetable\CompTargetable_Reproductive.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompTargetable\CompTargetable_SingleReproductiveBody.cs">
+      <Link>CompTargetable\CompTargetable_SingleReproductiveBody.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\GameComponent\MapComponent_Tracker.cs">
+      <Link>GameComponent\MapComponent_Tracker.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Graphics\LayeredGraphicData.cs">
+      <Link>Graphics\LayeredGraphicData.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\HediffCompProperties\HediffCompProperties_ExitMap.cs">
+      <Link>HediffCompProperties\HediffCompProperties_ExitMap.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\HediffCompProperties\HediffCompProperties_RegenSeverityScaling.cs">
+      <Link>HediffCompProperties\HediffCompProperties_RegenSeverityScaling.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\HediffComp\HediffComp_Aggressive.cs">
+      <Link>HediffComp\HediffComp_Aggressive.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\HediffComp\HediffComp_DisableTaming.cs">
+      <Link>HediffComp\HediffComp_DisableTaming.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\HediffComp\HediffComp_ExitMap.cs">
+      <Link>HediffComp\HediffComp_ExitMap.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\HediffComp\HediffComp_HealScar.cs">
+      <Link>HediffComp\HediffComp_HealScar.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\HediffComp\HediffComp_RegenSeverityScaling.cs">
+      <Link>HediffComp\HediffComp_RegenSeverityScaling.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\HediffDefOf.cs">
+      <Link>HediffDefOf.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\HediffGiver\HediffGiver_Ferocity.cs">
+      <Link>HediffGiver\HediffGiver_Ferocity.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\IncidentWorker\IncidentWorker_DragonHunting.cs">
+      <Link>IncidentWorker\IncidentWorker_DragonHunting.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\IncidentWorker\TrackedIncidentWorker.cs">
+      <Link>IncidentWorker\TrackedIncidentWorker.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\JobGiver\JobGiver_PatientGoToBed.cs">
+      <Link>JobGiver\JobGiver_PatientGoToBed.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Patches\Extensions.cs">
+      <Link>Patches\Extensions.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Patches\Patches.cs">
+      <Link>Patches\Patches.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Patches\CompatibilityPatcher.cs">
+      <Link>Patches\CompatibilityPatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompProperties\CompProperties_CrossbredEggLayer.cs">
+      <Link>CompProperties\CompProperties_CrossbredEggLayer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompProperties\CompProperties_NextLifestage.cs">
+      <Link>CompProperties\CompProperties_NextLifestage.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompProperties\CompProperties_SpawnMate.cs">
+      <Link>CompProperties\CompProperties_SpawnMate.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompProperties\CompProperties_TargetableBody.cs">
+      <Link>CompProperties\CompProperties_TargetableBody.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompProperties\CompProperties_Thing.cs">
+      <Link>CompProperties\CompProperties_Thing.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompProperties\CompProperties_Range.cs">
+      <Link>CompProperties\CompProperties_Range.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompProperties\CompProperties_LifespanPercent.cs">
+      <Link>CompProperties\CompProperties_LifespanPercent.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompProperties\CompProperties_Value.cs">
+      <Link>CompProperties\CompProperties_Value.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompTargetable\CompTargetable_AllBodiesOnTheMap.cs">
+      <Link>CompTargetable\CompTargetable_AllBodiesOnTheMap.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompTargetable\CompTargetable_SingleAnimal.cs">
+      <Link>CompTargetable\CompTargetable_SingleAnimal.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompTargetable\CompTargetable_SingleBody.cs">
+      <Link>CompTargetable\CompTargetable_SingleBody.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompTargetEffect\CompTargetEffect_AddAge.cs">
+      <Link>CompTargetEffect\CompTargetEffect_AddAge.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompTargetEffect\CompTargetEffect_HealNatural.cs">
+      <Link>CompTargetEffect\CompTargetEffect_HealNatural.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompTargetEffect\CompTargetEffect_HealPermanent.cs">
+      <Link>CompTargetEffect\CompTargetEffect_HealPermanent.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompTargetEffect\CompTargetEffect_SetAge.cs">
+      <Link>CompTargetEffect\CompTargetEffect_SetAge.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompTargetEffect\CompTargetEffect_SpawnMate.cs">
+      <Link>CompTargetEffect\CompTargetEffect_SpawnMate.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\HediffCompProperties\HediffCompProperties_ModifyAge.cs">
+      <Link>HediffCompProperties\HediffCompProperties_ModifyAge.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\HediffCompProperties\HediffCompProperties_Regen.cs">
+      <Link>HediffCompProperties\HediffCompProperties_Regen.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\HediffComp\HediffComp_ModifyAge.cs">
+      <Link>HediffComp\HediffComp_ModifyAge.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\HediffComp\HediffComp_HealInjury.cs">
+      <Link>HediffComp\HediffComp_HealInjury.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\HediffGiver\HediffGiver_Regeneration.cs">
+      <Link>HediffGiver\HediffGiver_Regeneration.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\IncidentWorker\IncidentWorker_DragonPasses.cs">
+      <Link>IncidentWorker\IncidentWorker_DragonPasses.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\IngestionOutcomeDoer\IngestionOutcomeDoer_DoIfBody.cs">
+      <Link>IngestionOutcomeDoer\IngestionOutcomeDoer_DoIfBody.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\JobDefOf.cs">
+      <Link>JobDefOf.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\JobDriver\JobDriver_LayCrossbredEgg.cs">
+      <Link>JobDriver\JobDriver_LayCrossbredEgg.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\JobDriver\JobDriver_MateCrossbreed.cs">
+      <Link>JobDriver\JobDriver_MateCrossbreed.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\JobGiver\JobGiver_LayCrossbredEgg.cs">
+      <Link>JobGiver\JobGiver_LayCrossbredEgg.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\JobGiver\JobGiver_MateCrossbreed.cs">
+      <Link>JobGiver\JobGiver_MateCrossbreed.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\GameComponent\GameComponent_DD.cs">
+      <Link>GameComponent\GameComponent_DD.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Projectile\AnimalProjectile.cs">
+      <Link>Projectile\AnimalProjectile.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Projectile\ExplodeProjectile.cs">
+      <Link>Projectile\ExplodeProjectile.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Projectile\FireProjectile.cs">
+      <Link>Projectile\FireProjectile.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Projectile\SiegeProjectile.cs">
+      <Link>Projectile\SiegeProjectile.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\RecipeWorker\RecipeWorker_NoDestroy.cs">
+      <Link>RecipeWorker\RecipeWorker_NoDestroy.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Ritual\RitualDef.cs">
+      <Link>Ritual\RitualDef.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Ritual\Rituals.cs">
+      <Link>Ritual\Rituals.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Ritual\RitualTracker.cs">
+      <Link>Ritual\RitualTracker.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Ritual\Ritual_Bases.cs">
+      <Link>Ritual\Ritual_Bases.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Scenario\StartingThing_DefinedTamed.cs">
+      <Link>Scenario\StartingThing_DefinedTamed.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Settings\DraconicSettings.cs">
+      <Link>Settings\DraconicSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Settings\DraconicMod.cs">
+      <Link>Settings\DraconicMod.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Settings\DraconicOverseer.cs">
+      <Link>Settings\DraconicOverseer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Settings\DraconicSettingsGUI.cs">
+      <Link>Settings\DraconicSettingsGUI.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Settings\Flags.cs">
+      <Link>Settings\Flags.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\ThingComp\CompAssignableToPawn_Nest.cs">
+      <Link>ThingComp\CompAssignableToPawn_Nest.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\ThingComp\CompCrossBredEggLayer.cs">
+      <Link>ThingComp\CompCrossBredEggLayer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\ThingComp\CompEggIncubator.cs">
+      <Link>ThingComp\CompEggIncubator.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\ThingComp\CompRitualSacrifice.cs">
+      <Link>ThingComp\CompRitualSacrifice.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\ThinkNode\ThinkNode_ConditionalExitTimedOutOnce.cs">
+      <Link>ThinkNode\ThinkNode_ConditionalExitTimedOutOnce.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\ThinkNode\ThinkNode_ConditionalMustKeepLyingDownForRegen.cs">
+      <Link>ThinkNode\ThinkNode_ConditionalMustKeepLyingDownForRegen.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Utility\AgeUtils.cs">
+      <Link>Utility\AgeUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Utility\FerocityUtils.cs">
+      <Link>Utility\FerocityUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Utility\HealthUtils.cs">
+      <Link>Utility\HealthUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Utility\MateUtils.cs">
+      <Link>Utility\MateUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Utility\TimeUtils.cs">
+      <Link>Utility\TimeUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Utility\VerbUtils.cs">
+      <Link>Utility\VerbUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\VerbProperties\VerbProperties_Cooldown.cs">
+      <Link>VerbProperties\VerbProperties_Cooldown.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Verb\Verb_MeleeAttackDamage_Resetting.cs">
+      <Link>Verb\Verb_MeleeAttackDamage_Resetting.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Verb\Verb_Shoot_Cooldown.cs">
+      <Link>Verb\Verb_Shoot_Cooldown.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\Verb\Verb_Shoot_Limited.cs">
+      <Link>Verb\Verb_Shoot_Limited.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

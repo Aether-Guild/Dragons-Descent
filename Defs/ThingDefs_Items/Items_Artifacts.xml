@@ -87,8 +87,8 @@
 		<tradeNeverStack>true</tradeNeverStack>
 		<useHitPoints>true</useHitPoints>
 		<statBases>
-      <MarketValue>5000</MarketValue>
-      <MaxHitPoints>80</MaxHitPoints>
+			<MarketValue>5000</MarketValue>
+			<MaxHitPoints>80</MaxHitPoints>
 		</statBases>
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>

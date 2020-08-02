@@ -1,3 +1,4 @@
+# Exporting #
 Source			export-ignore
 
 .gitignore		export-ignore
@@ -5,3 +6,6 @@ Source			export-ignore
 
 *.psd			export-ignore
 *.clip			export-ignore
+
+LICENSE			export-ignore
+README.md		export-ignore

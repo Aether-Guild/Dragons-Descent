@@ -19,8 +19,21 @@ namespace DD
             {
                 return null;
             }
-            //Should match the def's name.
-            return JobMaker.MakeJob(DD_JobDefOf.LayCrossbredEgg, RCellFinder.RandomWanderDestFor(pawn, pawn.Position, 5f, null, Danger.Some));
+
+            IntVec3 layPosition;
+
+
+            Building_Bed bed = RestUtility.FindBedFor(pawn);
+            if (bed != null)
+            {
+                layPosition = bed.Position;
+            }
+            else
+            {
+                layPosition = RCellFinder.RandomWanderDestFor(pawn, pawn.Position, LayRadius, null, Danger.Some);
+            }
+
+            return JobMaker.MakeJob(DD_JobDefOf.LayCrossbredEgg, layPosition);
         }
     }
 }

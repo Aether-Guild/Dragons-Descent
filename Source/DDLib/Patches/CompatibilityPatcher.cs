@@ -15,36 +15,54 @@ namespace DD
         public static readonly string DragonBreathWeaponDef = "Gun_DragonBreathWeapon";
         public static readonly string DragonRaceBodyDef = "QuadrupedeAnimalWithClawsDragon";
 
-        public static List<string> fightingJobDefNames = new List<string>()
-            {
-                //KFM
-                "KFM_KillTarget",
-                //HFM
-                "HuntTrained",
-                "HuntTrainedAssist",
-                "HuntForMe_CatGift",
-                //DD
-                "AA_DragonAnimalRangeAttack"
-            };
-
         private static readonly string HarmonyCompatibilityPatchID = "com.rimworld.mod.dd.compat";
+
+        public static bool Patched { get; private set; } = false;
 
         public static void Patch()
         {
-            try
+            if (!Patched)
             {
-                Log.Message("Preparing to apply compatibility patches...");
-                KFM_IgnoreDragonRanged();
-                HFM_IgnoreDragonRanged();
+                try
+                {
+                    Log.Message("Preparing to apply compatibility patches...");
+                    if (DraconicOverseer.Settings.KFM_IgnoreRange)
+                    {
+                        KFM_IgnoreDragonRanged();
+                    }
 
-                Add_HarmonyPatch(typeof(PawnUtility).GetMethod("IsFighting"), null, new HarmonyMethod(typeof(CompatibilityPatch).GetMethod("PawnUtility_IsFighting_Patch")));
-                Replace_HarmonyPatch(typeof(Pawn).GetMethod("TryGetAttackVerb"), HarmonyPatchType.Prefix, patch => patch.PatchMethod.ReflectedType.Name == "ARA__VerbCheck_Patch", null, new HarmonyMethod(typeof(CompatibilityPatch).GetMethod("Compat__VerbCheck_Patch")));
-                Log.Message("Compatibility patches were applied successfully.");
-            }
-            catch (Exception ex)
-            {
-                Log.Message("Compatibility patching failed.");
-                throw;
+                    if (DraconicOverseer.Settings.HFM_IgnoreRange)
+                    {
+                        HFM_IgnoreDragonRanged();
+                    }
+
+                    if (DraconicOverseer.Settings.ARA_VerbCheck)
+                    {
+                        MethodInfo pawn_attackVerb = AccessTools.Method(typeof(Pawn), "TryGetAttackVerb");
+                        HarmonyMethod attackVerb_Postfix = new HarmonyMethod(typeof(CompatibilityPatch), "Compat__VerbCheck_Patch");
+
+                        Replace_HarmonyPatch(pawn_attackVerb, HarmonyPatchType.Prefix, patch => patch.PatchMethod.ReflectedType.Name == "ARA__VerbCheck_Patch", null, attackVerb_Postfix);
+                    }
+
+                    if(DraconicOverseer.Settings.RW_RoyaltyErrors)
+                    {
+                        MethodInfo storyteller_GenerateIncident = AccessTools.Method(typeof(StorytellerComp_OnOffCycle), "GenerateIncident");
+                        MethodInfo storyteller_ToString = AccessTools.Method(typeof(StorytellerComp_OnOffCycle), "ToString");
+
+                        HarmonyMethod generateIncident_Prefix = new HarmonyMethod(typeof(CompatibilityPatch), "DD_StorytellerComp_OnOffCycle_GenerateIncident");
+                        HarmonyMethod ToString_Prefix = new HarmonyMethod(typeof(CompatibilityPatch), "DD_StorytellerComp_OnOffCycle_ToString");
+
+                        Add_HarmonyPatch(storyteller_GenerateIncident, generateIncident_Prefix);
+                        Add_HarmonyPatch(storyteller_ToString, ToString_Prefix);
+                    }
+                    Patched = true;
+                    Log.Message("Compatibility patches were applied successfully.");
+                }
+                catch (Exception ex)
+                {
+                    Log.Message("Compatibility patching failed.");
+                    throw;
+                }
             }
         }
 
@@ -180,25 +198,67 @@ namespace DD
                 }
             }
 
-            // PawnUtility.IsFighting KFM/HFM
-            public static void PawnUtility_IsFighting_Patch(ref bool __result, Pawn pawn)
+            // PawnUtility.IsFighting
+            [HarmonyPatch(typeof(PawnUtility), "IsFighting")]
+            private static class PawnUtility_IsFighting_Patch
             {
-                if (!__result && pawn.CurJob != null)
+                public static void Postfix(ref bool __result, Pawn pawn)
                 {
-                    //Not fighting (vanilla) and has a job.
-                    foreach (string defName in fightingJobDefNames)
+                    if (!__result && pawn.CurJob != null)
                     {
-                        JobDef def = DefDatabase<JobDef>.GetNamedSilentFail(defName);
-
-                        __result = pawn.CurJobDef == def;
-
-                        if (__result)
+                        //Not fighting (vanilla) and has a job.
+                        foreach (JobDef def in DraconicOverseer.Settings.FightingJobs)
                         {
-                            //Found a fighting job.
-                            break;
+                            __result = pawn.CurJobDef == def;
+
+                            if (__result)
+                            {
+                                //Found a fighting job.
+                                return;
+                            }
                         }
                     }
                 }
+            }
+
+            //Rimworld-Core w/o Royalty load errors.
+            public static bool DD_StorytellerComp_OnOffCycle_GenerateIncident(ref StorytellerComp_OnOffCycle __instance, ref FiringIncident __result, IIncidentTarget target)
+            {
+                StorytellerCompProperties_OnOffCycle Props = __instance.props as StorytellerCompProperties_OnOffCycle;
+                if (Props != null)
+                {
+                    if (Props.IncidentCategory == null)
+                    {
+                        __result = null;
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            //Rimworld-Core w/o Royalty load errors.
+            public static bool DD_StorytellerComp_OnOffCycle_ToString(ref StorytellerComp_OnOffCycle __instance, ref string __result)
+            {
+                StorytellerCompProperties_OnOffCycle Props = __instance.props as StorytellerCompProperties_OnOffCycle;
+                if (Props != null)
+                {
+                    if (Props.incident == null && Props.IncidentCategory == null)
+                    {
+                        string text = __instance.GetType().Name;
+                        string text2 = typeof(StorytellerComp).Name + "_";
+                        if (text.StartsWith(text2))
+                        {
+                            text = text.Substring(text2.Length);
+                        }
+                        if (!__instance.props.allowedTargetTags.NullOrEmpty())
+                        {
+                            text = text + " (" + __instance.props.allowedTargetTags.Select(x => x.ToStringSafe()).ToCommaList() + ")";
+                        }
+                        __result = text;
+                        return false;
+                    }
+                }
+                return true;
             }
         }
     }

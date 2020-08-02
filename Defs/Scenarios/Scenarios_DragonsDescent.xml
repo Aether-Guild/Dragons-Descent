@@ -17,7 +17,7 @@
         <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
           <def>ConfigPage_ConfigureStartingPawns</def>
           <pawnCount>4</pawnCount>
-          <pawnChoiceCount>7</pawnChoiceCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
         </li>
 
         <!-- Player starting stuff spawn method-->
@@ -54,26 +54,21 @@
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
-          <thingDef>MeleeWeapon_Club</thingDef>
-          <stuff>WoodLog</stuff>
-        </li>
-        <li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
           <thingDef>MeleeWeapon_Ikwa</thingDef>
           <stuff>Steel</stuff>
         </li>
+        <li Class="DD.ScenPart_StartingThing_DefinedTamed">
+          <def>StartingThing_DefinedTamed_PlayerTribe</def>
+          <thingDef>EggGreenDragonFertilized</thingDef>
+        </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
-          <thingDef>EggGreenDragonFertilized</thingDef>
+          <thingDef>DragonNest</thingDef>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>Bow_Short</thingDef>
           <count>2</count>
-        </li>
-        <li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
-          <thingDef>Pila</thingDef>
         </li>
         <li Class="ScenPart_StartingAnimal">
           <def>StartingAnimal</def>
@@ -91,7 +86,7 @@
         <!-- Game start dialog -->
         <li Class="ScenPart_GameStartDialog">
           <def>GameStartDialog</def>
-          <text>You and your cronies had successfully snuck into the nursery for your young animals, knowing from rumours something very valuable was hidden inside. Once the guards were alerted of your prescence you had no choice but to hide and take what you could get, or else suffer the consequences of attempted theft. When you had finally escaped pursuit you decided to see what had been gathered, and you had done it. You accidentally stole the dragon egg. Now you must survive with minimal supplies, and a soon to be very hungry dragon.\n\nNow, after a harrowing journey, with no friends to turn to, you must build a new home in the wilderness - like your ancestors did.</text>
+          <text>You and your cronies had successfully snuck into the sacred temple; knowing from rumours something very valuable was hidden inside. Once the guards were alerted of your prescence you had no choice but to hide and take what you could get, or else suffer the consequences of attempted theft. When you finally escaped pursuit you decided to see what you managed to grab, and you did it. You stole the dragon egg. Now you must survive with minimal supplies, and a soon to be very hungry dragon.\n\nYour success is currently temporary, and the rest of your journey is going to be difficult, but you will have a great advantage in the future. If you make it that far.</text>
           <closeSound>GameStartSting</closeSound>
         </li>
 

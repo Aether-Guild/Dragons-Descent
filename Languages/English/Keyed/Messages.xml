@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- ========== Egging ========== -->
+  <DragonLayingEggMessage>{PARENT} has laid {EGG}</DragonLayingEggMessage>
+  <DragonEggRuinedIncubatorMessage>Warning: {EGG} is ruined.</DragonEggRuinedIncubatorMessage>
+  
+  <!-- ========== Mating ========== -->
+  <DragonMateSpawnMessage>{MATE} has heard the mating call!</DragonMateSpawnMessage>
+  
+  <!-- ========== Rituals ========== -->
+  <RitualControlNeedsOnMessage>{TARGET} seems mystically sated. (Duration: {DURATION})</RitualControlNeedsOnMessage>
+  <RitualControlNeedsOffMessage>{TARGET} begins to hunger once more.</RitualControlNeedsOffMessage>
+  
+  <RitualControlNeedsAllOnMessage>The dragons mystically feel sated. (Duration: {DURATION})</RitualControlNeedsAllOnMessage>
+  <RitualControlNeedsAllOffMessage>The dragons begin to hunger once more.</RitualControlNeedsAllOffMessage>
+  
+  <RitualHediffRemoveMessage>{TARGET} recovered from {HEDIFF}.</RitualHediffRemoveMessage>
+  <RitualHediffRemoveAllMessage>{COUNT} dragon(s) recovered from {HEDIFF}.</RitualHediffRemoveAllMessage>
+  
+  <RitualCalmDownMessage>{TARGET} calms down.</RitualCalmDownMessage>
+  <RitualCalmDownAllMessage>{COUNT} dragon(s) were calmed down.</RitualCalmDownAllMessage>
+  
+  <RitualBanishMessage>{TARGET} was banished.</RitualBanishMessage>
+  <RitualBanishAllMessage>{COUNT} dragon(s) were banished.</RitualBanishAllMessage>
+  
+  <RitualWardOnMessage>The colony is protected from draconic rage. (Duration: {DURATION})</RitualWardOnMessage>
+  <RitualWardOffMessage>The colony is no longer protected from draconic rage.</RitualWardOffMessage>
+  
+</LanguageData>

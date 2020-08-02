@@ -19,8 +19,8 @@
 		</graphicData>
 		<rotatable>false</rotatable>
 		<statBases>
-			<WorkToMake>850</WorkToMake>
-			<MarketValue>72</MarketValue>
+			<WorkToMake>1250</WorkToMake>
+			<MarketValue>178</MarketValue>
 			<Mass>0.1</Mass>
 		</statBases>
 		<techLevel>Medieval</techLevel>
@@ -64,7 +64,7 @@
 			</outcomeDoers>
 		</ingestible>
 		<recipeMaker>
-			<productCount>8</productCount>
+			<productCount>15</productCount>
 			<researchPrerequisite>DraconicDrugProduction</researchPrerequisite>
 			<recipeUsers>
 				<li>CraftingSpot</li>

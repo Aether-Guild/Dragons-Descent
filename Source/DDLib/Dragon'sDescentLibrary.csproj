@@ -64,8 +64,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bill\Bills.cs" />
+    <Compile Include="Building\Building_StorageBed.cs" />
+    <Compile Include="CompProperties\CompProperties_AssignableToPawn_Body.cs" />
+    <Compile Include="CompProperties\CompProperties_EggIncubator.cs" />
+    <Compile Include="CompProperties\CompProperties_FireOverlay.cs" />
+    <Compile Include="CompProperties\CompProperties_Ritual.cs" />
     <Compile Include="CompTargetable\CompTargetable_Reproductive.cs" />
     <Compile Include="CompTargetable\CompTargetable_SingleReproductiveBody.cs" />
+    <Compile Include="GameComponent\MapComponent_Tracker.cs" />
+    <Compile Include="Graphics\LayeredGraphicData.cs" />
     <Compile Include="HediffCompProperties\HediffCompProperties_ExitMap.cs" />
     <Compile Include="HediffCompProperties\HediffCompProperties_RegenSeverityScaling.cs" />
     <Compile Include="HediffComp\HediffComp_Aggressive.cs" />
@@ -75,10 +83,12 @@
     <Compile Include="HediffComp\HediffComp_RegenSeverityScaling.cs" />
     <Compile Include="HediffDefOf.cs" />
     <Compile Include="HediffGiver\HediffGiver_Ferocity.cs" />
+    <Compile Include="IncidentWorker\IncidentWorker_DragonHunting.cs" />
+    <Compile Include="IncidentWorker\TrackedIncidentWorker.cs" />
     <Compile Include="JobGiver\JobGiver_PatientGoToBed.cs" />
     <Compile Include="Patches\Extensions.cs" />
     <Compile Include="Patches\Patches.cs" />
-    <Compile Include="Patches\CompatibilityPatches.cs" />
+    <Compile Include="Patches\CompatibilityPatcher.cs" />
     <Compile Include="CompProperties\CompProperties_CrossbredEggLayer.cs" />
     <Compile Include="CompProperties\CompProperties_NextLifestage.cs" />
     <Compile Include="CompProperties\CompProperties_SpawnMate.cs" />
@@ -113,10 +123,25 @@
     <Compile Include="Projectile\FireProjectile.cs" />
     <Compile Include="Projectile\SiegeProjectile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipeWorker\RecipeWorker_NoDestroy.cs" />
+    <Compile Include="Ritual\RitualDef.cs" />
+    <Compile Include="Ritual\Rituals.cs" />
+    <Compile Include="Ritual\RitualTracker.cs" />
+    <Compile Include="Ritual\Ritual_Bases.cs" />
+    <Compile Include="Scenario\StartingThing_DefinedTamed.cs" />
+    <Compile Include="Settings\DraconicSettings.cs" />
+    <Compile Include="Settings\DraconicMod.cs" />
+    <Compile Include="Settings\DraconicOverseer.cs" />
+    <Compile Include="Settings\DraconicSettingsGUI.cs" />
+    <Compile Include="Settings\Flags.cs" />
+    <Compile Include="ThingComp\CompAssignableToPawn_Nest.cs" />
     <Compile Include="ThingComp\CompCrossBredEggLayer.cs" />
+    <Compile Include="ThingComp\CompEggIncubator.cs" />
+    <Compile Include="ThingComp\CompRitualSacrifice.cs" />
     <Compile Include="ThinkNode\ThinkNode_ConditionalExitTimedOutOnce.cs" />
     <Compile Include="ThinkNode\ThinkNode_ConditionalMustKeepLyingDownForRegen.cs" />
     <Compile Include="Utility\AgeUtils.cs" />
+    <Compile Include="Utility\FerocityUtils.cs" />
     <Compile Include="Utility\HealthUtils.cs" />
     <Compile Include="Utility\MateUtils.cs" />
     <Compile Include="Utility\TimeUtils.cs" />

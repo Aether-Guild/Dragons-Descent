@@ -6,10 +6,10 @@ The Rimworld is a harsh and dangerous place. Its environment can be lush and giv
 
 ## Current Versions:
 ### Steam Workshop
-<b>Release Version:</b> 1.1, Dragon's Hoard
+<b>Release Version:</b> 1.2, Worship
 
 ### Upcoming Features/Changes
-<b>Testing Version:</b> 1.2, Worship
+<b>Testing Version:</b> In Progress
 
 ## Dependencies
 Harmony is required
