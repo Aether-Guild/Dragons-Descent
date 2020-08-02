@@ -11,6 +11,7 @@
 		</targetTags>
 		<workerClass>DD.IncidentWorker_DragonPasses</workerClass>
 		<baseChance>0.7</baseChance>
+		<earliestDay>40</earliestDay>
 		<minRefireDays>40</minRefireDays>
 		<minThreatPoints>500</minThreatPoints>
 		<modExtensions>
@@ -101,6 +102,7 @@
 		</targetTags>
 		<workerClass>DD.IncidentWorker_DragonHunting</workerClass>
 		<baseChance>0.55</baseChance>
+		<earliestDay>60</earliestDay>
 		<minRefireDays>60</minRefireDays>
 		<minThreatPoints>500</minThreatPoints>
 		<modExtensions>
