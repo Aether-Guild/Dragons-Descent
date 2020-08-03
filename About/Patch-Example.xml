@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- BREEDING -->
+	<!-- Adding your own breeding pool -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThinkTreeDef[defName="Dragon"]/thinkRoot/subNodes/li[@Class="ThinkNode_ConditionalHasFaction"]/subNodes/li[@Class="ThinkNode_ChancePerHour_Mate"]/subNodes/li[@Class="ThinkNode_Tagger"]/subNodes/li[@Class="DD.JobGiver_MateCrossbreed"]/matePools</xpath>
+		<value>
+			<li>
+				<defs>
+					<!-- Add your pawn's ThingDef defNames here. -->
+					<li>Thrumbo</li>
+					<li>Yak</li>
+					<li>Hare</li>
+				</defs>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Adding your pawns to the common dragon breeding pool -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThinkTreeDef[defName="Dragon"]/thinkRoot/subNodes/li[@Class="ThinkNode_ConditionalHasFaction"]/subNodes/li[@Class="ThinkNode_ChancePerHour_Mate"]/subNodes/li[@Class="ThinkNode_Tagger"]/subNodes/li[@Class="DD.JobGiver_MateCrossbreed"]/matePools/li[@Name="CommonDragonPool"]/defs</xpath>
+		<value>
+			<!-- Add your pawn's ThingDef defNames here. -->
+			<li>Thrumbo</li>
+		</value>
+	</Operation>
+
+	<!-- Adding your pawns to the rare dragon breeding pool -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThinkTreeDef[defName="Dragon"]/thinkRoot/subNodes/li[@Class="ThinkNode_ConditionalHasFaction"]/subNodes/li[@Class="ThinkNode_ChancePerHour_Mate"]/subNodes/li[@Class="ThinkNode_Tagger"]/subNodes/li[@Class="DD.JobGiver_MateCrossbreed"]/matePools/li[@Name="RareDragonPool"]/defs</xpath>
+		<value>
+			<!-- Add your pawn's ThingDef defNames here. -->
+			<li>Hare</li>
+		</value>
+	</Operation>
+
+	<!-- INCIDENTS -->
+	<!-- Adding your pawns to the existing DragonPasses incident spawn pool -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/IncidentDef[defName="DragonsPasses"]/modExtensions/li[@Class="DD.PawnPoolExtension"]/pawnPool</xpath>
+		<value>
+			<li>
+				<thingDef>Hare</thingDef> <!-- Add your pawn's ThingDef defNames here. -->
+				<kindDef>Hare</kindDef> <!-- Add your pawn's PawnKindDef defNames here. -->
+				<temperature>100~200</temperature> <!-- Outdoor temperature to spawn the pawn in (Celcius) -->
+			</li>
+		</value>
+	</Operation>
+  
+	<!-- Adding your pawns to the existing DragonPasses incident spawn pool -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/IncidentDef[defName="DragonHunting"]/modExtensions/li[@Class="DD.PawnPoolExtension"]/pawnPool</xpath>
+		<value>
+			<li>
+				<thingDef>Hare</thingDef> <!-- Add your pawn's ThingDef defNames here. -->
+				<kindDef>Hare</kindDef> <!-- Add your pawn's PawnKindDef defNames here. -->
+				<temperature>100~200</temperature> <!-- Outdoor temperature to spawn the pawn in (Celcius) -->
+			</li>
+		</value>
+	</Operation>
+  
+</Patch>

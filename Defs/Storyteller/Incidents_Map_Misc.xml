@@ -31,7 +31,7 @@
 			</li>
 			<li Class="DD.PawnPoolExtension">
 				<pawnPool>
-					  <li>
+					<li>
 						<thingDef>Black_Dragon</thingDef>
 						<kindDef>Black_Dragon</kindDef>
 						<temperature>31~62</temperature>
@@ -125,7 +125,7 @@
 			</li>
 			<li Class="DD.PawnPoolExtension">
 				<pawnPool>
-					  <li>
+					<li>
 						<thingDef>Black_Dragon</thingDef>
 						<kindDef>Black_Dragon</kindDef>
 						<temperature>31~62</temperature>

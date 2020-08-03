@@ -30,11 +30,7 @@ namespace DD
                 return null;
             }
 
-            Predicate<Thing> validator = thing =>
-            {
-                Pawn p = thing as Pawn;
-                return !p.Downed && p.CanCasuallyInteractNow(false) && (!p.IsForbidden(pawn) && p.Faction == pawn.Faction) && MateUtils.FertileMateTarget(pawn, p);
-            };
+            Predicate<Thing> validator = thing => thing is Pawn p && !p.Downed && p.CanCasuallyInteractNow(false) && !p.IsForbidden(pawn) && p.Faction == pawn.Faction && MateUtils.FertileMateTarget(pawn, p);
 
             Pawn closest = null;
             foreach (ThingDef def in GetPossibleMates(pawn))
@@ -62,8 +58,19 @@ namespace DD
 
         private IEnumerable<ThingDef> GetPossibleMates(Pawn pawn)
         {
-            //Filter all pools that don't include the pawn. Then collect all of the unique elements into a single pool.
-            return matePools.Where(pool => pool.Contains(pawn.def)).Select(pool => (IEnumerable<ThingDef>)pool.defs).Aggregate((pool1, pool2) => pool1.Concat(pool2)).Distinct();
+            //Filter away all pools that don't include the pawn. Then collect all of the unique elements into a single pool.
+            IEnumerable<ThingDefPool> mateDefs = matePools.Where(pool => pool.Contains(pawn.def));
+
+            if(mateDefs.Any())
+            {
+                //Mate pool was defined.
+                return mateDefs.Select(pool => (IEnumerable<ThingDef>)pool.defs).Aggregate((pool1, pool2) => pool1.Concat(pool2)).Distinct();
+            }
+            else
+            {
+                //Pool wasn't defined, can only breed with its own type.
+                return new ThingDef[] { pawn.def };
+            }
         }
     }
 }

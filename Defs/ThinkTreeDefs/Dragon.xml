@@ -211,7 +211,7 @@
                   <subNodes>
 					<li Class="DD.JobGiver_MateCrossbreed">
 						<matePools>
-							<li Class="DD.ThingDefPool">
+							<li Name="CommonDragonPool">
 								<defs>
 									<li>Black_Dragon</li>
 									<li>Blue_Dragon</li>
@@ -222,7 +222,7 @@
 									<li>Yellow_Dragon</li>
 								</defs>
 							</li>
-							<li Class="DD.ThingDefPool">
+							<li Name="RareDragonPool">
 								<defs>
 									<li>Gold_Dragon</li>
 									<li>Silver_Dragon</li>
