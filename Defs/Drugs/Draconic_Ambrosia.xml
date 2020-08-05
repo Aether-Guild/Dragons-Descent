@@ -27,13 +27,17 @@
 			<nurseable>true</nurseable>
 			<drugCategory>Medical</drugCategory>
 			<outcomeDoers>
-				<li Class="DD.IngestionOutcomeDoer_DoIfBody">
-					<targetDef>QuadrupedeAnimalWithClawsDragon</targetDef>
-					<doer Class="IngestionOutcomeDoer_GiveHediff">
-						<hediffDef>StrongDraconicDrug</hediffDef>
-						<severity>1</severity>
-						<toleranceChemical>Ambrosia</toleranceChemical>
-					</doer>
+				<li Class="DD.IngestionOutcomeDoer_Multiple">
+					<doers>
+						<li Class="DD.IngestionOutcomeDoer_DoIfBody">
+							<targetDef>QuadrupedeAnimalWithClawsDragon</targetDef>
+							<doer Class="IngestionOutcomeDoer_GiveHediff">
+								<hediffDef>StrongDraconicDrug</hediffDef>
+								<severity>1</severity>
+								<toleranceChemical>Ambrosia</toleranceChemical>
+							</doer>
+						</li>
+					</doers>
 				</li>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 					<hediffDef>AmbrosiaHigh</hediffDef>

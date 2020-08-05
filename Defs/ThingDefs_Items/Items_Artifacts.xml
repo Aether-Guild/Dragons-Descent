@@ -94,7 +94,9 @@
 		<comps>
 			<li Class="DD.CompProperties_TargetableBody">
 				<compClass>DD.CompTargetable_SingleReproductiveBody</compClass>
-				<targetDef>QuadrupedeAnimalWithClawsDragon</targetDef>
+				<targetDefs>
+					<li>QuadrupedeAnimalWithClawsDragon</li>
+				</targetDefs>
 				<moteOnTarget>Mote_PsycastPsychicEffect</moteOnTarget>
 				<moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
 			</li>

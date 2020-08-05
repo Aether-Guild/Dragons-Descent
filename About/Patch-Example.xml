@@ -59,4 +59,28 @@
 		</value>
 	</Operation>
   
+	<!-- ITEMS -->
+	<!-- Adding your BodyDef to the Draconic Ambrosia matching list. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="DraconicAmbrosia"]/ingestible/outcomeDoers/li[@Class="DD.IngestionOutcomeDoer_Multiple"]/doers</xpath>
+		<value>
+			<li Class="DD.IngestionOutcomeDoer_DoIfBody">
+				<targetDef>QuadrupedAnimalWithPawsAndTail</targetDef> <!-- Add your BodyDef here. -->
+				<doer Class="IngestionOutcomeDoer_GiveHediff"> <!-- Set up the effect you want to apply here. -->
+					<hediffDef>Hangover</hediffDef>
+					<severity>5000</severity>
+					<toleranceChemical>Alcohol</toleranceChemical>
+				</doer>
+			</li>
+		</value>
+	</Operation>
+	
+	<!-- Adding your BodyDef to the Mating Horn matching list. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="MatingHorn"]/comps/li[@Class="DD.CompProperties_TargetableBody"]/targetDefs</xpath>
+		<value>
+			<li>QuadrupedAnimalWithPawsAndTail</li> <!-- Add your BodyDef here. -->
+		</value>
+	</Operation>
+	
 </Patch>

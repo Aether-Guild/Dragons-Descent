@@ -19,7 +19,7 @@ namespace DD
                 {
                     Pawn p = x.Thing as Pawn;
                     CompProperties_TargetableBody bodyProps = (CompProperties_TargetableBody)props;
-                    if (p != null && p.ageTracker.CurLifeStage.reproductive && p.RaceProps.body == bodyProps.targetDef)
+                    if (p != null && p.ageTracker != null && p.RaceProps != null && p.ageTracker.CurLifeStage.reproductive && bodyProps.targetDefs.Contains(p.RaceProps.body))
                     {
                         return this.BaseTargetValidator(x.Thing);
                     }
