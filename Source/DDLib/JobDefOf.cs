@@ -14,10 +14,4 @@ namespace DD
         public static JobDef MateCrossbreed;
         public static JobDef LayCrossbredEgg;
     }
-
-    [DefOf]
-    public class DD_BodyDefOf
-    {
-        public static BodyDef QuadrupedeAnimalWithClawsDragon;
-    }
 }

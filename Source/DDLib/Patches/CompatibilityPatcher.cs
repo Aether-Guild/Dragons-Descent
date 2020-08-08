@@ -12,9 +12,6 @@ namespace DD
 {
     public static class CompatibilityPatcher
     {
-        public static readonly string DragonBreathWeaponDef = "Gun_DragonBreathWeapon";
-        public static readonly string DragonRaceBodyDef = "QuadrupedeAnimalWithClawsDragon";
-
         private static readonly string HarmonyCompatibilityPatchID = "com.rimworld.mod.dd.compat";
 
         public static bool Patched { get; private set; } = false;
@@ -79,8 +76,8 @@ namespace DD
 
                     //Retrieve the ignore list.
                     List<string> ignoredRangedAttack = (List<string>)Type_KFM_Settings.GetField("ignoredRangedAttack").GetValue(null);
-                    //Lookup the dragon's thingdefs and add their defNames to the ignore list.
-                    ignoredRangedAttack.AddRange(DefDatabase<ThingDef>.AllDefs.Where(t => t != null && t.race != null && t.race.body != null && t.race.body.defName.Equals(DragonRaceBodyDef) && !ignoredRangedAttack.Contains(t.defName)).Select(t => t.defName));
+                    //Lookup all pawns which have the shoot cooldown verb and add their ThingDef defNames to the ignore list.
+                    ignoredRangedAttack.AddRange(DefDatabase<ThingDef>.AllDefs.Where(t => t.Verbs.Any(vp => vp.verbClass == typeof(Verb_Shoot_Cooldown)) && !ignoredRangedAttack.Contains(t.defName)).Select(t => t.defName));
 
                     Log.Message("Dragons were successfully added to the KFM ignore range list.");
                 }
@@ -105,8 +102,8 @@ namespace DD
 
                     //Retrieve the ignore list.
                     List<string> ignoredRangedAttack = (List<string>)Type_KFM_Settings.GetField("ignoredRangedAttack").GetValue(null);
-                    //Lookup the dragon's thingdefs and add their defNames to the ignore list.
-                    ignoredRangedAttack.AddRange(DefDatabase<ThingDef>.AllDefs.Where(t => t != null && t.race != null && t.race.body != null && t.race.body.defName.Equals(DragonRaceBodyDef) && !ignoredRangedAttack.Contains(t.defName)).Select(t => t.defName));
+                    //Lookup all pawns which have the shoot cooldown verb and add their ThingDef defNames to the ignore list.
+                    ignoredRangedAttack.AddRange(DefDatabase<ThingDef>.AllDefs.Where(t => t.Verbs.Any(vp => vp.verbClass == typeof(Verb_Shoot_Cooldown)) && !ignoredRangedAttack.Contains(t.defName)).Select(t => t.defName));
 
                     Log.Message("Dragons were successfully added to the HFM ignore range list.");
                 }
