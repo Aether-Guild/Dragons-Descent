@@ -40,6 +40,9 @@
 		<li Class="DD.LegacyModExtension">
 			<hasOwnership>true</hasOwnership>
 		</li>
+		<li Class="DD.AmbrosiaTargetExtension" />
+		<li Class="DD.MatingTargetExtension" />
+		<li Class="DD.RitualTargetExtension" />
 	</modExtensions>
   </ThingDef>
 
@@ -162,8 +165,13 @@
       <li>AnimalExotic</li>
     </tradeTags>
 	<butcherProducts>
-    <DragonHorn>1</DragonHorn>
+      <DragonHorn>1</DragonHorn>
     </butcherProducts>
+	<modExtensions>
+	  <li Class="DD.BreedingPoolExtension">
+	    <pool>CommonDragons</pool>
+	  </li>
+	</modExtensions>
   </ThingDef>
 
 
@@ -285,9 +293,14 @@
     <tradeTags>
       <li>AnimalExotic</li>
     </tradeTags>
-		<butcherProducts>
-    <DragonHorn>1</DragonHorn>
+	<butcherProducts>
+		<DragonHorn>1</DragonHorn>
     </butcherProducts>
+	<modExtensions>
+	  <li Class="DD.BreedingPoolExtension">
+	    <pool>RareDragons</pool>
+	  </li>
+	</modExtensions>
   </ThingDef>
 
 

@@ -9,7 +9,7 @@ namespace DD
 {
     public interface ITickingRitual
     {
-
+        //Used as a flag
     }
 
     public abstract class Ritual : IExposable
@@ -125,10 +125,7 @@ namespace DD
 
     public abstract class Ritual_AoE : Ritual
     {
-        private BodyDef bodyDef;
-
-        public BodyDef TargetBodyDef { get => bodyDef; set => bodyDef = value; }
-        public virtual IEnumerable<Pawn> AllTargetedPawns => Map.mapPawns.AllPawnsSpawned.Where(p => !p.DestroyedOrNull() && p.Map == Map).Where(pawn => (bodyDef == null && (pawn.RaceProps == null || pawn.RaceProps.body == null)) || (pawn.RaceProps != null && pawn.RaceProps.body == bodyDef));
+        public virtual IEnumerable<Pawn> AllTargetedPawns => Map.mapPawns.AllPawnsSpawned.Where(p => !p.DestroyedOrNull() && p.Map == Map).Where(pawn => pawn.def.HasModExtension<RitualTargetExtension>());
 
         public override bool Active => false;
         public override TickerType TickerType => TickerType.Never;
@@ -144,12 +141,6 @@ namespace DD
         public override void DoDeactivation() { }
 
         public abstract void ApplyRitual(Pawn target);
-
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Defs.Look(ref bodyDef, "targetBodyDef");
-        }
     }
 
     public abstract class Ritual_TargetingTicking : Ritual_Targeting, ITickingRitual

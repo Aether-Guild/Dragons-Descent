@@ -235,6 +235,11 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>31~62</temperature>
+	  </li>
+	</modExtensions>
   </PawnKindDef>
 
   <!-- =========================== Blue Dragon =========================== -->
@@ -463,6 +468,11 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>-42~13</temperature>
+	  </li>
+	</modExtensions>
   </PawnKindDef>
 
 
@@ -693,6 +703,11 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>7~35</temperature>
+	  </li>
+	</modExtensions>
   </PawnKindDef>
 
   <!-- =========================== Purple Dragon =========================== -->
@@ -961,6 +976,11 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>7~35</temperature>
+	  </li>
+	</modExtensions>
   </PawnKindDef>
 
   <!-- =========================== Red Dragon =========================== -->
@@ -1211,6 +1231,11 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>31~62</temperature>
+	  </li>
+	</modExtensions>
   </PawnKindDef>
 
   <!-- =========================== White Dragon =========================== -->
@@ -1479,6 +1504,18 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<weaponMoney>
+    <min>8000</min>
+    <max>8000</max>
+    </weaponMoney>
+    <weaponTags>
+  	<li>DragonBreathWeapon</li>
+	</weaponTags>
+    <modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>-42~13</temperature>
+	  </li>
+	</modExtensions>
   </PawnKindDef>
 
 
@@ -1747,6 +1784,11 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>31~62</temperature>
+	  </li>
+	</modExtensions>
   </PawnKindDef>
 
 </Defs>

@@ -7,6 +7,55 @@ using System.Linq;
 
 namespace DD
 {
+    public static class IncidentPawnPool
+    {
+        private static IEnumerable<PawnKindDef> IncidentPawns => DefDatabase<PawnKindDef>.AllDefsListForReading.Where(def => def.HasModExtension<IncidentSpawnConditionExtension>());
+        private static IEnumerable<PawnKindDef> GetIncidentPawns(Map map) => IncidentPawns.Where(def => map.mapTemperature.SeasonAndOutdoorTemperatureAcceptableFor(def.race) && def.GetModExtension<IncidentSpawnConditionExtension>().temperature.Includes(map.mapTemperature.OutdoorTemp));
+
+        public static bool Any(Map map) => GetIncidentPawns(map).Any();
+
+        public static PawnSpawnEntry PickEntry(Map map, SpawnIncidentExtension settings)
+        {
+            PawnSpawnEntry entry = null;
+            IEnumerable<PawnKindDef> selection;
+
+            if (Rand.Chance(settings.chancesSpawnRandom))
+            {
+                //Plain random selection
+                selection = IncidentPawns;
+            }
+            else
+            {
+                //Only consider dragons that'll be comfortable in the area and in its allowed biome
+                selection = GetIncidentPawns(map);
+            }
+
+            //If there's still any pawns in the pool.
+            if (selection.Any())
+            {
+                //Actually pick one of the pawns in the pool.
+                entry = new PawnSpawnEntry()
+                {
+                    kindDef = selection.RandomElement()
+                };
+            }
+
+            return entry;
+        }
+    }
+
+    public class PawnSpawnEntry
+    {
+        public PawnKindDef kindDef;
+
+        public ThingDef ThingDef => kindDef.race;
+        public PawnKindDef KindDef => kindDef;
+        public FloatRange Temperature => kindDef.GetModExtension<IncidentSpawnConditionExtension>().temperature;
+        public float CombatPower => Mathf.Max(KindDef.combatPower * ThingDef.race.baseBodySize, 1);
+
+        public bool CanSpawn(Map map) => Temperature.Includes(map.mapTemperature.OutdoorTemp);
+    }
+
     public class TimedSpawnExtension : DefModExtension
     {
         public GameTime minExit, maxExit;
@@ -39,45 +88,6 @@ namespace DD
         }
     }
 
-    public class PawnSpawnEntry
-    {
-        public ThingDef thingDef;
-        public PawnKindDef kindDef;
-        public FloatRange temperature = new FloatRange(-1000f, 1000f);
-
-        public float CombatPower => Mathf.Max(kindDef.combatPower * thingDef.race.baseBodySize, 1);
-
-        public bool CanSpawn(Map map) => temperature.Includes(map.mapTemperature.OutdoorTemp);
-    }
-
-    public class PawnPoolExtension : DefModExtension
-    {
-        public List<PawnSpawnEntry> pawnPool;
-
-        public float MinimumCombatPower => pawnPool.Min(e => e.CombatPower);
-
-        public PawnSpawnEntry PickEntry(Map map, SpawnIncidentExtension settings)
-        {
-            PawnSpawnEntry entry = null;
-            IEnumerable<PawnSpawnEntry> pawnPoolSelection = pawnPool;
-
-            if (!Rand.Chance(settings.chancesSpawnRandom))
-            {
-                //Only consider dragons that'll be comfortable in the area and in its allowed biome
-                pawnPoolSelection = pawnPoolSelection.Where(e => e.CanSpawn(map) && map.mapTemperature.SeasonAndOutdoorTemperatureAcceptableFor(e.thingDef));
-            }
-
-            //If there's still any pawns in the pool.
-            if (pawnPoolSelection.Any())
-            {
-                //Actually pick one of the pawns in the pool.
-                entry = pawnPoolSelection.RandomElement();
-            }
-
-            return entry;
-        }
-    }
-
     public class SpawnIncidentExtension : TimedSpawnExtension
     {
         public float chancesSpawnRandom = 0;
@@ -98,19 +108,12 @@ namespace DD
     {
         protected override bool CanFireNowSub(IncidentParms parms)
         {
-            if (!this.def.HasModExtension<PawnPoolExtension>())
-            {
-                //Doesn't have a pawn pool to spawn pawns from.
-                return false;
-            }
-
             if (!this.def.HasModExtension<SpawnIncidentExtension>())
             {
                 //Doesn't have the settings for the incident defined.
                 return false;
             }
 
-            PawnPoolExtension pool = this.def.GetModExtension<PawnPoolExtension>();
             SpawnIncidentExtension settings = this.def.GetModExtension<SpawnIncidentExtension>();
 
             Map map = (Map)parms.target;
@@ -121,9 +124,9 @@ namespace DD
                 return false;
             }
 
-            if (!TryFindEntryCell(map, out IntVec3 _) || pool.PickEntry(map, settings) == null)
+            if (!TryFindEntryCell(map, out IntVec3 _) || IncidentPawnPool.PickEntry(map, settings) == null)
             {
-                //Settings valid
+                //Settings invalid
                 return false;
             }
 
@@ -132,17 +135,22 @@ namespace DD
 
         protected override bool TryExecuteWorkerSub(IncidentParms parms)
         {
-            if (!this.def.HasModExtension<PawnPoolExtension>() || !this.def.HasModExtension<SpawnIncidentExtension>())
+            if (!this.def.HasModExtension<SpawnIncidentExtension>())
             {
-                //Doesn't have a pawn pool to spawn pawns from OR Doesn't have the settings for the incident defined.
+                //Doesn't have the settings for the incident defined.
                 return false;
             }
 
-            PawnPoolExtension pool = this.def.GetModExtension<PawnPoolExtension>();
             SpawnIncidentExtension settings = this.def.GetModExtension<SpawnIncidentExtension>();
 
             Map map = (Map)parms.target;
             IntVec3 intVec;
+
+            if (!IncidentPawnPool.Any(map))
+            {
+                //Doesn't have a pawn pool to spawn pawns from.
+                return false;
+            }
 
             if (!TryFindEntryCell(map, out intVec))
             {
@@ -150,7 +158,7 @@ namespace DD
                 return false;
             }
 
-            PawnSpawnEntry entry = pool.PickEntry(map, settings);
+            PawnSpawnEntry entry = IncidentPawnPool.PickEntry(map, settings);
             if (entry == null)
             {
                 //No pawns to pick from?

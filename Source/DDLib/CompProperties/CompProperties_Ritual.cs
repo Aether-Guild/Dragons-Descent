@@ -14,8 +14,6 @@ namespace DD
     {
         public RitualDef def;
 
-        public BodyDef targetBody;
-
         public string iconPath;
         private Gizmo gizmo;
 
@@ -58,24 +56,7 @@ namespace DD
                 {
                     canTargetPawns = true,
                     canTargetBuildings = false,
-                    validator = x =>
-                    {
-                        if (x.HasThing)
-                        {
-                            if (x.Thing is Pawn pawn)
-                            {
-                                if (targetBody == null && (pawn.RaceProps == null || pawn.RaceProps.body == null))
-                                {
-                                    return true;
-                                }
-                                if (targetBody != null && (pawn.RaceProps != null && pawn.RaceProps.body == targetBody))
-                                {
-                                    return true;
-                                }
-                            }
-                        }
-                        return false;
-                    }
+                    validator = x => x.HasThing && x.Thing is Pawn pawn && pawn.def.HasModExtension<RitualTargetExtension>()
                 };
 
                 cmd.action = target =>
@@ -123,7 +104,6 @@ namespace DD
                 cmd.action = () =>
                 {
                     Ritual_AoE aoeRitual = ritual as Ritual_AoE;
-                    aoeRitual.TargetBodyDef = targetBody;
 
                     foreach (Pawn pawn in aoeRitual.AllTargetedPawns)
                     {

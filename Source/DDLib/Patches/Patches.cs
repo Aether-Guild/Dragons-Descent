@@ -11,12 +11,6 @@ using Verse;
 
 namespace DD
 {
-    public class LegacyModExtension : DefModExtension
-    {
-        public bool allowStackLimitExceed;
-        public bool hasOwnership;
-    }
-
     [StaticConstructorOnStartup]
     public static class Patcher
     {

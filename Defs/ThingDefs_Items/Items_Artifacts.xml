@@ -92,11 +92,8 @@
 		</statBases>
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
-			<li Class="DD.CompProperties_TargetableBody">
-				<compClass>DD.CompTargetable_SingleReproductiveBody</compClass>
-				<targetDefs>
-					<li>QuadrupedeAnimalWithClawsDragon</li>
-				</targetDefs>
+			<li Class="CompProperties_Targetable">
+				<compClass>DD.CompTargetable_MatingTarget</compClass>
 				<moteOnTarget>Mote_PsycastPsychicEffect</moteOnTarget>
 				<moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
 			</li>

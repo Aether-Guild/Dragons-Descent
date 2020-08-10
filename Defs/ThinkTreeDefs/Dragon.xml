@@ -209,29 +209,7 @@
                 <li Class="ThinkNode_Tagger">
                   <tagToGive>SatisfyingNeeds</tagToGive>
                   <subNodes>
-					<li Class="DD.JobGiver_MateCrossbreed">
-						<matePools>
-							<li Name="CommonDragonPool">
-								<defs>
-									<li>Black_Dragon</li>
-									<li>Blue_Dragon</li>
-									<li>Green_Dragon</li>
-									<li>Purple_Dragon</li>
-									<li>Red_Dragon</li>
-									<li>White_Dragon</li>
-									<li>Yellow_Dragon</li>
-								</defs>
-							</li>
-							<li Name="RareDragonPool">
-								<defs>
-									<li>Gold_Dragon</li>
-									<li>Silver_Dragon</li>
-									<li>Jade_Dragon</li>
-									<li>True_Dragon</li>
-								</defs>
-							</li>
-						</matePools>
-					</li>
+					<li Class="DD.JobGiver_MateCrossbreed" />
                   </subNodes>
                 </li>
               </subNodes>

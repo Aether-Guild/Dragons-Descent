@@ -9,24 +9,6 @@ using Verse;
 
 namespace DD
 {
-    public class RitualNeedsModExtension : DefModExtension
-    {
-        public FloatRange? food, rest, comfort, joy, mood, drugDesire;
-    }
-
-    public class RitualHediffModExtension : DefModExtension
-    {
-        public List<HediffDef> hediffs = new List<HediffDef>();
-    }
-
-    public class RitualTickingModExtension : DefModExtension
-    {
-        public SimpleCurve duration;
-        public TickerType tickerType;
-
-        public int GetDuration(int activationCount) => GenTicks.SecondsToTicks(duration.Evaluate(activationCount));
-    }
-
     public class Ritual_MaintainNeeds : Ritual_TargetingTicking
     {
         private void Maintain(Need need, FloatRange range)

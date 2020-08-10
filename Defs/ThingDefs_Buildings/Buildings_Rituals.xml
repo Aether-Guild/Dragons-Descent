@@ -300,7 +300,6 @@
             <moteConnecting>Mote_LineEMP</moteConnecting>
             <sound>PsychicInsanityLanceCast</sound>
             <shakeCamera>true</shakeCamera>
-            <targetBody>QuadrupedeAnimalWithClawsDragon</targetBody>
           </li>
           <li>
             <def>Ritual_RemoveFerocity</def>
@@ -309,7 +308,6 @@
             <moteOnSource>Mote_HeatGlow</moteOnSource>
             <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
             <sound>MechSerumUsed</sound>
-            <targetBody>QuadrupedeAnimalWithClawsDragon</targetBody>
           </li>
           <li>
             <def>Ritual_MaintainDragonNeeds</def>
@@ -318,7 +316,6 @@
             <moteOnSource>Mote_HeatGlow</moteOnSource>
             <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
             <sound>MechSerumUsed</sound>
-            <targetBody>QuadrupedeAnimalWithClawsDragon</targetBody>
           </li>
           <li>
             <def>Ritual_BanishAllDragon</def>
@@ -328,16 +325,14 @@
             <moteConnecting>Mote_LineEMP</moteConnecting>
             <sound>PsychicInsanityLanceCast</sound>
             <shakeCamera>true</shakeCamera>
-            <targetBody>QuadrupedeAnimalWithClawsDragon</targetBody>
           </li>
           <li>
             <def>Ritual_RemoveFerocityAll</def>
-      <iconPath>UI/Rituals/CalmDragons</iconPath>
+			<iconPath>UI/Rituals/CalmDragons</iconPath>
             <moteOnTarget>Mote_SparkFlash</moteOnTarget>
             <moteOnSource>Mote_HeatGlow</moteOnSource>
             <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
             <sound>MechSerumUsed</sound>
-            <targetBody>QuadrupedeAnimalWithClawsDragon</targetBody>
           </li>
           <li>
             <def>Ritual_MaintainAllDragonNeeds</def>
@@ -346,7 +341,6 @@
             <moteOnSource>Mote_HeatGlow</moteOnSource>
             <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
             <sound>MechSerumUsed</sound>
-            <targetBody>QuadrupedeAnimalWithClawsDragon</targetBody>
           </li>
           <li>
             <def>Ritual_WardAllDragon</def>
@@ -355,7 +349,6 @@
             <moteOnSource>Mote_LightningGlow</moteOnSource>
             <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
             <sound>PsychicAnimalPulserCast</sound>
-            <targetBody>QuadrupedeAnimalWithClawsDragon</targetBody>
                 </li>
             </rituals>
         </li>

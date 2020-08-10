@@ -27,6 +27,7 @@ namespace DD
             }
         }
     }
+
     public class IngestionOutcomeDoer_DoIfBody : IngestionOutcomeDoer
     {
         public string targetDef;
@@ -40,6 +41,19 @@ namespace DD
         protected override void DoIngestionOutcomeSpecial(Pawn pawn, Thing ingested)
         {
             if (pawn.RaceProps.body.defName.Equals(targetDef))
+            {
+                doer.DoIngestionOutcome(pawn, ingested);
+            }
+        }
+    }
+
+    public class IngestionOutcomeDoer_DoIfAmbrosiaTarget : IngestionOutcomeDoer
+    {
+        public IngestionOutcomeDoer doer;
+
+        protected override void DoIngestionOutcomeSpecial(Pawn pawn, Thing ingested)
+        {
+            if (pawn.def.HasModExtension<AmbrosiaTargetExtension>())
             {
                 doer.DoIngestionOutcome(pawn, ingested);
             }

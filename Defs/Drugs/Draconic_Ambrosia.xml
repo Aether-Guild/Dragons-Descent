@@ -29,8 +29,7 @@
 			<outcomeDoers>
 				<li Class="DD.IngestionOutcomeDoer_Multiple">
 					<doers>
-						<li Class="DD.IngestionOutcomeDoer_DoIfBody">
-							<targetDef>QuadrupedeAnimalWithClawsDragon</targetDef>
+						<li Class="DD.IngestionOutcomeDoer_DoIfAmbrosiaTarget">
 							<doer Class="IngestionOutcomeDoer_GiveHediff">
 								<hediffDef>StrongDraconicDrug</hediffDef>
 								<severity>1</severity>

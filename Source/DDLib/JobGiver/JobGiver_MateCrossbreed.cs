@@ -8,21 +8,8 @@ using Verse.AI;
 
 namespace DD
 {
-    public class ThingDefPool
-    {
-        public List<ThingDef> defs;
-
-
-        public bool Contains(ThingDef def)
-        {
-            return defs.Contains(def);
-        }
-    }
-
     public class JobGiver_MateCrossbreed : ThinkNode_JobGiver
     {
-        public List<ThingDefPool> matePools;
-
         protected override Job TryGiveJob(Pawn pawn)
         {
             if (pawn.gender != Gender.Male || !pawn.ageTracker.CurLifeStage.reproductive)
@@ -35,7 +22,7 @@ namespace DD
             Pawn closest = null;
             foreach (ThingDef def in GetPossibleMates(pawn))
             {
-                Pawn candidate = (Pawn)GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForDef(def), PathEndMode.Touch, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false), 30f, validator, null, 0, -1, false, RegionType.Set_Passable, false);
+                Pawn candidate = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForDef(def), PathEndMode.Touch, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false), 30f, validator, null, 0, -1, false, RegionType.Set_Passable, false) as Pawn;
                 if (candidate != null)
                 { //Found candidate
                     if (closest == null || candidate.Position.DistanceTo(pawn.Position) < closest.Position.DistanceTo(pawn.Position))
@@ -58,19 +45,24 @@ namespace DD
 
         private IEnumerable<ThingDef> GetPossibleMates(Pawn pawn)
         {
-            //Filter away all pools that don't include the pawn. Then collect all of the unique elements into a single pool.
-            IEnumerable<ThingDefPool> mateDefs = matePools.Where(pool => pool.Contains(pawn.def));
+            //Is part of a breeding pool
+            if(pawn.def.HasModExtension<BreedingPoolExtension>())
+            {
+                //Can be part of multiple breeding pools (mod extensions seem to allow this...)
+                IEnumerable<BreedingPoolExtension> exts = pawn.def.modExtensions.OfType<BreedingPoolExtension>();
 
-            if(mateDefs.Any())
-            {
-                //Mate pool was defined.
-                return mateDefs.Select(pool => (IEnumerable<ThingDef>)pool.defs).Aggregate((pool1, pool2) => pool1.Concat(pool2)).Distinct();
+                //Find all the pawns that are part of the same breeding pools.
+                IEnumerable<ThingDef> mateDefs = DefDatabase<ThingDef>.AllDefsListForReading.Where(def => def.HasModExtension<BreedingPoolExtension>() && exts.Any(ext => ext.pool == def.GetModExtension<BreedingPoolExtension>().pool));
+                
+                if (mateDefs.Any())
+                {
+                    //Found some ThingDefs that are part of the same pool.
+                    return mateDefs;
+                }
             }
-            else
-            {
-                //Pool wasn't defined, can only breed with its own type.
-                return new ThingDef[] { pawn.def };
-            }
+
+            //Pool wasn't defined, can only breed with its own type.
+            return new ThingDef[] { pawn.def };
         }
     }
 }

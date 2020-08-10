@@ -9,15 +9,6 @@ using Verse;
 
 namespace DD
 {
-    public class TrackedIncidentExtension : DefModExtension
-    {
-        public FloatRange maxRefireDays;
-        public FloatRange watcherCooldownDays;
-
-        public int RefireTicks => Mathf.RoundToInt(maxRefireDays.RandomInRange * GenDate.TicksPerDay);
-        public int CooldownTicks => Mathf.RoundToInt(watcherCooldownDays.RandomInRange * GenDate.TicksPerDay);
-    }
-
     public abstract class TrackedIncidentWorker : IncidentWorker
     {
         protected abstract bool TryExecuteWorkerSub(IncidentParms parms);

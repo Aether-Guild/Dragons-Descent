@@ -29,65 +29,6 @@
 					<days>4</days>
 				</maxExit>
 			</li>
-			<li Class="DD.PawnPoolExtension">
-				<pawnPool>
-					<li>
-						<thingDef>Black_Dragon</thingDef>
-						<kindDef>Black_Dragon</kindDef>
-						<temperature>31~62</temperature>
-					</li>
-					<li>
-						<thingDef>Red_Dragon</thingDef>
-						<kindDef>Red_Dragon</kindDef>
-						<temperature>31~62</temperature>
-					</li>
-					<li>
-						<thingDef>Blue_Dragon</thingDef>
-						<kindDef>Blue_Dragon</kindDef>
-						<temperature>-42~13</temperature>
-					</li>
-					<li>
-						<thingDef>Gold_Dragon</thingDef>
-						<kindDef>Gold_Dragon</kindDef>
-						<temperature>31~62</temperature>
-					</li>
-					<li>
-						<thingDef>Purple_Dragon</thingDef>
-						<kindDef>Purple_Dragon</kindDef>
-						<temperature>7~35</temperature>
-					</li>
-					<li>
-						<thingDef>Jade_Dragon</thingDef>
-						<kindDef>Jade_Dragon</kindDef>
-						<temperature>7~35</temperature>
-					</li>
-					<li>
-						<thingDef>True_Dragon</thingDef>
-						<kindDef>True_Dragon</kindDef>
-						<temperature>-50~80</temperature>
-					</li>
-					<li>
-						<thingDef>Green_Dragon</thingDef>
-						<kindDef>Green_Dragon</kindDef>
-						<temperature>7~35</temperature>
-					</li>
-					<li>
-						<thingDef>Yellow_Dragon</thingDef>
-						<kindDef>Yellow_Dragon</kindDef>
-						<temperature>31~62</temperature>
-					</li>
-					<li>
-						<thingDef>White_Dragon</thingDef>
-						<kindDef>White_Dragon</kindDef>
-						<temperature>-42~13</temperature>
-					</li>
-					<li>
-						<thingDef>Silver_Dragon</thingDef>
-						<kindDef>Silver_Dragon</kindDef>
-						<temperature>-42~13</temperature>
-					</li>
-				</pawnPool>
-			</li>
 		</modExtensions>
 	</IncidentDef>
 	
@@ -122,65 +63,6 @@
 			<li Class="DD.SpawnHerdIncidentExtension">
 				<maxWildness>0.35</maxWildness>
 				<baseHerdNutrition>50</baseHerdNutrition>
-			</li>
-			<li Class="DD.PawnPoolExtension">
-				<pawnPool>
-					<li>
-						<thingDef>Black_Dragon</thingDef>
-						<kindDef>Black_Dragon</kindDef>
-						<temperature>31~62</temperature>
-					</li>
-					<li>
-						<thingDef>Red_Dragon</thingDef>
-						<kindDef>Red_Dragon</kindDef>
-						<temperature>31~62</temperature>
-					</li>
-					<li>
-						<thingDef>Blue_Dragon</thingDef>
-						<kindDef>Blue_Dragon</kindDef>
-						<temperature>-42~13</temperature>
-					</li>
-					<li>
-						<thingDef>Gold_Dragon</thingDef>
-						<kindDef>Gold_Dragon</kindDef>
-						<temperature>31~62</temperature>
-					</li>
-					<li>
-						<thingDef>Purple_Dragon</thingDef>
-						<kindDef>Purple_Dragon</kindDef>
-						<temperature>7~35</temperature>
-					</li>
-					<li>
-						<thingDef>Jade_Dragon</thingDef>
-						<kindDef>Jade_Dragon</kindDef>
-						<temperature>7~35</temperature>
-					</li>
-					<li>
-						<thingDef>True_Dragon</thingDef>
-						<kindDef>True_Dragon</kindDef>
-						<temperature>-50~80</temperature>
-					</li>
-					<li>
-						<thingDef>Green_Dragon</thingDef>
-						<kindDef>Green_Dragon</kindDef>
-						<temperature>7~35</temperature>
-					</li>
-					<li>
-						<thingDef>Yellow_Dragon</thingDef>
-						<kindDef>Yellow_Dragon</kindDef>
-						<temperature>31~62</temperature>
-					</li>
-					<li>
-						<thingDef>White_Dragon</thingDef>
-						<kindDef>White_Dragon</kindDef>
-						<temperature>-42~13</temperature>
-					</li>
-					<li>
-						<thingDef>Silver_Dragon</thingDef>
-						<kindDef>Silver_Dragon</kindDef>
-						<temperature>-42~13</temperature>
-					</li>
-				</pawnPool>
 			</li>
 		</modExtensions>
 	</IncidentDef>

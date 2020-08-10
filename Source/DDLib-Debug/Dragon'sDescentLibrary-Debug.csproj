@@ -63,7 +63,8 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
-  <ItemGroup>    <Compile Include="..\DDLib\Bill\Bills.cs">
+  <ItemGroup>
+    <Compile Include="..\DDLib\Bill\Bills.cs">
       <Link>Bill\Bills.cs</Link>
     </Compile>
     <Compile Include="..\DDLib\Building\Building_StorageBed.cs">
@@ -81,11 +82,14 @@
     <Compile Include="..\DDLib\CompProperties\CompProperties_Ritual.cs">
       <Link>CompProperties\CompProperties_Ritual.cs</Link>
     </Compile>
-    <Compile Include="..\DDLib\CompTargetable\CompTargetable_Reproductive.cs">
-      <Link>CompTargetable\CompTargetable_Reproductive.cs</Link>
+    <Compile Include="..\DDLib\CompTargetableLocation\CompTargetableLocation.cs">
+      <Link>CompTargetableLocation\CompTargetableLocation.cs</Link>
     </Compile>
-    <Compile Include="..\DDLib\CompTargetable\CompTargetable_SingleReproductiveBody.cs">
-      <Link>CompTargetable\CompTargetable_SingleReproductiveBody.cs</Link>
+    <Compile Include="..\DDLib\CompTargetLocationEffect\CompTargetLocationEffect.cs">
+      <Link>CompTargetLocationEffect\CompTargetLocationEffect.cs</Link>
+    </Compile>
+    <Compile Include="..\DDLib\CompTargetLocationEffect\CompTargetLocationEffect_Teleport.cs">
+      <Link>CompTargetLocationEffect\CompTargetLocationEffect_Teleport.cs</Link>
     </Compile>
     <Compile Include="..\DDLib\GameComponent\MapComponent_Tracker.cs">
       <Link>GameComponent\MapComponent_Tracker.cs</Link>
@@ -132,6 +136,9 @@
     <Compile Include="..\DDLib\Patches\Extensions.cs">
       <Link>Patches\Extensions.cs</Link>
     </Compile>
+    <Compile Include="..\DDLib\Patches\Flags.cs">
+      <Link>Patches\Flags.cs</Link>
+    </Compile>
     <Compile Include="..\DDLib\Patches\Patches.cs">
       <Link>Patches\Patches.cs</Link>
     </Compile>
@@ -147,9 +154,6 @@
     <Compile Include="..\DDLib\CompProperties\CompProperties_SpawnMate.cs">
       <Link>CompProperties\CompProperties_SpawnMate.cs</Link>
     </Compile>
-    <Compile Include="..\DDLib\CompProperties\CompProperties_TargetableBody.cs">
-      <Link>CompProperties\CompProperties_TargetableBody.cs</Link>
-    </Compile>
     <Compile Include="..\DDLib\CompProperties\CompProperties_Thing.cs">
       <Link>CompProperties\CompProperties_Thing.cs</Link>
     </Compile>
@@ -162,14 +166,8 @@
     <Compile Include="..\DDLib\CompProperties\CompProperties_Value.cs">
       <Link>CompProperties\CompProperties_Value.cs</Link>
     </Compile>
-    <Compile Include="..\DDLib\CompTargetable\CompTargetable_AllBodiesOnTheMap.cs">
-      <Link>CompTargetable\CompTargetable_AllBodiesOnTheMap.cs</Link>
-    </Compile>
-    <Compile Include="..\DDLib\CompTargetable\CompTargetable_SingleAnimal.cs">
-      <Link>CompTargetable\CompTargetable_SingleAnimal.cs</Link>
-    </Compile>
-    <Compile Include="..\DDLib\CompTargetable\CompTargetable_SingleBody.cs">
-      <Link>CompTargetable\CompTargetable_SingleBody.cs</Link>
+    <Compile Include="..\DDLib\CompTargetable\CompTargetables.cs">
+      <Link>CompTargetable\CompTargetables.cs</Link>
     </Compile>
     <Compile Include="..\DDLib\CompTargetEffect\CompTargetEffect_AddAge.cs">
       <Link>CompTargetEffect\CompTargetEffect_AddAge.cs</Link>
@@ -270,8 +268,8 @@
     <Compile Include="..\DDLib\Settings\DraconicSettingsGUI.cs">
       <Link>Settings\DraconicSettingsGUI.cs</Link>
     </Compile>
-    <Compile Include="..\DDLib\Settings\Flags.cs">
-      <Link>Settings\Flags.cs</Link>
+    <Compile Include="..\DDLib\Settings\SettingFlags.cs">
+      <Link>Settings\SettingFlags.cs</Link>
     </Compile>
     <Compile Include="..\DDLib\ThingComp\CompAssignableToPawn_Nest.cs">
       <Link>ThingComp\CompAssignableToPawn_Nest.cs</Link>

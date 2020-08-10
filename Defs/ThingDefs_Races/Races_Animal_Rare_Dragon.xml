@@ -248,6 +248,11 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>31~62</temperature>
+	  </li>
+	</modExtensions>
   </PawnKindDef>
 
   <!-- =========================== Royal Dragon =========================== 
@@ -715,6 +720,11 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>-42~13</temperature>
+	  </li>
+	</modExtensions>
   </PawnKindDef>
 
   <!-- =========================== Jade Dragon =========================== -->
@@ -940,6 +950,11 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>7~35</temperature>
+	  </li>
+	</modExtensions>
   </PawnKindDef>
   
   
@@ -1233,6 +1248,11 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>-50~80</temperature>
+	  </li>
+	</modExtensions>
   </PawnKindDef>
 
 </Defs>

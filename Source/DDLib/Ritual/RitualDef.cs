@@ -18,4 +18,22 @@ namespace DD
 
         public int InitialCooldown => GenTicks.SecondsToTicks(initialCooldown.RandomInRange);
     }
+
+    public class RitualTickingModExtension : DefModExtension
+    {
+        public SimpleCurve duration;
+        public TickerType tickerType;
+
+        public int GetDuration(int activationCount) => GenTicks.SecondsToTicks(duration.Evaluate(activationCount));
+    }
+
+    public class RitualNeedsModExtension : DefModExtension
+    {
+        public FloatRange? food, rest, comfort, joy, mood, drugDesire;
+    }
+
+    public class RitualHediffModExtension : DefModExtension
+    {
+        public List<HediffDef> hediffs = new List<HediffDef>();
+    }
 }

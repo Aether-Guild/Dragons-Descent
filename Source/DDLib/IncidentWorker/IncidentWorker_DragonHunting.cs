@@ -57,12 +57,6 @@ namespace DD
 
         protected override bool CanFireNowSub(IncidentParms parms)
         {
-            if (!this.def.HasModExtension<PawnPoolExtension>())
-            {
-                //Doesn't have a pawn pool to spawn pawns from.
-                return false;
-            }
-
             if (!this.def.HasModExtension<SpawnIncidentExtension>())
             {
                 //Doesn't have the settings for the incident defined.
@@ -77,7 +71,12 @@ namespace DD
 
             Map map = (Map)parms.target;
 
-            PawnPoolExtension pool = this.def.GetModExtension<PawnPoolExtension>();
+            if (!IncidentPawnPool.Any(map))
+            {
+                //Doesn't have a pawn pool to spawn pawns from.
+                return false;
+            }
+
             SpawnIncidentExtension settings = this.def.GetModExtension<SpawnIncidentExtension>();
             SpawnHerdIncidentExtension herdSettings = this.def.GetModExtension<SpawnHerdIncidentExtension>();
 
@@ -87,7 +86,7 @@ namespace DD
                 return false;
             }
 
-            if(!PickEntryCell(map).IsValid || herdSettings.PickRandomAnimalKind(map) == null || pool.PickEntry(map, settings) == null)
+            if(!PickEntryCell(map).IsValid || herdSettings.PickRandomAnimalKind(map) == null)
             {
                 //Settings are valid.
                 return false;
@@ -98,7 +97,7 @@ namespace DD
 
         protected override bool TryExecuteWorkerSub(IncidentParms parms)
         {
-            if (!this.def.HasModExtension<PawnPoolExtension>() || !this.def.HasModExtension<SpawnIncidentExtension>() || !this.def.HasModExtension<SpawnIncidentExtension>())
+            if (!this.def.HasModExtension<SpawnIncidentExtension>() || !this.def.HasModExtension<SpawnIncidentExtension>())
             {
                 //Doesn't have a pawn pool to spawn pawns from OR Doesn't have the settings for the incident defined.
                 return false;
@@ -106,6 +105,12 @@ namespace DD
 
             Map map = (Map)parms.target;
             List<Pawn> pawns = new List<Pawn>();
+
+            if (!IncidentPawnPool.Any(map))
+            {
+                //Doesn't have a pawn pool to spawn pawns from.
+                return false;
+            }
 
             //Entry locations
             IntVec3 herdLoc = PickEntryCell(map);
@@ -125,7 +130,7 @@ namespace DD
             SpawnHerdIncidentExtension herdSettings = this.def.GetModExtension<SpawnHerdIncidentExtension>();
             SpawnIncidentExtension hunterSettings = this.def.GetModExtension<SpawnIncidentExtension>();
 
-            PawnSpawnEntry hunterEntry = def.GetModExtension<PawnPoolExtension>().PickEntry(map, hunterSettings);
+            PawnSpawnEntry hunterEntry = IncidentPawnPool.PickEntry(map, hunterSettings);
             PawnKindDef herdKindDef = herdSettings.PickRandomAnimalKind(map);
             if (hunterEntry == null)
             {
