@@ -135,7 +135,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -159,7 +159,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -183,7 +183,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>4.5</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -211,7 +211,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>4.5</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -388,7 +388,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -412,7 +412,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>2.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -434,7 +434,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>4.5</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -607,7 +607,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -631,7 +631,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -655,7 +655,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>4.8</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -683,7 +683,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>4.8</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -837,7 +837,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -861,7 +861,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -885,7 +885,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>4.8</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -913,7 +913,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>4.8</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -941,7 +941,7 @@
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
           <drawSize>4.8</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
