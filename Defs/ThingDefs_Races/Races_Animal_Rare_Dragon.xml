@@ -120,7 +120,7 @@
         <labelPlural>Gold dragon whelps</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/GDDragon</texPath>
-          <drawSize>2.25</drawSize>
+          <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -128,7 +128,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/GDDragon</texPath>
-          <drawSize>2.25</drawSize>
+          <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -144,7 +144,7 @@
         <labelPlural>Gold dragon wyrmlings</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/GDDragon</texPath>
-          <drawSize>3.7</drawSize>
+          <drawSize>3.1</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -152,7 +152,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/GDDragon</texPath>
-          <drawSize>3.7</drawSize>
+          <drawSize>3.1</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -168,7 +168,7 @@
         <labelPlural>Gold dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/GDDragon</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -176,7 +176,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/GDDragon</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -184,7 +184,7 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>4.5</drawSize>
+          <drawSize>3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -196,7 +196,7 @@
         <labelPlural>Elder gold dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/GDDragon</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -204,7 +204,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/GDDragon</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -212,7 +212,7 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>4.5</drawSize>
+          <drawSize>3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -224,7 +224,7 @@
         <labelPlural>Ancient gold dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/GDDragon</texPath>
-          <drawSize>5.1</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -232,7 +232,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/GDDragon</texPath>
-          <drawSize>5.1</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -240,7 +240,7 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>5</drawSize>
+          <drawSize>3.7</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -248,6 +248,13 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<weaponMoney>
+    <min>8000</min>
+    <max>8000</max>
+    </weaponMoney>
+    <weaponTags>
+  	<li>DragonBreathWeapon</li>
+	</weaponTags>
 	<modExtensions>
 	  <li Class="DD.IncidentSpawnConditionExtension">
 		<temperature>31~62</temperature>
@@ -373,7 +380,7 @@
         <labelPlural>Royal dragon whelps</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/RLDragon</texPath>
-          <drawSize>2.25</drawSize>
+          <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -381,7 +388,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/RLDragon</texPath>
-          <drawSize>2.25</drawSize>
+          <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -397,7 +404,7 @@
         <labelPlural>Royal dragon wyrmlings</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/RLDragon</texPath>
-          <drawSize>4</drawSize>
+          <drawSize>3.7</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -405,7 +412,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/RLDragon</texPath>
-          <drawSize>4</drawSize>
+          <drawSize>3.7</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -419,7 +426,7 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/RLDragon</texPath>
-          <drawSize>5.1</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -427,7 +434,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/RLDragon</texPath>
-          <drawSize>5.1</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -435,7 +442,7 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>4.5</drawSize>
+          <drawSize>3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -461,7 +468,7 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>5</drawSize>
+          <drawSize>3.7</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -592,7 +599,7 @@
         <labelPlural>Silver dragon whelps</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/SDragon</texPath>
-          <drawSize>2.25</drawSize>
+          <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -600,7 +607,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/SDragon</texPath>
-          <drawSize>2.25</drawSize>
+          <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -616,7 +623,7 @@
         <labelPlural>Silver dragon wyrmlings</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/SDragon</texPath>
-          <drawSize>3.7</drawSize>
+          <drawSize>3.1</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -624,7 +631,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/SDragon</texPath>
-          <drawSize>3.7</drawSize>
+          <drawSize>3.1</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -640,7 +647,7 @@
         <labelPlural>Silver dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/SDragon</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -648,7 +655,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/SDragon</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -656,7 +663,7 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -668,7 +675,7 @@
         <labelPlural>Elder silver dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/SDragon</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -676,7 +683,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/SDragon</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -684,7 +691,7 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -696,7 +703,7 @@
         <labelPlural>Ancient silver dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/SDragon</texPath>
-          <drawSize>5.1</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -704,7 +711,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/SDragon</texPath>
-          <drawSize>5.1</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -712,7 +719,7 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>5</drawSize>
+          <drawSize>3.7</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -720,6 +727,13 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<weaponMoney>
+    <min>8000</min>
+    <max>8000</max>
+    </weaponMoney>
+    <weaponTags>
+  	<li>DragonBreathWeapon</li>
+	</weaponTags>
 	<modExtensions>
 	  <li Class="DD.IncidentSpawnConditionExtension">
 		<temperature>-42~13</temperature>
@@ -822,7 +836,7 @@
         <labelPlural>Jade dragon whelps</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/JDragon</texPath>
-          <drawSize>2.25</drawSize>
+          <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -830,7 +844,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/JDragon</texPath>
-          <drawSize>2.25</drawSize>
+          <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -870,7 +884,7 @@
         <labelPlural>Jade dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/JDragon</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -878,7 +892,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/JDragon</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -886,7 +900,7 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -898,7 +912,7 @@
         <labelPlural>Elder jade dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/JDragon</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -906,7 +920,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/JDragon</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -914,7 +928,7 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -926,7 +940,7 @@
         <labelPlural>Ancient jade dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/JDragon</texPath>
-          <drawSize>5.1</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -934,7 +948,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/JDragon</texPath>
-          <drawSize>5.1</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -942,7 +956,7 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>4.8</drawSize>
+          <drawSize>3.9</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -950,6 +964,13 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<weaponMoney>
+    <min>8000</min>
+    <max>8000</max>
+    </weaponMoney>
+    <weaponTags>
+  	<li>DragonBreathWeapon</li>
+	</weaponTags>
 	<modExtensions>
 	  <li Class="DD.IncidentSpawnConditionExtension">
 		<temperature>7~35</temperature>
@@ -1144,7 +1165,7 @@
         <labelPlural>True dragon wyrmlings</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/TDragon</texPath>
-          <drawSize>4.5</drawSize>
+          <drawSize>3.8</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -1152,7 +1173,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/TDragon</texPath>
-          <drawSize>4.5</drawSize>
+          <drawSize>3.8</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -1160,7 +1181,7 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/TDragon_skeleton</texPath>
-          <drawSize>4</drawSize>
+          <drawSize>3.7</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
@@ -1248,6 +1269,13 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
+	<weaponMoney>
+    <min>8000</min>
+    <max>8000</max>
+    </weaponMoney>
+    <weaponTags>
+  	<li>DragonBreathWeapon</li>
+	</weaponTags>
 	<modExtensions>
 	  <li Class="DD.IncidentSpawnConditionExtension">
 		<temperature>-50~80</temperature>
