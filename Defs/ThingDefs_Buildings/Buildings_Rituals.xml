@@ -251,7 +251,7 @@
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <size>(3,2)</size>
     <costList>
-        <Gold>120</Gold>
+        <Gold>25</Gold>
     </costList>
     <recipes>
         <li>Ritual_Weak</li>

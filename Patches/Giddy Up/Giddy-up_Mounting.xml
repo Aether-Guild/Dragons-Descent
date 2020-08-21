@@ -8,48 +8,6 @@
 	<match Class="PatchOperationSequence">
 		<success>Always</success>
 		<operations>
-       
-      <li Class="PatchOperationAddModExtension">
-        <xpath>*/ThingDef[ defName = "Silver_Dragon"]</xpath>
-        <value>
-          <li Class="GiddyUpCore.DrawingOffsetPatch">
-            <!--Offsets can be configured for each view (north, south, west, east) separately using comma separated floating point values-->
-            <northOffsetCSV>0,0,0.8</northOffsetCSV>
-            <!--x,y,z coordinates. Mind that x: horizontal axis, y: drawing priority, z: vertical axis -->
-            <southOffsetCSV>0,0,1.2</southOffsetCSV>
-            <eastOffsetCSV>0,0,1.5</eastOffsetCSV>
-            <westOffsetCSV>0,0,1.5</westOffsetCSV>
-          </li>
-        </value>
-      </li>
-
-      <li Class="PatchOperationAddModExtension">
-          <xpath>*/ThingDef[ defName = "Gold_Dragon"]</xpath>
-          <value>
-            <li Class="GiddyUpCore.DrawingOffsetPatch">
-              <!--Offsets can be configured for each view (north, south, west, east) separately using comma separated floating point values-->
-              <northOffsetCSV>0,0,0.8</northOffsetCSV>
-              <!--x,y,z coordinates. Mind that x: horizontal axis, y: drawing priority, z: vertical axis -->
-              <southOffsetCSV>0,0,1.2</southOffsetCSV>
-              <eastOffsetCSV>0,0,1.5</eastOffsetCSV>
-              <westOffsetCSV>0,0,1.5</westOffsetCSV>
-            </li>
-          </value>
-        </li>
-	
-      <li Class="PatchOperationAddModExtension">
-          <xpath>*/ThingDef[ defName = "Jade_Dragon"]</xpath>
-          <value>
-            <li Class="GiddyUpCore.DrawingOffsetPatch">
-              <!--Offsets can be configured for each view (north, south, west, east) separately using comma separated floating point values-->
-              <northOffsetCSV>0,0,0.8</northOffsetCSV>
-              <!--x,y,z coordinates. Mind that x: horizontal axis, y: drawing priority, z: vertical axis -->
-              <southOffsetCSV>0,0,1.2</southOffsetCSV>
-              <eastOffsetCSV>0,0,1.5</eastOffsetCSV>
-              <westOffsetCSV>0,0,1.5</westOffsetCSV>
-            </li>
-          </value>
-        </li>
 
       <li Class="PatchOperationAddModExtension">
         <xpath>*/ThingDef[ defName = "Black_Dragon"]</xpath>
