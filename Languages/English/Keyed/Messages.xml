@@ -9,6 +9,8 @@
   <DragonMateSpawnMessage>{MATE} has heard the mating call!</DragonMateSpawnMessage>
   
   <!-- ========== Rituals ========== -->
+  <RitualNoTargetMessage>No applicable targets in range.</RitualNoTargetMessage>
+  
   <RitualControlNeedsOnMessage>{TARGET} seems mystically sated. (Duration: {DURATION})</RitualControlNeedsOnMessage>
   <RitualControlNeedsOffMessage>{TARGET} begins to hunger once more.</RitualControlNeedsOffMessage>
   

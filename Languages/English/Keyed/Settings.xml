@@ -16,14 +16,12 @@
   <Setting_EventSpawn_Description>Control whether the event will trigger or not.</Setting_EventSpawn_Description>
   
   <Setting_Compatibility>Compatibility Patches</Setting_Compatibility>
-  <Setting_Compatibility_KFM_Range_Title>[Kill For Me]: Ignore Ranged Attacks</Setting_Compatibility_KFM_Range_Title>
+  <Setting_Compatibility_KFM_Range_Title>[Kill For Me(Inactive)]: Ignore Ranged Attacks</Setting_Compatibility_KFM_Range_Title>
   <Setting_Compatibility_KFM_Range_Description>Adds dragons to KFM's ignore ranged attack list to stop the crashes/hangups when it tries to use ranged attacks.</Setting_Compatibility_KFM_Range_Description>
-  <Setting_Compatibility_HFM_Range_Title>[Hunt For Me]: Ignore Ranged Attacks</Setting_Compatibility_HFM_Range_Title>
+  <Setting_Compatibility_HFM_Range_Title>[Hunt For Me(Inactive)]: Ignore Ranged Attacks</Setting_Compatibility_HFM_Range_Title>
   <Setting_Compatibility_HFM_Range_Description>Adds dragons to HFM's ignore ranged attack list to stop the crashes/hangups when it tries to use ranged attacks.</Setting_Compatibility_HFM_Range_Description>
   <Setting_Compatibility_ARA_VerbCheck_Title>[Alpha Animals (OLD)]: Replace old VerbCheck patch</Setting_Compatibility_ARA_VerbCheck_Title>
   <Setting_Compatibility_ARA_VerbCheck_Description>Detects an old prefix patch ARA__VerbCheck_Patch in AA and replaces it with a more compatible version.\n\n(AA has since been updated to use a more compatible version, this patch exists for other mods that are still using the old version)</Setting_Compatibility_ARA_VerbCheck_Description>
-  <Setting_Compatibility_RW_RoyaltyErrors_Title>[Rimworld Core-Royalty]: Workaround for NullReferences being loaded when MayRequireRoyalty attribute is used.</Setting_Compatibility_RW_RoyaltyErrors_Title>
-  <Setting_Compatibility_RW_RoyaltyErrors_Description>--MOSTLY FOR DEVS--\n\nSome of the Debug Logging Menu options (e.g: Future Incidents) will end up erroring out because Core Storytellers will load a Comp with null values if Royalty isn't installed.</Setting_Compatibility_RW_RoyaltyErrors_Description>
   <Setting_Compatibility_Warning>Changes will not be applied until the game is restarted.</Setting_Compatibility_Warning>
   
   <Setting_FightingJobs>Compatibility Patch [Fighting Jobs]</Setting_FightingJobs>

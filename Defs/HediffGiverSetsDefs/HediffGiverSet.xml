@@ -1,32 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  
-  <HediffGiverSetDef>
-    <defName>DragonPassiveSet</defName>
-    <hediffGivers>
-      <li Class="HediffGiver_Birthday">
-        <hediff>DragonStandard</hediff>
-        <ageFractionChanceCurve>
-          <points>
-            <li>(0, 0)</li>
-			<li>(0.25, 0.00018)</li>
-			<li>(0.5, 0.00001)</li>
-			<li>(0.75, 0.000001)</li>
-            <li>(1, 0.000001)</li>
-          </points>
-        </ageFractionChanceCurve>
-      </li>
-    </hediffGivers>
-  </HediffGiverSetDef>
-
-
 	<HediffGiverSetDef>
 		<defName>OrganicAgeless</defName>
 		<hediffGivers>
 			<li Class="DD.HediffGiver_Regeneration">
 				<hediff>DraconicRegeneration</hediff>
-				<giveWhileFighting>false</giveWhileFighting>
+				<regenTimeout>10</regenTimeout>
 				<startInBed>false</startInBed>
 				<partsToAffect>
 					<li>Fundamentum</li>

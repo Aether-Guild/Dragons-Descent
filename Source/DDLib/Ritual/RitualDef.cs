@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,24 +17,8 @@ namespace DD
 
         public FloatRange initialCooldown;
 
+        public RitualTargetingParameters targetingParams = new RitualTargetingParameters();
+
         public int InitialCooldown => GenTicks.SecondsToTicks(initialCooldown.RandomInRange);
-    }
-
-    public class RitualTickingModExtension : DefModExtension
-    {
-        public SimpleCurve duration;
-        public TickerType tickerType;
-
-        public int GetDuration(int activationCount) => GenTicks.SecondsToTicks(duration.Evaluate(activationCount));
-    }
-
-    public class RitualNeedsModExtension : DefModExtension
-    {
-        public FloatRange? food, rest, comfort, joy, mood, drugDesire;
-    }
-
-    public class RitualHediffModExtension : DefModExtension
-    {
-        public List<HediffDef> hediffs = new List<HediffDef>();
     }
 }

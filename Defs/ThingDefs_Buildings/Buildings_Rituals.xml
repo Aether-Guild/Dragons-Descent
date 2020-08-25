@@ -4,8 +4,8 @@
   <!--=========================== Rituals ===============================-->
   <DD.RitualDef>
     <defName>Ritual_BanishSingleDragon</defName>
-    <label>Banish Dragon</label>
-    <description>Forces the selected dragon to exit the map if it is wild, or removes all mental states if the dragon is tamed.</description>
+    <label>Banish</label>
+    <description>Forces the selected dragon to exit the map.</description>
     <cost>
       <points>
         <li>(0, 1)</li>
@@ -20,14 +20,19 @@
         <li>(100, 10000)</li>
       </points>
     </cooldown>
+	<targetingParams>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetBuildings>false</canTargetBuildings>
+		<onlyTargetFactionless>true</onlyTargetFactionless>
+	</targetingParams>
     <initialCooldown>1000~3000</initialCooldown>
     <ritualClass>DD.Ritual_BanishPawn</ritualClass>
   </DD.RitualDef>
   
   <DD.RitualDef>
     <defName>Ritual_BanishAllDragon</defName>
-    <label>Banish All Dragons</label>
-    <description>Forces all wild dragons to exit the map, and removes all mental states from tamed dragons.</description>
+    <label>Banish All</label>
+    <description>Forces all wild dragons to exit the map.</description>
     <cost>
       <points>
         <li>(0, 7)</li>
@@ -42,14 +47,19 @@
         <li>(50, 100000)</li>
       </points>
     </cooldown>
+	<targetingParams>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetBuildings>false</canTargetBuildings>
+		<onlyTargetFactionless>true</onlyTargetFactionless>
+	</targetingParams>
     <initialCooldown>7500~12500</initialCooldown>
     <ritualClass>DD.Ritual_BanishAllPawns</ritualClass>
   </DD.RitualDef>
   
   <DD.RitualDef>
     <defName>Ritual_RemoveFerocity</defName>
-    <label>Calm Ferocity</label>
-    <description>Calms down a ferocious dragon.</description>
+    <label>Appease</label>
+    <description>Calms down a dragon.</description>
     <cost>
       <points>
         <li>(0, 1)</li>
@@ -64,8 +74,17 @@
         <li>(100, 60000)</li>
       </points>
     </cooldown>
+	<targetingParams>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetBuildings>false</canTargetBuildings>
+		<canTargetWithMentalState>true</canTargetWithMentalState>
+		<canTargetWithHediff>
+            <li>DraconicFerocity_Male</li>
+            <li>DraconicFerocity_Female</li>
+		</canTargetWithHediff>
+	</targetingParams>
     <initialCooldown>500~1500</initialCooldown>
-    <ritualClass>DD.Ritual_RemoveHediff</ritualClass>
+    <ritualClass>DD.Ritual_CalmDown</ritualClass>
     <modExtensions>
       <li Class="DD.RitualHediffModExtension">
         <hediffs>
@@ -78,8 +97,8 @@
   
   <DD.RitualDef>
     <defName>Ritual_RemoveFerocityAll</defName>
-    <label>Calm All Ferocity</label>
-    <description>Calms down all ferocious dragons in the vicinity.</description>
+    <label>Appease All</label>
+    <description>Calms down all dragons in the vicinity.</description>
     <cost>
       <points>
         <li>(0, 7)</li>
@@ -94,8 +113,19 @@
         <li>(50, 120000)</li>
       </points>
     </cooldown>
+	<targetingParams>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetBuildings>false</canTargetBuildings>
+		<canTargetWithMentalState>true</canTargetWithMentalState>
+		<canTargetWithHediff>
+          <li>DraconicFerocity_Male</li>
+          <li>DraconicFerocity_Female</li>
+          <li>DraconicPackFerocity_Male</li>
+          <li>DraconicPackFerocity_Female</li>
+		</canTargetWithHediff>
+	</targetingParams>
     <initialCooldown>5000~10000</initialCooldown>
-    <ritualClass>DD.Ritual_RemoveHediffAll</ritualClass>
+    <ritualClass>DD.Ritual_CalmDownAll</ritualClass>
     <modExtensions>
       <li Class="DD.RitualHediffModExtension">
         <hediffs>
@@ -110,7 +140,7 @@
   
   <DD.RitualDef>
     <defName>Ritual_MaintainDragonNeeds</defName>
-    <label>Sustain Dragon</label>
+    <label>Sustain</label>
     <description>Fills up and maintains the dragon's food.</description>
     <cost>
       <points>
@@ -126,6 +156,10 @@
         <li>(100, 14000)</li>
       </points>
     </cooldown>
+	<targetingParams>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetBuildings>false</canTargetBuildings>
+	</targetingParams>
     <initialCooldown>3000~5000</initialCooldown>
     <ritualClass>DD.Ritual_MaintainNeeds</ritualClass>
     <modExtensions>
@@ -146,7 +180,7 @@
   
   <DD.RitualDef>
     <defName>Ritual_MaintainAllDragonNeeds</defName>
-    <label>Sustain All Dragons</label>
+    <label>Sustain All</label>
     <description>Fills up and maintains all dragons food.</description>
     <cost>
       <points>
@@ -162,6 +196,10 @@
         <li>(50, 28000)</li>
       </points>
     </cooldown>
+	<targetingParams>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetBuildings>false</canTargetBuildings>
+	</targetingParams>
     <initialCooldown>10000~15000</initialCooldown>
     <ritualClass>DD.Ritual_MaintainAllNeeds</ritualClass>
     <modExtensions>
@@ -182,7 +220,7 @@
   
   <DD.RitualDef>
     <defName>Ritual_WardAllDragon</defName>
-    <label>Dragon Ward</label>
+    <label>Ward</label>
     <description>Automatically calms down tamed dragons and banish wild dragons for a period of time.</description>
     <cost>
       <points>
@@ -201,8 +239,12 @@
         <li>(25, 180000)</li>
       </points>
     </cooldown>
+	<targetingParams>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetBuildings>false</canTargetBuildings>
+	</targetingParams>
     <initialCooldown>10000~15000</initialCooldown>
-    <ritualClass>DD.Ritual_BanishAllPawnsWard</ritualClass>
+    <ritualClass>DD.Ritual_WardAllPawns</ritualClass>
     <modExtensions>
       <li Class="DD.RitualTickingModExtension">
         <duration>

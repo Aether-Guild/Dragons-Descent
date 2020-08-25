@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,7 +42,13 @@ namespace DD
 
         public void Activate(RitualDef def)
         {
-            if(this[def].CanActivate(current))
+            if (!this[def].IsReady)
+            {
+                Messages.Message("RitualNoTargetMessage".Translate(), MessageTypeDefOf.CautionInput);
+                return;
+            }
+
+            if (this[def].CanActivate(current))
             {
                 this[def].Activate();
                 Current -= this[def].Cost;
