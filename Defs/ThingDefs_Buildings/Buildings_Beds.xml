@@ -97,7 +97,7 @@
 		<uiIconScale>0.80</uiIconScale>
 		<costStuffCount>40</costStuffCount>
     <designationCategory>Furniture</designationCategory>
-    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
     <researchPrerequisites>
       <li>DraconicIncubation</li>
     </researchPrerequisites>
@@ -105,7 +105,7 @@
 			<li>ITab_Storage</li>
 		</inspectorTabs>
 		<costList>
-			<Gold>20</Gold>
+			<Gold>4</Gold>
 		</costList>
 		<stuffCategories>
 			<li>Fabric</li>

@@ -96,7 +96,7 @@
       </li>
     </comps>
     <race>
-      <wildness>0.84</wildness>
+      <wildness>0.96</wildness>
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <TropicalRainforest>0.001</TropicalRainforest>
@@ -574,7 +574,7 @@
       </li>
     </comps>
     <race>
-      <wildness>0.84</wildness>
+      <wildness>0.96</wildness>
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <TemperateForest>0.001</TemperateForest>
@@ -812,7 +812,7 @@
       </li>
     </comps>
     <race>
-      <wildness>0.84</wildness>
+      <wildness>0.96</wildness>
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <TemperateSwamp>0.002</TemperateSwamp>
@@ -1113,7 +1113,7 @@
       </li>
     </comps>
     <race>
-      <wildness>0.92</wildness>
+      <wildness>0.987</wildness>
       <leatherDef>True_Dragon_Leather</leatherDef>
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
