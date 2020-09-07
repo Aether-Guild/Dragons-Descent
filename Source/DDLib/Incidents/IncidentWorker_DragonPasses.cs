@@ -42,6 +42,35 @@ namespace DD
 
             return entry;
         }
+
+        public static bool RerollEntry(Map map, SpawnIncidentExtension settings, ref PawnSpawnEntry entry)
+        {
+            IEnumerable<PawnKindDef> selection;
+
+            if (Rand.Chance(settings.chancesSpawnRandom))
+            {
+                //Plain random selection
+                selection = IncidentPawns;
+            }
+            else
+            {
+                //Only consider dragons that'll be comfortable in the area and in its allowed biome, AND with combat power of the same magnitude.
+                PawnSpawnEntry e = entry;
+                selection = GetIncidentPawns(map).Where(def => Mathf.Approximately(Mathf.Round(Mathf.Log10(def.combatPower)), Mathf.Round(Mathf.Log10(e.CombatPower))));
+            }
+
+            //If there's still any pawns in the pool.
+            if (selection.Any())
+            {
+                //Actually pick one of the pawns in the pool.
+                entry = new PawnSpawnEntry()
+                {
+                    kindDef = selection.RandomElement()
+                };
+                return true;
+            }
+            return false;
+        }
     }
 
     public class PawnSpawnEntry

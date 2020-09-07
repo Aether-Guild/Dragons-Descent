@@ -51,7 +51,7 @@
 				<watcherCooldownDays>14~28</watcherCooldownDays>
 			</li>
 			<li Class="DD.SpawnIncidentExtension">
-				<spawnCount>1~4</spawnCount>
+				<spawnCount>1~2</spawnCount>
 				<hungerPercentage>0.25</hungerPercentage>
 				<minExit>
 					<days>5</days>
@@ -62,7 +62,13 @@
 			</li>
 			<li Class="DD.SpawnHerdIncidentExtension">
 				<maxWildness>0.35</maxWildness>
-				<baseHerdNutrition>50</baseHerdNutrition>
+				<baseHerdNutrition>35</baseHerdNutrition>
+				<minExit>
+					<days>8</days>
+				</minExit>
+				<maxExit>
+					<days>9</days>
+				</maxExit>
 			</li>
 		</modExtensions>
 	</IncidentDef>
