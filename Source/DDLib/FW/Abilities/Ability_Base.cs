@@ -77,12 +77,47 @@ namespace DD
             }
         }
 
+        public void InitializeComps()
+        {
+            if (def != null && !def.comps.NullOrEmpty())
+            {
+                comps = new List<AbilityComp>();
+                for (int i = 0; i < def.comps.Count; i++)
+                {
+                    AbilityComp abilityComp = null;
+                    try
+                    {
+                        abilityComp = (AbilityComp)Activator.CreateInstance(def.comps[i].compClass);
+                        abilityComp.parent = this;
+                        comps.Add(abilityComp);
+                        abilityComp.Initialize(def.comps[i]);
+                    }
+                    catch (Exception arg)
+                    {
+                        Log.Error("Could not instantiate or initialize an AbilityComp: " + arg);
+                        comps.Remove(abilityComp);
+                    }
+                }
+            }
+        }
+
         public override void ExposeData()
         {
-            base.ExposeData();
-
-            foreach(AbilityComp_Base comp in BaseAbilityComps)
+            if(Scribe.mode != LoadSaveMode.PostLoadInit)
             {
+                //Calling it during PostLoadInit will recreate the comps and get rid of our saved comp data.
+                base.ExposeData();
+            }
+
+            if (Scribe.mode == LoadSaveMode.LoadingVars)
+            {
+                //Need to have the comps, so create them for now.
+                InitializeComps();
+            }
+
+            foreach (AbilityComp_Base comp in BaseAbilityComps)
+            {
+                //Save comp data.
                 comp.PostExposeData();
             }
         }

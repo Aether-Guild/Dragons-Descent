@@ -10,9 +10,9 @@ namespace DD
 {
     public static class DDDebugTests
     {
-        public const float WildBiomeCount = 1000f;
+        public const int WildBiomeCount = 100;
 
-        [DebugAction("DD.AutoTests", "BiomeSpawn Summary x1000", actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("DD.AutoTests", "BiomeSpawn Summary x100", actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void BiomeSpawn1k()
         {
             Map map = Find.CurrentMap;
