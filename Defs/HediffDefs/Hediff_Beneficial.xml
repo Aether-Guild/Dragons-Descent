@@ -1,6 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
- 
+
+	<!-- Growth hediff, applied by giver when dragon is of a certain age/lifestage. -->
+	<HediffDef>
+		<defName>DraconicGrowth</defName>
+		<label>growing pains</label>
+		<labelNoun>pains associated with growth</labelNoun>
+		<description>Experiencing pain and restlessness due to growth.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.3, 0.4, 0.7)</defaultLabelColor>
+		<initialSeverity>0.0001</initialSeverity>
+		<comps>
+			<li Class="DD.HediffCompProperties_GrowthSeverityScaling">
+				<!-- Modify interval to change how fast severity (in this case it counts as the regen healing factor) increases. (<ticks>, <severity>) -->
+				<!-- It takes 0 ticks (0 hours) to go from severity 0 to severity 0. -->
+				<!-- It takes 5,000 ticks (2 hours) to go from severity 0 to severity 2.5. -->
+				<!-- It takes 15,000 ticks (6 hours) to go from severity 0 to severity 5.0. -->
+				<!-- It takes 20,000 ticks (8 hours) to go from severity 0 to severity 7.5. -->
+				<!-- It takes 30,000 ticks (12 hours) to go from severity 0 to severity 10.0. -->
+				<interval>
+					<points>
+						<li>(0, 0)</li>
+						<li>(5000, 2.5)</li>
+						<li>(15000, 5.0)</li>
+						<li>(20000, 7.5)</li>
+						<li>(30000, 10)</li>
+					</points>
+				</interval>
+				<severityRange>0~10</severityRange>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>starting</label>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<minSeverity>0.0001</minSeverity>
+				<label>light</label>
+				<becomeVisible>true</becomeVisible>
+				<painFactor>1.1</painFactor>
+				<painOffset>1.1</painOffset>
+				<hungerRateFactor>1.1</hungerRateFactor>
+			</li>
+			<li>
+				<minSeverity>2.5</minSeverity>
+				<label>dull</label>
+				<becomeVisible>true</becomeVisible>
+				<painFactor>1.25</painFactor>
+				<painOffset>1.25</painOffset>
+				<hungerRateFactor>1.25</hungerRateFactor>
+				<restFallFactor>1.25</restFallFactor>
+			</li>
+			<li>
+				<minSeverity>5.0</minSeverity>
+				<label>intense</label>
+				<becomeVisible>true</becomeVisible>
+				<painFactor>1.5</painFactor>
+				<painOffset>1.5</painOffset>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<restFallFactor>1.5</restFallFactor>
+				<statFactors>
+					<RestRateMultiplier>0.5</RestRateMultiplier>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>7.5</minSeverity>
+				<label>unbearable</label>
+				<becomeVisible>true</becomeVisible>
+				<painFactor>2</painFactor>
+				<painOffset>2</painOffset>
+				<hungerRateFactor>2</hungerRateFactor>
+				<restFallFactor>2</restFallFactor>
+				<statFactors>
+					<RestRateMultiplier>0.1</RestRateMultiplier>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
 	<!-- Regen hediff, applied by giver when any viable wounds are on a dragon -->
 	<HediffDef>
 		<defName>DraconicRegeneration</defName>

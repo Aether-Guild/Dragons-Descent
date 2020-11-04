@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- ITEMS -->
+	<!-- Adding additional effects to Draconic Ambrosia -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="DraconicAmbrosia"]/ingestible/outcomeDoers/li[@Class="DD.IngestionOutcomeDoer_Multiple"]/doers</xpath>
+		<value>
+			<li Class="DD.IngestionOutcomeDoer_DoIfBody">
+				<targetDef>QuadrupedAnimalWithPawsAndTail</targetDef> <!-- Add your BodyDef here. -->
+				<doer Class="IngestionOutcomeDoer_GiveHediff"> <!-- Set up the effect you want to apply here. -->
+					<hediffDef>Hangover</hediffDef>
+					<severity>5000</severity>
+					<toleranceChemical>Alcohol</toleranceChemical>
+				</doer>
+			</li>
+		</value>
+	</Operation>
+</Patch>

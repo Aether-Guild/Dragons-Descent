@@ -12,9 +12,6 @@ namespace DD
 {
     public static class CompatibilityPatcher
     {
-        public static readonly string DragonBreathWeaponDef = "Gun_DragonBreathWeapon";
-        public static readonly string DragonRaceBodyDef = "QuadrupedeAnimalWithClawsDragon";
-
         private static readonly string HarmonyCompatibilityPatchID = "com.rimworld.mod.dd.compat";
 
         public static bool Patched { get; private set; } = false;
@@ -26,35 +23,22 @@ namespace DD
                 try
                 {
                     Log.Message("Preparing to apply compatibility patches...");
+
                     if (DraconicOverseer.Settings.KFM_IgnoreRange)
                     {
-                        KFM_IgnoreDragonRanged();
+                        KFM_AddRanged();
                     }
 
                     if (DraconicOverseer.Settings.HFM_IgnoreRange)
                     {
-                        HFM_IgnoreDragonRanged();
+                        HFM_AddRanged();
                     }
 
                     if (DraconicOverseer.Settings.ARA_VerbCheck)
                     {
-                        MethodInfo pawn_attackVerb = AccessTools.Method(typeof(Pawn), "TryGetAttackVerb");
-                        HarmonyMethod attackVerb_Postfix = new HarmonyMethod(typeof(CompatibilityPatch), "Compat__VerbCheck_Patch");
-
-                        Replace_HarmonyPatch(pawn_attackVerb, HarmonyPatchType.Prefix, patch => patch.PatchMethod.ReflectedType.Name == "ARA__VerbCheck_Patch", null, attackVerb_Postfix);
+                        ARA_VerbCheck_Compat();
                     }
 
-                    if(DraconicOverseer.Settings.RW_RoyaltyErrors)
-                    {
-                        MethodInfo storyteller_GenerateIncident = AccessTools.Method(typeof(StorytellerComp_OnOffCycle), "GenerateIncident");
-                        MethodInfo storyteller_ToString = AccessTools.Method(typeof(StorytellerComp_OnOffCycle), "ToString");
-
-                        HarmonyMethod generateIncident_Prefix = new HarmonyMethod(typeof(CompatibilityPatch), "DD_StorytellerComp_OnOffCycle_GenerateIncident");
-                        HarmonyMethod ToString_Prefix = new HarmonyMethod(typeof(CompatibilityPatch), "DD_StorytellerComp_OnOffCycle_ToString");
-
-                        Add_HarmonyPatch(storyteller_GenerateIncident, generateIncident_Prefix);
-                        Add_HarmonyPatch(storyteller_ToString, ToString_Prefix);
-                    }
                     Patched = true;
                     Log.Message("Compatibility patches were applied successfully.");
                 }
@@ -67,65 +51,71 @@ namespace DD
         }
 
         //KFM
-        private static void KFM_IgnoreDragonRanged()
+        private static void KFM_AddRanged()
         {
             //KFM-fix add dragons to block list.
-            Type Type_KFM_Settings = Type.GetType("aRandomKiwi.KFM.Settings, aRandomKiwi_KillForMe");
-            if (Type_KFM_Settings != null)
+            Type Type_KFM_Utils = Type.GetType("aRandomKiwi.KFM.Utils, aRandomKiwi_KillForMe");
+            if (Type_KFM_Utils != null)
             {
                 try
                 {
-                    Log.Message("KFM was detected.\nAttempting to add dragons to its internal range ignore list...");
+                    Log.Message("KFM was detected.\nPatching to add ability verbs...");
 
-                    //Retrieve the ignore list.
-                    List<string> ignoredRangedAttack = (List<string>)Type_KFM_Settings.GetField("ignoredRangedAttack").GetValue(null);
-                    //Lookup the dragon's thingdefs and add their defNames to the ignore list.
-                    ignoredRangedAttack.AddRange(DefDatabase<ThingDef>.AllDefs.Where(t => t != null && t.race != null && t.race.body != null && t.race.body.defName.Equals(DragonRaceBodyDef) && !ignoredRangedAttack.Contains(t.defName)).Select(t => t.defName));
+                    MethodInfo originalMethod = AccessTools.Method(Type_KFM_Utils, "hasRemoteVerbAttack");
+                    Add_HarmonyPatch(originalMethod, postfixMethod: new HarmonyMethod(typeof(CompatibilityPatch), "DFM_hasRemoteAttack_Patch"));
 
-                    Log.Message("Dragons were successfully added to the KFM ignore range list.");
+                    Log.Message("KFM patch was successfully applied.");
                 }
                 catch (Exception ex)
                 {
-                    Log.Message("Could not add dragons to the ignore list.");
+                    Log.Message("Could not patch KFM.");
                     throw;
                 }
             }
         }
 
         //HFM
-        private static void HFM_IgnoreDragonRanged()
+        private static void HFM_AddRanged()
         {
             //HFM-fix add dragons to block list.
-            Type Type_KFM_Settings = Type.GetType("aRandomKiwi.HFM.Settings, aRandomKiwi_HuntForMe");
-            if (Type_KFM_Settings != null)
+            Type Type_HFM_Utils = Type.GetType("aRandomKiwi.HFM.Utils, aRandomKiwi_HuntForMe");
+            if (Type_HFM_Utils != null)
             {
                 try
                 {
-                    Log.Message("HFM was detected.\nAttempting to add dragons to its internal range ignore list...");
+                    Log.Message("HFM was detected.\nPatching to add ability verbs...");
 
-                    //Retrieve the ignore list.
-                    List<string> ignoredRangedAttack = (List<string>)Type_KFM_Settings.GetField("ignoredRangedAttack").GetValue(null);
-                    //Lookup the dragon's thingdefs and add their defNames to the ignore list.
-                    ignoredRangedAttack.AddRange(DefDatabase<ThingDef>.AllDefs.Where(t => t != null && t.race != null && t.race.body != null && t.race.body.defName.Equals(DragonRaceBodyDef) && !ignoredRangedAttack.Contains(t.defName)).Select(t => t.defName));
+                    MethodInfo originalMethod = AccessTools.Method(Type_HFM_Utils, "hasRemoteVerbAttack");
+                    Add_HarmonyPatch(originalMethod, postfixMethod: new HarmonyMethod(typeof(CompatibilityPatch), "DFM_hasRemoteAttack_Patch"));
 
-                    Log.Message("Dragons were successfully added to the HFM ignore range list.");
+                    Log.Message("HFM patch was successfully applied.");
                 }
                 catch (Exception ex)
                 {
-                    Log.Message("Could not add dragons to the ignore list.");
+                    Log.Message("Could not patch HFM.");
                     throw;
                 }
             }
         }
 
+        //ARA
+        private static void ARA_VerbCheck_Compat()
+        {
+            MethodInfo pawn_attackVerb = AccessTools.Method(typeof(Pawn), "TryGetAttackVerb");
+            HarmonyMethod attackVerb_Postfix = new HarmonyMethod(typeof(CompatibilityPatch), "Compat__VerbCheck_Patch");
+
+            Replace_HarmonyPatch(pawn_attackVerb, HarmonyPatchType.Prefix, patch => patch.PatchMethod.ReflectedType.Name == "ARA__VerbCheck_Patch", null, attackVerb_Postfix);
+        }
+
+
         //Harmony Compatibility
-        private static void Add_HarmonyPatch(MethodInfo original, HarmonyMethod prefixMethod = null, HarmonyMethod postfixMethod = null, HarmonyMethod transpilerMethod = null)
+        internal static void Add_HarmonyPatch(MethodInfo original, HarmonyMethod prefixMethod = null, HarmonyMethod postfixMethod = null, HarmonyMethod transpilerMethod = null)
         {
             Harmony harmony = new Harmony(HarmonyCompatibilityPatchID);
             harmony.Patch(original, prefixMethod, postfixMethod, transpilerMethod);
         }
 
-        private static void Replace_HarmonyPatch(MethodInfo original, HarmonyPatchType targetPatchType, Func<Patch, bool> isTargetPatch, HarmonyMethod prefixReplacementMethod = null, HarmonyMethod postfixReplacementMethod = null, HarmonyMethod transpilerReplacementMethod = null)
+        internal static void Replace_HarmonyPatch(MethodInfo original, HarmonyPatchType targetPatchType, Func<Patch, bool> isTargetPatch, HarmonyMethod prefixReplacementMethod = null, HarmonyMethod postfixReplacementMethod = null, HarmonyMethod transpilerReplacementMethod = null)
         {
             List<Patch> patches = null;
 
@@ -198,67 +188,20 @@ namespace DD
                 }
             }
 
-            // PawnUtility.IsFighting
-            [HarmonyPatch(typeof(PawnUtility), "IsFighting")]
-            private static class PawnUtility_IsFighting_Patch
+            //KFM/HFM Compat
+            public static void DFM_hasRemoteAttack_Patch(IEnumerable<Verb> verbs, ref bool __result)
             {
-                public static void Postfix(ref bool __result, Pawn pawn)
+                if (!__result)
                 {
-                    if (!__result && pawn.CurJob != null)
+                    foreach(Pawn pawn in verbs.Select(verb => verb.Caster))
                     {
-                        //Not fighting (vanilla) and has a job.
-                        foreach (JobDef def in DraconicOverseer.Settings.FightingJobs)
+                        if(VerbUtils.GetPossibleVerbs(pawn).Filter_KeepRanged().Any())
                         {
-                            __result = pawn.CurJobDef == def;
-
-                            if (__result)
-                            {
-                                //Found a fighting job.
-                                return;
-                            }
+                            __result = true;
+                            return;
                         }
                     }
                 }
-            }
-
-            //Rimworld-Core w/o Royalty load errors.
-            public static bool DD_StorytellerComp_OnOffCycle_GenerateIncident(ref StorytellerComp_OnOffCycle __instance, ref FiringIncident __result, IIncidentTarget target)
-            {
-                StorytellerCompProperties_OnOffCycle Props = __instance.props as StorytellerCompProperties_OnOffCycle;
-                if (Props != null)
-                {
-                    if (Props.IncidentCategory == null)
-                    {
-                        __result = null;
-                        return false;
-                    }
-                }
-                return true;
-            }
-
-            //Rimworld-Core w/o Royalty load errors.
-            public static bool DD_StorytellerComp_OnOffCycle_ToString(ref StorytellerComp_OnOffCycle __instance, ref string __result)
-            {
-                StorytellerCompProperties_OnOffCycle Props = __instance.props as StorytellerCompProperties_OnOffCycle;
-                if (Props != null)
-                {
-                    if (Props.incident == null && Props.IncidentCategory == null)
-                    {
-                        string text = __instance.GetType().Name;
-                        string text2 = typeof(StorytellerComp).Name + "_";
-                        if (text.StartsWith(text2))
-                        {
-                            text = text.Substring(text2.Length);
-                        }
-                        if (!__instance.props.allowedTargetTags.NullOrEmpty())
-                        {
-                            text = text + " (" + __instance.props.allowedTargetTags.Select(x => x.ToStringSafe()).ToCommaList() + ")";
-                        }
-                        __result = text;
-                        return false;
-                    }
-                }
-                return true;
             }
         }
     }

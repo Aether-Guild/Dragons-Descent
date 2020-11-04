@@ -9,6 +9,8 @@
   <DragonMateSpawnMessage>{MATE} has heard the mating call!</DragonMateSpawnMessage>
   
   <!-- ========== Rituals ========== -->
+  <RitualNoTargetMessage>No applicable targets in range.</RitualNoTargetMessage>
+  
   <RitualControlNeedsOnMessage>{TARGET} seems mystically sated. (Duration: {DURATION})</RitualControlNeedsOnMessage>
   <RitualControlNeedsOffMessage>{TARGET} begins to hunger once more.</RitualControlNeedsOffMessage>
   
@@ -26,5 +28,11 @@
   
   <RitualWardOnMessage>The colony is protected from draconic rage. (Duration: {DURATION})</RitualWardOnMessage>
   <RitualWardOffMessage>The colony is no longer protected from draconic rage.</RitualWardOffMessage>
+  
+  <!-- ========== Ability ========== -->
+  <AbilityGainHediffMessage>{PAWN} has gained the {ABILITY} ability.</AbilityGainHediffMessage>
+  
+  
+  <HostileResponseFriendlyFireMessage>{PAWN} is manhunting due to friendly fire by {ATTACKER}. The rage will end once the dragon rests or falls unconscious.</HostileResponseFriendlyFireMessage>
   
 </LanguageData>

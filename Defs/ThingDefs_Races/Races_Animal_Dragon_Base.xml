@@ -10,38 +10,125 @@
 	  
 		<!-- This clears any hediffgivers from its children -->
 		<hediffGiverSets Inherit="false">
-			<li>OrganicAgeless</li> <!-- Moved here since its the same on both common and rare dragons -->
+			<li>OrganicDragon</li> <!-- Moved here since its the same on both common and rare dragons -->
 		</hediffGiverSets>
 	  
 		<!-- Moved here since its the same on both common and rare dragons -->
 		<lifeExpectancy>2000</lifeExpectancy>
     </race>
-	<verbs>
-	   <li Class="DD.VerbProperties_Cooldown">
-			<verbClass>DD.Verb_Shoot_Cooldown</verbClass>
-			<cooldown>20</cooldown>
-			<accuracyTouch>0.95</accuracyTouch>
-			<accuracyShort>0.60</accuracyShort>
-			<accuracyMedium>0.50</accuracyMedium>
-			<accuracyLong>0.30</accuracyLong>
-			<hasStandardCommand>false</hasStandardCommand>
-			<defaultProjectile>Projectile_DragonBreath</defaultProjectile>
-			<warmupTime>0.5</warmupTime>
-			<range>35</range>
-			<burstShotCount>20</burstShotCount>
-			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-			<minRange>1</minRange>
-			<soundCast>DragonBreathShot</soundCast>
-			<muzzleFlashScale>1</muzzleFlashScale>
+	<comps>
+	    <!-- HostileResponse settings -->
+		<li Class="DD.CompProperties_HostileResponse">
+			<compClass>DD.CompHostileResponse</compClass>
+			<initialHostility>Aggressive</initialHostility>
+			<friendlyFireMentalState>Manhunter</friendlyFireMentalState>
+			<options>
+				<li>
+					<type>Aggressive</type>
+					<label>Aggressive</label>
+					<description>Attacks any hostile targets within sight, even manhunter bunnies.</description>
+					<iconPath>UI/AI/Attack</iconPath>
+					<disableMessage>Aggressive, and you better get used to it.</disableMessage>
+				</li>
+				<li>
+					<type>Defensive</type>
+					<label>Defensive</label>
+					<description>Retaliates against any attacks made towards it, even if they're just taking aim.</description>
+					<iconPath>UI/AI/Defense</iconPath>
+					<disableMessage>Defensive and disabled.</disableMessage>
+				</li>
+				<li>
+					<type>Passive</type>
+					<label>Pacifist</label>
+					<description>Flees from any hostile actions made against it, even by friendlies.</description>
+					<iconPath>UI/AI/Passive</iconPath>
+					<disableMessage>Passive and disabled.</disableMessage>
+				</li>
+			</options>
 		</li>
-	</verbs>
+		<!-- Defines the conditions for when to give the pawn an ability -->
+		<li Class="DD.CompProperties_AbilityDefinition">
+			<compClass>DD.CompAbilityDefinition</compClass>
+			
+			<!-- List of Abilities and conditions for gaining the abilities -->
+			<abilities>
+				<li>
+					<abilityDef>DragonBreath</abilityDef>
+					<!-- Set if you want the ability to be gained after a hediff (Needs to have a HediffComp_GrowthSeverityScaling) -->
+					<hediffDef>DraconicGrowth</hediffDef>
+					<!-- Set if you want the hediff to be put on a specific body part -->
+					<!-- <bodyPartDef>Fundamentum</bodyPartDef> -->
+					<conditions>
+						<li Class="DD.AbilityGainAgeCondition">
+							<ageRange>35~40</ageRange>
+						</li>
+						<!-- Testing additional conditions -->
+						<!-- <li Class="DD.AbilityGainKillCondition"> -->
+							<!-- <killCount>10~15</killCount> -->
+							<!-- <type></type> -->
+						<!-- </li> -->
+						<!-- <li Class="DD.AbilityGainDamageCondition"> -->
+							<!-- <damageRange>2000~2500</damageRange> -->
+						<!-- </li> -->
+					</conditions>
+				</li>
+				<li>
+					<abilityDef>DragonSpit</abilityDef>
+					<hediffDef>DraconicGrowth</hediffDef>
+					<conditions>
+						<li Class="DD.AbilityGainAgeCondition">
+							<ageRange>200~210</ageRange>
+						</li>
+					</conditions>
+				</li>
+			</abilities>
+			
+			<!-- ====== Spawn curves ====== -->
+			<!-- Curve for the number of kills the pawn has, based on how old they are. -->
+			<!-- Used only for setting the value when the pawn is spawned. -->
+			<!-- E.g: If the pawn spawns at age 35, it'll start with 5 kills in its counter. -->
+			<spawnKillCount>
+				<points>
+					<li>(0, 0)</li>
+					<li>(35, 5)</li>
+					<li>(100, 30)</li>
+					<li>(700, 100)</li>
+					<li>(2000, 5000)</li>
+				</points>
+			</spawnKillCount>
+			<!-- Curve for the amount of damage a pawn sustained, based on how old they are. -->
+			<!-- Used only for setting the value when the pawn is spawned. -->
+			<!-- E.g: If the pawn spawns at age 30, it'll start with 50 damage total. -->
+			<spawnDamageTotal>
+				<points>
+					<li>(0, 0)</li>
+					<li>(30, 50)</li>
+					<li>(100, 300)</li>
+					<li>(700, 1000)</li>
+					<li>(1500, 50000)</li>
+				</points>
+			</spawnDamageTotal>
+		</li>
+	</comps>
 	<modExtensions>
 		<li Class="DD.SettingControlledExtension_AnimalBiome" />
 		<li Class="DD.LegacyModExtension">
 			<hasOwnership>true</hasOwnership>
+			<hasAbilities>true</hasAbilities>
 		</li>
+		<li Class="DD.AmbrosiaTargetExtension" />
+		<li Class="DD.MatingTargetExtension" />
+		<li Class="DD.RitualTargetExtension" />
 	</modExtensions>
   </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase" Name="BaseDragonKind" Abstract="True">
+	<modExtensions>
+		<li Class="DD.VerbSettingExtension">
+			<useExtendedVerbs>true</useExtendedVerbs>
+		</li>
+	</modExtensions>
+  </PawnKindDef>
 
   <!-- =========================== Common Dragon =========================== -->
 
@@ -162,8 +249,13 @@
       <li>AnimalExotic</li>
     </tradeTags>
 	<butcherProducts>
-    <DragonHorn>1</DragonHorn>
+      <DragonHorn>1</DragonHorn>
     </butcherProducts>
+	<modExtensions>
+	  <li Class="DD.BreedingPoolExtension">
+	    <pool>CommonDragons</pool>
+	  </li>
+	</modExtensions>
   </ThingDef>
 
 
@@ -285,9 +377,14 @@
     <tradeTags>
       <li>AnimalExotic</li>
     </tradeTags>
-		<butcherProducts>
-    <DragonHorn>1</DragonHorn>
+	<butcherProducts>
+		<DragonHorn>1</DragonHorn>
     </butcherProducts>
+	<modExtensions>
+	  <li Class="DD.BreedingPoolExtension">
+	    <pool>RareDragons</pool>
+	  </li>
+	</modExtensions>
   </ThingDef>
 
 

@@ -4,7 +4,7 @@
 	<!-- Dragon Blood Potion -->
 	<ThingDef ParentName="MakeableDrugBase">
 		<defName>DragonsBlood</defName>
-		<label>dragon's blood potion</label>
+		<label>dragon's blood</label>
 		<description>Dragons have forever been known as mythical beasts with amazing strength. Some believe this strength is stored within the eyes or claws, but in reality it is from its blood. A dragon's blood can only be obtained from the horns, as the blood from other areas is simply too potent and toxic for consumption. This potion grants some of the dragons powers; speed, pain resistence, fierce combat capabilities, and flame nullification. \n\nDue to the feeling of power this creates within those who take it may get extremely addicted. The feeling of a dragon's power coursing through your veins is hard to resist.</description>
 		<descriptionHyperlinks>
 			<HediffDef>DragonsBloodHigh</HediffDef>

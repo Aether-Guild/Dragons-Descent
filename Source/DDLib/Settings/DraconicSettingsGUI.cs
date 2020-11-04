@@ -19,21 +19,15 @@ namespace DD
         private const string Format_IncidentSpawn_Label = "Setting_EventSpawn_Title";
         private const string Format_IncidentSpawn_Desc = "Setting_EventSpawn_Description";
 
-        private const string Format_Compat_Title = "Setting_Compatibility";
-        private const string Format_Compat_Warning = "Setting_Compatibility_Warning";
         private const string Format_Compat_KFM_IR_Label = "Setting_Compatibility_KFM_Range_Title";
         private const string Format_Compat_KFM_IR_Desc = "Setting_Compatibility_KFM_Range_Description";
         private const string Format_Compat_HFM_IR_Label = "Setting_Compatibility_HFM_Range_Title";
         private const string Format_Compat_HFM_IR_Desc = "Setting_Compatibility_HFM_Range_Description";
+
+        private const string Format_Compat_Title = "Setting_Compatibility";
+        private const string Format_Compat_Warning = "Setting_Compatibility_Warning";
         private const string Format_Compat_ARA_VC_Label = "Setting_Compatibility_ARA_VerbCheck_Title";
         private const string Format_Compat_ARA_VC_Desc = "Setting_Compatibility_ARA_VerbCheck_Description";
-        private const string Format_Compat_RW_RE_Label = "Setting_Compatibility_RW_RoyaltyErrors_Title";
-        private const string Format_Compat_RW_RE_Desc = "Setting_Compatibility_RW_RoyaltyErrors_Description";
-
-        private const string Format_Compat_FightJobs_Title = "Setting_FightingJobs";
-        private const string Format_Compat_FightJobs_Desc = "Setting_FightingJobs_Note";
-        private const string Format_Compat_FightJobs_Add = "Setting_FightingJobs_Add";
-        private const string Format_Compat_FightJobs_Remove = "Setting_FightingJobs_Remove";
 
         private const string Format_Select = "Setting_Select";
         private const string Format_Deselect = "Setting_Deselect";
@@ -72,8 +66,6 @@ namespace DD
             DoGUI_IncidentPanel(window);
             window.Gap(GapSize);
             DoGUI_CompatibilityPatchesPanel(window);
-            window.Gap(GapSize);
-            DoGUI_FightingJobPanel(window);
             window.Gap(GapSize);
             if (window.ButtonText(Format_Reset.Translate()))
             {
@@ -174,7 +166,7 @@ namespace DD
 
         private void DoGUI_CompatibilityPatchesPanel(Listing_Standard window)
         {
-            float panelHeight = TitleHeight + GapSize + EntryHeight + EntryHeight + EntryHeight + EntryHeight + FooterHeight + Delta;
+            float panelHeight = TitleHeight + GapSize + EntryHeight + EntryHeight + EntryHeight + FooterHeight + Delta;
 
             Listing_Standard panel = window.BeginSection(panelHeight);
 
@@ -189,7 +181,6 @@ namespace DD
                 settings.KFM_IgnoreRange = true;
                 settings.HFM_IgnoreRange = true;
                 settings.ARA_VerbCheck = true;
-                settings.RW_RoyaltyErrors = true;
             }
             titlePanel.NewColumn();
             if (titlePanel.ButtonText(Format_Deselect.Translate()))
@@ -197,79 +188,24 @@ namespace DD
                 settings.KFM_IgnoreRange = false;
                 settings.HFM_IgnoreRange = false;
                 settings.ARA_VerbCheck = false;
-                settings.RW_RoyaltyErrors = false;
             }
             panel.EndSection(titlePanel);
 
             bool KFM_IR = settings.KFM_IgnoreRange;
             bool HFM_IR = settings.HFM_IgnoreRange;
             bool ARA_VC = settings.ARA_VerbCheck;
-            bool RW_RE = settings.RW_RoyaltyErrors;
 
             panel.CheckboxLabeled(Format_Compat_KFM_IR_Label.Translate(), ref KFM_IR, Format_Compat_KFM_IR_Desc.Translate());
             panel.CheckboxLabeled(Format_Compat_HFM_IR_Label.Translate(), ref HFM_IR, Format_Compat_HFM_IR_Desc.Translate());
             panel.CheckboxLabeled(Format_Compat_ARA_VC_Label.Translate(), ref ARA_VC, Format_Compat_ARA_VC_Desc.Translate());
-            panel.CheckboxLabeled(Format_Compat_RW_RE_Label.Translate(), ref RW_RE, Format_Compat_RW_RE_Desc.Translate());
 
             settings.KFM_IgnoreRange = KFM_IR;
             settings.HFM_IgnoreRange = HFM_IR;
             settings.ARA_VerbCheck = ARA_VC;
-            settings.RW_RoyaltyErrors = RW_RE;
 
             Text.Font = GameFont.Tiny;
             panel.Label(Format_Compat_Warning.Translate());
             Text.Font = GameFont.Small;
-            window.EndSection(panel);
-        }
-
-        private void DoGUI_FightingJobPanel(Listing_Standard window)
-        {
-            float innerPanelHeight = settings.FightingJobDefs.Count * Mathf.Max(TextEntryHeight, ButtonHeight);
-            float panelHeight = TitleHeight + GapSize + FooterHeight + innerPanelHeight + TitleHeight + FooterHeight;
-
-            Listing_Standard panel = window.BeginSection(panelHeight);
-
-            Listing_Standard titlePanel = panel.BeginSection(TitleHeight);
-            titlePanel.ColumnWidth /= 2;
-            Text.Font = GameFont.Medium;
-            titlePanel.Label(Format_Compat_FightJobs_Title.Translate());
-            Text.Font = GameFont.Small;
-            titlePanel.NewColumn();
-            if (titlePanel.ButtonText(Format_Compat_FightJobs_Add.Translate()))
-            {
-                settings.FightingJobDefs.Add("");
-            }
-            panel.EndSection(titlePanel);
-
-            Text.Font = GameFont.Tiny;
-            panel.Label(Format_Compat_FightJobs_Desc.Translate());
-            Text.Font = GameFont.Small;
-
-            Listing_Standard innerPanel = panel.BeginSection(innerPanelHeight);
-            innerPanel.ColumnWidth /= 2;
-            for (int i = 0; i < settings.FightingJobDefs.Count; i++)
-            {
-                string defName = settings.FightingJobDefs[i];
-                innerPanel.Gap((ButtonHeight - TextEntryHeight-GapSizeMini)/2);
-                settings.FightingJobDefs[i] = innerPanel.TextEntry(defName, 1);
-                innerPanel.Gap((ButtonHeight - TextEntryHeight - GapSizeMini)/2);
-            }
-            innerPanel.NewColumn();
-            for (int i = 0; i < settings.FightingJobDefs.Count; i++)
-            {
-                string text = Format_Compat_FightJobs_Remove.Translate();
-                if(!settings.FightingJobDefs[i].NullOrEmpty())
-                {
-                    text += " [" + settings.FightingJobDefs[i] + "]";
-                }
-
-                if (innerPanel.ButtonText(text))
-                {
-                    settings.FightingJobDefs.RemoveAt(i);
-                    i--;
-                }
-            }
-            panel.EndSection(innerPanel);
             window.EndSection(panel);
         }
     }
