@@ -26,12 +26,12 @@ namespace DD
 
                     if (DraconicOverseer.Settings.KFM_IgnoreRange)
                     {
-                        //Inactive
+                        KFM_AddRanged();
                     }
 
                     if (DraconicOverseer.Settings.HFM_IgnoreRange)
                     {
-                        //Inactive
+                        HFM_AddRanged();
                     }
 
                     if (DraconicOverseer.Settings.ARA_VerbCheck)
@@ -53,11 +53,49 @@ namespace DD
         //KFM
         private static void KFM_AddRanged()
         {
+            //KFM-fix add dragons to block list.
+            Type Type_KFM_Utils = Type.GetType("aRandomKiwi.KFM.Utils, aRandomKiwi_KillForMe");
+            if (Type_KFM_Utils != null)
+            {
+                try
+                {
+                    Log.Message("KFM was detected.\nPatching to add ability verbs...");
+
+                    MethodInfo originalMethod = AccessTools.Method(Type_KFM_Utils, "hasRemoteVerbAttack");
+                    Add_HarmonyPatch(originalMethod, postfixMethod: new HarmonyMethod(typeof(CompatibilityPatch), "DFM_hasRemoteAttack_Patch"));
+
+                    Log.Message("KFM patch was successfully applied.");
+                }
+                catch (Exception ex)
+                {
+                    Log.Message("Could not patch KFM.");
+                    throw;
+                }
+            }
         }
 
         //HFM
         private static void HFM_AddRanged()
         {
+            //HFM-fix add dragons to block list.
+            Type Type_HFM_Utils = Type.GetType("aRandomKiwi.HFM.Utils, aRandomKiwi_HuntForMe");
+            if (Type_HFM_Utils != null)
+            {
+                try
+                {
+                    Log.Message("HFM was detected.\nPatching to add ability verbs...");
+
+                    MethodInfo originalMethod = AccessTools.Method(Type_HFM_Utils, "hasRemoteVerbAttack");
+                    Add_HarmonyPatch(originalMethod, postfixMethod: new HarmonyMethod(typeof(CompatibilityPatch), "DFM_hasRemoteAttack_Patch"));
+
+                    Log.Message("HFM patch was successfully applied.");
+                }
+                catch (Exception ex)
+                {
+                    Log.Message("Could not patch HFM.");
+                    throw;
+                }
+            }
         }
 
         //ARA
@@ -145,6 +183,22 @@ namespace DD
                                 __result = verb;
                                 break;
                             }
+                        }
+                    }
+                }
+            }
+
+            //KFM/HFM Compat
+            public static void DFM_hasRemoteAttack_Patch(IEnumerable<Verb> verbs, ref bool __result)
+            {
+                if (!__result)
+                {
+                    foreach(Pawn pawn in verbs.Select(verb => verb.Caster))
+                    {
+                        if(VerbUtils.GetPossibleVerbs(pawn).Filter_KeepRanged().Any())
+                        {
+                            __result = true;
+                            return;
                         }
                     }
                 }

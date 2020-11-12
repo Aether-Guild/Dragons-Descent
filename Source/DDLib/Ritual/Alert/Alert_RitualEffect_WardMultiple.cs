@@ -18,6 +18,6 @@ namespace DD
 
         public override RitualDef Def => DD_RitualDefOf.Ritual_WardAllDragon;
 
-        public override AlertReport GetAlertReport(ITickingRitual ritual) => AlertReport.CulpritsAre(ritual.AllTargetedPawns.ToList());
+        public override AlertReport GetAlertReport(ITickingRitual ritual) => !ritual.AllTargetedPawns.EnumerableNullOrEmpty() ? AlertReport.CulpritsAre(ritual.AllTargetedPawns.ToList()) : AlertReport.Inactive;
     }
 }

@@ -9,34 +9,29 @@ using Verse.AI;
 
 namespace DD
 {
-    public class JobGiver_PatientGoToBed : ThinkNode
+    public class JobGiver_RegenPatientGoToBed : JobGiver_PatientGoToBed
     {
-        public bool respectTimetable = true;
+        public float timeout = 60f;
 
         public override ThinkResult TryIssueJobPackage(Pawn pawn, JobIssueParams jobParams)
         {
-            if(!HealthAIUtility.ShouldHaveSurgeryDoneNow(pawn) && !pawn.health.hediffSet.HasImmunizableNotImmuneHediff())
+            ThinkResult result = base.TryIssueJobPackage(pawn, jobParams);
+
+            if (result.IsValid)
             {
-                return ThinkResult.NoJob;
+                if (HealthUtils.CanRegen(pawn, timeout) && HealthUtils.ShouldRegen(pawn) && pawn.health.hediffSet.HasHediff(DD_HediffDefOf.DraconicRegeneration))
+                {
+                    //Do nothing if has regen active.
+                    result = ThinkResult.NoJob;
+                }
+                else if (!HealthUtils.ShouldBeDoctored(pawn))
+                {
+                    //Do nothing if shouldn't be doctored.
+                    result = ThinkResult.NoJob;
+                }
             }
 
-            if (RestUtility.DisturbancePreventsLyingDown(pawn))
-            {
-                return ThinkResult.NoJob;
-            }
-
-            if(respectTimetable && RestUtility.TimetablePreventsLayDown(pawn))
-            {
-                return ThinkResult.NoJob;
-            }
-
-            Thing thing = RestUtility.FindPatientBedFor(pawn);
-            if (thing == null)
-            {
-                return ThinkResult.NoJob;
-            }
-
-            return new ThinkResult(JobMaker.MakeJob(JobDefOf.LayDown, thing), this);
+            return result;
         }
     }
 }

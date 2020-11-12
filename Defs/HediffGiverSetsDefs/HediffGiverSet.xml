@@ -2,7 +2,7 @@
 <Defs>
 
 	<HediffGiverSetDef>
-		<defName>OrganicAgeless</defName>
+		<defName>OrganicDragon</defName>
 		<hediffGivers>
 			<li Class="DD.HediffGiver_Regeneration">
 				<hediff>DraconicRegeneration</hediff>

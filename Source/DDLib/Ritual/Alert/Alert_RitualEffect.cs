@@ -13,7 +13,8 @@ namespace DD
         public abstract RitualDef Def { get; }
         public abstract AlertReport GetAlertReport(ITickingRitual ritual);
 
-        public RitualTracker Tracker => Find.CurrentMap.GetComponent<MapComponent_Tracker>()?.Rituals ?? null;
+        public Map Map => Find.CurrentMap;
+        public RitualTracker Tracker => Map?.GetComponent<MapComponent_Tracker>()?.Rituals ?? null;
 
         public Alert_RitualEffect()
         {
@@ -39,7 +40,7 @@ namespace DD
         public override AlertReport GetReport()
         {
             RitualTracker rituals = Tracker;
-            if (rituals != null && rituals[Def] != null && rituals[Def].Active && rituals[Def] is ITickingRitual)
+            if (Map != null && rituals != null && rituals[Def] != null && rituals[Def].Active && rituals[Def] is ITickingRitual)
             {
                 if (!report.active)
                 {

@@ -3,20 +3,20 @@
     <ThingDef ParentName="LeatherBase">
     <defName>Dragon_Leather</defName>
     <label>dragon leather</label>
-    <description>The tanning process has converted these scales into a rich, supple, strong leather. However, the original color has been lost (like when a lobster is boiled in water) and so the scales and skin have irreversibly changed color.</description>
+    <description>Exotic leather of a dragon. The tanning process has converted these scales into a rich, supple, strong leather. However, the original color has been lost (like when a lobster is boiled in water) and so the skin has irreversibly changed color.</description>
     <graphicData>
       <color>(15,63,51)</color>
     </graphicData>
     <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <DeteriorationRate>4</DeteriorationRate>
+      <MaxHitPoints>130</MaxHitPoints>
+      <DeteriorationRate>1.2</DeteriorationRate>
       <Mass>0.15</Mass>
       <Flammability>0</Flammability>
-      <MarketValue>18.0</MarketValue>
-      <StuffPower_Armor_Sharp>1.20</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>1.68</StuffPower_Armor_Blunt>
+      <MarketValue>16.4</MarketValue>
+      <StuffPower_Armor_Sharp>0.92</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.24</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>1.00</StuffPower_Armor_Heat>
-      <StuffPower_Insulation_Cold>30</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Cold>28</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>35</StuffPower_Insulation_Heat>
     </statBases>
       <thingCategories>
@@ -25,12 +25,9 @@
     <stuffProps>
       <color>(15,63,51)</color>
       <commonality>0.01</commonality>
-       <statOffsets>
-        <Beauty>25</Beauty>
-      </statOffsets>
       <statFactors>
-        <MaxHitPoints>2.5</MaxHitPoints>
-		<Beauty>8</Beauty>
+        <MaxHitPoints>2.2</MaxHitPoints>
+        <Beauty>10</Beauty>
       </statFactors>
     </stuffProps>
   </ThingDef>
@@ -44,7 +41,7 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <DeteriorationRate>4</DeteriorationRate>
+      <DeteriorationRate>1</DeteriorationRate>
       <Mass>0.15</Mass>
       <Flammability>0</Flammability>
       <MarketValue>22.8</MarketValue>
@@ -79,7 +76,7 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <DeteriorationRate>4</DeteriorationRate>
+      <DeteriorationRate>1</DeteriorationRate>
       <Mass>0.3</Mass>
       <Flammability>0</Flammability>
       <MarketValue>38.0</MarketValue>

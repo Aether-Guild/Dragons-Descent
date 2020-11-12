@@ -2,16 +2,16 @@
 <Defs>
   <ThingDef ParentName="ResourceVerbBase">
     <defName>DragonHorn</defName>
-    <label>Dragon horn</label>
-    <description>A dragon horn. It's razor-sharp, very hard, and priceless in most markets. This is a true trophy.</description>
+    <label>dragon horn</label>
+    <description>A dragon horn. To obtain one you must battle to the death with one of the fiercest animals on the rim. They are very durable and sharp, making it an excellent choice as a melee weapon.</description>
     <graphicData>
       <texPath>Things/Item/Special/DragonHorn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <equippedAngleOffset>70</equippedAngleOffset>
     <statBases>
-      <MarketValue>2100</MarketValue>
-      <MaxHitPoints>1500</MaxHitPoints>
+      <MarketValue>870</MarketValue>
+      <MaxHitPoints>150</MaxHitPoints>
       <Mass>3</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>0.5</DeteriorationRate>
@@ -25,16 +25,16 @@
           <li>Scratch</li>
           <li>Stab</li>
         </capacities>
-        <power>37</power>
-        <cooldownTime>1.5</cooldownTime>
+        <power>31</power>
+        <cooldownTime>2.8</cooldownTime>
       </li>
       <li>
         <label>base</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>15</power>
-        <cooldownTime>1.0</cooldownTime>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
       </li>
     </tools>
     <thingCategories>

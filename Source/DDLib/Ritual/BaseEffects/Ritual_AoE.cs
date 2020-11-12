@@ -10,7 +10,7 @@ namespace DD
 {
     public abstract class Ritual_AoE : Ritual
     {
-        public virtual IEnumerable<Pawn> AllTargetedPawns => Map.mapPawns.AllPawnsSpawned.Where(p => Def.targetingParams.CanTarget(p));
+        public virtual IEnumerable<Pawn> AllTargetedPawns => Map.mapPawns.AllPawnsSpawned.Where(p => !p.DestroyedOrNull() && Def.targetingParams.CanTarget(p));
 
         public override bool Active => false;
         public override TickerType TickerType => TickerType.Never;

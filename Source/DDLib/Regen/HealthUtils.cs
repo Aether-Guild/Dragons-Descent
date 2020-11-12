@@ -34,5 +34,11 @@ namespace DD
 
             return true;
         }
+
+        public static bool ShouldBeDoctored(Pawn pawn)
+        {
+            //Not scar & Not fully immunized & Is neither an injury nor is bleeding & requires tending.
+            return pawn.health.hediffSet.hediffs.Any(hediff => !hediff.IsPermanent() && !hediff.FullyImmune() && !(hediff is Hediff_Injury || hediff.Bleeding) && hediff.TendableNow());
+        }
     }
 }

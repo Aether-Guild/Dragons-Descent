@@ -1,27 +1,55 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Defs> 
-<!--This is a hacky way of handling mod dependency. These are empty, patch replace will fill these in.-->
- <ThingDef>
-	<defName>ARA_DragonFireBreathAlpha</defName>
-	<label>None</label>
-	<thingClass>Projectile_Explosive</thingClass>
+<Defs>
+<!--======================== Fire Breath ====================-->
+	<ThingDef>
+		<defName>Projectile_DragonBreath</defName>
+		<label>Breath</label>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<thingClass>DD.Projectile_Explode</thingClass>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/DragonFire</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>32</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>2.3</explosionRadius>
+			<damageAmountBase>2</damageAmountBase>
+			<soundExplode>DragonBreathFire</soundExplode>
+		</projectile>
+	</ThingDef>
+  <!--====================== Fire Spit ======================-->
+  <ThingDef>
+    <defName>Projectile_DragonSpit</defName>
+    <label>Spit</label>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <thingClass>DD.Projectile_Explode</thingClass>
+    <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
+      <texPath>AnimalProjectile/DragonSpit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <speed>28</speed>
+      <damageDef>Flame</damageDef>
+      <explosionRadius>3.1</explosionRadius>
+      <damageAmountBase>6</damageAmountBase>
+      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>0.3</preExplosionSpawnChance>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>1</shadowSize>
+    </projectile>
   </ThingDef>
   
-   <ThingDef>
-	<defName>ARA_DragonFireBreathBeta</defName>
-	<label>None</label>
-	<thingClass>Projectile_Explosive</thingClass>
-  </ThingDef>
- 
-   <ThingDef>
-	<defName>ARA_DragonFireBreathOmega</defName>
-	<label>None</label>
-	<thingClass>Projectile_Explosive</thingClass>
-  </ThingDef>
-
-  <ThingDef >
-	<defName>ARA_DragonCryo</defName>
-	<label>None</label>
-	<thingClass>Projectile_Explosive</thingClass>
-  </ThingDef>
 </Defs>

@@ -29,4 +29,10 @@
   <RitualWardOnMessage>The colony is protected from draconic rage. (Duration: {DURATION})</RitualWardOnMessage>
   <RitualWardOffMessage>The colony is no longer protected from draconic rage.</RitualWardOffMessage>
   
+  <!-- ========== Ability ========== -->
+  <AbilityGainHediffMessage>{PAWN} has gained the {ABILITY} ability.</AbilityGainHediffMessage>
+  
+  
+  <HostileResponseFriendlyFireMessage>{PAWN} is manhunting due to friendly fire by {ATTACKER}. The rage will end once the dragon rests or falls unconscious.</HostileResponseFriendlyFireMessage>
+  
 </LanguageData>

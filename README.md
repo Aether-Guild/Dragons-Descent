@@ -6,17 +6,20 @@ The Rimworld is a harsh and dangerous place. Its environment can be lush and giv
 
 ## Current Versions:
 ### Steam Workshop
-<b>Release Version:</b> 1.2, Worship
+<b>Release Version:</b> 1.3, Mind, X, and X
 
 ### Upcoming Features/Changes
-<b>Testing Version:</b> In Progress
+<b>Testing Version:</b> 1.3.1: In Progress
 
 ## Dependencies
-Harmony is required
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077">Harmony</a> is required
 
-Giddy Up! Core is highly suggested
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1216999901">Giddy Up! Core</a> is highly suggested
 
-Cyber Fauna is highly suggested
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1548649032">Cyber Fauna</a> is highly suggested
+
+## Addons
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2185295561">Dragon's Descent: Void Dwellers</a>
 
 ## Credits
 ### Original Modders

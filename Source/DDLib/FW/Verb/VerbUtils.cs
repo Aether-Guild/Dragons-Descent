@@ -5,6 +5,7 @@ using Verse;
 using Verse.AI;
 using System.Reflection;
 using System.Linq;
+using UnityEngine;
 
 namespace DD
 {
@@ -28,6 +29,18 @@ namespace DD
                 verbs = verbs.Concat(pawn.VerbTracker.AllVerbs);
             }
 
+            if(pawn.abilities != null && pawn.abilities.abilities != null)
+            {
+                //Add it if it has a comp that states that the comp can be used automatically.
+                foreach (VerbTracker tracker in pawn.abilities.abilities.OfType<Ability_Base>().Where(ability => ability.CanAutoCast).Select(a => a.VerbTracker))
+                {
+                    if(tracker != null && tracker.AllVerbs.Any())
+                    {
+                        verbs = verbs.Concat(tracker.AllVerbs);
+                    }
+                }
+            }
+
             return verbs;
         }
 
@@ -49,11 +62,11 @@ namespace DD
             return verbs.Where((verb) => !verb.IsMeleeAttack);
         }
 
-        public static IEnumerable<Verb> Filter_KeepOffensive(this IEnumerable<Verb> verbs)
-        {
-            //Filter the sequence to keep verbs that are tagged as 'harms health'.
-            return verbs.Where((verb) => verb.HarmsHealth());
-        }
+        //public static IEnumerable<Verb> Filter_KeepOffensive(this IEnumerable<Verb> verbs)
+        //{
+        //    //Filter the sequence to keep verbs that are tagged as 'harms health'.
+        //    return verbs.Where((verb) => verb.HarmsHealth());
+        //}
 
         public static IEnumerable<Verb> Filter_KeepInRange(this IEnumerable<Verb> verbs, Thing target)
         {
@@ -64,42 +77,63 @@ namespace DD
         public static IEnumerable<Verb> Sort_OrderByPreference(this IEnumerable<Verb> verbs)
         {
             //Sort the verb list by preference.
-            return verbs.OrderByDescending(verb => CalculatePreference(verb));
+            //return verbs.OrderByDescending(verb => CalculatePreference(verb));
+            return verbs.OrderByDescending(verb => verb.verbProps.commonality);
         }
 
-        public static Verb Get_MostPreferred(this IEnumerable<Verb> verbs)
+        public static Verb Get_MostPreferred(this IEnumerable<Verb> verbs, bool primary)
         {
             //Select the verb with the maximum preference.
-            return verbs.MaxByWithFallback(verb => CalculatePreference(verb));
+            //return verbs.RandomElementByWeightWithFallback(verb => CalculatePreference(verb));
+            if(primary)
+            {
+                return verbs.MaxByWithFallback(verb => Mathf.Pow(verb.verbProps.range - verb.verbProps.EffectiveMinRange(true), 2));
+            } else
+            {
+                return verbs.RandomElementByWeightWithFallback(verb => verb.verbProps.commonality);
+            }
         }
 
-        private static double CalculatePreference(Verb verb)
+        public static float CalculateCommonality(this Verb verb, Pawn source, Thing target)
         {
-            VerbProperties props = verb.verbProps;
-            DamageDef dd = verb.GetDamageDef();
-
-            double preferenceValue = dd.defaultDamage; //Start with base damage
-
-            preferenceValue += dd.defaultDamage * dd.defaultStoppingPower; //Prefer higher stopping power
-            preferenceValue += dd.defaultDamage * dd.defaultArmorPenetration; //Prefer higher armor penetration
-
-            if (dd.additionalHediffs != null)
+            if(source.IsAdjacentToCardinalOrInside(target))
             {
-                preferenceValue += dd.defaultDamage * dd.additionalHediffs.Where(hddd => hddd.hediff.isBad).Sum(hddd => hddd.severityPerDamageDealt); //Prefer hediff causing attacks
-            }
-            
-            if(dd.isRanged)
+                return verb.verbProps.commonality;
+            } else
             {
-                preferenceValue += dd.defaultDamage*(props.minRange - props.range); //Prefer ranged
+                return verb.verbProps.commonality + verb.verbProps.EffectiveMinRange(target, source) + verb.verbProps.range;
             }
-
-            if(dd.isExplosive)
-            {
-                preferenceValue += dd.defaultDamage; //Prefer explosions
-            }
-
-            return preferenceValue;
         }
+
+        //private static float CalculatePreference(Verb verb)
+        //{
+        //    VerbProperties props = verb.verbProps;
+        //    DamageDef dd = verb.GetDamageDef();
+
+        //    float preferenceValue = dd.defaultDamage; //Start with base damage
+
+        //    preferenceValue += dd.defaultDamage * dd.defaultStoppingPower; //Prefer higher stopping power
+        //    preferenceValue += dd.defaultDamage * dd.defaultArmorPenetration; //Prefer higher armor penetration
+
+        //    if (dd.additionalHediffs != null)
+        //    {
+        //        preferenceValue += dd.defaultDamage * dd.additionalHediffs.Where(hddd => hddd.hediff.isBad).Sum(hddd => hddd.severityPerDamageDealt); //Prefer hediff causing attacks
+        //    }
+
+        //    if(dd.isRanged)
+        //    {
+        //        preferenceValue += dd.defaultDamage*(props.minRange - props.range); //Prefer ranged
+        //    }
+
+        //    if(dd.isExplosive)
+        //    {
+        //        preferenceValue += dd.defaultDamage; //Prefer explosions
+        //    }
+
+        //    preferenceValue = Mathf.Abs(preferenceValue * props.commonality); //Scale by commonality
+
+        //    return preferenceValue;
+        //}
     }
 
 }

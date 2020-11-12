@@ -77,6 +77,24 @@
             </li>
           </subNodes>
         </li>
+		
+		<li Class="ThinkNode_ConditionalMentalStateClass">
+          <stateClass>MentalState_Manhunter</stateClass>
+          <subNodes>
+            <li Class="ThinkNode_Priority">
+              <subNodes>
+                <li Class="ThinkNode_PrioritySorter">
+                  <subNodes>
+                    <li Class="JobGiver_GetFood">
+                      <minCategory>Starving</minCategory>
+                    </li>
+                  </subNodes>
+                </li>
+                <li Class="DD.JobGiver_Manhunter_AnyVerb" />
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
 
         <!-- Mental state non critical -->
         <li Class="ThinkNode_Subtree">
@@ -174,7 +192,7 @@
 			<li Class="ThinkNode_Tagger">
 			  <tagToGive>RestingForMedicalReasons</tagToGive>
 			  <subNodes>
-				<li Class="DD.JobGiver_PatientGoToBed" />
+				<li Class="DD.JobGiver_RegenPatientGoToBed" />
 			  </subNodes>
 			</li>
             
@@ -351,6 +369,9 @@
             </li>
           </subNodes>
         </li>
+		<!-- Hostility response -->
+		<!-- Lower priority, but always active -->
+		<li Class="DD.JobGiver_HostilityResponse" />
       </subNodes>
     </thinkRoot>
   </ThinkTreeDef>

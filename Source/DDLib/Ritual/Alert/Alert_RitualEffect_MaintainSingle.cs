@@ -18,9 +18,6 @@ namespace DD
 
         public override RitualDef Def => DD_RitualDefOf.Ritual_MaintainDragonNeeds;
 
-        public override AlertReport GetAlertReport(ITickingRitual ritual)
-        {
-            return AlertReport.CulpritIs(ritual.Target);
-        }
+        public override AlertReport GetAlertReport(ITickingRitual ritual) => !ritual.Target.DestroyedOrNull() ? AlertReport.CulpritIs(ritual.Target) : AlertReport.Inactive;
     }
 }

@@ -6,13 +6,13 @@
 		<defName>DragonNest</defName>
 		<thingClass>DD.Building_StorageBed</thingClass>
 		<label>dragon nest</label>
-		<description>A soft bed of hay for animals to sleep on. Fit for any dragon egg as it protects it from the elements and increases growth by 5%.</description>
+		<description>A soft bed of hay for dragons to sleep on. Fit for any dragon egg as it protects it from the elements and increases growth by 10%.</description>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<surfaceType>Item</surfaceType>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		<rotatable>false</rotatable>
+		<rotatable>true</rotatable>
 		<canOverlapZones>false</canOverlapZones>
 		<castEdgeShadows>true</castEdgeShadows>
 		<uiIconScale>0.80</uiIconScale>
@@ -71,7 +71,7 @@
 				<!-- Difference between previous and new value = 5.342998E-06 -->
 				<!-- Estimated number of ticks till progress 100% = 185446.3 -->
 				<!-- Estimated number of seconds till progress 100% = 3090.767 -->
-				<basePercentageDailyProgress>0.05</basePercentageDailyProgress>
+				<basePercentageDailyProgress>0.1</basePercentageDailyProgress>
 				<bonusPercentageDailyProgress>0.5~0.15</bonusPercentageDailyProgress>
 				<compClass>DD.CompEggIncubator_Nest</compClass>
 			</li>
@@ -83,13 +83,13 @@
 		<defName>DragonPillow</defName>
 		<thingClass>DD.Building_StorageBed</thingClass>
 		<label>dragon pillow</label>
-		<description>A soft bed for animals to sleep on. Fits any animal even though it is designed for dragon eggs. Grants a 7% growth bonus for dragon eggs.</description>
+		<description>A soft bed for dragons to sleep on. Perfectly fits a dragon and a dragon egg. Grants a 13% growth bonus for dragon eggs.</description>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<surfaceType>Item</surfaceType>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		<rotatable>false</rotatable>
+		<rotatable>true</rotatable>
 		<canOverlapZones>false</canOverlapZones>
 		<castEdgeShadows>true</castEdgeShadows>
 		<fillPercent>0.15</fillPercent>
@@ -113,7 +113,7 @@
 		</stuffCategories>
 		<graphicData>
 			<texPath>Things/Building/Misc/DragonPillow/DragonPillow</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>2</drawSize>
 		</graphicData>
@@ -157,7 +157,7 @@
 				<!-- Difference between previous and new value = 5.342998E-06 -->
 				<!-- Estimated number of ticks till progress 100% = 185446.3 -->
 				<!-- Estimated number of seconds till progress 100% = 3090.767 -->
-				<basePercentageDailyProgress>0.07</basePercentageDailyProgress>
+				<basePercentageDailyProgress>0.13</basePercentageDailyProgress>
 				<bonusPercentageDailyProgress>0.15~0.25</bonusPercentageDailyProgress>
 				<compClass>DD.CompEggIncubator_Nest</compClass>
 			</li>
@@ -168,7 +168,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>BasicIncubator</defName>
 		<label>basic incubator</label>
-		<description>An incubator specially made for dragon eggs. Speeds up the development of the dragon embryo by 15%, allowing it to hatch a little earlier than normal.</description>
+		<description>An incubator specially made for dragon eggs. Speeds up the development of the dragon embryo by 30%, allowing it to hatch a little earlier than normal.</description>
 		<graphicData>
 			<texPath>Things/Building/Misc/BasicIncubator/BasicIncubator</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
@@ -248,7 +248,7 @@
 				<!-- Difference between previous and new value = 5.342998E-06 -->
 				<!-- Estimated number of ticks till progress 100% = 185446.3 -->
 				<!-- Estimated number of seconds till progress 100% = 3090.767 -->
-				<basePercentageDailyProgress>0.15</basePercentageDailyProgress>
+				<basePercentageDailyProgress>0.3</basePercentageDailyProgress>
 				<compClass>DD.CompEggIncubator_Container</compClass>
 				<eggDrawOffset>(0,0,0.4)</eggDrawOffset>
 				<gizmoLabel>Retrieve Egg</gizmoLabel>
@@ -256,7 +256,7 @@
 				<gizmoIconPath>UI/Rituals/TakeEgg</gizmoIconPath>
 			</li>
 		</comps>
-    <designationCategory>Temperature</designationCategory>
+    <designationCategory>Misc</designationCategory>
     <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
     <researchPrerequisites>
       <li>DraconicIncubation</li>
@@ -282,7 +282,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>AdvancedIncubator</defName>
 		<label>advanced incubator</label>
-		<description>A highly monitored and regulated machine specially made to assist in the development of a dragon embryo. Allows the egg to grow 30% faster than normal, and hence a shorter hatch wait time.</description>
+		<description>A highly monitored and regulated machine specially made to assist in the development of a dragon embryo. Allows the egg to grow 50% faster than normal, and hence a shorter hatch wait time.</description>
 		<thingClass>Building_WorkTable</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Misc/AdvancedIncubator/AdvancedIncubator</texPath>
@@ -302,7 +302,7 @@
 		<hasInteractionCell>True</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
-    <designationCategory>Temperature</designationCategory>
+    <designationCategory>Misc</designationCategory>
     <constructionSkillPrerequisite>11</constructionSkillPrerequisite>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<placeWorkers>
@@ -355,7 +355,7 @@
 				<!-- Difference between previous and new value = 5.342998E-06 -->
 				<!-- Estimated number of ticks till progress 100% = 185446.3 -->
 				<!-- Estimated number of seconds till progress 100% = 3090.767 -->
-				<basePercentageDailyProgress>0.30</basePercentageDailyProgress>
+				<basePercentageDailyProgress>0.5</basePercentageDailyProgress>
 				<compClass>DD.CompEggIncubator_Container</compClass>
 				<gizmoLabel>Retrieve Egg</gizmoLabel>
 				<gizmoDesc>Removes the egg from the incubator.</gizmoDesc>

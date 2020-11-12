@@ -11,6 +11,7 @@ namespace DD
     [DefOf]
     public class DD_HediffDefOf
     {
+        public static HediffDef DraconicGrowth;
         public static HediffDef DraconicRegeneration;
 
         public static HediffDef DraconicFerocity_Male;

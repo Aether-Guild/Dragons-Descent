@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!--====================== Dragon Breath ==========================-->
+  
+    <AbilityDef>
+        <defName>DragonBreath</defName>
+        <label>dragon breath</label>
+        <description>Use dragon breath on a target.</description>
+        <abilityClass>DD.Ability_Base</abilityClass>
+        <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+        <cooldownTicksRange>1000~1200</cooldownTicksRange>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>AnimalProjectile/DragonFire</iconPath>
+        <verbProperties>
+            <verbClass>DD.Verb_CastAbility_Base</verbClass>
+			
+			<!-- Make sure range and minRange matches the CastVerb's range and minRanges -->
+			<range>40</range>
+            <minRange>5</minRange>
+			
+			<!-- Warmup time is better in the ability's casting verb -->
+			<warmupTime>0.8</warmupTime>
+			
+			<!-- Projectile defined here just for the targeting when you click the gizmo, the CastVerb's projectile is the actual one that will cause damage -->
+			<defaultProjectile>Projectile_DragonBreath</defaultProjectile>
+			
+			<!-- Targeting parameters to stop the verb from firing unless the target type matches -->
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			
+			<!-- Controls how likely the ability will get picked. -->
+			<commonality>2</commonality>
+        </verbProperties>
+        <comps>
+            <li Class="DD.AbilityCompProperties_AbilityControl">
+                <compClass>DD.AbilityComp_AbilityControl</compClass>
+				<!-- Allows the ability.verb to be picked up by Pawn.TryGetAttackVerb -->
+                <autoUse>true</autoUse>
+                <gizmoOnText>Breath Enabled</gizmoOnText>
+                <gizmoOffText>Breath Disabled</gizmoOffText>
+                <gizmoOnIconPath>AnimalProjectile/DragonFire</gizmoOnIconPath>
+                <gizmoOffIconPath>AnimalProjectile/DragonFire</gizmoOffIconPath>
+                <gizmoDesc>Toggle Dragon Breath Usage</gizmoDesc>
+            </li>
+            <li Class="DD.AbilityCompProperties_CastVerb">
+                <compClass>DD.AbilityComp_CastVerb</compClass>
+				<!-- Verbs defined here will be actually triggered when the ability activates. -->
+                <verbProperties>
+                    <li>
+                        <verbClass>Verb_Shoot</verbClass>
+                        <accuracyTouch>0.50</accuracyTouch>
+                        <accuracyShort>0.40</accuracyShort>
+                        <accuracyMedium>0.30</accuracyMedium>
+                        <accuracyLong>0.20</accuracyLong>
+                        <defaultProjectile>Projectile_DragonBreath</defaultProjectile>
+                        <range>40</range>
+						<minRange>5</minRange>
+                        <burstShotCount>25</burstShotCount>
+                        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+                        <soundCast>DragonBreathShot</soundCast>
+                        <muzzleFlashScale>1</muzzleFlashScale>
+                    </li>
+                </verbProperties>
+            </li>
+			<li Class="DD.AbilityCompProperties_Cooldown">
+                <compClass>DD.AbilityComp_Cooldown</compClass>
+				
+				<!-- Ability cooldown pool -->
+				<cooldownPool>DragonBreathPool</cooldownPool>
+				
+				<!-- Cooldown ticks range (omit to use each verb's default <cooldownTicksRange>) -->
+				<cooldownTicksRange>1000</cooldownTicksRange>
+				
+				<!-- Unaffected by other abilities cooling down in the same pool -->
+				<independent>false</independent>
+				
+				<!-- Resets the other cooldowns in the pool even if they're already cooling down -->
+				<resetsTimer>true</resetsTimer>
+			</li>
+        </comps>
+    </AbilityDef>
+
+  <!--================================= Dragon Spit ============================-->
+  
+	<AbilityDef>
+		<defName>DragonSpit</defName>
+		<label>dragon spit</label>
+		<description>Use dragon spit on a target.</description>
+		<abilityClass>DD.Ability_Base</abilityClass>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>700~950</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>AnimalProjectile/DragonSpit</iconPath>
+		<verbProperties>
+			<verbClass>DD.Verb_CastAbility_Base</verbClass>
+			<range>15</range>
+			<minRange>1</minRange>
+			<warmupTime>0.5</warmupTime>
+			<defaultProjectile>Projectile_DragonBreath</defaultProjectile>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<commonality>2</commonality>
+		</verbProperties>
+		<comps>
+			<li Class="DD.AbilityCompProperties_AbilityControl">
+				<compClass>DD.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Spit Enabled</gizmoOnText>
+				<gizmoOffText>Spit Disabled</gizmoOffText>
+				<gizmoOnIconPath>AnimalProjectile/DragonSpit</gizmoOnIconPath>
+				<gizmoOffIconPath>AnimalProjectile/DragonSpit</gizmoOffIconPath>
+				<gizmoDesc>Toggle Dragon Spit Usage</gizmoDesc>
+			</li>
+			<li Class="DD.AbilityCompProperties_CastVerb">
+				<compClass>DD.AbilityComp_CastVerb</compClass>
+				<verbProperties>
+					<li>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.95</accuracyTouch>
+						<accuracyShort>0.70</accuracyShort>
+						<accuracyMedium>0.30</accuracyMedium>
+						<accuracyLong>0.10</accuracyLong>
+						<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+						<defaultProjectile>Projectile_DragonSpit</defaultProjectile>
+						<range>23</range>
+						<burstShotCount>3</burstShotCount>
+						<ticksBetweenBurstShots>18</ticksBetweenBurstShots>
+						<minRange>1</minRange>
+						<soundCast>DragonBreathShot</soundCast>
+						<muzzleFlashScale>1</muzzleFlashScale>
+					</li>
+				</verbProperties>
+			</li>
+		</comps>
+	</AbilityDef>
+
+</Defs>
