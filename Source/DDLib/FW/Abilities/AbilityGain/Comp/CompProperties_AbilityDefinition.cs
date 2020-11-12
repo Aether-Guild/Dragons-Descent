@@ -9,7 +9,10 @@ namespace DD
 {
     public class CompProperties_AbilityDefinition : CompProperties
     {
-        public SimpleCurve spawnKillCount, spawnDamageTotal;
-        public List<AbilityGainEntry> abilities;
+        public string gizmoLabel;
+        public string gizmoDesc;
+        public string gizmoIconPath;
+
+        public List<AbilityDefinitionEntry> abilities;
     }
 }

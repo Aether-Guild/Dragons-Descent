@@ -32,6 +32,16 @@ namespace DD
                 __result = new List<Gizmo>();
             }
 
+            CompAbilityDefinition config = __instance.GetComp<CompAbilityDefinition>();
+            if(config != null)
+            {
+                foreach(Gizmo gizmo in config.CompGetGizmosExtra().Reverse())
+                {
+                    __result = __result.Prepend(gizmo);
+                }
+            }
+
+
             if (__instance.abilities != null)
             {
                 IEnumerable<Ability_Base> abilities = __instance.abilities.abilities.OfType<Ability_Base>().Where(ability => ability.CanShowGizmos);

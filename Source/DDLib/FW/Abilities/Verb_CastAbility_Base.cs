@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Verse;
+using Verse.AI;
 
 namespace DD
 {
@@ -12,6 +14,18 @@ namespace DD
         public override bool Available()
         {
             return ability.CanCast && base.Available();
+        }
+
+        public override bool CanHitTarget(LocalTargetInfo targ)
+        {
+            if (ability.CanApplyOn(targ))
+            {
+                return base.CanHitTarget(targ);
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public override void Reset()
@@ -23,17 +37,15 @@ namespace DD
             }
         }
 
+        public override bool CanHitTargetFrom(IntVec3 root, LocalTargetInfo targ)
+        {
+            Ability_Base ba = ability as Ability_Base;
+
+            return base.CanHitTargetFrom(root, targ) && (ba == null || ba.CanApplyOn(targ));
+        }
+
         protected override bool TryCastShot()
         {
-            if (ability is Ability_Base ba)
-            {
-                if (!ba.CanApplyOn(CurrentTarget) && !ba.CanApplyOn(CurrentDestination))
-                {
-                    //Should be applicable on either the target or the destination.
-                    return false;
-                }
-            }
-
             if (ability.CanCast)
             {
                 return base.TryCastShot();
@@ -43,5 +55,7 @@ namespace DD
                 return false;
             }
         }
+
+
     }
 }

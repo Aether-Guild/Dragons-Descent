@@ -4,8 +4,8 @@
   <ResearchProjectDef>
     <defName>DraconicDrugProduction</defName>
     <label>draconic drug production</label>
-    <description>Allows for the creation of dragon themed drugs. Draconic ambrosia assists in the aging of dragons and dragon's blood is a combat enchancing potion for your colonists.</description>
-    <baseCost>500</baseCost>
+    <description>Allows for the creation of dragonic drugs and sowing of jewel orchids. Draconic ambrosia assists in the aging of dragons and dragon's blood is a combat enchancing potion for your colonists.</description>
+    <baseCost>300</baseCost>
     <techLevel>Medieval</techLevel>
     <researchViewX>0</researchViewX>
     <researchViewY>0</researchViewY>
@@ -19,7 +19,7 @@
     <defName>DraconicIncubation</defName>
     <label>draconic incubation</label>
     <description>Build basic draconic furniture and buildings like basic incubators and, dragon pillows.</description>
-    <baseCost>700</baseCost>
+    <baseCost>450</baseCost>
     <techLevel>Medieval</techLevel>
     <researchViewX>0</researchViewX>
     <researchViewY>1</researchViewY>
@@ -34,7 +34,7 @@
     <defName>DraconicAdvancedIncubation</defName>
     <label>draconic advanced incubation</label>
     <description>Build draconic machines like the advanced incubator.</description>
-    <baseCost>1200</baseCost>
+    <baseCost>600</baseCost>
     <techLevel>Industrial</techLevel>
     <researchViewX>1</researchViewX>
     <researchViewY>1</researchViewY>
@@ -56,7 +56,7 @@
     <researchViewY>2</researchViewY>
     <tab>DragonsDescent</tab>
     <prerequisites>
-      <li>ComplexFurniture</li>
+      <li>PsychoidBrewing</li>
     </prerequisites>
   </ResearchProjectDef>
   

@@ -59,14 +59,9 @@ namespace DD
 
         public override bool CanCast => VerbTracker.AllVerbs.All(v => v.Available());
 
-        public override bool CanActivateOn(LocalTargetInfo target, LocalTargetInfo dest)
-        {
-            return !VerbTracker.AllVerbs.NullOrEmpty() && VerbTracker.AllVerbs.Any(v => v.Available() && v.IsUsableOn(target.Thing));
-        }
-
         public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            return base.CanApplyOn(target, dest) && CanActivateOn(target, dest);
+            return base.CanApplyOn(target, dest) && !VerbTracker.AllVerbs.NullOrEmpty() && VerbTracker.AllVerbs.Any(v => v.Available() && v.IsUsableOn(target.Thing));
         }
 
         public override void PostTick()

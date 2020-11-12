@@ -17,11 +17,20 @@
             <verbClass>DD.Verb_CastAbility_Base</verbClass>
 			
 			<!-- Make sure range and minRange matches the CastVerb's range and minRanges -->
-            <range>35</range>
+			<range>40</range>
             <minRange>5</minRange>
+			
+			<!-- Warmup time is better in the ability's casting verb -->
+			<warmupTime>0.8</warmupTime>
 			
 			<!-- Projectile defined here just for the targeting when you click the gizmo, the CastVerb's projectile is the actual one that will cause damage -->
 			<defaultProjectile>Projectile_DragonBreath</defaultProjectile>
+			
+			<!-- Targeting parameters to stop the verb from firing unless the target type matches -->
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
 			
 			<!-- Controls how likely the ability will get picked. -->
 			<commonality>2</commonality>
@@ -47,11 +56,9 @@
                         <accuracyShort>0.40</accuracyShort>
                         <accuracyMedium>0.30</accuracyMedium>
                         <accuracyLong>0.20</accuracyLong>
-                        <hasStandardCommand>false</hasStandardCommand>
                         <defaultProjectile>Projectile_DragonBreath</defaultProjectile>
-                        <warmupTime>0.8</warmupTime>
                         <range>40</range>
-												<minRange>5</minRange>
+						<minRange>5</minRange>
                         <burstShotCount>25</burstShotCount>
                         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
                         <soundCast>DragonBreathShot</soundCast>
@@ -90,11 +97,16 @@
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<iconPath>AnimalProjectile/DragonSpit</iconPath>
 		<verbProperties>
-		<verbClass>DD.Verb_CastAbility_Base</verbClass>
-		<range>15</range>
-		<minRange>1</minRange>
-		<defaultProjectile>Projectile_DragonBreath</defaultProjectile>
-		<commonality>2</commonality>
+			<verbClass>DD.Verb_CastAbility_Base</verbClass>
+			<range>15</range>
+			<minRange>1</minRange>
+			<warmupTime>0.5</warmupTime>
+			<defaultProjectile>Projectile_DragonBreath</defaultProjectile>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<commonality>2</commonality>
 		</verbProperties>
 		<comps>
 			<li Class="DD.AbilityCompProperties_AbilityControl">
@@ -116,12 +128,7 @@
 						<accuracyMedium>0.30</accuracyMedium>
 						<accuracyLong>0.10</accuracyLong>
 						<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-						<targetParams>
-						<canTargetLocations>true</canTargetLocations>
-						</targetParams>
-						<hasStandardCommand>false</hasStandardCommand>
 						<defaultProjectile>Projectile_DragonSpit</defaultProjectile>
-						<warmupTime>0.5</warmupTime>
 						<range>23</range>
 						<burstShotCount>3</burstShotCount>
 						<ticksBetweenBurstShots>18</ticksBetweenBurstShots>

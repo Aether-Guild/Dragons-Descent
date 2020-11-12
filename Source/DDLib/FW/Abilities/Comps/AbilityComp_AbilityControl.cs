@@ -19,8 +19,10 @@ namespace DD
         public AbilityCompProperties_AbilityControl VProps => props as AbilityCompProperties_AbilityControl;
 
         public bool AutoUse => VProps.autoUse;
+        public bool Controllable => VProps.abilityControllable;
 
-        public override bool CanCast => Status;
+        public override bool CanCast => Controllable ? Status : true;
+
 
         public bool Status
         {
@@ -53,6 +55,12 @@ namespace DD
         {
             get
             {
+                if(!VProps.abilityControllable)
+                {
+                    //Hide gizmo
+                    return null;
+                }
+
                 if (gizmo == null)
                 {
                     //Load images
@@ -108,28 +116,6 @@ namespace DD
                     verb.Ability = parent;
                 }
             }
-        }
-
-        public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
-        {
-            if (base.CanApplyOn(target, dest))
-            {
-                if (VProps.targetParms != null)
-                {
-                    Map map = parent.pawn.Map;
-                    if (!VProps.targetParms.CanTarget(target.ToTargetInfo(map)) && !VProps.targetParms.CanTarget(target.ToTargetInfo(map)))
-                    {
-                        return false;
-                    }
-                }
-                return true;
-            }
-            return false;
-        }
-
-        public override bool CanActivateOn(LocalTargetInfo target, LocalTargetInfo dest)
-        {
-            return CanApplyOn(target, dest);
         }
 
         public override void PostExposeData()

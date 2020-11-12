@@ -13,8 +13,7 @@ namespace DD
     public class AbilityCompProperties_AbilityControl : CompProperties_AbilityEffect
     {
         public bool autoUse = false;
-
-        public TargetingParameters targetParms = null;
+        public bool abilityControllable = true;
 
         public string gizmoOnText = "Breath Enabled";
         public string gizmoOffText = "Breath Disabled";

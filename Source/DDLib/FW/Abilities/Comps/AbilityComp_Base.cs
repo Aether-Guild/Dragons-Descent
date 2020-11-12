@@ -13,7 +13,6 @@ namespace DD
         public virtual bool CanCast => true;
         public virtual Command Gizmo => null;
 
-        public virtual bool CanActivateOn(LocalTargetInfo target, LocalTargetInfo dest) => true;
         public virtual void PostTick() { }
         public virtual void PostExposeData() { }
         public virtual void PostReset() { }

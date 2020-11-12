@@ -65,24 +65,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DebugTests.cs" />
+    <Compile Include="Defs\RecordDefOf.cs" />
     <Compile Include="Defs\RitualDefOf.cs" />
-    <Compile Include="FW\Abilities\AbilityCompProperties_Cooldown.cs" />
-    <Compile Include="FW\Abilities\AbilityCompProperties_CastVerb.cs" />
-    <Compile Include="FW\Abilities\AbilityComp_Base.cs" />
-    <Compile Include="FW\Abilities\AbilityComp_Cooldown.cs" />
-    <Compile Include="FW\Abilities\AbilityComp_CastVerb.cs" />
-    <Compile Include="FW\Abilities\Comp\Conditions\AbilityGainKillCondition.cs" />
-    <Compile Include="FW\Abilities\Comp\Conditions\AbilityGainDamageCondition.cs" />
-    <Compile Include="FW\Abilities\Comp\CompAbilityDefinition.cs" />
-    <Compile Include="FW\Abilities\Comp\CompProperties_AbilityDefinition.cs" />
-    <Compile Include="FW\Abilities\Comp\AbilityGainEntry.cs" />
-    <Compile Include="FW\Abilities\Comp\Conditions\AbilityGainAgeCondition.cs" />
-    <Compile Include="FW\Abilities\Comp\Conditions\AbilityGainCondition.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityCompProperties_Cooldown.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityCompProperties_CastVerb.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityCompProperties_ReplaceWorldObject.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityComp_Base.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityComp_Cooldown.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityComp_CastVerb.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\ModExtension\AbilityDefinitionExtension.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\AbilitySettingsUtility.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\ModExtension\HediffGiver_GrantAbility.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityComp_ReplaceWorldObject.cs" />
+    <Compile Include="FW\Records\RecordInitializer.cs" />
+    <Compile Include="FW\Records\CompRecordInitializer.cs" />
+    <Compile Include="FW\Records\CompProperties_RecordInitializer.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Conditions\AbilityAndCondition.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Conditions\AbilityOrCondition.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Conditions\AbilityBodyPartCondition.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Conditions\AbilityRecordCondition.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Comp\CompAbilityDefinition.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Comp\CompProperties_AbilityDefinition.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\AbilityConditionEntry.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Conditions\AbilityAgeCondition.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Conditions\AbilityCondition.cs" />
     <Compile Include="FW\Abilities\Ability_Base.cs" />
-    <Compile Include="FW\Abilities\AbilityCompProperties_AbilityControl.cs" />
-    <Compile Include="FW\Abilities\AbilityComp_AbilityControl.cs" />
-    <Compile Include="FW\Abilities\Hediffs\HediffCompProperties_GrowthSeverityScaling.cs" />
-    <Compile Include="FW\Abilities\Hediffs\HediffComp_GrowthSeverityScaling.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityCompProperties_AbilityControl.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityComp_AbilityControl.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Hediffs\HediffCompProperties_GrowthSeverityScaling.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Hediffs\HediffComp_GrowthSeverityScaling.cs" />
     <Compile Include="FW\Abilities\IAttackVerb.cs" />
     <Compile Include="FW\Abilities\Verb_CastAbility_Base.cs" />
     <Compile Include="FW\HostileResponse\CompHostileResponse.cs" />
@@ -92,7 +103,9 @@
     <Compile Include="FW\HostileResponse\HostilityStatisticRecord.cs" />
     <Compile Include="FW\HostileResponse\Patch_DD_Pawn_MindState_CanStartFleeingBecauseOfPawnAction.cs" />
     <Compile Include="Common\Extensions\VerbSettingExtension.cs" />
+    <Compile Include="FW\Records\Patch_DD_Pawn_PostApplyDamage.cs" />
     <Compile Include="FW\Verb\JobGiver_Manhunter_AnyVerb.cs" />
+    <Compile Include="FW\Verb\Verb_AoE.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_Multiple.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_DoIfAmbrosiaTarget.cs" />
     <Compile Include="Common\Extensions\TrackedIncidentExtension.cs" />
@@ -232,7 +245,6 @@
     <Compile Include="FW\Verb\Verb_MeleeAttackDamage_Resetting.cs" />
     <Compile Include="FW\Verb\Verb_Shoot_Cooldown.cs" />
     <Compile Include="FW\Verb\Verb_Shoot_Limited.cs" />
-    <Compile Include="FW\Abilities\Verb_Ability_Shoot.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -240,5 +252,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

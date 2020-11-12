@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace DD
         public virtual bool CanAutoCast => AbilityControl?.AutoUse ?? false;
 
         protected IEnumerable<AbilityComp_Base> BaseAbilityComps => CompsOfType<AbilityComp_Base>() ?? new AbilityComp_Base[0];
-        protected AbilityComp_AbilityControl AbilityControl => CompOfType<AbilityComp_AbilityControl>();
+        public AbilityComp_AbilityControl AbilityControl => CompOfType<AbilityComp_AbilityControl>();
 
         public override bool CanCast
         {
@@ -36,32 +37,23 @@ namespace DD
 
                 foreach (AbilityComp_Base comp in BaseAbilityComps)
                 {
-                    if(!comp.CanCast)
+                    if (!comp.CanCast)
                     {
                         return false;
                     }
                 }
-                
+
                 return true;
             }
         }
-        
-        public virtual bool CanShowGizmos => pawn.FactionOrExtraMiniOrHomeFaction != null && pawn.FactionOrExtraMiniOrHomeFaction.IsPlayer && !pawn.InMentalState;
 
+        public virtual bool CanShowGizmos => pawn.FactionOrExtraMiniOrHomeFaction != null && pawn.FactionOrExtraMiniOrHomeFaction.IsPlayer && !pawn.InMentalState;
 
         public override bool Activate(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            if(CooldownTicksRemaining > 0)
+            if (CooldownTicksRemaining > 0)
             {
                 return false;
-            }
-
-            foreach (AbilityComp_Base comp in BaseAbilityComps)
-            {
-                if(!comp.CanActivateOn(target, dest))
-                {
-                    return false;
-                }
             }
 
             return base.Activate(target, dest);
@@ -103,7 +95,7 @@ namespace DD
 
         public override void ExposeData()
         {
-            if(Scribe.mode != LoadSaveMode.PostLoadInit)
+            if (Scribe.mode != LoadSaveMode.PostLoadInit)
             {
                 //Calling it during PostLoadInit will recreate the comps and get rid of our saved comp data.
                 base.ExposeData();
@@ -146,16 +138,16 @@ namespace DD
                     yield return comp.Gizmo;
                 }
             }
+        }
 
-            //yield return new Command_Action()
-            //{
-            //    defaultLabel = "Stop",
-            //    defaultDesc = "Cancel the current job.",
-            //    action = () =>
-            //    {
-            //        pawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
-            //    }
-            //};
+        public override bool CanApplyOn(GlobalTargetInfo target)
+        {
+            return base.CanApplyOn(target);
+        }
+
+        public override bool Activate(GlobalTargetInfo target)
+        {
+            return base.Activate(target);
         }
     }
 }

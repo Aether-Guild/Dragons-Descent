@@ -15,6 +15,9 @@
 	  
 		<!-- Moved here since its the same on both common and rare dragons -->
 		<lifeExpectancy>2000</lifeExpectancy>
+      
+    <nameGenerator>NamerAnimalDragonMale</nameGenerator>
+    <nameGeneratorFemale>NamerAnimalDragonFemale</nameGeneratorFemale>
     </race>
 	<comps>
 	    <!-- HostileResponse settings -->
@@ -46,68 +49,96 @@
 				</li>
 			</options>
 		</li>
+		
+		<li Class="DD.CompProperties_RecordInitializer">
+			<compClass>DD.CompRecordInitializer</compClass>
+			
+			<!-- Record values to be set on spawn -->
+			<init>
+				<li>
+					<!-- ====== Spawn curves ====== -->
+					<!-- Curve for the number of kills the pawn has, based on how old they are. -->
+					<!-- Used only for setting the value when the pawn is spawned. -->
+					<!-- E.g: If the pawn spawns at age 35, it'll start with 5 kills in its counter. -->
+					<recordDef>Kills</recordDef>
+					<data>
+						<points>
+							<li>(0, 0)</li>
+							<li>(35, 5)</li>
+							<li>(100, 30)</li>
+							<li>(700, 100)</li>
+							<li>(2000, 5000)</li>
+						</points>
+					</data>
+				</li>
+				<li>
+					<!-- Curve for the amount of damage a pawn sustained, based on how old they are. -->
+					<!-- Used only for setting the value when the pawn is spawned. -->
+					<!-- E.g: If the pawn spawns at age 30, it'll start with 50 damage total. -->
+					<recordDef>DamageTaken</recordDef>
+					<data>
+						<points>
+							<li>(0, 0)</li>
+							<li>(30, 50)</li>
+							<li>(100, 300)</li>
+							<li>(700, 1000)</li>
+							<li>(1500, 50000)</li>
+						</points>
+					</data>
+				</li>
+				<li>
+					<!-- Curve for the amount of damage a pawn sustained, based on how old they are. -->
+					<!-- Used only for setting the value when the pawn is spawned. -->
+					<!-- E.g: If the pawn spawns at age 30, it'll start with 50 damage total. -->
+					<recordDef>DamageTaken</recordDef>
+					<data>
+						<points>
+							<li>(0, 0)</li>
+							<li>(30, 50)</li>
+							<li>(100, 300)</li>
+							<li>(700, 1000)</li>
+							<li>(1500, 50000)</li>
+						</points>
+					</data>
+				</li>
+			</init>
+		</li>
+		
 		<!-- Defines the conditions for when to give the pawn an ability -->
 		<li Class="DD.CompProperties_AbilityDefinition">
 			<compClass>DD.CompAbilityDefinition</compClass>
+			
+			<!-- <gizmoLabel>Ability\nSettings</gizmoLabel> -->
+			<!-- <gizmoDesc>Display Ability Settings</gizmoDesc> -->
+			<!-- <gizmoIconPath>UI/Abilities/Settings</gizmoIconPath> -->
 			
 			<!-- List of Abilities and conditions for gaining the abilities -->
 			<abilities>
 				<li>
 					<abilityDef>DragonBreath</abilityDef>
-					<!-- Set if you want the ability to be gained after a hediff (Needs to have a HediffComp_GrowthSeverityScaling) -->
-					<hediffDef>DraconicGrowth</hediffDef>
-					<!-- Set if you want the hediff to be put on a specific body part -->
-					<!-- <bodyPartDef>Fundamentum</bodyPartDef> -->
-					<conditions>
-						<li Class="DD.AbilityGainAgeCondition">
-							<ageRange>35~40</ageRange>
-						</li>
-						<!-- Testing additional conditions -->
-						<!-- <li Class="DD.AbilityGainKillCondition"> -->
-							<!-- <killCount>10~15</killCount> -->
-							<!-- <type></type> -->
-						<!-- </li> -->
-						<!-- <li Class="DD.AbilityGainDamageCondition"> -->
-							<!-- <damageRange>2000~2500</damageRange> -->
-						<!-- </li> -->
-					</conditions>
+					<growthHediff>DraconicGrowth</growthHediff>
+					<growthBodyPart>Fundamentum</growthBodyPart>
+					<gainCondition Class="DD.AbilityAgeCondition">
+						<ageRange>35~40</ageRange>
+					</gainCondition>
+					<loseCondition Class="DD.AbilityBodyPartCondition">
+						<missing>true</missing>
+						<bodyPart>Fundamentum</bodyPart>
+					</loseCondition>
 				</li>
 				<li>
 					<abilityDef>DragonSpit</abilityDef>
-					<hediffDef>DraconicGrowth</hediffDef>
-					<conditions>
-						<li Class="DD.AbilityGainAgeCondition">
-							<ageRange>200~210</ageRange>
-						</li>
-					</conditions>
+					<growthHediff>DraconicGrowth</growthHediff>
+					<growthBodyPart>Fundamentum</growthBodyPart>
+					<gainCondition Class="DD.AbilityAgeCondition">
+						<ageRange>200~210</ageRange>
+					</gainCondition>
+					<loseCondition Class="DD.AbilityBodyPartCondition">
+						<missing>true</missing>
+						<bodyPart>Fundamentum</bodyPart>
+					</loseCondition>
 				</li>
 			</abilities>
-			
-			<!-- ====== Spawn curves ====== -->
-			<!-- Curve for the number of kills the pawn has, based on how old they are. -->
-			<!-- Used only for setting the value when the pawn is spawned. -->
-			<!-- E.g: If the pawn spawns at age 35, it'll start with 5 kills in its counter. -->
-			<spawnKillCount>
-				<points>
-					<li>(0, 0)</li>
-					<li>(35, 5)</li>
-					<li>(100, 30)</li>
-					<li>(700, 100)</li>
-					<li>(2000, 5000)</li>
-				</points>
-			</spawnKillCount>
-			<!-- Curve for the amount of damage a pawn sustained, based on how old they are. -->
-			<!-- Used only for setting the value when the pawn is spawned. -->
-			<!-- E.g: If the pawn spawns at age 30, it'll start with 50 damage total. -->
-			<spawnDamageTotal>
-				<points>
-					<li>(0, 0)</li>
-					<li>(30, 50)</li>
-					<li>(100, 300)</li>
-					<li>(700, 1000)</li>
-					<li>(1500, 50000)</li>
-				</points>
-			</spawnDamageTotal>
 		</li>
 	</comps>
 	<modExtensions>
@@ -169,14 +200,13 @@
       <predator>true</predator>
       <foodType>OmnivoreAnimal</foodType>
       <leatherDef>Dragon_Leather</leatherDef>
-      <meatLabel>Dragon meat</meatLabel>
+      <meatLabel>dragon meat</meatLabel>
       <trainability>Advanced</trainability>
       <manhunterOnDamageChance>5</manhunterOnDamageChance>
-      <nameOnTameChance>1</nameOnTameChance>
       <gestationPeriodDays>60</gestationPeriodDays>
       <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
       <maxPreyBodySize>3</maxPreyBodySize>
-      <nuzzleMtbHours>275</nuzzleMtbHours>
+      <nuzzleMtbHours>90</nuzzleMtbHours>
       <litterSizeCurve>
         <points>
           <li>(0.5, 0)</li>

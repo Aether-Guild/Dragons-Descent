@@ -10,8 +10,8 @@
     </graphicData>
     <equippedAngleOffset>70</equippedAngleOffset>
     <statBases>
-      <MarketValue>900</MarketValue>
-      <MaxHitPoints>200</MaxHitPoints>
+      <MarketValue>870</MarketValue>
+      <MaxHitPoints>150</MaxHitPoints>
       <Mass>3</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>0.5</DeteriorationRate>
