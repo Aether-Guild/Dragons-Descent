@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+
+    <xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_ShamanMerchant"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>DragonHorn</thingDef>
+        <countRange>0~1</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>EggsDragon</categoryDef>
+        <thingDefCountRange>0~1</thingDefCountRange>
+        <countRange>0~1</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>DraconicAmbrosia</thingDef>
+        <countRange>2~11</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>DragonLeathers</categoryDef>
+        <thingDefCountRange>0~1</thingDefCountRange>
+        <totalPriceRange>100~250</totalPriceRange>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+
+    <xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>DragonHorn</thingDef>
+        <countRange>0~3</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>EggsDragon</categoryDef>
+        <thingDefCountRange>0~1</thingDefCountRange>
+        <countRange>1</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>DraconicAmbrosia</thingDef>
+        <countRange>5~18</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>DragonLeathers</categoryDef>
+        <thingDefCountRange>1~2</thingDefCountRange>
+        <totalPriceRange>400~950</totalPriceRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>DragonsBlood</thingDef>
+        <countRange>0~8</countRange>
+      </li>
+    </value>
+  </Operation>
+</Patch>

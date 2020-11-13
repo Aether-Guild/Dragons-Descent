@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--========= General ============-->
+<JobDef>
+        <defName>AA_DragonAnimalRangeAttack</defName>
+        <driverClass>DragonsRangedAttack.JobDriver_AnimalRangeAttack</driverClass>
+        <reportString>Attacking.</reportString>
+    </JobDef>
+    </Defs>

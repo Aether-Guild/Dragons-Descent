@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+<!--This is a hacky way of handling mod dependency. These are empty, patch replace will fill these in.-->
+ <ThingDef>
+	<defName>ARA_DragonFireBreathAlpha</defName>
+	<label>None</label>
+	<thingClass>Projectile_Explosive</thingClass>
+  </ThingDef>
+  
+   <ThingDef>
+	<defName>ARA_DragonFireBreathBeta</defName>
+	<label>None</label>
+	<thingClass>Projectile_Explosive</thingClass>
+  </ThingDef>
+ 
+   <ThingDef>
+	<defName>ARA_DragonFireBreathOmega</defName>
+	<label>None</label>
+	<thingClass>Projectile_Explosive</thingClass>
+  </ThingDef>
+
+  <ThingDef >
+	<defName>ARA_DragonCryo</defName>
+	<label>None</label>
+	<thingClass>Projectile_Explosive</thingClass>
+  </ThingDef>
+</Defs>
