@@ -253,7 +253,7 @@
 				<eggDrawOffset>(0,0,0.4)</eggDrawOffset>
 				<gizmoLabel>Retrieve Egg</gizmoLabel>
 				<gizmoDesc>Removes the egg from the incubator.</gizmoDesc>
-				<gizmoIconPath>UI/Rituals/TakeEgg</gizmoIconPath>
+				<gizmoIconPath>UserInterface/Rituals/TakeEgg</gizmoIconPath>
 			</li>
 		</comps>
     <designationCategory>Misc</designationCategory>
@@ -359,7 +359,7 @@
 				<compClass>DD.CompEggIncubator_Container</compClass>
 				<gizmoLabel>Retrieve Egg</gizmoLabel>
 				<gizmoDesc>Removes the egg from the incubator.</gizmoDesc>
-				<gizmoIconPath>UI/Rituals/TakeEgg</gizmoIconPath>
+				<gizmoIconPath>UserInterface/Rituals/TakeEgg</gizmoIconPath>
 			</li>
 		</comps>
 		<modExtensions>

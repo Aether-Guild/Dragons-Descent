@@ -30,21 +30,21 @@
 					<type>Aggressive</type>
 					<label>Aggressive</label>
 					<description>Attacks any hostile targets within sight, even manhunter bunnies.</description>
-					<iconPath>UI/AI/Attack</iconPath>
+					<iconPath>UserInterface/AI/Attack</iconPath>
 					<disableMessage>Aggressive, and you better get used to it.</disableMessage>
 				</li>
 				<li>
 					<type>Defensive</type>
 					<label>Defensive</label>
 					<description>Retaliates against any attacks made towards it, even if they're just taking aim.</description>
-					<iconPath>UI/AI/Defense</iconPath>
+					<iconPath>UserInterface/AI/Defense</iconPath>
 					<disableMessage>Defensive and disabled.</disableMessage>
 				</li>
 				<li>
 					<type>Passive</type>
 					<label>Pacifist</label>
 					<description>Flees from any hostile actions made against it, even by friendlies.</description>
-					<iconPath>UI/AI/Passive</iconPath>
+					<iconPath>UserInterface/AI/Passive</iconPath>
 					<disableMessage>Passive and disabled.</disableMessage>
 				</li>
 			</options>
@@ -110,7 +110,7 @@
 			
 			<!-- <gizmoLabel>Ability\nSettings</gizmoLabel> -->
 			<!-- <gizmoDesc>Display Ability Settings</gizmoDesc> -->
-			<!-- <gizmoIconPath>UI/Abilities/Settings</gizmoIconPath> -->
+			<!-- <gizmoIconPath>UserInterface/Abilities/Settings</gizmoIconPath> -->
 			
 			<!-- List of Abilities and conditions for gaining the abilities -->
 			<abilities>

@@ -71,7 +71,7 @@
         <rituals>
           <li>
             <def>Ritual_BanishSingleDragon</def>
-            <iconPath>UI/Rituals/BanishDragon</iconPath>
+            <iconPath>UserInterface/Rituals/BanishDragon</iconPath>
             <moteOnTarget>Mote_PsycastPsychicEffect</moteOnTarget>
             <moteOnSource>Mote_LightningGlow</moteOnSource>
             <moteConnecting>Mote_LineEMP</moteConnecting>
@@ -80,7 +80,7 @@
           </li>
           <li>
             <def>Ritual_RemoveFerocity</def>
-            <iconPath>UI/Rituals/CalmDragon</iconPath>
+            <iconPath>UserInterface/Rituals/CalmDragon</iconPath>
             <moteOnTarget>Mote_SparkFlash</moteOnTarget>
             <moteOnSource>Mote_HeatGlow</moteOnSource>
             <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
@@ -88,7 +88,7 @@
           </li>
           <li>
             <def>Ritual_MaintainDragonNeeds</def>
-            <iconPath>UI/Rituals/FulfillDragon</iconPath>
+            <iconPath>UserInterface/Rituals/FulfillDragon</iconPath>
             <moteOnTarget>Mote_SparkFlash</moteOnTarget>
             <moteOnSource>Mote_HeatGlow</moteOnSource>
             <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
@@ -96,7 +96,7 @@
           </li>
           <li>
             <def>Ritual_BanishAllDragon</def>
-            <iconPath>UI/Rituals/BanishDragons</iconPath>
+            <iconPath>UserInterface/Rituals/BanishDragons</iconPath>
             <moteOnTarget>Mote_PsycastPsychicEffect</moteOnTarget>
             <moteOnSource>Mote_LightningGlow</moteOnSource>
             <moteConnecting>Mote_LineEMP</moteConnecting>
@@ -105,7 +105,7 @@
           </li>
           <li>
             <def>Ritual_RemoveFerocityAll</def>
-			<iconPath>UI/Rituals/CalmDragons</iconPath>
+			<iconPath>UserInterface/Rituals/CalmDragons</iconPath>
             <moteOnTarget>Mote_SparkFlash</moteOnTarget>
             <moteOnSource>Mote_HeatGlow</moteOnSource>
             <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
@@ -113,7 +113,7 @@
           </li>
           <li>
             <def>Ritual_MaintainAllDragonNeeds</def>
-            <iconPath>UI/Rituals/FulfillDragons</iconPath>
+            <iconPath>UserInterface/Rituals/FulfillDragons</iconPath>
             <moteOnTarget>Mote_SparkFlash</moteOnTarget>
             <moteOnSource>Mote_HeatGlow</moteOnSource>
             <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
@@ -121,7 +121,7 @@
           </li>
           <li>
             <def>Ritual_WardAllDragon</def>
-            <iconPath>UI/Rituals/DragonWard</iconPath>
+            <iconPath>UserInterface/Rituals/DragonWard</iconPath>
             <moteOnTarget>Mote_PsycastPsychicEffect</moteOnTarget>
             <moteOnSource>Mote_LightningGlow</moteOnSource>
             <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>

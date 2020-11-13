@@ -75,7 +75,7 @@
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>40</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
-        <eggCountRange>2</eggCountRange>
+        <eggCountRange>1</eggCountRange>
 		<failChance>0.25</failChance>
 		<paternalChance>0.5</paternalChance>
 		<maternalChance>0.5</maternalChance>
@@ -281,7 +281,7 @@
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>40</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
-        <eggCountRange>2</eggCountRange>
+        <eggCountRange>1</eggCountRange>
 		<failChance>0.25</failChance>
 		<paternalChance>0.5</paternalChance>
 		<maternalChance>0.5</maternalChance>
@@ -487,7 +487,7 @@
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>40</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
-        <eggCountRange>2</eggCountRange>
+        <eggCountRange>1</eggCountRange>
 		<failChance>0.25</failChance>
 		<paternalChance>0.5</paternalChance>
 		<maternalChance>0.5</maternalChance>
@@ -732,7 +732,7 @@
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>40</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
-        <eggCountRange>2</eggCountRange>
+        <eggCountRange>1</eggCountRange>
 		<failChance>0.25</failChance>
 		<paternalChance>0.5</paternalChance>
 		<maternalChance>0.5</maternalChance>
@@ -960,7 +960,7 @@
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>40</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
-        <eggCountRange>2</eggCountRange>
+        <eggCountRange>1</eggCountRange>
 		<failChance>0.25</failChance>
 		<paternalChance>0.5</paternalChance>
 		<maternalChance>0.5</maternalChance>
@@ -1204,7 +1204,7 @@
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>40</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
-        <eggCountRange>2</eggCountRange>
+        <eggCountRange>1</eggCountRange>
 		<failChance>0.25</failChance>
 		<paternalChance>0.5</paternalChance>
 		<maternalChance>0.5</maternalChance>
@@ -1450,7 +1450,7 @@
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>40</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
-        <eggCountRange>2</eggCountRange>
+        <eggCountRange>1</eggCountRange>
 		<failChance>0.25</failChance>
 		<paternalChance>0.5</paternalChance>
 		<maternalChance>0.5</maternalChance>
