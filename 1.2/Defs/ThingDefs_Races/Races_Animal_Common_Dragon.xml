@@ -118,7 +118,7 @@
         <label>Black dragon whelp</label>
         <labelPlural>Black dragon whelps</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BDragon1</texPath>
+          <texPath>Things/Pawn/Animal/BDragon/BDragon1</texPath>
           <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
@@ -1002,7 +1002,7 @@
         <label>Red dragon whelp</label>
         <labelPlural>Red dragon whelps</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon</texPath>
+          <texPath>Things/Pawn/Animal/RDragon/RDragon1</texPath>
           <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
@@ -1247,7 +1247,7 @@
         <label>White dragon whelp</label>
         <labelPlural>White dragon whelps</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/WDragon1</texPath>
+          <texPath>Things/Pawn/Animal/WDragon/WDragon1</texPath>
           <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
