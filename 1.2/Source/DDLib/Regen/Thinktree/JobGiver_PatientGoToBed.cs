@@ -19,6 +19,12 @@ namespace DD
 
             if (result.IsValid)
             {
+                if(HealthAIUtility.ShouldHaveSurgeryDoneNow(pawn))
+                {
+                    //Just let surgery through ffs.
+                    return result;
+                }
+
                 if (HealthUtils.CanRegen(pawn, timeout) && HealthUtils.ShouldRegen(pawn) && pawn.health.hediffSet.HasHediff(DD_HediffDefOf.DraconicRegeneration))
                 {
                     //Do nothing if has regen active.
