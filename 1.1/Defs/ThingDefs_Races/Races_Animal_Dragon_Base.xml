@@ -213,7 +213,7 @@
       <baseHealthScale>22</baseHealthScale>
       <predator>true</predator>
       <foodType>OmnivoreAnimal</foodType>
-      <leatherDef>Rich_Dragon_Leather</leatherDef>
+      <leatherDef>Rare_Dragon_Leather</leatherDef>
       <meatLabel>Dragon meat</meatLabel>
       <trainability>Advanced</trainability>
       <manhunterOnDamageChance>5</manhunterOnDamageChance>

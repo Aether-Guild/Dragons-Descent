@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- ========== Egging ========== -->
+  <DragonLayingEggMessage>{PARENT} has laid {EGG}</DragonLayingEggMessage>
+  <DragonEggRuinedIncubatorMessage>Warning: {EGG} is ruined.</DragonEggRuinedIncubatorMessage>
+  
+  <!-- ========== Mating ========== -->
+  <DragonMateSpawnMessage>{MATE} has heard the mating call!</DragonMateSpawnMessage>
+  
+  <HostileResponseFriendlyFireMessage>{PAWN} is manhunting due to friendly fire by {ATTACKER}. The rage will end once the dragon rests or falls unconscious.</HostileResponseFriendlyFireMessage>
+  
+</LanguageData>

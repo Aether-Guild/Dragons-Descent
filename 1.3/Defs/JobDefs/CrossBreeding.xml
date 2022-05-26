@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>MateCrossbreed</defName>
+    <driverClass>DD.JobDriver_MateCrossbreed</driverClass>
+    <reportString>mating with TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>LayCrossbredEgg</defName>
+    <driverClass>DD.JobDriver_LayCrossbredEgg</driverClass>
+    <reportString>laying egg.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+    
+    
+</Defs>
+	

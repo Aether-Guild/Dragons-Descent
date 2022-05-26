@@ -36,8 +36,8 @@
   </ThingDef>
 
   <ThingDef ParentName="LeatherBase">
-    <defName>Rich_Dragon_Leather</defName>
-    <label>rich dragon leather</label>
+    <defName>Rare_Dragon_Leather</defName>
+    <label>rare dragon leather</label>
     <description>The tanning process has converted these scales into a rich, supple, strong leather. However, the original color has been lost (like when a lobster is boiled in water) and so the scales and skin have irreversibly changed color.</description>
     <graphicData>
       <color>(159,153,247)</color>

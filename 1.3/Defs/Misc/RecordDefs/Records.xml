@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Combat -->
+ 
+  <RecordDef>
+    <defName>DamageDealtAnimals</defName>
+    <label>damage dealt (animals)</label>
+    <description>The amount of damage I have dealt to animals.</description>
+    <type>Float</type>
+  </RecordDef>
+  
+  <RecordDef>
+    <defName>DamageDealtMechanoids</defName>
+    <label>damage dealt (mechanoids)</label>
+    <description>The amount of damage I have dealt to mechanoids.</description>
+    <type>Float</type>
+  </RecordDef>
+  
+  <RecordDef>
+    <defName>DamageDealtHumanlike</defName>
+    <label>damage dealt (humanlikes)</label>
+    <description>The amount of damage I have dealt to humanlikes.</description>
+    <type>Float</type>
+  </RecordDef>
+
+  <RecordDef>
+    <defName>DamageTakenAnimals</defName>
+    <label>damage taken (animals)</label>
+    <description>The amount of damage I have taken from animals.</description>
+    <type>Float</type>
+  </RecordDef>
+
+  <RecordDef>
+    <defName>DamageTakenMechanoids</defName>
+    <label>damage taken (mechanoids)</label>
+    <description>The amount of damage I have taken from mechanoids.</description>
+    <type>Float</type>
+  </RecordDef>
+
+  <RecordDef>
+    <defName>DamageTakenHumanlike</defName>
+    <label>damage taken (humanlikes)</label>
+    <description>The amount of damage I have taken from humanlikes.</description>
+    <type>Float</type>
+  </RecordDef>
+  
+</Defs>

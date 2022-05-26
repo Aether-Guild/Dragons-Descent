@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+                <!--======= Toxic Bite =======-->
+   <ManeuverDef>
+    <defName>Toxic_Bite</defName>
+    <requiredCapacity>Toxic_Bite</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>Toxic_Bite</meleeDamageDef>
+    </verb>
+     <logEntryDef>MeleeAttack</logEntryDef>
+     <combatLogRulesHit>Maneuver_Bite_MeleeHit</combatLogRulesHit>
+     <combatLogRulesDeflect>Maneuver_Bite_MeleeDeflect</combatLogRulesDeflect>
+     <combatLogRulesMiss>Maneuver_Bite_MeleeMiss</combatLogRulesMiss>
+     <combatLogRulesDodge>Maneuver_Bite_MeleeDodge</combatLogRulesDodge>
+	 <modExtensions>
+		<li Class="DD.VerbUsageExtension">
+			<useWhileHunting>false</useWhileHunting>
+		</li>
+	 </modExtensions>
+  </ManeuverDef>
+                <!--======= Rend =======-->
+  <ManeuverDef>
+    <defName>Rend</defName>
+    <requiredCapacity>Rend</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>Rend</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Bite_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Bite_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Bite_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Bite_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+                <!--======= Skull Bash =======-->
+  <ManeuverDef>
+    <defName>Skull_Bash</defName>
+    <requiredCapacity>Skull_Bash</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>Skull_Bash</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Smash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Smash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Smash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Smash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+                <!--======== Tail Whip =========-->
+  <ManeuverDef>
+    <defName>Slash</defName>
+    <requiredCapacity>Cut</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>Cut</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+                <!--======== Frost Bite =========-->
+   <ManeuverDef>
+    <defName>Frost_Bite</defName>
+    <requiredCapacity>Frost_Bite</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>Frost_Bite</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Bite_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Bite_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Bite_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Bite_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+                <!-- =========== Pyro Bite ============-->  
+ <ManeuverDef>
+    <defName>Pyro_Bite</defName>
+    <requiredCapacity>Pyro_Bite</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>Pyro_Bite</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Stab_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Stab_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Stab_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Stab_MeleeDodge</combatLogRulesDodge>
+	 <modExtensions>
+		<li Class="DD.VerbUsageExtension">
+			<useWhileHunting>false</useWhileHunting>
+		</li>
+	 </modExtensions>
+  </ManeuverDef>
+
+</Defs>

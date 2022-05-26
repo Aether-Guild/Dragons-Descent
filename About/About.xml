@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Dragon's Descent</name>
+	<name>Dragons Descent</name>
 	<author>Onyxae</author>
 	<supportedVersions>
 		<li>1.1</li>
 		<li>1.2</li>
+   		<li>1.3</li>
 	</supportedVersions>
 	<packageId>onyxae.dragonsdescent</packageId>
 	<url>https://github.com/Aether-Guild/Dragons-Descent/</url>
-	<modDependencies>
+	 <modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
 			<displayName>Harmony</displayName>
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
 			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
 		</li>
+		<li>
+			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+			<displayName>Vanilla Expanded Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1854607105</steamWorkshopUrl>
+		</li>
 	</modDependencies>
 	<loadAfter>
-		<li>brrainz.harmony</li>
+	<li>brrainz.harmony</li>
+	<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
 	<incompatibleWith>
-		<!-- Release Version -->
-		<!-- <li>onyxae.dragonsdescent</li>  -->
-		<!-- WIP Version -->
-		<li>onyxae.ddsharedcode</li>
-		<!-- Testing Version -->
-		<li>onyxae.ddtestercode</li> 
+
 	</incompatibleWith>
 	<description>
   <![CDATA[
@@ -34,7 +36,7 @@
 
 The Rimworld is a harsh and dangerous place. Its environment can be lush and giving or disasterous and desolate, and has such bred certain races to adapt to both. One such race is the dragon, these beasts are quite powerful and rare; making them valuable for any colony to capture and tame. Some curious offworld glittertech civilizations have even bred their own types which have recently escaped into the wild. Even if they were once in captivity taming any dragon is an extreme risk, fighting and angering one even moreso.
 
-<color=#E0D83C><size=18>Version: 1.3: Mind, X, and X</size></color>
+<color=#E0D83C><size=18>Version: 1.3.1: Mind, X, and X</size></color>
 
 <color=#E0D83C><size=18>Dependencies</size></color>
 

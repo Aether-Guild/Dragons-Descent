@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--========== DraconicFlame ========== -->
+<!-- 	<DamageDef Name="DraconicFlame">
+		<defName>DraconicFlame</defName>
+        <workerClass>DD.DamageWorker_DraconicFlame</workerClass> 
+        <label>draconic flame</label>
+		<hasForcefulImpact>false</hasForcefulImpact>
+		<makesBlood>false</makesBlood>
+		<canInterruptJobs>false</canInterruptJobs>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has burned to death.</deathMessage>
+		<hediff>Burn</hediff>
+		<armorCategory>Heat</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>10</defaultDamage>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+		<explosionCellMote>Mote_BlastDry</explosionCellMote>
+		<explosionColorCenter>(1, 0.7, 0.8)</explosionColorCenter>
+		<explosionColorEdge>(1, 1, 0.8)</explosionColorEdge>
+		<soundExplosion>Explosion_Flame</soundExplosion>
+		<combatLogRules>Damage_Flame</combatLogRules> 
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+	</DamageDef> -->
+
+<!--========== DraconicFlame ========== -->
+<!-- <DamageDef Name="DraconicWater">
+	<defName>DraconicWater</defName>
+	<workerClass>DD.DamageWorker_Draconic</workerClass> 
+	<label>draconic flame</label>
+	<hasForcefulImpact>false</hasForcefulImpact>
+	<makesBlood>false</makesBlood>
+	<canInterruptJobs>false</canInterruptJobs>
+	<externalViolence>true</externalViolence>
+	<deathMessage>{0} has burned to death.</deathMessage>
+	<hediff>Burn</hediff>
+	<armorCategory>Heat</armorCategory>
+	<minDamageToFragment>15</minDamageToFragment>
+	<defaultDamage>10</defaultDamage>
+	<defaultArmorPenetration>0</defaultArmorPenetration>
+	<explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+	<explosionCellMote>Mote_BlastFlame</explosionCellMote>
+	<explosionColorCenter>(1, 0.7, 0.8)</explosionColorCenter>
+	<explosionColorEdge>(1, 1, 0.8)</explosionColorEdge>
+	<soundExplosion>Explosion_Flame</soundExplosion>
+	<combatLogRules>Damage_Flame</combatLogRules> 
+	<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+</DamageDef> -->
+
+	
+	<!-- ========== DraconicFrost ========== -->
+	<!-- <DamageDef Name="DraconicFrost">
+		<defName>DraconicFrost</defName>
+        <workerClass>DD.DamageWorker_DraconicFrost</workerClass>
+        <label>draconic frost</label>
+		<hasForcefulImpact>false</hasForcefulImpact>
+		<makesBlood>false</makesBlood>
+		<canInterruptJobs>false</canInterruptJobs>
+		<externalViolence>true</externalViolence>
+        <deathMessage>{0} froze to death.</deathMessage>
+		<hediff>Frostbite</hediff>
+		<additionalHediffs>
+			<li>
+				<hediff>Hypothermia</hediff>
+				<severityPerDamageDealt>0.015</severityPerDamageDealt>
+				<victimSeverityScaling>ToxicSensitivity</victimSeverityScaling>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+			</li>
+		</additionalHediffs>
+		<armorCategory>Heat</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>10</defaultDamage>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+		<explosionCellMote>Mote_BlastFlame</explosionCellMote>
+		<explosionColorCenter>(0.7, 0.7, 1)</explosionColorCenter>
+		<explosionColorEdge>(0.7, 1, 1)</explosionColorEdge>
+		<soundExplosion>Explosion_Flame</soundExplosion>
+		<combatLogRules>Damage_Flame</combatLogRules>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+	</DamageDef>
+	 -->
+</Defs>

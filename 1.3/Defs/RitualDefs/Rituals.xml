@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=========================== Rituals ===============================-->
+	<DD.RitualDef>
+		<defName>Ritual_BanishSingleDragon</defName>
+		<label>Banish</label>
+		<description>Forces the selected dragon to exit the map.</description>
+		<cost>
+			<points>
+				<li>(0, 1)</li>
+				<li>(6, 3)</li>
+				<li>(12, 6)</li>
+				<li>(20, 18)</li>
+			</points>
+		</cost>
+		<cooldown>
+			<points>
+				<li>(0, 1000)</li>
+				<li>(100, 10000)</li>
+			</points>
+		</cooldown>
+		<targetingParams>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetBuildings>false</canTargetBuildings>
+			<onlyTargetFactionless>true</onlyTargetFactionless>
+			<ritualTarget>LocalTarget</ritualTarget>
+		</targetingParams>
+		<ritualClass>DD.Ritual_BanishPawn</ritualClass>
+		<iconPath>UserInterface/Rituals/BanishDragon</iconPath>
+		<fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+		<fleckOnSource>LightningGlow</fleckOnSource>
+		<fleckConnecting>LineEMP</fleckConnecting>
+		<sound>PsychicInsanityLanceCast</sound>
+		<shakeCamera>true</shakeCamera>
+	</DD.RitualDef>
+  
+	<DD.RitualDef>
+		<defName>Ritual_BanishAllDragon</defName>
+		<label>Banish All</label>
+		<description>Forces all wild dragons to exit the map.</description>
+		<cost>
+			<points>
+				<li>(0, 4)</li>
+				<li>(5, 7)</li>
+				<li>(10, 10)</li>
+				<li>(45, 60)</li>
+			</points>
+		</cost>
+		<cooldown>
+		<points>
+			<li>(0, 10000)</li>
+			<li>(50, 100000)</li>
+		</points>
+		</cooldown>
+		<targetingParams>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetBuildings>false</canTargetBuildings>
+			<onlyTargetFactionless>true</onlyTargetFactionless>
+			<ritualTarget>NoTarget</ritualTarget>
+		</targetingParams>
+		<ritualClass>DD.Ritual_BanishAllPawns</ritualClass>
+		<iconPath>UserInterface/Rituals/BanishDragons</iconPath>
+		<fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+		<fleckOnSource>LightningGlow</fleckOnSource>
+		<fleckConnecting>LineEMP</fleckConnecting>
+		<sound>PsychicInsanityLanceCast</sound>
+		<shakeCamera>true</shakeCamera>
+	</DD.RitualDef>
+  
+	<DD.RitualDef>
+		<defName>Ritual_RemoveFerocity</defName>
+		<label>Appease</label>
+		<description>Calms down a dragon.</description>
+		<cost>
+			<points>
+				<li>(0, 1)</li>
+				<li>(6, 3)</li>
+				<li>(12, 6)</li>
+				<li>(20, 18)</li>
+			</points>
+		</cost>
+		<cooldown>
+			<points>
+				<li>(0, 3000)</li>
+				<li>(100, 60000)</li>
+			</points>
+		</cooldown>
+		<targetingParams>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetBuildings>false</canTargetBuildings>
+			<canTargetWithMentalState>true</canTargetWithMentalState>
+			<canTargetWithHediff>
+				<li>DraconicFerocity_Male</li>
+				<li>DraconicFerocity_Female</li>
+			</canTargetWithHediff>
+			<ritualTarget>LocalTarget</ritualTarget>
+		</targetingParams>
+		<ritualClass>DD.Ritual_CalmDown</ritualClass>
+		<iconPath>UserInterface/Rituals/CalmDragon</iconPath>
+		<fleckOnTarget>SparkFlash</fleckOnTarget>
+		<fleckOnSource>HeatGlow</fleckOnSource>
+		<fleckConnecting>PsycastPsychicLine</fleckConnecting>
+		<sound>MechSerumUsed</sound>
+		<modExtensions>
+			<li Class="DD.RitualHediffModExtension">
+				<hediffs>
+					<li>DraconicFerocity_Male</li>
+					<li>DraconicFerocity_Female</li>
+				</hediffs>
+			</li>
+		</modExtensions>
+	</DD.RitualDef>
+  
+	<DD.RitualDef>
+		<defName>Ritual_RemoveFerocityAll</defName>
+		<label>Appease All</label>
+		<description>Calms down all dragons in the vicinity.</description>
+		<cost>
+      <points>
+      <li>(0, 4)</li>
+      <li>(5, 7)</li>
+      <li>(10, 10)</li>
+      <li>(45, 60)</li>
+      </points>
+		</cost>
+		<cooldown>
+			<points>
+				<li>(0, 12000)</li>
+				<li>(50, 120000)</li>
+			</points>
+		</cooldown>
+		<targetingParams>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetBuildings>false</canTargetBuildings>
+			<canTargetWithMentalState>true</canTargetWithMentalState>
+			<canTargetWithHediff>
+				<li>DraconicFerocity_Male</li>
+				<li>DraconicFerocity_Female</li>
+				<li>DraconicPackFerocity_Male</li>
+				<li>DraconicPackFerocity_Female</li>
+			</canTargetWithHediff>
+			<ritualTarget>NoTarget</ritualTarget>
+		</targetingParams>
+		<ritualClass>DD.Ritual_CalmDownAll</ritualClass>
+		<iconPath>UserInterface/Rituals/CalmDragons</iconPath>
+		<fleckOnTarget>SparkFlash</fleckOnTarget>
+		<fleckOnSource>HeatGlow</fleckOnSource>
+		<fleckConnecting>PsycastPsychicLine</fleckConnecting>
+		<sound>MechSerumUsed</sound>
+		<modExtensions>
+			<li Class="DD.RitualHediffModExtension">
+				<hediffs>
+					<li>DraconicFerocity_Male</li>
+					<li>DraconicFerocity_Female</li>
+					<li>DraconicPackFerocity_Male</li>
+					<li>DraconicPackFerocity_Female</li>
+				</hediffs>
+			</li>
+		</modExtensions>
+	</DD.RitualDef>
+  
+	<DD.RitualDef>
+		<defName>Ritual_MaintainDragonNeeds</defName>
+		<label>Sustain</label>
+		<description>Fills up and maintains the dragon's food.</description>
+		<cost>
+			<points>
+				<li>(0, 1)</li>
+				<li>(6, 3)</li>
+				<li>(12, 6)</li>
+				<li>(20, 18)</li>
+			</points>
+		</cost>
+		<cooldown>
+			<points>
+				<li>(0, 7000)</li>
+				<li>(100, 14000)</li>
+			</points>
+		</cooldown>
+		<targetingParams>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetBuildings>false</canTargetBuildings>
+			<ritualTarget>LocalTarget</ritualTarget>
+		</targetingParams>
+		<ritualClass>DD.Ritual_MaintainNeeds</ritualClass>
+		<iconPath>UserInterface/Rituals/FulfillDragon</iconPath>
+		<fleckOnTarget>SparkFlash</fleckOnTarget>
+		<fleckOnSource>HeatGlow</fleckOnSource>
+		<fleckConnecting>PsycastPsychicLine</fleckConnecting>
+		<sound>MechSerumUsed</sound>
+		<modExtensions>
+			<li Class="DD.RitualNeedsModExtension">
+				<food>0.75~1.0</food>
+			</li>
+			<li Class="DD.RitualTickingModExtension">
+				<duration>
+					<points>
+						<li>(0, 7000)</li>
+						<li>(20, 14000)</li>
+					</points>
+				</duration>
+				<tickerType>Long</tickerType>
+			</li>
+		</modExtensions>
+	</DD.RitualDef>
+  
+	<DD.RitualDef>
+		<defName>Ritual_MaintainAllDragonNeeds</defName>
+		<label>Sustain All</label>
+		<description>Fills up and maintains all dragons food.</description>
+		<cost>
+      <points>
+        <li>(0, 4)</li>
+        <li>(5, 7)</li>
+        <li>(10, 10)</li>
+        <li>(45, 60)</li>
+      </points>
+		</cost>
+		<cooldown>
+			<points>
+				<li>(0, 14000)</li>
+				<li>(50, 28000)</li>
+			</points>
+		</cooldown>
+		<targetingParams>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetBuildings>false</canTargetBuildings>
+			<ritualTarget>NoTarget</ritualTarget>
+		</targetingParams>
+		<ritualClass>DD.Ritual_MaintainAllNeeds</ritualClass>
+		<iconPath>UserInterface/Rituals/FulfillDragons</iconPath>
+		<fleckOnTarget>SparkFlash</fleckOnTarget>
+		<fleckOnSource>HeatGlow</fleckOnSource>
+		<fleckConnecting>PsycastPsychicLine</fleckConnecting>
+		<sound>MechSerumUsed</sound>
+		<modExtensions>
+			<li Class="DD.RitualNeedsModExtension">
+				<food>0.75~1.0</food>
+			</li>
+			<li Class="DD.RitualTickingModExtension">
+				<duration>
+					<points>
+						<li>(0, 7000)</li>
+						<li>(30, 20000)</li>
+					</points>
+				</duration>
+				<tickerType>Long</tickerType>
+			</li>
+		</modExtensions>
+	</DD.RitualDef>
+  
+	<DD.RitualDef>
+		<defName>Ritual_WardAllDragon</defName>
+		<label>Ward</label>
+		<description>Automatically calms down tamed dragons and banish wild dragons for a period of time.</description>
+		<cost>
+			<points>
+				<li>(0, 6)</li>
+				<li>(5, 18)</li>
+				<li>(25, 32)</li>
+				<li>(50, 65)</li>
+				<li>(100, 80)</li>
+			</points>
+		</cost>
+		<cooldown>
+			<points>
+				<li>(0, 45000)</li>
+				<li>(5, 50000)</li>
+				<li>(10, 65000)</li>
+				<li>(25, 80000)</li>
+			</points>
+		</cooldown>
+		<targetingParams>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetBuildings>false</canTargetBuildings>
+			<ritualTarget>NoTarget</ritualTarget>
+		</targetingParams>
+		<ritualClass>DD.Ritual_WardAllPawns</ritualClass>
+		<iconPath>UserInterface/Rituals/DragonWard</iconPath>
+		<fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+		<fleckOnSource>LightningGlow</fleckOnSource>
+		<fleckConnecting>PsycastPsychicLine</fleckConnecting>
+		<sound>PsychicAnimalPulserCast</sound>
+		<modExtensions>
+			<li Class="DD.RitualTickingModExtension">
+				<duration>
+					<points>
+						<li>(0, 45000)</li>
+						<li>(25, 90000)</li>
+					</points>
+				</duration>
+				<tickerType>Rare</tickerType>
+			</li>
+			<li Class="DD.RitualHediffModExtension">
+				<hediffs>
+					<li>DraconicFerocity_Male</li>
+					<li>DraconicFerocity_Female</li>
+					<li>DraconicPackFerocity_Male</li>
+					<li>DraconicPackFerocity_Female</li>
+				</hediffs>
+			</li>
+		</modExtensions>
+	</DD.RitualDef>
+
+	<DD.RitualDef>
+		<defName>Ritual_Bombardment</defName>
+		<label>Bombardment</label>
+		<description>Bombards an area.</description>
+		<cost>
+			<points>
+				<li>(0, 18)</li>
+				<li>(6, 26)</li>
+				<li>(12, 36)</li>
+				<li>(20, 46)</li>
+			</points>
+		</cost>
+		<cooldown>
+			<points>
+				<li>(0, 7000)</li>
+				<li>(100, 20000)</li>
+			</points>
+		</cooldown>
+		<targetingParams>
+			<mustBeRitualTarget>false</mustBeRitualTarget>
+			<canTargetLocations>true</canTargetLocations>
+			<targetWorldObjects>
+				<li>Settlement</li>
+			</targetWorldObjects>
+			<ritualTarget>ForeignTarget</ritualTarget>
+		</targetingParams>
+		<initialCooldown>1500</initialCooldown>
+		<ritualClass>DD.Ritual_Bombardment</ritualClass>
+		<iconPath>UserInterface/Rituals/Bombardment</iconPath>
+		<fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+		<fleckOnSource>LightningGlow</fleckOnSource>
+		<sound>Dragon_Bom</sound>
+		<shakeCamera>true</shakeCamera>
+		<modExtensions>
+			<li Class="DD.RitualTickingModExtension">
+				<duration>
+					<points>
+						<li>(0, 2)</li>
+						<li>(15, 6)</li>
+					</points>
+				</duration>
+				<tickerType>Normal</tickerType>
+			</li>
+			<li Class="DD.RitualDamageModExtension">
+				<bombardmentThingDef>BombardmentIncoming</bombardmentThingDef>
+				<bombardmentInterval>0.3~0.4</bombardmentInterval>
+				<bombardmentRadius>7</bombardmentRadius>
+			</li>
+		</modExtensions>
+	</DD.RitualDef>
+	
+	<ThingDef ParentName="SkyfallerBase">
+		<defName>BombardmentIncoming</defName>
+		<label>bombardment (incoming)</label>
+		<size>(5, 5)</size>
+		<graphicData>
+			<texPath>AnimalProjectile/DFire</texPath>
+			<graphicClass>DD.Graphic_Animation</graphicClass>
+			<shaderType>Transparent</shaderType>
+			<drawSize>(3.5, 4)</drawSize>
+		</graphicData>
+		<skyfaller>
+			<hitRoof>true</hitRoof>
+			<movementType>Accelerate</movementType>
+			<explosionRadius>4</explosionRadius>
+			<explosionDamage>Bomb</explosionDamage>
+			<explosionDamageFactor>0.45</explosionDamageFactor>
+			<ticksToImpactRange>500~1000</ticksToImpactRange>
+			<speed>0.3</speed>
+			<cameraShake>0.25</cameraShake>
+			<rotateGraphicTowardsDirection>true</rotateGraphicTowardsDirection>
+			<shadowSize>(4, 4)</shadowSize>
+		</skyfaller>
+	</ThingDef>
+  
+	<!-- <DD.RitualDef>
+		<defName>Ritual_Destroyer</defName>
+		<label>Destroyer</label>
+		<description>Activates the destroyer on a settlement.</description>
+		<cost>
+			<points>
+				<li>(0, 100)</li>
+				<li>(2, 200)</li>
+				<li>(6, 300)</li>
+				<li>(10, 400)</li>
+			</points>
+		</cost>
+		<cooldown>
+			<points>
+				<li>(0, 15000)</li>
+				<li>(50, 20000)</li>
+			</points>
+		</cooldown>
+		<targetingParams>
+			<targetWorldObjects>
+				<li>Settlement</li>
+			</targetWorldObjects>
+			<ritualTarget>GlobalTarget</ritualTarget>
+			<canTargetOwnTile>false</canTargetOwnTile>
+			<canTargetPlayerFaction>false</canTargetPlayerFaction>
+		</targetingParams>
+		<initialCooldown>1500</initialCooldown>
+		<ritualClass>DD.Ritual_Destroyer</ritualClass>
+		<iconPath>UserInterface/Rituals/Destroy</iconPath>
+		<fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+		<fleckOnSource>LightningGlow</fleckOnSource>
+		<fleckConnecting>LineEMP</fleckConnecting>
+		<sound>PsychicInsanityLanceCast</sound>
+		<shakeCamera>true</shakeCamera>
+		<targetedGoodwillChange>-50~-75</targetedGoodwillChange>
+		<otherGoodwillChange>-60~-90</otherGoodwillChange>
+		<confirmationMessage>This will destroy the target map (if it exists) and kill all pawns currently on it.\n</confirmationMessage>
+		<modExtensions>
+			<li Class="DD.RitualWorldObjectModExtension">
+				<defaultDestroy>true</defaultDestroy>
+				<worldObjects>
+					<li>
+						<from>Settlement</from>
+						<to>DestroyedSettlement</to>
+					</li>
+				</worldObjects>
+			</li>
+		</modExtensions>
+	</DD.RitualDef> -->
+  
+</Defs>

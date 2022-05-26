@@ -1,0 +1,54 @@
+Major Changes:
+
+	New AI! New verb abilities allowing for gizmos.
+
+	They not dumb. Clench your butt.
+
+	Dragons can now keep a "track" of 10 pawns that have attacked it, focusing on the one who has dealt/ dealing the most damage. 
+
+	Can gain new abilities depending on its age/ kill count/ other things. Not entirely used atm, will be expanded on in (Soul).
+
+Gizmos:
+
+	Disable Breath, Use Breath (can aim using gizmo), can toggle between 3 seperate hostility responses.
+
+Hostility Response:
+
+	Aggressive: Any time a dragon sees a hostile pawn, targeted by one, or attacked by one it will retaliate and keep a track of it. It will also keep a track of hostile pawns it can see.
+	The dragon also turns manhunter upon intentional friendly damage.
+
+	Defensive: Any time a dragon is targeted or attacked by a hostile pawn it will retaliate. It will only keep a track of those who attack it.
+	The dragon also turns manhunter upon intentional friendly damage.
+	
+	Pacifist: Any time a dragon is attacked it will flee. Tracks hostile pawns but does not attack unless hostility is changed.
+	Does not turn manhunter upon intentional friendly damage.
+
+Textures:
+
+	New variety! 3 new textures for commons, 2 new for rares.
+	
+	Adjusted dragon pillow a bit, also ignore jewel orchid and hard scales they're not ready.
+	
+	Weapons & Armor!
+
+Weapons & Armor:
+
+	Will likely not be included in Body, Mind, and Soul (Mind) but 100% will be in (Body)
+
+	Scale Mail: Lighter weight version of plate armor. Offers less defense but higher speed.
+
+	Scale Helm: Lighter weight version of plate helmet. Offer less defense but higher speed.
+
+	Dragon Crown: Made from a dragon horn. Grants social impact bonus.
+
+	Wing Cape: Grants a slight speed bonus.
+
+	Thrumbo Battleaxe: Crafted using a thrumbo horn, hard hitting but slower than a thrumbo horn.
+
+	Dragon Sword: Crafted using a dragon horn, fast sharp swings.
+
+	Stik: Crafted using a dragon horn, armor piercing jabs and stabs
+
+	Dragonfire Launcher: Like incendiary launcher, but it fires 2 shots.
+
+	Double Crossbow: Fires 2 arrows in quick succession.

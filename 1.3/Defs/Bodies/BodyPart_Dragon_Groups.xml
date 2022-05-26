@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <bodyPartGroupDef>
+    <defName>Wings</defName>
+    <label>both wings</label>
+  </bodyPartGroupDef>
+
+  <bodyPartGroupDef>
+    <defName>Horns</defName>
+    <label>horns</label>
+  </bodyPartGroupDef>
+  
+  <BodyPartGroupDef>
+    <defName>Paws</defName>
+    <label>paws</label>
+  </BodyPartGroupDef>
+
+  <BodyPartGroupDef>
+    <defName>FrontLeftPaw</defName>
+    <label>paw</label>
+  </BodyPartGroupDef>
+
+  <BodyPartGroupDef>
+    <defName>BackLeftPaw</defName>
+    <label>paw</label>
+  </BodyPartGroupDef>
+
+  <BodyPartGroupDef>
+    <defName>FrontRightPaw</defName>
+    <label>paw</label>
+  </BodyPartGroupDef>
+
+  <BodyPartGroupDef>
+    <defName>BackRightPaw</defName>
+    <label>paw</label>
+  </BodyPartGroupDef>
+
+  <bodyPartGroupDef>
+    <defName>Tail</defName>
+    <label>tail</label>
+  </bodyPartGroupDef>
+
+  <BodyPartDef>
+    <defName>Coracoid</defName>
+    <label>coracoid</label>
+    <hitPoints>23</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>Pubis</defName>
+    <label>pubis</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>Fundamentum</defName>
+    <label>fundamentum</label>
+    <hitPoints>5</hitPoints>
+    <bleedRate>0</bleedRate>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>BloodPumpingSource</li>
+      <li>BloodFiltrationLiver</li>
+      <li>MetabolismSource</li>
+    </tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Wing</defName>
+    <label>wing</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+
+  
+</Defs>

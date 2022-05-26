@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- =========================== Neutral ============================-->
+	<IncidentDef>
+		<defName>DragonsPasses</defName>
+		<label>dragons pass</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>DD.IncidentWorker_DragonPasses</workerClass>
+		<baseChance>0.7</baseChance>
+		<earliestDay>40</earliestDay>
+		<minRefireDays>40</minRefireDays>
+		<minThreatPoints>500</minThreatPoints>
+		<modExtensions>
+			<li Class="DD.SettingControlledExtension_IncidentChance" />
+			<li Class="DD.TrackedIncidentExtension">
+				<maxRefireDays>65</maxRefireDays>
+				<watcherCooldownDays>7~14</watcherCooldownDays>
+			</li>
+			<li Class="DD.SpawnIncidentExtension">
+				<spawnCount>1~2</spawnCount>
+				<minExit>
+					<days>2</days>
+				</minExit>
+				<maxExit>
+					<days>4</days>
+				</maxExit>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>DragonHunting</defName>
+		<label>dragon hunting</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>DD.IncidentWorker_DragonHunting</workerClass>
+		<baseChance>0.55</baseChance>
+		<earliestDay>60</earliestDay>
+		<minRefireDays>60</minRefireDays>
+		<minThreatPoints>500</minThreatPoints>
+		<modExtensions>
+			<li Class="DD.SettingControlledExtension_IncidentChance" />
+			<li Class="DD.TrackedIncidentExtension">
+				<maxRefireDays>100</maxRefireDays>
+				<watcherCooldownDays>14~28</watcherCooldownDays>
+			</li>
+			<li Class="DD.SpawnIncidentExtension">
+				<spawnCount>1~2</spawnCount>
+				<hungerPercentage>0.25</hungerPercentage>
+				<minExit>
+					<days>5</days>
+				</minExit>
+				<maxExit>
+					<days>7</days>
+				</maxExit>
+			</li>
+			<li Class="DD.SpawnHerdIncidentExtension">
+				<maxWildness>0.35</maxWildness>
+				<baseHerdNutrition>35</baseHerdNutrition>
+        <minExit>
+          <days>8</days>
+        </minExit>
+        <maxExit>
+          <days>9</days>
+        </maxExit>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+
+</Defs>

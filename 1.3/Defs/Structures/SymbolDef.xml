@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <KCSG.SymbolDef>
+    <defName>DragonNest_North</defName>
+    <thing>DragonNest</thing>
+    <rotation>North</rotation>
+  </KCSG.SymbolDef>
+  
+  <KCSG.SymbolDef>
+    <defName>DragonPillow_Cloth_North</defName>
+    <thing>DragonPillow</thing>
+    <stuff>Cloth</stuff>
+    <rotation>North</rotation>
+  </KCSG.SymbolDef>
+  
+  <KCSG.SymbolDef>
+    <defName>BasicIncubator_BlocksGranite_North</defName>
+    <thing>BasicIncubator</thing>
+    <stuff>BlocksGranite</stuff>
+    <rotation>North</rotation>
+  </KCSG.SymbolDef>
+  
+  <KCSG.SymbolDef>
+    <defName>DDCasket_West</defName>
+    <thing>CryptosleepCasket</thing>
+    <rotation>West</rotation>
+    <containPawnKindAnyOf> <!-- All the possible pawnKindDefs -->
+      <li>Purple_Dragon</li>
+      <li>Red_Dragon</li>
+    </containPawnKindAnyOf>
+    <containPawnKindForPlayerAnyOf> <!-- If the map faction is Player, those pawnkinds are used -->
+      <!-- <li>pawnforPlayer1</li>
+      <li>pawnforPlayer2</li> -->
+    </containPawnKindForPlayerAnyOf>
+    <chanceToContainPawn>1</chanceToContainPawn>
+    <!-- <spawnPartOfFaction>true</spawnPartOfFaction> --> <!-- If the map faction is Player, pawn is spawned part of it -->
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DDCasket_North</defName>
+    <thing>CryptosleepCasket</thing>
+    <rotation>North</rotation>
+    <containPawnKindAnyOf> <!-- All the possible pawnKindDefs -->
+      <li>Purple_Dragon</li>
+      <li>Red_Dragon</li>
+    </containPawnKindAnyOf>
+    <containPawnKindForPlayerAnyOf> <!-- If the map faction is Player, those pawnkinds are used -->
+      <!-- <li>pawnforPlayer1</li>
+      <li>pawnforPlayer2</li> -->
+    </containPawnKindForPlayerAnyOf>
+    <chanceToContainPawn>1</chanceToContainPawn>
+    <!-- <spawnPartOfFaction>true</spawnPartOfFaction> --> <!-- If the map faction is Player, pawn is spawned part of it -->
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DDCasket_South</defName>
+    <thing>CryptosleepCasket</thing>
+    <rotation>South</rotation>
+    <containPawnKindAnyOf> <!-- All the possible pawnKindDefs -->
+      <li>Purple_Dragon</li>
+      <li>Red_Dragon</li>
+    </containPawnKindAnyOf>
+    <containPawnKindForPlayerAnyOf> <!-- If the map faction is Player, those pawnkinds are used -->
+      <!-- <li>pawnforPlayer1</li>
+      <li>pawnforPlayer2</li> -->
+    </containPawnKindForPlayerAnyOf>
+    <chanceToContainPawn>1</chanceToContainPawn>
+    <!-- <spawnPartOfFaction>true</spawnPartOfFaction> --> <!-- If the map faction is Player, pawn is spawned part of it -->
+  </KCSG.SymbolDef>
+
+
+  <KCSG.SymbolDef>
+    <defName>PawnSymbol</defName>
+    <pawnKindDef>Drifter</pawnKindDef>
+    <isSlave>false</isSlave> <!-- Default:false -->
+    <spawnPartOfFaction>false</spawnPartOfFaction> <!-- To spawn part of map faction Default:true -->
+    <faction>OutlanderRough</faction> <!-- Null for wild pawn -->
+    <numberToSpawn>1</numberToSpawn>
+    <spawnDead>false</spawnDead> <!-- Default:false -->
+    <spawnRotten>false</spawnRotten> <!-- Default:false -->
+    <spawnFilthAround>false</spawnFilthAround> <!-- Default:false -->
+    <defendSpawnPoint>true</defendSpawnPoint> <!-- Default:false -->
+  </KCSG.SymbolDef>
+  
+</Defs>

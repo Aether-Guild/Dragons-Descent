@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- <ThingDef> 
+        <defName>Projectile_DragonBreath_Flame</defName> 
+         <label>flame breath</label> 
+         <category>Projectile</category> 
+        <tickerType>Normal</tickerType>
+        <altitudeLayer>Projectile</altitudeLayer>
+        <useHitPoints>False</useHitPoints> 
+        <neverMultiSelect>True</neverMultiSelect> 
+         <thingClass>DD.Projectile_Explode</thingClass> 
+        <graphicData>
+            <shaderType>TransparentPostLight</shaderType>
+            <texPath>AnimalProjectile/DragonFire</texPath>
+			<color>(255, 0, 110)</color> 
+			<colorTwo>(110, 0, 255)</colorTwo> 
+            <graphicClass>Graphic_Single</graphicClass> 
+         </graphicData> 
+         <projectile> 
+            <flyOverhead>false</flyOverhead> 
+            <speed>32</speed> 
+             <damageDef>DraconicFlame</damageDef> 
+             <explosionRadius>2.3</explosionRadius> 
+             <damageAmountBase>2</damageAmountBase> 
+             <soundExplode>DragonBreathFire</soundExplode>
+         </projectile>
+    </ThingDef> -->
+    <!-- <ThingDef> -->
+        <!-- <defName>Projectile_DragonBreath_Frost</defName> -->
+        <!-- <label>frost breath</label> -->
+        <!-- <category>Projectile</category> -->
+        <!-- <tickerType>Normal</tickerType> -->
+        <!-- <altitudeLayer>Projectile</altitudeLayer> -->
+        <!-- <useHitPoints>False</useHitPoints> -->
+        <!-- <neverMultiSelect>True</neverMultiSelect> -->
+        <!-- <thingClass>DD.Projectile_Explode</thingClass> -->
+        <!-- <graphicData> -->
+            <!-- <shaderType>TransparentPostLight</shaderType> -->
+            <!-- <texPath>AnimalProjectile/DragonFire</texPath> -->
+			<!-- <color>(190, 170, 255)</color> -->
+			<!-- <colorTwo>(255, 170, 190)</colorTwo> -->
+            <!-- <graphicClass>Graphic_Single</graphicClass> -->
+        <!-- </graphicData> -->
+        <!-- <projectile> -->
+            <!-- <flyOverhead>false</flyOverhead> -->
+            <!-- <speed>32</speed> -->
+            <!-- <damageDef>DraconicFrost</damageDef> -->
+            <!-- <explosionRadius>2.3</explosionRadius> -->
+            <!-- <damageAmountBase>2</damageAmountBase> -->
+            <!-- <soundExplode>DragonBreathFire</soundExplode> -->
+        <!-- </projectile> -->
+    <!-- </ThingDef> -->
+	
+    
+</Defs>

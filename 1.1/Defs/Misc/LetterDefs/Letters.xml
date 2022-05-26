@@ -6,7 +6,7 @@
     <color>(255, 130, 0)</color>
     <flashColor>(255, 93, 76)</flashColor>
     <flashInterval>90</flashInterval>
-    <arriveSound>LetterArrive</arriveSound>
+    <arriveSound>LetterArrive_BadUrgentBig</arriveSound>
 	<bounce>true</bounce>
   </LetterDef>
 

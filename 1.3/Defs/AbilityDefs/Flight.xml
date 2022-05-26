@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--========== Flight ========== -->
+	<AbilityDef>
+        <defName>DraconicFlight</defName>
+        <label>draconic flight</label>
+        <description>Jet goes up, Icarus comes down.</description>
+		<iconPath>UserInterface/Abilities/Fly</iconPath>
+        <abilityClass>DD.Ability_Base</abilityClass>
+        <cooldownTicksRange>800~1200</cooldownTicksRange>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+			
+			<!-- Make sure range and minRange matches the CastVerb's range and minRanges -->
+			<range>50</range>
+			
+			<requireLineOfSight>false</requireLineOfSight>
+			<drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+			
+			<!-- Warmup time is better in the ability's casting verb -->
+			<warmupTime>1</warmupTime>
+			
+			<!-- Targeting parameters to stop the verb from firing unless the target type matches -->
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+        </verbProperties>
+        <comps>
+			<li Class="DD.AbilityCompProperties_Flight">
+				<compClass>DD.AbilityComp_Flight</compClass>
+				<range>100</range>
+			</li>
+			<li Class="DD.AbilityCompProperties_Cooldown">
+                		<compClass>DD.AbilityComp_Cooldown</compClass>
+				<cooldownTicksRange>8000</cooldownTicksRange>
+			</li>
+			<li Class="DD.AbilityCompProperties_RequireBodyPart">
+				<compClass>DD.AbilityComp_RequireBodyPart</compClass>
+				<missing>true</missing>
+				<bodyPart>Wing</bodyPart>
+			</li>
+        </comps>
+    </AbilityDef>
+	
+	<ThingDef>
+		<defName>WingedFlyer</defName>
+		<label>dragon in flight</label>
+		<thingClass>DD.WingedFlyer</thingClass>
+		<category>Ethereal</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Skyfaller</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<destroyOnDrop>true</destroyOnDrop>
+		<tradeability>None</tradeability>
+	</ThingDef>
+	
+</Defs>

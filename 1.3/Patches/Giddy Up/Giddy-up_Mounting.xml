@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+      <mods>
+			<li>Giddy-up! Core</li>
+		</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+
+      <li Class="PatchOperationAddModExtension">
+        <xpath>*/ThingDef[ defName = "Black_Dragon"]</xpath>
+        <value>
+          <li Class="GiddyUpCore.AllowedLifeStagesPatch">
+            <allowedLifeStagesCSV>2,3,4</allowedLifeStagesCSV>
+            <!-- Provide the life stage indices as csv here.-->
+          </li>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAddModExtension">
+        <xpath>*/ThingDef[ defName = "Blue_Dragon"]</xpath>
+        <value>
+          <li Class="GiddyUpCore.AllowedLifeStagesPatch">
+            <allowedLifeStagesCSV>2,3,4</allowedLifeStagesCSV>
+          </li>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAddModExtension">
+        <xpath>*/ThingDef[ defName = "Jade_Dragon"]</xpath>
+        <value>
+          <li Class="GiddyUpCore.AllowedLifeStagesPatch">
+            <allowedLifeStagesCSV>2,3,4</allowedLifeStagesCSV>
+          </li>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAddModExtension">
+        <xpath>*/ThingDef[ defName = "Gold_Dragon"]</xpath>
+        <value>
+          <li Class="GiddyUpCore.AllowedLifeStagesPatch">
+            <allowedLifeStagesCSV>2,3,4</allowedLifeStagesCSV>
+          </li>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAddModExtension">
+        <xpath>*/ThingDef[ defName = "Green_Dragon"]</xpath>
+        <value>
+          <li Class="GiddyUpCore.AllowedLifeStagesPatch">
+            <allowedLifeStagesCSV>2,3,4</allowedLifeStagesCSV>
+          </li>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAddModExtension">
+        <xpath>*/ThingDef[ defName = "Purple_Dragon"]</xpath>
+        <value>
+          <li Class="GiddyUpCore.AllowedLifeStagesPatch">
+            <allowedLifeStagesCSV>2,3,4</allowedLifeStagesCSV>
+          </li>
+        </value>
+      </li>
+  
+      <li Class="PatchOperationAddModExtension">
+        <xpath>*/ThingDef[ defName = "Red_Dragon"]</xpath>
+        <value>
+          <li Class="GiddyUpCore.AllowedLifeStagesPatch">
+            <allowedLifeStagesCSV>2,3,4</allowedLifeStagesCSV>
+          </li>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAddModExtension">
+        <xpath>*/ThingDef[ defName = "Silver_Dragon"]</xpath>
+        <value>
+          <li Class="GiddyUpCore.AllowedLifeStagesPatch">
+            <allowedLifeStagesCSV>2,3,4</allowedLifeStagesCSV>
+          </li>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAddModExtension">
+        <xpath>*/ThingDef[ defName = "True_Dragon"]</xpath>
+        <value>
+          <li Class="GiddyUpCore.AllowedLifeStagesPatch">
+            <allowedLifeStagesCSV>2,3,4</allowedLifeStagesCSV>
+          </li>
+        </value>
+      </li>
+  
+      <li Class="PatchOperationAddModExtension">
+        <xpath>*/ThingDef[ defName = "White_Dragon"]</xpath>
+        <value>
+          <li Class="GiddyUpCore.AllowedLifeStagesPatch">
+            <allowedLifeStagesCSV>2,3,4</allowedLifeStagesCSV>
+          </li>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAddModExtension">
+          <xpath>*/ThingDef[ defName = "Yellow_Dragon"]</xpath>
+          <value>
+            <li Class="GiddyUpCore.AllowedLifeStagesPatch">
+              <allowedLifeStagesCSV>2,3,4</allowedLifeStagesCSV>
+            </li>
+          </value>
+        </li>
+
+      <li Class="PatchOperationAdd">
+    <xpath>
+      Defs/ThingDef[
+      defName = "Black_Dragon"
+      or 	defName = "Blue_Dragon"
+      or 	defName = "Jade_Dragon"
+      or 	defName = "Gold_Dragon"
+      or 	defName = "Green_Dragon"
+      or 	defName = "Purple_Dragon"
+      or 	defName = "Red_Dragon"
+      or 	defName = "Silver_Dragon"
+      or 	defName = "True_Dragon"
+      or 	defName = "White_Dragon"
+      or 	defName = "Yellow_Dragon"
+      ]/comps
+    </xpath>
+    <value>
+      <li Class="GiddyUpCore.CompProperties_Mount">
+        <drawFront>true</drawFront>
+      </li>
+    </value>
+  </li>
+
+      <li Class="PatchOperationAdd">
+    <xpath>
+      Defs/ThingDef[(
+      defName = "Black_Dragon"
+      or 	defName = "Blue_Dragon"
+      or 	defName = "Jade_Dragon"
+      or 	defName = "Gold_Dragon"
+      or 	defName = "Green_Dragon"
+      or 	defName = "Purple_Dragon"
+      or 	defName = "Red_Dragon"
+      or 	defName = "Silver_Dragon"
+      or 	defName = "True_Dragon"
+      or 	defName = "White_Dragon"
+      or 	defName = "Yellow_Dragon"
+      ) and not(comps)]
+    </xpath>
+    <value>
+      <comps>
+        <li Class="GiddyUpCore.CompProperties_Mount">
+          <drawFront>true</drawFront>
+        </li>
+      </comps>
+    </value>
+  </li>
+      
+    </operations>
+  </match>
+</Operation>
+</Patch>

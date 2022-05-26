@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--  ============Scale Mail=========== -->
+  <ThingDef ParentName="ArmorSmithableBase">
+    <defName>DD_Apparel_ScaleMail</defName>
+    <label>scale mail</label>
+    <description>Inspired by the way scales overlap each other, this suit of armor has multiple small "scales" bound together by chain, allowing for greater mobility than standard plate armor. However this increased mobility sacrifices some protection.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ScaleMail/ScaleMail</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <generateCommonality>1</generateCommonality>
+    <costStuffCount>140</costStuffCount>
+    <stuffCategories>
+      <li>DragonScale</li>
+      <li>Metallic</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToMake>35000</WorkToMake>
+      <Mass>11</Mass>
+      <StuffEffectMultiplierArmor>0.75</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.45</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.65</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>8</EquipDelay>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.05</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ScaleMail/ScaleMail</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>MedievalMilitary</li>
+        <li>MedievalArmorDecent</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>DraconicApparelAndWeapons</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	<colorGenerator Class="ColorGenerator_Options">
+    <options>
+      <li>
+        <!-- Reds -->
+        <weight>1</weight>
+        <only>(70,25,22)</only>
+      </li>
+      <li>
+        <weight>1</weight>
+        <only>(94,39,36)</only>
+      </li>
+      <li>
+        <weight>1</weight>
+        <only>(176,162,95)</only>
+      </li>
+      <li>
+        <!-- Greens -->
+        <weight>1</weight>
+        <only>(32,67,48)</only>
+      </li>
+      <li>
+        <weight>1</weight>
+        <only>(81,111,65)</only>
+      </li>
+      <li>
+        <!-- Blues -->
+        <weight>1</weight>
+        <only>(72,57,94)</only>
+      </li>
+      <li>
+        <weight>1</weight>
+        <only>(65,74,108)</only>
+      </li>
+      <li>
+        <weight>1</weight>
+        <only>(43,84,103)</only>
+      </li>
+      <li>
+        <!-- Monotone -->
+        <weight>1</weight>
+        <only>(43,41,44)</only>
+      </li>
+      <li>
+        <weight>1</weight>
+        <only>(187,191,194)</only>
+      </li>
+    </options>
+	</colorGenerator>
+  </ThingDef>
+
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>DD_Apparel_WingCape</defName>
+    <label>wing cape</label>
+    <description>A short cape sewn in the shape of wings. Grants the wearer increased walking speed.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/WingCape/WingCape</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <generateCommonality>1</generateCommonality>
+    <costStuffCount>90</costStuffCount>
+    <costList>
+      <Gold>1</Gold>
+    </costList>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+      <li>DragonScale</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>190</MaxHitPoints>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>1</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.55</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.7</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>+0.15</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+      </bodyPartGroups>
+      <hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/WingCape/WingCape</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>MedievalArmorDecent</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <researchPrerequisite>DraconicApparelAndWeapons</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	<colorGenerator Class="ColorGenerator_Options">
+    <options>
+      <li>
+        <!-- Reds -->
+        <weight>1</weight>
+        <only>(70,25,22)</only>
+      </li>
+      <li>
+        <weight>1</weight>
+        <only>(94,39,36)</only>
+      </li>
+      <li>
+        <weight>1</weight>
+        <only>(176,162,95)</only>
+      </li>
+      <li>
+        <!-- Greens -->
+        <weight>1</weight>
+        <only>(32,67,48)</only>
+      </li>
+      <li>
+        <weight>1</weight>
+        <only>(81,111,65)</only>
+      </li>
+      <li>
+        <!-- Blues -->
+        <weight>1</weight>
+        <only>(72,57,94)</only>
+      </li>
+      <li>
+        <weight>1</weight>
+        <only>(65,74,108)</only>
+      </li>
+      <li>
+        <weight>1</weight>
+        <only>(43,84,103)</only>
+      </li>
+      <li>
+        <!-- Monotone -->
+        <weight>1</weight>
+        <only>(43,41,44)</only>
+      </li>
+      <li>
+        <weight>1</weight>
+        <only>(187,191,194)</only>
+      </li>
+    </options>
+	</colorGenerator>
+  </ThingDef>
+
+</Defs>
