@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
- <FleckDef Abstract="True" Name="FleckGlowDistortBackground" ParentName="FleckBase">
+ <!-- <FleckDef Abstract="True" Name="FleckGlowDistortBackground" ParentName="FleckBase">
     <graphicData>
       <shaderType>MoteGlowDistortBackground</shaderType>
       <shaderParameters>
@@ -18,6 +18,6 @@
 <ShaderTypeDef>
   <defName>MoteGlowDistortBackground</defName>
   <shaderPath>Map/MoteGlowDistortBackground</shaderPath>
-</ShaderTypeDef>
+</ShaderTypeDef> -->
 
 </Defs>
