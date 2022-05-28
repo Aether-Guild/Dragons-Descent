@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <!-- <VBE.BackgroundImageDef>
+     <VBE.BackgroundImageDef>
         <label>Dragons Descent</label>
-        <description>Splash screen created by .</description>
-        <defName>VBE_Exploration</defName>
-        <path>Exploration</path>
-        <iconPath>UI/VanillaExpandedLogo</iconPath>
-    </VBE.BackgroundImageDef> -->
+        <description>Splash screen created by Onyxae.</description>
+        <defName>DD_Dragons</defName>
+        <path>Backgrounds/TrueDragon</path>
+        <iconPath>UI/DragonsDescentLogo</iconPath>
+    </VBE.BackgroundImageDef> 
 
 </Defs>

@@ -27,7 +27,7 @@
 	<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
 	<incompatibleWith>
-
+	<li>hatena.rangeanimalframework</li>
 	</incompatibleWith>
 	<description>
   <![CDATA[
