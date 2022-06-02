@@ -33,6 +33,10 @@
 				<maxSafeTemperature>100</maxSafeTemperature>
 				<progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
 			</li>
+      <li>
+        <compClass MayRequire="gregorycurrie.animalgenetics">AnimalGenetics.EggGeneticInformation</compClass>
+      </li>
+
 		</comps>
 		<modExtensions>
 			<li Class="DD.LegacyModExtension">
@@ -86,7 +90,7 @@
 	</stuffProps>
     <comps>
       <li Class="CompProperties_Hatcher">
-        <hatcherDaystoHatch>42</hatcherDaystoHatch>
+        <hatcherDaystoHatch>1</hatcherDaystoHatch>
         <hatcherPawn>Black_Dragon</hatcherPawn>
       </li>
     </comps>

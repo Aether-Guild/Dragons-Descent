@@ -30,7 +30,7 @@
     <label>Jeweled Rhizome</label>
     <description>The root tubers of a Jewel orchid.</description>
     <graphicData>
-      <texPath>Things/Plant/JeweledRhizome</texPath>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Jeweledrhizome</texPath>
     </graphicData>
     <statBases>
       <Nutrition>0.175</Nutrition>
