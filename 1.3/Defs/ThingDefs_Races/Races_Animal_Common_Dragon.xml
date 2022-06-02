@@ -86,9 +86,9 @@
         <eggUnfertilizedDef>EggDragonUnfertilized</eggUnfertilizedDef>
         <eggFertilizedDef>EggBlackDragonFertilized</eggFertilizedDef>
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
-        <eggLayIntervalDays>40</eggLayIntervalDays>
+        <eggLayIntervalDays>.1</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
-        <eggCountRange>1</eggCountRange>
+        <eggCountRange>10</eggCountRange>
 	    	<failChance>0.25</failChance>
 		    <paternalChance>0.5</paternalChance>
 		    <maternalChance>0.5</maternalChance>
