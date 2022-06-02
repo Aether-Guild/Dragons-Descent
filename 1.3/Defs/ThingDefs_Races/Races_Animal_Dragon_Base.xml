@@ -275,6 +275,7 @@
 	  <PsychicSensitivity>.5</PsychicSensitivity>
 	  <ToxicSensitivity>0.25</ToxicSensitivity>
 	  <Flammability>0</Flammability>
+    <CaravanRidingSpeedFactor>1.6</CaravanRidingSpeedFactor>
     </statBases>
 	<uiIconScale>1.75</uiIconScale>
     <race>
@@ -404,6 +405,7 @@
  	  <PsychicSensitivity>.5</PsychicSensitivity>
 	  <ToxicSensitivity>0.25</ToxicSensitivity>
 	  <Flammability>0</Flammability>
+    <CaravanRidingSpeedFactor>1.6</CaravanRidingSpeedFactor>
     </statBases>
 	<uiIconScale>1.75</uiIconScale>
     <race>
