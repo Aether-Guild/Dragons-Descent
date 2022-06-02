@@ -24,7 +24,7 @@
 		<buildingDamageFactor>1.8</buildingDamageFactor>
 		<minDamageToFragment>2</minDamageToFragment>
 		<plantDamageFactor>4</plantDamageFactor>
-		<defaultDamage>7</defaultDamage>
+		<defaultDamage>6</defaultDamage>
 		<defaultArmorPenetration>1</defaultArmorPenetration>
 		<explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
 		<explosionCellFleck>BlastFlame</explosionCellFleck>
@@ -85,7 +85,7 @@
 		<isExplosive>true</isExplosive>
 		<isRanged>true</isRanged>
 		<harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
-		<armorCategory>Blunt</armorCategory>
+		<armorCategory>Heat</armorCategory>
 		<modExtensions>
 			<li Class="DD.EffectDefExtension">
 				<def>DraconicFlame</def>
