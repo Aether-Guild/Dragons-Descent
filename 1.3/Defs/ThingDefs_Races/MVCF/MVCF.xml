@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-	<!-- <MVCF.ModDef>
+	<MVCF.ModDef>
 		<defName>DD_DragonsDescent</defName>
 		<label>Dragons</label>
 		<description>Adding animal ranged attacks to Dragons Descent</description>
@@ -8,5 +8,5 @@
 			<RangedAnimals>true</RangedAnimals>
 			<IntegratedToggle>true</IntegratedToggle>
 		</Features>
-	</MVCF.ModDef> -->
+	</MVCF.ModDef>
 </Defs>
