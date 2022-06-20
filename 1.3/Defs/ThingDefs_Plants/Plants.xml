@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>Jewel_Orchid</defName>
+    <label>jewel orchid</label>
+    <description>An exotic looking plant comprised of pseudobulbs, or as most call them, berries. These slow growing plants are quite beautiful, sprouting flower spikes with large yellow and red flowers. Used in the production of some draconic goods.</description>
+    <statBases>
+      <MaxHitPoints>125</MaxHitPoints>
+      <Beauty>14</Beauty>
+      <Nutrition>0.175</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/JewelOrchid</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+    </ingestible>
+    <plant>
+      <fertilityMin>0.70</fertilityMin>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>JewelBerries</harvestedThingDef>
+      <harvestYield>3</harvestYield>
+      <sowMinSkill>8</sowMinSkill>
+      <sowWork>800</sowWork>
+      <harvestWork>200</harvestWork>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <sowResearchPrerequisites>
+        <li>DraconicDrugProduction</li>
+      </sowResearchPrerequisites>
+      <growMinGlow>0.75</growMinGlow>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>14.2</growDays>
+      <immatureGraphicPath>Things/Plant/JewelOrchid_Immature</immatureGraphicPath>
+      <lifespanDaysPerGrowDays>5</lifespanDaysPerGrowDays>
+      <visualSizeRange>0.3~1.2</visualSizeRange>
+      <wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+    </plant>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(20,45,15,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>Jeweled_Rhizome</defName>
+    <label>Jeweled Rhizome Tuber</label>
+    <description>Jeweled Rhi is a spicy-tasting underground tuber that draconic species love.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Nutrition>0.37</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/JeweledRhizome</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <hideAtSnowDepth>0.5</hideAtSnowDepth>
+    <ingestible />
+    <plant>
+      <fertilityMin>0.25</fertilityMin>
+      <fertilitySensitivity>0.3</fertilitySensitivity>
+      <growDays>2.5</growDays>
+      <harvestWork>40</harvestWork>
+      <maxMeshCount>4</maxMeshCount>
+      <visualSizeRange>0.4~0.6</visualSizeRange>
+      <topWindExposure>0.1</topWindExposure>
+      <wildOrder>1</wildOrder>
+    </plant>
+  </ThingDef>
+
+</Defs>

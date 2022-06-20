@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+    <SitePartDef>
+        <defName>dragonlair_site_large_1</defName>
+        <label>Dragon Lair</label>
+        <description>An "abandoned" lair.</description>
+        <siteTexture>World/Questlocations/Dragonlair</siteTexture>
+        <expandingIconTexture>World/Questlocations/Dragonlair</expandingIconTexture>
+        <handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
+        <tags>
+          <li>dragonlair_site_large_1</li>
+        </tags>
+    </SitePartDef>
+
+
+  
+
+</Defs>

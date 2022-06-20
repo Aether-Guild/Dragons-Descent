@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef>
+    <defName>DraconicFire</defName>
+    <label>draconic fire</label>
+    <thingClass>DD.DraconicFire</thingClass>
+    <category>Attachment</category>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Special/Fire</texPath>
+      <graphicClass>Graphic_Flicker</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(255, 0, 110)</color>
+      <colorTwo>(110, 0, 255)</colorTwo>
+    </graphicData> 
+    <altitudeLayer>PawnState</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+  </ThingDef>
+
+  <!-- <ThingDef> -->
+    <!-- <defName>DraconicFrost</defName> -->
+    <!-- <label>draconic frost</label> -->
+    <!-- <thingClass>DD.DraconicFrost</thingClass> -->
+    <!-- <category>Attachment</category> -->
+    <!-- <tickerType>Normal</tickerType> -->
+    <!-- <graphicData> -->
+      <!-- <texPath>Things/Special/Fire</texPath> -->
+      <!-- <graphicClass>Graphic_Flicker</graphicClass> -->
+      <!-- <shaderType>TransparentPostLight</shaderType> -->
+      <!-- <color>(190, 170, 255)</color> -->
+      <!-- <colorTwo>(255, 170, 190)</colorTwo> -->
+    <!-- </graphicData>  -->
+    <!-- <altitudeLayer>PawnState</altitudeLayer> -->
+    <!-- <useHitPoints>false</useHitPoints> -->
+  <!-- </ThingDef> -->
+
+</Defs>

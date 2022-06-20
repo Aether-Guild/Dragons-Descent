@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+                        <!--========= Weak ==========-->
+  <RecipeDef>
+    <defName>Ritual_Weak</defName>
+    <label>ritual (weak)</label>
+    <description>Executing a ritual. Grants 1 favor.</description>
+    <jobString>executing a ritual.</jobString>
+    <workAmount>260</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <requiredGiverWorkType>Hauling</requiredGiverWorkType>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+            <li>Uranium</li>
+            <li>Jade</li>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>40</count>
+      </li>
+          <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>52</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Gold</li>
+        <li>Uranium</li>
+        <li>Jade</li>
+        <li>Silver</li>
+      </thingDefs>
+      <categories>
+        <li>MeatRaw</li>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <thingDefs>
+        <li>Gold</li>
+        <li>Uranium</li>
+        <li>Jade</li>
+        <li>Silver</li>
+      </thingDefs>
+      <categories>
+        <li>MeatRaw</li>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </defaultIngredientFilter>
+	<modExtensions>
+		<li Class="DD.RitualFactorModExtension">
+			<factor>1</factor>
+		</li>
+	  <li Class="DD.RitualBillOverrideExtension" />
+	</modExtensions>
+  </RecipeDef>
+                        <!--========= Moderate ==========-->
+  <RecipeDef>
+    <defName>Ritual_Moderate</defName>
+    <label>ritual (moderate)</label>
+    <description>Executing a ritual. Grants 2 favor.</description>
+    <jobString>executing a ritual.</jobString>
+    <workAmount>380</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <requiredGiverWorkType>Hauling</requiredGiverWorkType>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+            <li>Uranium</li>
+            <li>Jade</li>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>6</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>65</count>
+      </li>
+          <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>86</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Gold</li>
+        <li>Uranium</li>
+        <li>Jade</li>
+        <li>Silver</li>
+      </thingDefs>
+      <categories>
+        <li>MeatRaw</li>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <thingDefs>
+        <li>Gold</li>
+        <li>Uranium</li>
+        <li>Jade</li>
+        <li>Silver</li>
+      </thingDefs>
+      <categories>
+        <li>MeatRaw</li>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </defaultIngredientFilter>
+	<modExtensions>
+      <li Class="DD.RitualFactorModExtension">
+        <factor>2</factor>
+      </li>
+	  <li Class="DD.RitualBillOverrideExtension" />
+	</modExtensions>
+  </RecipeDef>
+                        <!--========= Large ==========-->
+  <RecipeDef>
+    <defName>Ritual_Large</defName>
+    <label>ritual (large)</label>
+    <description>Executing a ritual. Grants 3 favor.</description>
+    <jobString>executing a ritual.</jobString>
+    <workAmount>480</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <requiredGiverWorkType>Hauling</requiredGiverWorkType>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+            <li>Uranium</li>
+            <li>Jade</li>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>90</count>
+      </li>
+          <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>104</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Gold</li>
+        <li>Uranium</li>
+        <li>Jade</li>
+        <li>Silver</li>
+      </thingDefs>
+      <categories>
+        <li>MeatRaw</li>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <thingDefs>
+        <li>Gold</li>
+        <li>Uranium</li>
+        <li>Jade</li>
+        <li>Silver</li>
+      </thingDefs>
+      <categories>
+        <li>MeatRaw</li>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </defaultIngredientFilter>
+	<modExtensions>
+      <li Class="DD.RitualFactorModExtension">
+        <factor>3</factor>
+      </li>
+	  <li Class="DD.RitualBillOverrideExtension" />
+	</modExtensions>
+  </RecipeDef>
+                        <!--========= Major ==========-->
+  <RecipeDef>
+    <defName>Ritual_Major</defName>
+    <label>ritual (major)</label>
+    <description>Executing a major ritual. Grants 5 favor.</description>
+    <jobString>executing a major ritual.</jobString>
+    <workAmount>620</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <requiredGiverWorkType>Hauling</requiredGiverWorkType>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+            <li>Uranium</li>
+            <li>Jade</li>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>19</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>140</count>
+      </li>
+          <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>180</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Gold</li>
+        <li>Uranium</li>
+        <li>Jade</li>
+        <li>Silver</li>
+      </thingDefs>
+      <categories>
+        <li>MeatRaw</li>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <thingDefs>
+        <li>Gold</li>
+        <li>Uranium</li>
+        <li>Jade</li>
+        <li>Silver</li>
+      </thingDefs>
+      <categories>
+        <li>MeatRaw</li>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </defaultIngredientFilter>
+	<modExtensions>
+      <li Class="DD.RitualFactorModExtension">
+        <factor>5</factor>
+      </li>
+	  <li Class="DD.RitualBillOverrideExtension" />
+	</modExtensions>
+  </RecipeDef>
+
+</Defs>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="LeatherBase">
+    <defName>Dragon_Leather</defName>
+    <label>dragon leather</label>
+    <description>The tanning process has converted these scales into a rich, supple, strong leather. However, the original color has been lost (like when a lobster is boiled in water) and so the scales and skin have irreversibly changed color.</description>
+    <graphicData>
+      <color>(15,63,51)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <DeteriorationRate>4</DeteriorationRate>
+      <Mass>0.15</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>18.0</MarketValue>
+      <StuffPower_Armor_Sharp>1.20</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.68</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.00</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>30</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>35</StuffPower_Insulation_Heat>
+    </statBases>
+      <thingCategories>
+        <li>DragonLeathers</li>
+      </thingCategories>
+    <stuffProps>
+      <color>(15,63,51)</color>
+      <commonality>0.01</commonality>
+       <statOffsets>
+        <Beauty>25</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>2.5</MaxHitPoints>
+		<Beauty>8</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>Rare_Dragon_Leather</defName>
+    <label>rare dragon leather</label>
+    <description>The tanning process has converted these scales into a rich, supple, strong leather. However, the original color has been lost (like when a lobster is boiled in water) and so the scales and skin have irreversibly changed color.</description>
+    <graphicData>
+      <color>(159,153,247)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <DeteriorationRate>4</DeteriorationRate>
+      <Mass>0.15</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>22.8</MarketValue>
+    <StuffPower_Armor_Sharp>1.34</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.96</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.25</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>40</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>40</StuffPower_Insulation_Heat>
+    </statBases>
+    <thingCategories>
+      <li>DragonLeathers</li>
+    </thingCategories>
+    <stuffProps>
+      <color>(159,153,247)</color>
+      <commonality>0.0075</commonality>
+	  <statOffsets>
+        <Beauty>32</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>2.5</MaxHitPoints>
+		<Beauty>8</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>True_Dragon_Leather</defName>
+    <label>true dragon leather</label>
+    <description>The tanning process has converted these scales into a rich, supple, strong leather. And, unlike other leathers of this kind, it still holds a resemblance to its original color which is a testament of strength to the true dragon.</description>
+    <graphicData>
+      <color>(102,17,17)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <DeteriorationRate>4</DeteriorationRate>
+      <Mass>0.3</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>38.0</MarketValue>
+        <StuffPower_Armor_Sharp>1.82</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>2.04</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.80</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>60</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>60</StuffPower_Insulation_Heat>
+    </statBases>
+    <thingCategories>
+      <li>DragonLeathers</li>
+    </thingCategories>
+    <stuffProps>
+      <color>(102,17,17)</color>
+      <commonality>0.0025</commonality>
+      <statOffsets>
+        <Beauty>35</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>2.5</MaxHitPoints>
+        <Beauty>8</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+      <GenStepDef>
+        <defName>dragonlair_large_gen</defName>
+        <linkWithSite>dragonlair_site_large_1</linkWithSite>
+        <order>460</order>
+        <genStep Class="KCSG.GenStep_CustomStructureGen">
+          <structureLayoutDefs>
+            <li>DD_dragonlair_layout_large1</li>
+          </structureLayoutDefs>
+          <shouldRuin>true</shouldRuin>
+      <!-- Premade options, you can add or remove any of them, and also add custom ones -->
+      <ruinSymbolResolvers>
+        <li>kcsg_randomdamage</li>
+        <li>kcsg_randomfilth</li>
+        <li>kcsg_randomterrainremoval</li>
+        <li>kcsg_randomroofremoval</li>
+        <li>kcsg_randomitemremoval</li>
+        <li>kcsg_removeperishable</li>
+        <li>kcsg_destroyrefuelablelightsource</li>
+        <li>kcsg_scatterstuffaround</li>
+      </ruinSymbolResolvers>
+      <!-- Only if tou use kcsg_randomfilth -->
+      <filthTypes>
+        <li>Filth_Dirt</li>
+        <li>Filth_Trash</li>
+        <li>Filth_RubbleBuilding</li>
+      </filthTypes>
+      <!-- Only if tou use kcsg_scatterstuffaround-->
+      <scatterThings>
+        <li>Gold</li>
+        <li>Silver</li>
+      </scatterThings>
+      <scatterChance>0.02</scatterChance>
+    </genStep>
+  </GenStepDef>
+</Defs>

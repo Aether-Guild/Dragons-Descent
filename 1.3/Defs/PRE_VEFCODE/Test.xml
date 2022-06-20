@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  
+    <!-- <AbilityDef> -->
+        <!-- <defName>CloseAoE</defName> -->
+        <!-- <label>Close AoE</label> -->
+        <!-- <description>Close AoE Desc</description> -->
+        <!-- <abilityClass>DD.Ability_Base</abilityClass> -->
+        <!-- <canUseAoeToGetTargets>true</canUseAoeToGetTargets> -->
+		<!-- <targetRequired>false</targetRequired> -->
+        <!-- <cooldownTicksRange>100~200</cooldownTicksRange> -->
+        <!-- <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted> -->
+        <!-- <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted> -->
+        <!-- <verbProperties> -->
+            <!-- <verbClass>DD.Verb_CastAbility_Base</verbClass> -->
+            <!-- <range>10</range> -->
+			<!-- <warmupTime>5</warmupTime> -->
+			<!-- <targetParams> -->
+				<!-- <canTargetSelf>true</canTargetSelf> -->
+			<!-- </targetParams> -->
+        <!-- </verbProperties> -->
+        <!-- <comps> -->
+            <!-- <li Class="DD.AbilityCompProperties_AbilityControl"> -->
+                <!-- <compClass>DD.AbilityComp_AbilityControl</compClass> -->
+                <!-- <autoUse>true</autoUse> -->
+            <!-- </li> -->
+            <!-- <li Class="DD.AbilityCompProperties_CastVerb"> -->
+                <!-- <compClass>DD.AbilityComp_CastVerb</compClass> -->
+                <!-- <verbProperties> -->
+                    <!-- <li> -->
+                        <!-- <verbClass>DD.Verb_AoE</verbClass> -->
+						<!-- <range>10</range> -->
+						<!-- <meleeDamageDef>Stun</meleeDamageDef> -->
+						<!-- <meleeDamageBaseAmount>7</meleeDamageBaseAmount> -->
+                        <!-- <burstShotCount>10</burstShotCount> -->
+                        <!-- <ticksBetweenBurstShots>5</ticksBetweenBurstShots> -->
+                    <!-- </li> -->
+                <!-- </verbProperties> -->
+            <!-- </li> -->
+			<!-- <li Class="DD.AbilityCompProperties_Cooldown"> -->
+                <!-- <compClass>DD.AbilityComp_Cooldown</compClass> -->
+				<!-- <cooldownPool>TestPool</cooldownPool> -->
+				<!-- <cooldownTicksRange>1000</cooldownTicksRange> -->
+				<!-- <independent>false</independent> -->
+				<!-- <resetsTimer>true</resetsTimer> -->
+			<!-- </li> -->
+        <!-- </comps> -->
+    <!-- </AbilityDef> -->
+
+  
+    <!-- <AbilityDef> -->
+        <!-- <defName>TargetPawn</defName> -->
+        <!-- <label>Target Pawn</label> -->
+        <!-- <description>Target Pawn Desc</description> -->
+        <!-- <abilityClass>DD.Ability_Base</abilityClass> -->
+        <!-- <canUseAoeToGetTargets>true</canUseAoeToGetTargets> -->
+        <!-- <cooldownTicksRange>100~200</cooldownTicksRange> -->
+        <!-- <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted> -->
+        <!-- <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted> -->
+        <!-- <verbProperties> -->
+            <!-- <verbClass>DD.Verb_CastAbility_Base</verbClass> -->
+			
+			<!-- <minRange>5</minRange> -->
+            <!-- <range>40</range> -->
+			
+			<!-- <targetParams> -->
+				<!-- <canTargetPawns>true</canTargetPawns> -->
+				<!-- <canTargetLocations>false</canTargetLocations> -->
+			<!-- </targetParams> -->
+        <!-- </verbProperties> -->
+        <!-- <comps> -->
+            <!-- <li Class="DD.AbilityCompProperties_AbilityControl"> -->
+                <!-- <compClass>DD.AbilityComp_AbilityControl</compClass> -->
+                <!-- <autoUse>true</autoUse> -->
+            <!-- </li> -->
+            <!-- <li Class="DD.AbilityCompProperties_CastVerb"> -->
+                <!-- <compClass>DD.AbilityComp_CastVerb</compClass> -->
+                <!-- <verbProperties> -->
+                    <!-- <li> -->
+                        <!-- <verbClass>Verb_Shoot</verbClass> -->
+                        <!-- <accuracyTouch>0.50</accuracyTouch> -->
+                        <!-- <accuracyShort>0.40</accuracyShort> -->
+                        <!-- <accuracyMedium>0.30</accuracyMedium> -->
+                        <!-- <accuracyLong>0.20</accuracyLong> -->
+                        <!-- <defaultProjectile>Bullet_SniperRifle</defaultProjectile> -->
+                        <!-- <warmupTime>0.8</warmupTime> -->
+                        <!-- <range>40</range> -->
+						<!-- <minRange>5</minRange> -->
+                        <!-- <burstShotCount>25</burstShotCount> -->
+                        <!-- <ticksBetweenBurstShots>2</ticksBetweenBurstShots> -->
+                        <!-- <soundCast>DragonBreathShot</soundCast> -->
+                        <!-- <muzzleFlashScale>1</muzzleFlashScale> -->
+                    <!-- </li> -->
+                <!-- </verbProperties> -->
+            <!-- </li> -->
+			<!-- <li Class="DD.AbilityCompProperties_Cooldown"> -->
+                <!-- <compClass>DD.AbilityComp_Cooldown</compClass> -->
+				<!-- <cooldownPool>TestPool</cooldownPool> -->
+				<!-- <cooldownTicksRange>1000</cooldownTicksRange> -->
+				<!-- <independent>false</independent> -->
+				<!-- <resetsTimer>true</resetsTimer> -->
+			<!-- </li> -->
+        <!-- </comps> -->
+    <!-- </AbilityDef> -->
+
+  
+    <!-- <AbilityDef> -->
+        <!-- <defName>TargetLocation</defName> -->
+        <!-- <label>Location Target</label> -->
+        <!-- <description>Location Target Desc</description> -->
+        <!-- <abilityClass>DD.Ability_Base</abilityClass> -->
+        <!-- <canUseAoeToGetTargets>true</canUseAoeToGetTargets> -->
+        <!-- <cooldownTicksRange>100~200</cooldownTicksRange> -->
+        <!-- <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted> -->
+        <!-- <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted> -->
+        <!-- <verbProperties> -->
+            <!-- <verbClass>DD.Verb_CastAbility_Base</verbClass> -->
+			<!-- <minRange>5</minRange> -->
+            <!-- <range>40</range> -->
+			<!-- <targetParams> -->
+				<!-- <canTargetPawns>false</canTargetPawns> -->
+				<!-- <canTargetLocations>true</canTargetLocations> -->
+			<!-- </targetParams> -->
+        <!-- </verbProperties> -->
+        <!-- <comps> -->
+            <!-- <li Class="DD.AbilityCompProperties_AbilityControl"> -->
+                <!-- <compClass>DD.AbilityComp_AbilityControl</compClass> -->
+                <!-- <autoUse>true</autoUse> -->
+            <!-- </li> -->
+            <!-- <li Class="DD.AbilityCompProperties_CastVerb"> -->
+                <!-- <compClass>DD.AbilityComp_CastVerb</compClass> -->
+                <!-- <verbProperties> -->
+                    <!-- <li> -->
+                        <!-- <verbClass>Verb_Shoot</verbClass> -->
+                        <!-- <accuracyTouch>0.50</accuracyTouch> -->
+                        <!-- <accuracyShort>0.40</accuracyShort> -->
+                        <!-- <accuracyMedium>0.30</accuracyMedium> -->
+                        <!-- <accuracyLong>0.20</accuracyLong> -->
+                        <!-- <defaultProjectile>Bullet_ChargeLance</defaultProjectile> -->
+                        <!-- <warmupTime>0.1</warmupTime> -->
+                        <!-- <range>40</range> -->
+						<!-- <minRange>5</minRange> -->
+                        <!-- <burstShotCount>20</burstShotCount> -->
+                        <!-- <ticksBetweenBurstShots>2</ticksBetweenBurstShots> -->
+                    <!-- </li> -->
+                <!-- </verbProperties> -->
+            <!-- </li> -->
+			<!-- <li Class="DD.AbilityCompProperties_Cooldown"> -->
+                <!-- <compClass>DD.AbilityComp_Cooldown</compClass> -->
+				<!-- <cooldownPool>TestPool</cooldownPool> -->
+				<!-- <cooldownTicksRange>1000</cooldownTicksRange> -->
+				<!-- <independent>false</independent> -->
+				<!-- <resetsTimer>true</resetsTimer> -->
+			<!-- </li> -->
+        <!-- </comps> -->
+    <!-- </AbilityDef> -->
+
+  
+    <!-- <AbilityDef> -->
+        <!-- <defName>GlobalTarget</defName> -->
+        <!-- <label>Global Target</label> -->
+        <!-- <description>Global Target Desc</description> -->
+        <!-- <abilityClass>DD.Ability_Base</abilityClass> -->
+        <!-- <targetRequired>true</targetRequired> -->
+		<!-- <targetWorldCell>true</targetWorldCell> -->
+        <!-- <cooldownTicksRange>1000~1200</cooldownTicksRange> -->
+        <!-- <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted> -->
+        <!-- <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted> -->
+        <!-- <verbProperties> -->
+            <!-- <verbClass>DD.Verb_CastAbility_Base</verbClass> -->
+			<!-- <minRange>5</minRange> -->
+            <!-- <range>40</range> -->
+			<!-- <warmupTime>20</warmupTime> -->
+        <!-- </verbProperties> -->
+        <!-- <comps> -->
+            <!-- <li Class="DD.AbilityCompProperties_AbilityControl"> -->
+                <!-- <compClass>DD.AbilityComp_AbilityControl</compClass> -->
+                <!-- <autoUse>false</autoUse> -->
+            <!-- </li> -->
+			<!-- <li Class="DD.AbilityCompProperties_ReplaceWorldObject"> -->
+				<!-- <compClass>DD.AbilityComp_ReplaceWorldObject</compClass> -->
+				<!-- <attackedGoodwillChange>-50</attackedGoodwillChange> -->
+				<!-- <otherGoodwillChange>-25</otherGoodwillChange> -->
+				<!-- <searchWorldObjectDef>Settlement</searchWorldObjectDef> -->
+				<!-- <replacementWorldObjectDef>DestroyedSettlement</replacementWorldObjectDef> -->
+				<!-- <killDamageDef>Flame</killDamageDef> -->
+			<!-- </li> -->
+			<!-- <li Class="DD.AbilityCompProperties_Cooldown"> -->
+                <!-- <compClass>DD.AbilityComp_Cooldown</compClass> -->
+				<!-- <cooldownPool>TestPool</cooldownPool> -->
+				<!-- <cooldownTicksRange>1000000</cooldownTicksRange> -->
+				<!-- <independent>false</independent> -->
+				<!-- <resetsTimer>true</resetsTimer> -->
+			<!-- </li> -->
+        <!-- </comps> -->
+    <!-- </AbilityDef> -->
+
+</Defs>

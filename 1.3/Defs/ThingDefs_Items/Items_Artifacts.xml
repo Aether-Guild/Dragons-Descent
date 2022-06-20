@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ArtifactBase">
+    <defName>PubertyLance</defName>
+    <label>Psychic aging lance</label>
+    <description>A one-use psycho-physical effector. It ages the target's mind and body, only taking a few moments to grow a couple decades, along with healing any old scars through the rapid generation of new tissue. It works over long distances, and through walls.</description>
+    <graphicData>
+     <texPath>Things/Item/Special/PsychicAgingLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>1</stackLimit>
+    <tradeNeverStack>true</tradeNeverStack>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MarketValue>1850</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+    </statBases>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <comps>
+	  <li Class="CompProperties_Targetable">
+		<compClass>CompTargetable_SinglePawn</compClass>
+		<fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+		<fleckConnecting>PsycastPsychicLine</fleckConnecting>
+	  </li>
+      <li Class="DD.CompProperties_LifespanPercent">
+        <compClass>DD.CompTargetEffect_AddAge</compClass>
+		<value>0.2</value>
+      </li>
+      <li>
+        <compClass>DD.CompTargetEffect_HealPermanent</compClass>
+      </li>
+      <li Class="CompProperties_UseEffectArtifact">
+        <sound>PsychicInsanityLanceCast</sound>
+      </li>
+    </comps>
+  </ThingDef>
+  
+
+  <!--ThingDef ParentName="ArtifactBase">
+    <defName>ReincarnationLance</defName>
+    <label>reincarnation lance</label>
+    <description>A one-use psycho-physical effector. It reduces the target's mind and body into that of an infant. It works over long distances, and through walls.</description>
+    <graphicData>
+     <texPath>Things/Item/Artifact/PsychicInsanityLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>1</stackLimit>
+    <tradeNeverStack>true</tradeNeverStack>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MarketValue>650</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+    </statBases>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <comps>
+      <li Class="CompProperties_Targetable">
+        <compClass>CompTargetable_SinglePawn</compClass>
+        <moteOnTarget>Mote_PsycastPsychicEffect</moteOnTarget>
+        <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
+      </li>
+      <li Class="DD.CompProperties_Range">
+        <compClass>DD.CompTargetEffect_SetAge</compClass>
+		<values>1~10</values>
+      </li>
+      <li>
+        <compClass>DD.CompTargetEffect_HealNatural</compClass>
+      </li>
+      <li Class="CompProperties_UseEffectArtifact">
+        <sound>PsychicShockLanceCast</sound>
+      </li>
+    </comps>
+  </ThingDef-->
+
+	<ThingDef ParentName="ArtifactBase">
+		<defName>MatingHorn</defName>
+		<label>mating horn</label>
+		<description>A one-use technologically enchanced horn.\n\nProjects a normal dragon's roar over many miles and many landscapes, calling upon a suitable mate.\nThis however drives the dragons who have heard the call to act rashly for a period of time, as all they wish to do is mate.\n\nNote: Forcing a enraged dragon, pack or not, to roar again will cause a disastrous effect.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/MatingHorn</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>1</stackLimit>
+		<tradeNeverStack>true</tradeNeverStack>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<MaxHitPoints>80</MaxHitPoints>
+		</statBases>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<comps>
+			<li Class="CompProperties_Targetable">
+				<compClass>DD.CompTargetable_MatingTarget</compClass>
+				<fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+				<fleckConnecting>PsycastPsychicLine</fleckConnecting>
+			</li>
+			<li Class="DD.CompProperties_SpawnMate">
+				<compClass>DD.CompTargetEffect_SpawnMate</compClass>
+				<targetHediff>false</targetHediff>
+				<mateHediff>true</mateHediff>
+				<spawnTamed>false</spawnTamed>
+				<spawnedAgeRange>100~750</spawnedAgeRange>
+				<penaltyMentalDef>Manhunter</penaltyMentalDef>
+				<penaltyReason>The dragon has been driven mad by the roars.</penaltyReason>
+				<targetPenalty>true</targetPenalty>
+				<matePenalty>true</matePenalty>
+				<spawnDuringPenalty>false</spawnDuringPenalty>
+			</li>
+			<li Class="CompProperties_UseEffectArtifact">
+				<sound>PsychicInsanityLanceCast</sound>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

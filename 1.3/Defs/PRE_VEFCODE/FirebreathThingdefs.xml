@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  
+      <!-- <ThingDef ParentName="DragonsDescent_BaseAnimalProjectile">
+		<defName>DraconicFire</defName>
+		<label>incendiary breath</label>
+		<graphicData>
+			<texPath>AnimalProjectile/DragonBreath_Fire</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<speed>20</speed>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>2</damageAmountBase>
+			<explosionRadius>1.1</explosionRadius>
+			<ai_IsIncendiary>false</ai_IsIncendiary>
+			<soundExplode>Interact_Ignite</soundExplode>
+		</projectile>
+	</ThingDef> -->
+
+</Defs>

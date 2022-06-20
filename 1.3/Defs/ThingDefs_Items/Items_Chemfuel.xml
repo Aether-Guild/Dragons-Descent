@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef>
+		<defName>Make_ChemfuelFromHardScale</defName>
+		<label>make chemfuel from HardScale</label>
+		<description>Make a batch of chemfuel by extracting and condensing oils from Hard Dragon Scales.</description>
+		<jobString>Refining chemfuel from Hard Dragon Scales.</jobString>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>4000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>HardScale</li>
+			  </thingDefs>
+			</filter>
+			<count>70</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>HardScale</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <Chemfuel>35</Chemfuel>
+		</products>
+	  </RecipeDef>
+</Defs>

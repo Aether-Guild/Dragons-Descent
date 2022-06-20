@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+      <!-- straight up fuckin' remaking the damn base thingdef lmao -->
+
+	<ThingDef Abstract="True" Name="DEggFertBase" ParentName="ResourceBase">
+		<tickerType>Normal</tickerType>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<stackLimit>1</stackLimit>
+		<graphicData>
+			<texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.15</Mass>
+			<MaxHitPoints>20</MaxHitPoints>
+			<DeteriorationRate>2</DeteriorationRate>
+			<Flammability>0.7</Flammability>
+			<FoodPoisonChanceFixedHuman>100</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<thingCategories>
+			<li>EggsDragon</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>15</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+				<disableIfHatcher>true</disableIfHatcher>
+			</li>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-20</minSafeTemperature>
+				<maxSafeTemperature>100</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+			</li>
+      <li MayRequire="gregorycurrie.animalgenetics">
+        <compClass>AnimalGenetics.EggGeneticInformation</compClass>
+      </li>
+
+		</comps>
+		<modExtensions>
+			<li Class="DD.LegacyModExtension">
+				<allowStackLimitExceed>true</allowStackLimitExceed>
+			</li>
+		</modExtensions>
+	</ThingDef>
+  
+        <!-- ================================== Unfertilized Egg ================================== -->
+		
+    <ThingDef ParentName="EggUnfertBase">
+    <defName>EggDragonUnfertilized</defName>
+    <label>dragon egg (unfert.)</label>
+    <description>A dragon egg that was lain unfertilized. It can be eaten raw, but it's much, much better cooked.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+      <color>(127,127,127)</color>
+      <drawSize>1</drawSize>
+    </graphicData>
+	<statBases>
+		<Beauty>2</Beauty>
+		<Mass>2.25</Mass>
+		<Flammability>0</Flammability>
+		<MarketValue>25</MarketValue>
+	</statBases>
+	<stuffProps>
+		<color>(127,127,127)</color>
+		<commonality>0.1</commonality>
+	</stuffProps>
+  </ThingDef>
+
+        <!-- =========================== Black Dragon Egg =========================== -->
+     <ThingDef ParentName="DEggFertBase">
+    <defName>EggBlackDragonFertilized</defName>
+    <label>black dragon egg (fert.)</label>
+    <description>Tar black eggs, whoever obtained this must've gone through a lot of trouble. Comes from a vicious black dragon.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
+      <color>(40,31,31)</color>
+      <drawSize>1</drawSize>
+	</graphicData>
+	<statBases>
+		<Beauty>12</Beauty>
+		<Mass>12.25</Mass>
+		<Flammability>0</Flammability>
+		<MarketValue>3200</MarketValue>
+	</statBases>
+	<stuffProps>
+		<color>(40,31,31)</color>
+		<commonality>0</commonality>
+	</stuffProps>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>42</hatcherDaystoHatch>
+        <hatcherPawn>Black_Dragon</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+        <!-- =========================== Blue Dragon Egg =========================== -->
+     <ThingDef ParentName="DEggFertBase">
+    <defName>EggBlueDragonFertilized</defName>
+    <label>blue dragon egg (fert.)</label>
+    <description>Lapis like eggs, awfully beautiful for an egg. Comes from a beautiful blue dragon.</description>    
+      <graphicData>
+        <texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
+      <color>(108,125,183)</color>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>12</Beauty>
+      <Mass>12.25</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>2500</MarketValue>
+    </statBases>
+	<stuffProps>
+		<color>(108,125,183)</color>
+		<commonality>0.012</commonality>
+	</stuffProps>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>42</hatcherDaystoHatch>
+        <hatcherPawn>Blue_Dragon</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+        <!-- =========================== Gold Dragon Egg =========================== -->
+     <ThingDef ParentName="DEggFertBase">
+    <defName>EggGoldDragonFertilized</defName>
+    <label>gold dragon egg (fert.)</label>
+    <description>Eggs of gold, shimmering and showing off their beauty. Comes from the wise gold dragon.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
+      <color>(234,210,107)</color>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>16</Beauty>
+      <Mass>12.25</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>4100</MarketValue>
+    </statBases>
+	<stuffProps>
+      <color>(234,210,107)</color>
+	  <commonality>0</commonality>
+	</stuffProps>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>42</hatcherDaystoHatch>
+        <hatcherPawn>Gold_Dragon</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+        <!-- =========================== Green Dragon Egg =========================== -->
+     <ThingDef ParentName="DEggFertBase">
+    <defName>EggGreenDragonFertilized</defName>
+    <label>green dragon egg (fert.)</label>
+    <description>Brilliant green eggs, very difficult to find when properly hidden in lush canopies. Comes from the kind green dragon.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
+      <color>(66,96,64)</color>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>12</Beauty>
+      <Mass>12.25</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>2500</MarketValue>
+    </statBases>
+	<stuffProps>
+      <color>(66,96,64)</color>
+	  <commonality>0.012</commonality>
+	</stuffProps>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>42</hatcherDaystoHatch>
+        <hatcherPawn>Green_Dragon</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+        <!-- =========================== Jade Dragon Egg =========================== -->
+  <ThingDef ParentName="DEggFertBase">
+    <defName>EggJadeDragonFertilized</defName>
+    <label>jade dragon egg (fert.)</label>
+    <description>Rich jade eggs, shimmering and glimmering with beauty and purity. Comes from the wonderous jade dragon.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
+      <color>(65,141,113)</color>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>12</Beauty>
+      <Mass>12.25</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>4100</MarketValue>
+    </statBases>
+	<stuffProps>
+      <color>(65,141,113)</color>
+	  <commonality>0</commonality>
+	</stuffProps>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>42</hatcherDaystoHatch>
+        <hatcherPawn>Jade_Dragon</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+        <!-- =========================== Purple Dragon Egg =========================== -->
+     <ThingDef ParentName="DEggFertBase">
+    <defName>EggPurpleDragonFertilized</defName>
+    <label>purple dragon egg (fert.)</label>
+    <description>Mysterious purple eggs, a color very uncommon in the wild, especially with animals. Comes from the unnatural purple dragon.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
+      <color>(65,44,76)</color>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>12</Beauty>
+      <Mass>12.25</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>2500</MarketValue>
+    </statBases>
+	<stuffProps>
+      <color>(65,44,76)</color>
+	  <commonality>0.012</commonality>
+	</stuffProps>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>42</hatcherDaystoHatch>
+        <hatcherPawn>Purple_Dragon</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+        <!-- =========================== Red Dragon Egg =========================== -->
+     <ThingDef ParentName="DEggFertBase">
+    <defName>EggRedDragonFertilized</defName>
+    <label>red dragon egg (fert.)</label>
+    <description>Molten lava like eggs, when held you can feel a deep warmth come from it. Comes from the strong red dragon.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
+      <color>(91,23,29)</color>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>12</Beauty>
+      <Mass>12.25</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>3200</MarketValue>
+    </statBases>
+	<stuffProps>
+      <color>(91,23,29)</color>
+	  <commonality>0.012</commonality>
+	</stuffProps>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>42</hatcherDaystoHatch>
+        <hatcherPawn>Red_Dragon</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+        <!-- =========================== Royal Dragon Egg ===========================
+     <ThingDef ParentName="DEggFertBase">
+    <defName>EggRoyalDragonFertilized</defName>
+    <label>royal dragon egg (fert.)</label>
+    <description>An amber egg, you can feel authority radiating off of it, demanding respect. Comes from the regal royal dragon.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
+      <color>(183,102,44)</color>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>16</Beauty>
+      <Mass>12.25</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>6000</MarketValue>
+    </statBases>
+	<stuffProps>
+      <color>(183,102,44)</color>
+	  <commonality>0.009</commonality>
+	</stuffProps>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>42</hatcherDaystoHatch>
+        <hatcherPawn>Royal_Dragon</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+  -->
+        <!-- =========================== Silver Dragon Egg =========================== -->
+     <ThingDef ParentName="DEggFertBase">
+    <defName>EggSilverDragonFertilized</defName>
+    <label>silver dragon egg (fert.)</label>
+    <description>Eggs of silver, so shiny you can nearly see your reflection in it. Comes from the intelligent silver dragon.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
+      <color>(176,179,183)</color>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>16</Beauty>
+      <Mass>12.25</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>4100</MarketValue>
+    </statBases>
+	<stuffProps>
+      <color>(176,179,183)</color>
+	  <commonality>0</commonality>
+	</stuffProps>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>42</hatcherDaystoHatch>
+        <hatcherPawn>Silver_Dragon</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+        <!-- =========================== True Dragon Egg =========================== -->
+     <ThingDef ParentName="DEggFertBase">
+    <defName>EggTrueDragonFertilized</defName>
+    <label>true dragon egg (fert.)</label>
+    <description>Beautiful creamy white eggs, unassuming at first; that is until you realize its size. Comes from the truest dragon.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
+      <color>(234,208,182)</color>
+      <drawSize>1.15</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>12</Beauty>
+      <Mass>18.15</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>6650</MarketValue>
+    </statBases>
+	<stuffProps>
+      <color>(234,208,182)</color>
+	  <commonality>0</commonality>
+	</stuffProps>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>56</hatcherDaystoHatch>
+        <hatcherPawn>True_Dragon</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+        <!-- =========================== White Dragon Egg =========================== -->
+     <ThingDef ParentName="DEggFertBase">
+    <defName>EggWhiteDragonFertilized</defName>
+    <label>white dragon egg (fert.)</label>
+    <description>Snow white eggs, blends perfectly into colder climates and mountains. Comes from the elusive white dragon.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
+      <color>(247,253,255)</color>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>12</Beauty>
+      <Mass>12.25</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>2500</MarketValue>
+    </statBases>
+	<stuffProps>
+      <color>(247,253,255)</color>
+	  <commonality>0</commonality>
+	</stuffProps>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>42</hatcherDaystoHatch>
+        <hatcherPawn>White_Dragon</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+        <!-- =========================== Yellow Dragon Egg =========================== -->
+     <ThingDef ParentName="DEggFertBase">
+    <defName>EggYellowDragonFertilized</defName>
+    <label>yellow dragon egg (fert.)</label>
+    <description>Sun like eggs, blends in with the harsh Rimworld deserts. Comes from the warm yellow dragon.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
+      <color>(242,233,113)</color>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>12</Beauty>
+      <Mass>12.25</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>2500</MarketValue>
+    </statBases>
+	<stuffProps>
+      <color>(242,233,113)</color>
+	  <commonality>0</commonality>
+	</stuffProps>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>42</hatcherDaystoHatch>
+        <hatcherPawn>Yellow_Dragon</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+  
+</Defs>

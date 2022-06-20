@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ <!-- <FleckDef Abstract="True" Name="FleckGlowDistortBackground" ParentName="FleckBase">
+    <graphicData>
+      <shaderType>MoteGlowDistortBackground</shaderType>
+      <shaderParameters>
+        <_MainTex>/Things/Mote/ActivatorProximityRadius</_MainTex>
+        <_DistortionTex>Shaders/firemask</_DistortionTex>
+        <_distortionIntensity>5</_distortionIntensity>
+        <_brightnessMultiplier>1.1</_brightnessMultiplier>
+        <_Color>(1,0,0,1)</_Color>
+
+      </shaderParameters>
+    </graphicData>
+  </FleckDef>
+
+
+<ShaderTypeDef>
+  <defName>MoteGlowDistortBackground</defName>
+  <shaderPath>Map/MoteGlowDistortBackground</shaderPath>
+</ShaderTypeDef> -->
+
+</Defs>

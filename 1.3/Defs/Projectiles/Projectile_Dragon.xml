@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--====================== Fire Spit ======================-->
+  <ThingDef>
+    <defName>Projectile_DragonSpit</defName>
+    <label>Spit</label>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <thingClass>DD.Projectile_Explode</thingClass>
+	<!-- <thingClass>Projectile_Explosive</thingClass> -->
+    <graphicData>
+	<!-- <shaderType>MoteGlowDistortBackground</shaderType> -->
+      <shaderType>TransparentPostLight</shaderType>
+      <texPath>AnimalProjectile/DragonSpit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <speed>17</speed>
+      <damageDef>DraconicFlame</damageDef>
+      <explosionRadius>2</explosionRadius>
+      <damageAmountBase>5</damageAmountBase>
+      <preExplosionSpawnThingDef>Filth_Ash</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>0.3</preExplosionSpawnChance>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>1</shadowSize>
+	  <extraDamages>
+		<!-- <li>
+		  <def>EMP</def>
+		  <amount>1</amount>
+		  <armorPenetration>1</armorPenetration>
+		</li> -->
+	  </extraDamages>
+    </projectile>
+  </ThingDef> 
+	
+  <ThingDef>
+    <defName>Projectile_DragonSpitBlunt</defName>
+    <label>Spit Blunt</label>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <thingClass>DD.Projectile_Explode</thingClass>
+    <graphicData>
+      <texPath>AnimalProjectile/DragonSpit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <!-- <shaderType>MoteGlow</shaderType> -->
+	  <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <speed>22</speed>
+      <damageDef>DraconicExplosion</damageDef>
+      <explosionRadius>2</explosionRadius>
+      <damageAmountBase>6</damageAmountBase>
+      <preExplosionSpawnThingDef>Filth_Dirt</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>.3</preExplosionSpawnChance>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>1</shadowSize>
+	  <!-- <extraDamages>
+		<li>
+		  <def>EMP</def>
+		  <amount>1</amount>
+		  <armorPenetration>1</armorPenetration>
+		</li>
+	  </extraDamages> -->
+    </projectile>
+  </ThingDef> 
+
+
+<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>Projectile_RedDragonBreath_Fire</defName>
+		<label>Fire_Breath</label>
+		<thingClass>DD.VEF_DD_FireBreathProjectile</thingClass>
+		<!-- <thingClass>DD.VEF_DD_FireBreathProjectileTEST3</thingClass> -->
+		<!-- <thingClass>VFECore.FlamethrowProjectile</thingClass> -->
+		<!-- <thingClass>VFECore.ExpandableProjectile</thingClass> -->
+        <!-- this class inherited from the ExpandableProjectile class, it inherits the DoDamage method, which is responsible for the appearance of fire and damaging all things under the projectile -->
+		 <comps>
+		<li Class="CompProperties_Glower">
+			<overlightRadius>1.0</overlightRadius>
+			<glowRadius>1</glowRadius>
+			<glowColor>(255, 161, 0, 0.19)</glowColor>
+		  </li>    
+		</comps> 
+		<graphicData>
+			<texPath>AnimalProjectile/Animations/RedDAbilities/Projectile_Fire</texPath> 
+            <!-- main texture series, it's just a folder with textures. it sorts them alphabetically, there is no need to fill in A-Z at the end and you are also not limited to all letters of the alphabet, 01, 02 will do -->
+			<texPathFadeOut>AnimalProjectile/Animations/RedDAbilities/Projectile_Fire_FadeOut</texPathFadeOut>
+             <!-- optional, if set, fading out textures will be used in final projectile moments -->
+			<!-- <shaderType>TransparentPostLight</shaderType> -->
+			<shaderType>MoteGlow</shaderType>
+             <!-- optional, if not set, it will use defaul shader>-->
+			 <!-- <color>.90,.90,.90,1</color>  -->
+             <!--optional, you can set the opacity via alpha channel -->
+			 
+		</graphicData>
+		<projectile>
+			<damageDef>DraconicFlame</damageDef>		
+			<flyOverhead>true</flyOverhead>
+			<explosionRadius>2</explosionRadius>
+			<damageAmountBase>7</damageAmountBase>
+			<stoppingPower>2.5</stoppingPower>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<speed>27</speed>
+			<extraDamages>
+			  <!-- <li>
+				<def>EMP</def>
+				<amount>3</amount>
+				<armorPenetration>2</armorPenetration>
+			  </li> -->
+			</extraDamages>
+
+		</projectile>
+		<drawOffscreen>true</drawOffscreen> <!-- needed to draw them properly -->
+		<lifeTimeDuration>90</lifeTimeDuration> <!-- total life time duration, the counter counts every tickFrameRate property -->
+		<widthScaleFactor>0.65</widthScaleFactor> <!-- optional, will scale the width of the projectile textures -->
+		<heightScaleFactor>1</heightScaleFactor> <!-- optional, will scale the heigth of the projectile textures -->
+		<startingPositionOffset>(0, 1, -1)</startingPositionOffset> <!-- if you need to position starting projectile position (for big dragons and flamethrowers etc -->
+		<totalSizeScale>1.0</totalSizeScale> <!-- optional, will scale the size of projectile textures. was needed in order to scale Oskars textures properly to fit them after the shooter -->
+		<tickFrameRate>18</tickFrameRate> <!-- speed of changing textures per ticks -->
+		<finalTickFrameRate>7</finalTickFrameRate> <!-- speed of changing fade out textures per ticks -->
+		<tickDamageRate>1</tickDamageRate> <!-- determines through which each tick the damage is done by the custom class (fire class for example) -->
+		<dealsDamageOnce>true</dealsDamageOnce>
+		<minDistanceToAffect>2</minDistanceToAffect> <!-- can be set to ignore the affected cells nearby (useful if you do not need to burn sandbags or other buildings)-->
+	</VFECore.ExpandableProjectileDef>
+
+	<ThingDef>
+		<defName>Projectile_DragonLightning</defName>
+		<label>Dragon Lightning</label>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<!-- <thingClass>DD.Projectile_Explode</thingClass> -->
+		<!-- <thingClass>DD.Projectile_Fire</thingClass> -->
+		<thingClass>VFEMech.TeslaProjectile</thingClass>
+		<graphicData>
+		  <shaderType>TransparentPostLight</shaderType>
+		  <texPath>AnimalProjectile/Lightning</texPath>
+		  <!-- <graphicClass>Graphic_Single</graphicClass> -->
+		  <graphicClass>Graphic_Flicker</graphicClass>
+		</graphicData>
+		<projectile>
+		  <speed>30</speed>
+		  <damageDef>Flame</damageDef>
+		  <explosionRadius>1</explosionRadius>
+		  <damageAmountBase>2</damageAmountBase>
+		  <!-- <preExplosionSpawnThingDef>Filth_Dirt</preExplosionSpawnThingDef>
+		  <preExplosionSpawnChance>.3</preExplosionSpawnChance>-->
+		  <ai_IsIncendiary>true</ai_IsIncendiary>
+		  <!-- <arcHeightFactor>0.2</arcHeightFactor> -->
+		  <!-- <shadowSize>1</shadowSize>  -->
+		  <extraDamages>
+			<li>
+			  <def>EMP</def>
+			  <amount>1</amount>
+			  <armorPenetration>1</armorPenetration>
+			</li>
+		  </extraDamages> 
+		</projectile>
+		<modExtensions>
+			<li Class="VFEMech.TeslaChainingProps">
+				<maxBounceCount>1</maxBounceCount>
+				<damageDef>Flame</damageDef> <!--first target only?-->
+				<explosionDamageDef>Smoke</explosionDamageDef>
+				<impactRadius>1</impactRadius>
+				<targetFriendly>false</targetFriendly>
+				<addFire>true</addFire>
+				<bounceRange>4</bounceRange>
+				<maxLifetime>100</maxLifetime>
+			</li>
+		</modExtensions>
+	  </ThingDef> 
+
+
+</Defs>

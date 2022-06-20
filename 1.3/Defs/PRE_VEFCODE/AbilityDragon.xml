@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+<!-- 
+	<ThingDef>
+		<defName>Mote_FireBreath</defName>
+		<label>Mote</label>
+		<category>Mote</category>
+		<thingClass>DD.Mote_ParticleController</thingClass>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<tickerType>Normal</tickerType>
+		<useHitPoints>false</useHitPoints>
+		<isSaveable>false</isSaveable>
+		<rotatable>false</rotatable>
+		<mote Class="DD.MoteProperties_Controller">
+			<fadeInTime>0.1</fadeInTime>
+			<solidTime>6</solidTime>
+			<fadeOutTime>0.3</fadeOutTime>
+			<speed>0.85~2.5</speed>
+			<destinationVariance>-0.5~0.5</destinationVariance>
+			<rotationVariance>-25~25</rotationVariance>
+			<scaleVariance>0.4~0.95</scaleVariance>
+			<alphaCurve>
+				<points>
+					<li>(0, 1)</li>
+					<li>(1, 0.1)</li>
+				</points>
+			</alphaCurve>
+		</mote>
+		<graphicData>
+			<graphicClass>DD.Graphic_MoteController</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>AnimalProjectile/DragonFire</texPath>
+		</graphicData>
+	</ThingDef> -->
+
+	<!--====================== Dragon Breath ==========================-->
+
+<!-- 	<AbilityDef>
+		<defName>DragonBreath</defName>
+		<label>dragon breath</label>
+		<description>Use dragon breath on a target.</description>
+		<abilityClass>DD.Ability_Base</abilityClass>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>1000~1200</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<iconPath>AnimalProjectile/DragonFire</iconPath>
+		<verbProperties Class="DD.VerbProperties_Breath">
+			<verbClass>DD.Verb_Breath</verbClass>-->
+
+			<!-- Warmup time is better in the ability's casting verb -->
+			<!-- <warmupTime>0.8</warmupTime> -->
+			<!-- Range -->
+			<!-- <range>40</range>
+			<minRange>3</minRange> -->
+			<!-- The range based on the distance between the caster and the target that its trying to attack (distance, new_range) -->
+			<!-- <effectiveRange>
+				<points>
+					<li>(0, 20)</li> -->
+					<!-- <li>(3, 40)</li> -->
+					<!-- <li>(12, 50)</li> -->
+					<!-- <li>(25, 60)</li> -->
+					<!-- <li>(40, 40)</li>
+				</points>
+			</effectiveRange> -->
+
+			<!-- The angle of the circular sector/arc, also based on the distance between the caster and the target. (distance, angle) -->
+			<!-- <angle>
+				<points>
+					<li>(0, 120)</li>
+					<li>(3, 90)</li>
+					<li>(12, 70)</li>
+					<li>(25, 50)</li>
+					<li>(40, 30)</li>
+				</points>
+			</angle> -->
+
+			<!-- Damage -->
+			<!-- <damageDef>DraconicFlame</damageDef> -->
+			<!-- The damage amount to be dealt based on the distance between the caster and the target. (distance, damageAmount) -->
+			<!-- <damageAmount>
+				<points>
+					<li>(0, 8)</li>
+					<li>(3, 7)</li>
+					<li>(12, 5)</li>
+					<li>(25, 4)</li>
+					<li>(40, 3)</li>
+				</points>
+			</damageAmount> -->
+
+			<!-- Bursts --><!-- Controls how many rounds it will do to go from 0 to whatever the range/effectiveRange is. -->
+
+			<!-- <burstShotCount>15</burstShotCount>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+
+			<impactMote>Mote_FireBreath</impactMote>Mote that is shown on the ground of a cell that's being dealt damage -->
+			<!-- <soundCast>DragonBreathShot</soundCast> -->
+			<!-- <muzzleFlashScale>1</muzzleFlashScale> -->
+			
+			<!-- Targeting parameters to stop the verb from firing unless the target type matches -->
+	<!-- 		<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams> -->
+
+			<!-- Controls how likely the ability will get picked. -->
+<!-- 			<commonality>2</commonality>
+		</verbProperties>
+		<comps>
+			<li Class="DD.AbilityCompProperties_AbilityControl">
+				<compClass>DD.AbilityComp_AbilityControl</compClass> -->
+				<!-- Allows the ability.verb to be picked up by Pawn.TryGetAttackVerb -->
+<!-- 				<autoUse>true</autoUse>
+				<gizmoOnText>Breath Enabled</gizmoOnText>
+				<gizmoOffText>Breath Disabled</gizmoOffText>
+				<gizmoOnIconPath>AnimalProjectile/DragonFire</gizmoOnIconPath>
+				<gizmoOffIconPath>AnimalProjectile/DragonFire</gizmoOffIconPath>
+				<gizmoDesc>Toggle Dragon Breath Usage</gizmoDesc>
+			</li>
+			<li Class="DD.AbilityCompProperties_Cooldown">
+				<compClass>DD.AbilityComp_Cooldown</compClass> -->
+				<!-- Cooldown ticks range (omit to use each verb's default <cooldownTicksRange>) -->
+<!-- 				<cooldownTicksRange>1000</cooldownTicksRange>
+			</li>
+			<li Class="DD.AbilityCompProperties_RequireBodyPart">
+				<compClass>DD.AbilityComp_RequireBodyPart</compClass>
+				<missing>true</missing>
+				<bodyPart>Fundamentum</bodyPart>
+			</li>
+		</comps>
+	</AbilityDef>  -->
+
+	<!--================================= Dragon Spit ============================-->
+
+	<!-- <AbilityDef>
+		<defName>DragonSpit</defName>
+		<label>dragon spit</label>
+		<description>Use dragon spit on a target.</description>
+		<abilityClass>DD.Ability_Base</abilityClass>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets> 
+		<cooldownTicksRange>700~950</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>AnimalProjectile/DragonSpit</iconPath>
+		<verbProperties>
+			<verbClass>Verb_Shoot</verbClass>
+			<accuracyTouch>0.95</accuracyTouch>
+			<accuracyShort>0.70</accuracyShort>
+			<accuracyMedium>0.30</accuracyMedium>
+			<accuracyLong>0.10</accuracyLong>
+			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			<defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile>
+			<range>23</range>
+			<burstShotCount>3</burstShotCount>
+			<ticksBetweenBurstShots>18</ticksBetweenBurstShots>
+			<minRange>1</minRange>
+			<soundCast>DragonBreathShot</soundCast>
+			<muzzleFlashScale>1</muzzleFlashScale>
+			<warmupTime>0.5</warmupTime>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<commonality>.5</commonality>
+		</verbProperties>
+		<comps>
+			<li Class="DD.AbilityCompProperties_AbilityControl">
+				<compClass>DD.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Spit Enabled</gizmoOnText>
+				<gizmoOffText>Spit Disabled</gizmoOffText>
+				<gizmoOnIconPath>AnimalProjectile/DragonSpit</gizmoOnIconPath>
+				<gizmoOffIconPath>AnimalProjectile/DragonSpit</gizmoOffIconPath>
+				<gizmoDesc>Toggle Dragon Spit Usage</gizmoDesc>
+			</li>  -->
+			<!-- <li Class="DD.AbilityCompProperties_Cooldown">
+				<compClass>DD.AbilityComp_Cooldown</compClass> -->
+				 <!-- Cooldown ticks range (omit to use each verb's default -->
+				<!-- <cooldownTicksRange>1000</cooldownTicksRange>
+			</li> -->
+			<!-- <li Class="DD.AbilityCompProperties_RequireBodyPart">
+				<compClass>DD.AbilityComp_RequireBodyPart</compClass>
+				<missing>true</missing>
+				<bodyPart>Fundamentum</bodyPart>
+			</li>
+		</comps>
+	</AbilityDef>
+ -->
+
+</Defs>

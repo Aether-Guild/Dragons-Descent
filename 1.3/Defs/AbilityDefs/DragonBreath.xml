@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <VFECore.Abilities.AbilityDef>
+        <defName>DD_DragonBreath</defName>
+        <label>Fire Breath</label>
+        <description>High-explosive armor shredding projectile.</description>
+        <abilityClass>DD.DD_Ability_ShootProjectile</abilityClass>
+        <targetMode>Pawn</targetMode>
+        <castTime>1500</castTime>
+        <range>26</range>
+        <radius>2</radius>
+        <cooldownTime>1000</cooldownTime>
+         <!-- <cooldownTimeStatFactors>
+        <RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
+        </cooldownTimeStatFactors> -->
+        <iconPath>AnimalProjectile/DragonFire</iconPath>
+        <castSound>DragonBreathShot</castSound>
+        <modExtensions>
+          <li Class="VFECore.Abilities.AbilityExtension_Projectile">
+            <projectile>Projectile_DragonSpit</projectile>
+            <!-- <projectile>Projectile_RedDragonBreath_Fire</projectile> -->
+          </li>
+        </modExtensions>
+      </VFECore.Abilities.AbilityDef> 
+
+      <!-- <VFECore.Abilities.AbilityDef>
+		<defName>DD_DragonCharge</defName>
+		<label>Dragon Charge</label>
+		<description>dragon rawr</description>
+        <abilityClass>GeneticRim.Ability_Charge</abilityClass>
+		<targetMode>Location</targetMode>
+		<castTime>60</castTime>
+		<range>15</range>
+		<cooldownTime>5000</cooldownTime>
+		<iconPath>AnimalProjectile/DragonFire</iconPath>
+	</VFECore.Abilities.AbilityDef> -->
+
+</Defs>

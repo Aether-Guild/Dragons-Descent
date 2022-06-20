@@ -1,0 +1,27 @@
+<Patch>
+    <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName = "FueledSmithy"]</xpath>
+    
+     <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "FueledSmithy"]</xpath>
+            <value>
+             <recipes>
+                 <li>Make_ChemfuelFromHardScale</li>
+            </recipes>
+            </value>
+     </match>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName = "ElectricSmithy"]</xpath>
+        
+         <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "ElectricSmithy"]</xpath>
+                <value>
+                 <recipes>
+                     <li>Make_ChemfuelFromHardScale</li>
+                </recipes>
+                </value>
+         </match>
+        </Operation>
+</Patch>

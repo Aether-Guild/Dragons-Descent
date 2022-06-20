@@ -1,0 +1,1836 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- =========================== Black Dragon =========================== -->
+
+  <ThingDef ParentName="DragonRaceBase">
+    <defName>Black_Dragon</defName>
+    <label>black dragon</label>
+    <description>Black dragons overshadow all other dragons in terms of ferocity, even compared to the red dragon. Which is why they are incredibly hard to tame and very dangerous, simply too wild to use in war.</description>
+	<tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+     <power>15</power>
+        <armorPenetration>0.2</armorPenetration>
+        <cooldownTime>1</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+   <power>15</power>
+        <armorPenetration>0.2</armorPenetration>
+        <cooldownTime>1</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>bite</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>19</power>
+        <armorPenetration>0.6</armorPenetration>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>rend</label>
+        <capacities>
+          <li>Rend</li>
+        </capacities>
+        <power>34</power>
+        <armorPenetration>.9</armorPenetration>
+        <cooldownTime>4</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>horn</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Stab</li>
+        </capacities>
+        <power>5</power>
+        <armorPenetration>.8</armorPenetration>
+        <cooldownTime>1</cooldownTime>
+        <linkedBodyPartsGroup>Horns</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <comps>
+      <li Class="DD.CompProperties_CrossbredEggLayer">
+        <eggUnfertilizedDef>EggDragonUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>EggBlackDragonFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>40</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>2</eggCountRange>
+		<failChance>0.25</failChance>
+		<paternalChance>0.5</paternalChance>
+		<maternalChance>0.5</maternalChance>
+      </li>
+    </comps>
+    <race>
+      <wildness>0.97</wildness>
+      <useMeatFrom>Red_Dragon</useMeatFrom>
+      <wildBiomes>
+        <TemperateForest>0.003</TemperateForest>
+        <TropicalRainforest>0.003</TropicalRainforest>
+        <TropicalSwamp>0.0035</TropicalSwamp>
+        <TemperateSwamp>0.0043</TemperateSwamp>
+        <Desert>0.002</Desert>
+      </wildBiomes>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Black_Dragon</defName>
+    <label>black dragon</label>
+    <race>Black_Dragon</race>
+    <combatPower>1460</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+	<ecoSystemWeight>2</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>Black dragon whelp</label>
+        <labelPlural>Black dragon whelps</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BDragon</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/BDragon</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>Black dragon wyrmling</label>
+        <labelPlural>Black dragon wyrmlings</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BDragon</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/BDragon</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>Black dragon</label>
+        <labelPlural>Black dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BDragon</texPath>
+          <drawSize>3.7</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/BDragon</texPath>
+          <drawSize>3.7</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Elder black dragon</label>
+        <labelPlural>Elder black dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BDragon</texPath>
+          <drawSize>3.9</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/BDragon</texPath>
+          <drawSize>3.9</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3.2</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Ancient black dragon</label>
+        <labelPlural>Ancient black dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BDragon</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/BDragon</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3.35</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+    </lifeStages>
+	<weaponMoney>
+    <min>8000</min>
+    <max>8000</max>
+    </weaponMoney>
+    <weaponTags>
+  	<li>DragonBreathWeapon</li>
+	</weaponTags>
+    <modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>31~62</temperature>
+	  </li>
+	</modExtensions>
+  </PawnKindDef>
+
+  <!-- =========================== Blue Dragon =========================== -->
+
+  <ThingDef ParentName="DragonRaceBase">
+    <defName>Blue_Dragon</defName>
+    <label>blue dragon</label>
+    <description>Blue dragons are found in colder climates and their main source of energy comes from fish, this is due to the lack of larger prey in those areas. They are known to be a dragon of kinder temper, gladly accepting gifts and offerings.</description>
+	<tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <armorPenetration>0.2</armorPenetration>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <armorPenetration>0.2</armorPenetration>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>frost bite</label>
+        <capacities>
+          <li>Frost_Bite</li>
+        </capacities>
+        <power>20</power>
+        <armorPenetration>1.0</armorPenetration>
+        <cooldownTime>6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>horn</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Stab</li>
+        </capacities>
+        <power>10</power>
+        <armorPenetration>.8</armorPenetration>
+        <cooldownTime>5.0</cooldownTime>
+        <linkedBodyPartsGroup>Horns</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <comps>
+      <li Class="DD.CompProperties_CrossbredEggLayer">
+        <eggUnfertilizedDef>EggDragonUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>EggBlueDragonFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>40</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>2</eggCountRange>
+		<failChance>0.25</failChance>
+		<paternalChance>0.5</paternalChance>
+		<maternalChance>0.5</maternalChance>
+      </li>
+    </comps>
+    <race>
+      <wildness>0.94</wildness>
+      <useMeatFrom>Red_Dragon</useMeatFrom>
+      <wildBiomes>
+        <Tundra>0.004</Tundra>
+        <BorealForest>0.003</BorealForest>
+        <ColdBog>0.003</ColdBog>
+        <IceSheet>0.002</IceSheet>
+      </wildBiomes>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Blue_Dragon</defName>
+    <label>blue dragon</label>
+    <race>Blue_Dragon</race>
+    <combatPower>1460</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+	<ecoSystemWeight>2</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>Blue dragon whelp</label>
+        <labelPlural>Blue dragon whelps</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BLDragon</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/BLDragon</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>Blue dragon wyrmling</label>
+        <labelPlural>Blue dragon wyrmlings</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BLDragon</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/BLDragon</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>Blue dragon</label>
+        <labelPlural>Blue dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BLDragon</texPath>
+          <drawSize>3.7</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/BLDragon</texPath>
+          <drawSize>3.7</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Elder blue dragon</label>
+        <labelPlural>Elder blue dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BLDragon</texPath>
+          <drawSize>3.9</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/BLDragon</texPath>
+          <drawSize>3.9</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Ancient blue dragon</label>
+        <labelPlural>Ancient blue dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BLDragon</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/BLDragon</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3.7</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+    </lifeStages>
+	<weaponMoney>
+    <min>8000</min>
+    <max>8000</max>
+    </weaponMoney>
+    <weaponTags>
+  	<li>DragonBreathWeapon</li>
+	</weaponTags>
+    <modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>-42~13</temperature>
+	  </li>
+	</modExtensions>
+  </PawnKindDef>
+
+
+  <!-- =========================== Green Dragon =========================== -->
+
+  <ThingDef ParentName="DragonRaceBase">
+    <defName>Green_Dragon</defName>
+    <label>green dragon</label>
+    <description>Green dragons were one of the first dragons used for war. Common, easy to tame, and easy to train, they were used to transport large amounts of soldiers quickly.</description>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <armorPenetration>0.2</armorPenetration>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <armorPenetration>0.2</armorPenetration>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>toxic bite</label>
+        <capacities>
+          <li>Toxic_Bite</li>
+        </capacities>
+        <power>10</power>
+        <armorPenetration>1.0</armorPenetration>
+        <cooldownTime>9</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>horn</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Stab</li>
+        </capacities>
+        <power>10</power>
+        <armorPenetration>.8</armorPenetration>
+        <cooldownTime>5.0</cooldownTime>
+        <linkedBodyPartsGroup>Horns</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <comps>
+      <li Class="DD.CompProperties_CrossbredEggLayer">
+        <eggUnfertilizedDef>EggDragonUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>EggGreenDragonFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>40</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>2</eggCountRange>
+		<failChance>0.25</failChance>
+		<paternalChance>0.5</paternalChance>
+		<maternalChance>0.5</maternalChance>
+      </li>
+    </comps>
+    <race>
+      <wildness>0.92</wildness>
+      <useMeatFrom>Red_Dragon</useMeatFrom>
+      <wildBiomes>
+        <TemperateForest>0.0042</TemperateForest>
+        <TropicalRainforest>0.003</TropicalRainforest>
+        <TropicalSwamp>0.003</TropicalSwamp>
+        <TemperateSwamp>0.003</TemperateSwamp>
+        <AridShrubland>0.002</AridShrubland>
+      </wildBiomes>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Green_Dragon</defName>
+    <label>green dragon</label>
+    <race>Green_Dragon</race>
+    <combatPower>1440</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+	<ecoSystemWeight>2</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>Green dragon whelp</label>
+        <labelPlural>Green dragon whelps</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/GDragon</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/GDragon</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>Green dragon wyrmling</label>
+        <labelPlural>Green dragon wyrmlings</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/GDragon</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/GDragon</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>Green dragon</label>
+        <labelPlural>Green dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/GDragon</texPath>
+          <drawSize>3.7</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/GDragon</texPath>
+          <drawSize>3.7</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Elder green dragon</label>
+        <labelPlural>Elder green dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/GDragon</texPath>
+          <drawSize>3.9</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/GDragon</texPath>
+          <drawSize>3.9</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Ancient green dragon</label>
+        <labelPlural>Ancient green dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/GDragon</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/GDragon</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>5.8</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+    </lifeStages>
+	<weaponMoney>
+    <min>8000</min>
+    <max>8000</max>
+    </weaponMoney>
+    <weaponTags>
+  	<li>DragonBreathWeapon</li>
+	</weaponTags>
+    <modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>7~35</temperature>
+	  </li>
+	</modExtensions>
+  </PawnKindDef>
+
+  <!-- =========================== Purple Dragon =========================== -->
+
+  <ThingDef ParentName="DragonRaceBase">
+    <defName>Purple_Dragon</defName>
+    <label>purple dragon</label>
+    <description>Purple dragons were originally bred in captivity by combining red and blue varieties. It wasn't until a tribe member, Venn, released them from captivity that they became free, roaming the Rimworld as wild dragons.</description>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <armorPenetration>0.2</armorPenetration>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <armorPenetration>0.2</armorPenetration>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>bite</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>35</power>
+        <armorPenetration>0.6</armorPenetration>
+        <cooldownTime>3.0</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>skull bash</label>
+        <capacities>
+          <li>Skull_Bash</li>
+        </capacities>
+        <power>15</power>
+        <armorPenetration>0.6</armorPenetration>
+        <cooldownTime>6</cooldownTime>
+        <linkedBodyPartsGroup>Horns</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+
+      <li>
+        <label>tail whip</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Cut</li>
+        </capacities>
+        <power>5</power>
+        <armorPenetration>.4</armorPenetration>
+        <cooldownTime>5.0</cooldownTime>
+        <linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+
+      <li>
+        <label>horn</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Stab</li>
+        </capacities>
+        <power>10</power>
+        <armorPenetration>.8</armorPenetration>
+        <cooldownTime>5.0</cooldownTime>
+        <linkedBodyPartsGroup>Horns</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <comps>
+      <li Class="DD.CompProperties_CrossbredEggLayer">
+        <eggUnfertilizedDef>EggDragonUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>EggPurpleDragonFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>40</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>2</eggCountRange>
+		<failChance>0.25</failChance>
+		<paternalChance>0.5</paternalChance>
+		<maternalChance>0.5</maternalChance>
+      </li>
+    </comps>
+    <race>
+      <wildness>0.93</wildness>
+      <useMeatFrom>Red_Dragon</useMeatFrom>
+      <wildBiomes>
+        <TemperateForest>0.003</TemperateForest>
+        <TropicalRainforest>0.003</TropicalRainforest>
+        <TemperateSwamp>0.003</TemperateSwamp>
+        <TropicalSwamp>0.004</TropicalSwamp>
+        <ColdBog>0.002</ColdBog>
+      </wildBiomes>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Purple_Dragon</defName>
+    <label>purple dragon</label>
+    <race>Purple_Dragon</race>
+    <combatPower>1460</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+	<ecoSystemWeight>2</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>Purple dragon whelp</label>
+        <labelPlural>Purple dragon whelps</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/PDragon</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/PDragon</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>Purple dragon wyrmling</label>
+        <labelPlural>Purple dragon wyrmlings</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/PDragon</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/PDragon</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>Purple dragon</label>
+        <labelPlural>Purple dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/PDragon</texPath>
+          <drawSize>3.7</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/PDragon</texPath>
+          <drawSize>3.7</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Elder purple dragon</label>
+        <labelPlural>Elder purple dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/PDragon</texPath>
+          <drawSize>3.9</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/PDragon</texPath>
+          <drawSize>3.9</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Ancient purple dragon</label>
+        <labelPlural>Ancient purple dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/PDragon</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/PDragon</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>5.8</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+    </lifeStages>
+	<weaponMoney>
+    <min>8000</min>
+    <max>8000</max>
+    </weaponMoney>
+    <weaponTags>
+  	<li>DragonBreathWeapon</li>
+	</weaponTags>
+    <modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>7~35</temperature>
+	  </li>
+	</modExtensions>
+  </PawnKindDef>
+
+  <!-- =========================== Red Dragon =========================== -->
+
+  <ThingDef ParentName="DragonRaceBase">
+    <defName>Red_Dragon</defName>
+    <label>red dragon</label>
+    <description>Red dragons have been known to fight with great strength, making them useful as living war machines. Many escaped their chains due to a tribesman, Curro, secretly freeing them whenever she could. Many have since returned to the wild.</description>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>25</power>
+        <armorPenetration>0.2</armorPenetration>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>25</power>
+        <armorPenetration>0.2</armorPenetration>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>tail whip</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Cut</li>
+        </capacities>
+        <power>15</power>
+        <armorPenetration>.4</armorPenetration>
+        <cooldownTime>5.0</cooldownTime>
+        <linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+
+      <li>
+        <label>horn</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Stab</li>
+        </capacities>
+        <power>20</power>
+        <armorPenetration>.8</armorPenetration>
+        <cooldownTime>4.0</cooldownTime>
+        <linkedBodyPartsGroup>Horns</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+
+      <li>
+        <label>pyro bite</label>
+        <capacities>
+          <li>Pyro_Bite</li>
+        </capacities>
+        <power>15</power>
+        <armorPenetration>0.9</armorPenetration>
+        <cooldownTime>6.0</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.01</chanceFactor>
+      </li>
+
+    </tools>
+    <comps>
+      <li Class="DD.CompProperties_CrossbredEggLayer">
+        <eggUnfertilizedDef>EggDragonUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>EggRedDragonFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>40</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>2</eggCountRange>
+		<failChance>0.25</failChance>
+		<paternalChance>0.5</paternalChance>
+		<maternalChance>0.5</maternalChance>
+      </li>
+    </comps>
+    <race>
+      <wildness>0.96</wildness>
+      <wildBiomes>
+        <TemperateForest>0.001</TemperateForest>
+        <TropicalRainforest>0.002</TropicalRainforest>
+        <AridShrubland>0.003</AridShrubland>
+        <Desert>0.004</Desert>
+        <ExtremeDesert>0.003</ExtremeDesert>
+      </wildBiomes>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Red_Dragon</defName>
+    <label>red dragon</label>
+    <race>Red_Dragon</race>
+    <combatPower>1460</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+	<ecoSystemWeight>2</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>Red dragon whelp</label>
+        <labelPlural>Red dragon whelps</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/RDragon</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/RDragon</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>Red dragon wyrmling</label>
+        <labelPlural>Red dragon wyrmlings</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/RDragon</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/RDragon</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>Red dragon</label>
+        <labelPlural>Red dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/RDragon</texPath>
+          <drawSize>3.7</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/RDragon</texPath>
+          <drawSize>3.7</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Elder red dragon</label>
+        <labelPlural>Elder red dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/RDragon</texPath>
+          <drawSize>3.9</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/RDragon</texPath>
+          <drawSize>3.9</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Ancient red dragon</label>
+        <labelPlural>Ancient red dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/RDragon</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/RDragon</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3.7</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+    </lifeStages>
+	<weaponMoney>
+    <min>8000</min>
+    <max>8000</max>
+    </weaponMoney>
+    <weaponTags>
+  	<li>DragonBreathWeapon</li>
+	</weaponTags>
+    <modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>31~62</temperature>
+	  </li>
+	</modExtensions>
+  </PawnKindDef>
+
+  <!-- =========================== White Dragon =========================== -->
+
+  <ThingDef ParentName="DragonRaceBase">
+    <defName>White_Dragon</defName>
+    <label>white dragon</label>
+    <description>White dragons are a mysterious species, native to the coldest of climates and extremely territorial, they try ward off all who attempt to observe them.</description>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <armorPenetration>0.2</armorPenetration>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <armorPenetration>0.2</armorPenetration>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>frost bite</label>
+        <capacities>
+          <li>Frost_Bite</li>
+        </capacities>
+        <power>20</power>
+        <armorPenetration>1.0</armorPenetration>
+        <cooldownTime>6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>skull bash</label>
+        <capacities>
+          <li>Skull_Bash</li>
+        </capacities>
+        <power>15</power>
+        <armorPenetration>0.6</armorPenetration>
+        <cooldownTime>6</cooldownTime>
+        <linkedBodyPartsGroup>Horns</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+
+      <li>
+        <label>tail whip</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Cut</li>
+        </capacities>
+        <power>5</power>
+        <armorPenetration>.4</armorPenetration>
+        <cooldownTime>5.0</cooldownTime>
+        <linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+
+      <li>
+        <label>horn</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Stab</li>
+        </capacities>
+        <power>10</power>
+        <armorPenetration>.8</armorPenetration>
+        <cooldownTime>5.0</cooldownTime>
+        <linkedBodyPartsGroup>Horns</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>10</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <comps>
+      <li Class="DD.CompProperties_CrossbredEggLayer">
+        <eggUnfertilizedDef>EggDragonUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>EggWhiteDragonFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>40</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>2</eggCountRange>
+		<failChance>0.25</failChance>
+		<paternalChance>0.5</paternalChance>
+		<maternalChance>0.5</maternalChance>
+      </li>
+    </comps>
+    <race>
+      <wildness>0.94</wildness>
+      <useMeatFrom>Red_Dragon</useMeatFrom>
+      <wildBiomes>
+        <Tundra>0.003</Tundra>
+        <BorealForest>0.003</BorealForest>
+        <ColdBog>0.003</ColdBog>
+        <IceSheet>0.004</IceSheet>
+        <SeaIce>0.001</SeaIce>
+      </wildBiomes>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>White_Dragon</defName>
+    <label>white dragon</label>
+    <race>White_Dragon</race>
+    <combatPower>1460</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+	<ecoSystemWeight>2</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>White dragon whelp</label>
+        <labelPlural>White dragon whelps</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/WDragon</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/WDragon</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>White dragon wyrmling</label>
+        <labelPlural>White dragon wyrmlings</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/WDragon</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/WDragon</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>White dragon</label>
+        <labelPlural>White dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/WDragon</texPath>
+          <drawSize>3.7</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/WDragon</texPath>
+          <drawSize>3.7</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Elder white dragon</label>
+        <labelPlural>Elder white dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/WDragon</texPath>
+          <drawSize>3.9</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/WDragon</texPath>
+          <drawSize>3.9</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Ancient white dragon</label>
+        <labelPlural>Anicnet white dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/WDragon</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/WDragon</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>5.8</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+    </lifeStages>
+	<weaponMoney>
+    <min>8000</min>
+    <max>8000</max>
+    </weaponMoney>
+    <weaponTags>
+  	<li>DragonBreathWeapon</li>
+	</weaponTags>
+    <modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>-42~13</temperature>
+	  </li>
+	</modExtensions>
+  </PawnKindDef>
+
+
+  <!-- =========================== Yellow Dragon =========================== -->
+
+  <ThingDef ParentName="DragonRaceBase">
+    <defName>Yellow_Dragon</defName>
+    <label>yellow dragon</label>
+    <description>Yellow dragons are the newest dragons to have been seen in the wild. A rare dominant mutation created a new strain of dragon that developed into its own race.</description>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <armorPenetration>0.2</armorPenetration>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <armorPenetration>0.2</armorPenetration>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>bite</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>35</power>
+        <armorPenetration>0.6</armorPenetration>
+        <cooldownTime>3.0</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+
+      <li>
+        <label>skull bash</label>
+        <capacities>
+          <li>Skull_Bash</li>
+        </capacities>
+        <power>15</power>
+        <armorPenetration>0.6</armorPenetration>
+        <cooldownTime>6</cooldownTime>
+        <linkedBodyPartsGroup>Horns</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+
+      <li>
+        <label>tail whip</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Cut</li>
+        </capacities>
+        <power>5</power>
+        <armorPenetration>.4</armorPenetration>
+        <cooldownTime>5.0</cooldownTime>
+        <linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+
+      <li>
+        <label>horn</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Stab</li>
+        </capacities>
+        <power>10</power>
+        <armorPenetration>.8</armorPenetration>
+        <cooldownTime>5.0</cooldownTime>
+        <linkedBodyPartsGroup>Horns</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>10</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <comps>
+      <li Class="DD.CompProperties_CrossbredEggLayer">
+        <eggUnfertilizedDef>EggDragonUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>EggYellowDragonFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>40</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>2</eggCountRange>
+		<failChance>0.25</failChance>
+		<paternalChance>0.5</paternalChance>
+		<maternalChance>0.5</maternalChance>
+      </li>
+    </comps>
+    <race>
+      <wildness>0.93</wildness>
+      <useMeatFrom>Red_Dragon</useMeatFrom>
+      <wildBiomes>
+        <TropicalRainforest>0.003</TropicalRainforest>
+        <AridShrubland>0.004</AridShrubland>
+        <Desert>0.003</Desert>
+        <ExtremeDesert>0.002</ExtremeDesert>
+      </wildBiomes>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Yellow_Dragon</defName>
+    <label>yellow dragon</label>
+    <race>Yellow_Dragon</race>
+    <combatPower>1460</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+	<ecoSystemWeight>2</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>Yellow dragon whelp</label>
+        <labelPlural>Yellow dragon whelps</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/YDragon</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/YDragon</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>Yellow dragon wyrmling</label>
+        <labelPlural>Yellow dragon wyrmlings</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/YDragon</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/YDragon</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>Yellow dragon</label>
+        <labelPlural>Yellow dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/YDragon</texPath>
+          <drawSize>3.7</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/YDragon</texPath>
+          <drawSize>3.7</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Elder yellow dragon</label>
+        <labelPlural>Elder yellow dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/YDragon</texPath>
+          <drawSize>3.9</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/YDragon</texPath>
+          <drawSize>3.9</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Ancient yellow dragon</label>
+        <labelPlural>Ancient yellow dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/YDragon</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/YDragon</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>5.2</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+    </lifeStages>
+	<weaponMoney>
+    <min>8000</min>
+    <max>8000</max>
+    </weaponMoney>
+    <weaponTags>
+  	<li>DragonBreathWeapon</li>
+	</weaponTags>
+	<modExtensions>
+	  <li Class="DD.IncidentSpawnConditionExtension">
+		<temperature>31~62</temperature>
+	  </li>
+	</modExtensions>
+  </PawnKindDef>
+
+</Defs>
