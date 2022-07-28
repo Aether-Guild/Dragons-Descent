@@ -36,7 +36,9 @@
       <li MayRequire="gregorycurrie.animalgenetics">
         <compClass>AnimalGenetics.EggGeneticInformation</compClass>
       </li>
-
+      <li MayRequire="Mlie.AnimalGenetics">
+        <compClass>AnimalGenetics.EggGeneticInformation</compClass>
+      </li>
 		</comps>
 		<modExtensions>
 			<li Class="DD.LegacyModExtension">
