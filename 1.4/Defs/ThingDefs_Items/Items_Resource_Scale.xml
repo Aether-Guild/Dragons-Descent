@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>HardScale</defName>
+		<label>hard dragon scale</label>
+		<description>An incredibly heat resistant scale shed from a dragon. Besides being moderately above steel in terms of strength the scales also exhibit a curious ability to change hue when forged in a certain way. Unfortunately this does not apply to furniture or buildings, resulting in a dull gray as the scales cannot properly overlap.\n\nThe scales can be dull red, red, yellow, purple, blue, cyan, dark green, light green, dark gray, and white.</description>
+		<stackLimit>100</stackLimit>
+		<minRewardCount>60</minRewardCount>
+		<graphicData>
+			<texPath>Things/Item/Resource/AnimalProduct/HardScale</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(162,157,152)</color>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+    	<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<MarketValue>3.8</MarketValue>
+			<Mass>0.35</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>1.2</DeteriorationRate>
+   			<StuffPower_Armor_Sharp>0.98</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Heat>1</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Blunt>0.55</StuffPower_Armor_Blunt>
+			<StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>11</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.12</BluntDamageMultiplier>
+		</statBases>
+    <thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<burnableByRecipe>false</burnableByRecipe>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<smeltable>true</smeltable>
+		<stuffProps>
+			<statFactors>
+				<Flammability>0.1</Flammability>
+				<Beauty>1.8</Beauty>
+				<MaxHitPoints>1.2</MaxHitPoints>
+				<MeleeWeapon_CooldownMultiplier>0.9</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+			<categories>
+				<li>DragonScale</li>
+				<li>Metallic</li>
+			</categories>
+			<appearance>Bricks</appearance>
+			<commonality>0.02</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(112,128,144)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<allowColorGenerators>true</allowColorGenerators>
+		</stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+	</ThingDef>
+
+ 
+</Defs>

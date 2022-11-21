@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- =========================== Dragon =========================== -->
+  <ThingDef ParentName="AnimalThingBase" Name="BaseDragon" Abstract="True">
+    <race>
+      <!-- Overriding animal think tree -->
+      <thinkTreeMain>Dragon</thinkTreeMain>
+      <thinkTreeConstant>DragonConstant</thinkTreeConstant>
+      <!-- <thinkTreeMain>Human</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant> -->
+      <!-- This clears any hediffgivers from its children -->
+      <hediffGiverSets Inherit="false">
+        <li>OrganicDragon</li> <!-- Moved here since its the same on both common and rare dragons -->
+      </hediffGiverSets>
+
+      <!-- Moved here since its the same on both common and rare dragons -->
+      <lifeExpectancy>2000</lifeExpectancy>
+
+      <nameGenerator>NamerAnimalDragonMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalDragonFemale</nameGeneratorFemale>
+    </race>
+
+    <comps>
+     
+        <li Class="AnimalBehaviours.CompProperties_DiseaseImmunity">
+          <hediffsToRemove>
+            <li>SandInEyes</li>
+            <li>DirtInEyes</li>
+            <li>MudInEyes</li>
+            <li>GravelInEyes</li>
+          </hediffsToRemove>
+          <tickInterval>200</tickInterval>
+        </li>
+      
+      <li Class="AnimalBehaviours.CompProperties_DigWhenHungry">
+        <customThingToDig>Jeweledrhizomeraw</customThingToDig>
+        <customAmountToDig>15</customAmountToDig>
+        <timeToDig>50000</timeToDig>
+        <spawnForbidden>false</spawnForbidden>
+      </li>
+      <!-- HostileResponse settings -->
+      <!-- <li Class="DD.CompProperties_HostileResponse">
+        <compClass>DD.CompHostileResponse</compClass>
+        <initialHostility>Aggressive</initialHostility>
+        <friendlyFireMentalState>Manhunter</friendlyFireMentalState>
+        <options>
+          <li>
+            <type>Aggressive</type>
+            <label>Aggressive</label>
+            <description>Attacks any hostile targets within sight, even manhunter bunnies.</description>
+            <iconPath>UserInterface/AI/Attack</iconPath>
+            <disableMessage>Aggressive, and you better get used to it.</disableMessage>
+          </li>
+          <li>
+            <type>Defensive</type>
+            <label>Defensive</label>
+            <description>Retaliates against any attacks made towards it, even if they're just taking aim.</description>
+            <iconPath>UserInterface/AI/Defense</iconPath>
+            <disableMessage>Defensive and disabled.</disableMessage>
+          </li>
+          <li>
+            <type>Passive</type>
+            <label>Pacifist</label>
+            <description>Will ignore any hostile actions made against it, even by friendlies.</description>
+            <iconPath>UserInterface/AI/Passive</iconPath>
+            <disableMessage>Passive and disabled.</disableMessage>
+          </li>
+        </options>
+      </li> -->
+
+      <li Class="DD.CompProperties_RecordInitializer">
+        <compClass>DD.CompRecordInitializer</compClass>
+
+        <!-- Record values to be set on spawn -->
+        <init>
+          <li>
+            <!-- ====== Spawn curves ====== -->
+            <!-- Curve for the number of kills the pawn has, based on how old they are. -->
+            <!-- Used only for setting the value when the pawn is spawned. -->
+            <!-- E.g: If the pawn spawns at age 35, it'll start with 5 kills in its counter. -->
+            <recordDef>Kills</recordDef>
+            <data>
+              <points>
+                <li>(0, 0)</li>
+                <li>(35, 5)</li>
+                <li>(100, 30)</li>
+                <li>(700, 100)</li>
+                <li>(2000, 5000)</li>
+              </points>
+            </data>
+          </li>
+          <li>
+            <!-- Curve for the amount of damage a pawn sustained, based on how old they are. -->
+            <!-- Used only for setting the value when the pawn is spawned. -->
+            <!-- E.g: If the pawn spawns at age 30, it'll start with 50 damage total. -->
+            <recordDef>DamageTaken</recordDef>
+            <data>
+              <points>
+                <li>(0, 0)</li>
+                <li>(30, 50)</li>
+                <li>(100, 300)</li>
+                <li>(700, 1000)</li>
+                <li>(1500, 50000)</li>
+              </points>
+            </data>
+          </li>
+          <li>
+            <!-- Curve for the amount of damage a pawn sustained, based on how old they are. -->
+            <!-- Used only for setting the value when the pawn is spawned. -->
+            <!-- E.g: If the pawn spawns at age 30, it'll start with 50 damage total. -->
+            <recordDef>DamageTaken</recordDef>
+            <data>
+              <points>
+                <li>(0, 0)</li>
+                <li>(30, 50)</li>
+                <li>(100, 300)</li>
+                <li>(700, 1000)</li>
+                <li>(1500, 50000)</li>
+              </points>
+            </data>
+          </li>
+        </init>
+      </li>
+
+      <!-- Defines the conditions for when to give the pawn an ability -->
+      <li Class="DD.CompProperties_AbilityDefinition">
+        <compClass>DD.CompAbilityDefinition</compClass>
+
+        <!-- <gizmoLabel>Ability\nSettings</gizmoLabel>
+			<gizmoDesc>Display Ability Settings</gizmoDesc>
+			<gizmoIconPath>UserInterface/Abilities/Settings</gizmoIconPath> -->
+
+        <!-- List of Abilities and conditions for gaining the abilities -->
+        <abilities>
+          <!-- <li>
+					<abilityDef>DragonBreath</abilityDef>
+					<growthHediff>DraconicGrowth</growthHediff>
+					<growthBodyPart>Fundamentum</growthBodyPart>
+					<gainCondition Class="DD.AbilityAgeCondition">
+						<ageRange>35~40</ageRange>
+					</gainCondition> -->
+          <!-- <loseCondition Class="DD.AbilityBodyPartCondition"> -->
+          <!-- <missing>true</missing> -->
+          <!-- <bodyPart>Fundamentum</bodyPart> -->
+          <!-- </loseCondition> -->
+          <!-- </li> -->
+          <!-- <li>
+					<abilityDef>DragonSpit</abilityDef>
+					<growthHediff>DraconicGrowth</growthHediff>
+					<growthBodyPart>Fundamentum</growthBodyPart>
+					<gainCondition Class="DD.AbilityAgeCondition">
+						<ageRange>200~210</ageRange>
+					</gainCondition>
+					<loseCondition Class="DD.AbilityBodyPartCondition">
+						<missing>true</missing>
+						<bodyPart>Fundamentum</bodyPart>
+					</loseCondition>
+				</li> -->
+          <li> 
+            <abilityDef>DraconicFlight</abilityDef>
+            <growthHediff>DraconicGrowth</growthHediff>
+            <gainCondition Class="DD.AbilityAgeCondition">
+              <ageRange>30~35</ageRange>
+            </gainCondition>
+            <loseCondition Class="DD.AbilityBodyPartCondition">
+              <missing>true</missing>
+              <bodyPart>Eye</bodyPart>
+            </loseCondition>
+          </li>
+          <!-- <li MayRequire="Ludeon.RimWorld.Biotech">
+            <abilityDef>DD_Longjump_Dragon</abilityDef>
+            <growthHediff>DraconicGrowth</growthHediff>
+            <gainCondition Class="DD.AbilityAgeCondition">
+              <ageRange>30~35</ageRange>
+            </gainCondition>
+            <loseCondition Class="DD.AbilityBodyPartCondition">
+              <missing>true</missing>
+              <bodyPart>Eye</bodyPart>
+            </loseCondition>
+          </li> -->
+          <!-- <li>
+            <abilityDef>FireSpew</abilityDef>
+            <growthHediff>DraconicGrowth</growthHediff>
+            <gainCondition Class="DD.AbilityAgeCondition">
+              <ageRange>30~35</ageRange>
+            </gainCondition> -->
+            <!-- <loseCondition Class="DD.AbilityBodyPartCondition">
+              <missing>true</missing>
+              <bodyPart>Eye</bodyPart>
+            </loseCondition> -->
+          <!-- </li> -->
+          <!-- <li><abilityDef>DraconicBreath_Fire</abilityDef></li> -->
+          <!-- <li><abilityDef>DraconicBreath_Frost</abilityDef></li> -->
+          <!-- <li><abilityDef>DraconicBreath_Test</abilityDef></li> -->
+          <!-- <li><abilityDef>CloseAoE</abilityDef></li> -->
+          <!-- <li><abilityDef>TargetPawn</abilityDef></li> -->
+          <!-- <li><abilityDef>TargetLocation</abilityDef></li> -->
+          <!-- <li><abilityDef>GlobalTarget</abilityDef></li> -->
+          <!-- <li> -->
+          <!-- AbilityDef defining the ability to be given to the pawn. -->
+          <!-- <abilityDef>AbilityDef</abilityDef> -->
+
+          <!-- HediffDef with HediffComp_GrowthSeverityScaling that will give the Ability when loseCondition is NOT satisfied and gainCondition is satisfied. -->
+          <!-- Optional: When set, will give a the specified hediff to the pawn, and does expect the hediff to eventually give the ability to the pawn. -->
+          <!-- <growthHediff>HediffDef (optional)</growthHediff> -->
+
+          <!-- BodyPartDef of the body part which will get the growthHediff. If the part is missing, then hediff can't be given, so ability won't be given either. -->
+          <!-- Optional: When set will block the ability/hediff from being given unless the pawn has the specific body part. -->
+          <!-- <growthBodyPart>BodyPartDef (optional)</growthBodyPart> -->
+
+          <!-- Ability gain condition is rechecked when pawn is damaged or scores a kill and on rare ticks. -->
+          <!-- Gain condition is lower priority than the Lose condition; if lose condition is set and evaluates to true then pawn will lose and not try to gain the ability -->
+          <!-- Optional: When not set, will always be given (unless overriden by loseCondition -->
+          <!-- <gainCondition Class="AbilityAndCondition"> -->
+          <!-- <and> -->
+          <!-- <li Class="AbilityBodyPartCondition"> -->
+          <!-- <missing>true/false</missing> -->
+          <!-- <bodyPart>BodyPartDef</bodyPart> -->
+          <!-- </li> -->
+          <!-- <li Class="AbilityAgeCondition"> -->
+          <!-- <ageRange>Age~Range</ageRange> -->
+          <!-- </li> -->
+          <!-- <li Class="AbilityRecordCondition"> -->
+          <!-- <recordDef>RecordDef</recordDef> -->
+          <!-- <value>Value~Range</value> -->
+          <!-- </li> -->
+          <!-- </and> -->
+          <!-- </gainCondition> -->
+
+          <!-- Ability Loss condition is rechecked when pawn is damaged or scores a kill and on rare ticks. -->
+          <!-- Loss condition overrides the gain condition; as long as the lose condition is set and evaluates to true, then the gain condition is skipped -->
+          <!-- Optional: When not set, will never be removed -->
+          <!-- <loseCondition Class="DD.AbilityOrCondition"> -->
+          <!-- <or> -->
+          <!-- <li Class="AbilityBodyPartCondition"> -->
+          <!-- <missing>true/false</missing> -->
+          <!-- <bodyPart>BodyPartDef</bodyPart> -->
+          <!-- </li> -->
+          <!-- <li Class="AbilityAgeCondition"> -->
+          <!-- <ageRange>Age~Range</ageRange> -->
+          <!-- </li> -->
+          <!-- <li Class="AbilityRecordCondition"> -->
+          <!-- <recordDef>RecordDef</recordDef> -->
+          <!-- <value>Value~Range</value> -->
+          <!-- </li> -->
+          <!-- </or> -->
+          <!-- </loseCondition> -->
+          <!-- </li> -->
+        </abilities>
+      </li>
+
+    </comps>
+
+
+    <modExtensions>
+      <li Class="DD.SettingControlledExtension_AnimalBiome" />
+      <li Class="DD.LegacyModExtension">
+        <hasOwnership>true</hasOwnership>
+        <hasAbilities>true</hasAbilities>
+      </li>
+      <li Class="DD.DrugTargetExtension" />
+      <li Class="DD.MatingTargetExtension" />
+      <li Class="DD.RitualTargetExtension" />
+    </modExtensions>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase" Name="BaseDragonKind" Abstract="True">
+    <canArriveManhunter>false</canArriveManhunter>
+    <modExtensions>
+      <li Class="DD.VerbSettingExtension">
+        <useExtendedVerbs>false</useExtendedVerbs>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- =========================== Common Dragon =========================== -->
+
+  <ThingDef ParentName="BaseDragon" Name="DragonRaceBase" Abstract="True">
+    <!-- Changed ParentName to BaseDragon -->
+    <comps>
+      <!-- <li Class="AnimalBehaviours.CompProperties_InitialHediff">
+        <hediffname>GR_MeleeDodge</hediffname>
+        <hediffseverity>1</hediffseverity>
+      </li> -->
+      <!-- <li Class="CompProperties_Shearable"> -->
+      <!-- <woolDef>HardScale</woolDef> -->
+      <!-- <shearIntervalDays>1</shearIntervalDays> -->
+      <!-- <woolAmount>50</woolAmount> -->
+      <!-- </li> -->
+      <li Class="DD.CompProperties_Scaleable">
+        <scaleDef>HardScale</scaleDef>
+        <minScaleableLifeStage>AnimalAdult</minScaleableLifeStage>
+        <scaleIntervalDays>15</scaleIntervalDays>
+        <scaleAmount>60</scaleAmount>
+      </li>
+    </comps>
+    <statBases>
+      <MoveSpeed>5.2</MoveSpeed>
+      <ImmunityGainSpeed>2</ImmunityGainSpeed>
+      <ComfyTemperatureMin>-75</ComfyTemperatureMin>
+      <ComfyTemperatureMax>120</ComfyTemperatureMax>
+      <ArmorRating_Blunt>0.95</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <ArmorRating_Heat>1.6</ArmorRating_Heat>
+      <PainShockThreshold>.85</PainShockThreshold>
+      <MeatAmount>200</MeatAmount>
+      <LeatherAmount>60</LeatherAmount>
+      <MarketValue>6600</MarketValue>
+      <PsychicSensitivity>.5</PsychicSensitivity>
+      <ToxicResistance>0.35</ToxicResistance>
+      <Flammability>0</Flammability>
+      <MeleeDodgeChance>15</MeleeDodgeChance>
+      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
+      <IncomingDamageFactor>0.9</IncomingDamageFactor>
+      <CaravanRidingSpeedFactor>1.6</CaravanRidingSpeedFactor>
+    </statBases>
+    <uiIconScale>1.75</uiIconScale>
+    <race>
+      <packAnimal>true</packAnimal>
+      <herdAnimal>false</herdAnimal>
+      <body>QuadrupedeAnimalWithClawsDragon</body>
+      <baseBodySize>4.1</baseBodySize>
+      <baseHungerRate>1.3</baseHungerRate>
+      <baseHealthScale>14</baseHealthScale>
+      <predator>true</predator>
+      <foodType>OmnivoreAnimal</foodType>
+      <leatherDef>Dragon_Leather</leatherDef>
+      <meatLabel>Dragon meat</meatLabel>
+      <trainability>Advanced</trainability>
+      <manhunterOnDamageChance>5</manhunterOnDamageChance>
+      <gestationPeriodDays>60</gestationPeriodDays>
+      <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
+      <maxPreyBodySize>4</maxPreyBodySize>
+      <nuzzleMtbHours>90</nuzzleMtbHours>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>2000</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+          <soundWounded>Baby_Dragon_Wounded</soundWounded>
+          <soundDeath>Baby_Dragon_Death</soundDeath>
+          <soundCall>Baby_Dragon_Call</soundCall>
+          <soundAngry>Baby_Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>10</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>30</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalElder</def>
+          <minAge>700</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalAncient</def>
+          <minAge>1400</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Dragon_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Dragon_HitPawn</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+          <li>(20,0)</li>
+          <li>(40,25)</li>
+          <li>(50,30)</li>
+          <li>(200,100)</li>
+          <li>(700,100)</li>
+          <li>(1000,60</li>
+          <li>(1200,40)</li>
+          <li>(1500,20)</li>
+          <li>(1800,12)</li>
+          <li>(2000,0)</li>
+        </points>
+      </ageGenerationCurve>
+    </race>
+    <tradeTags>
+      <li>AnimalExotic</li>
+    </tradeTags>
+    <butcherProducts>
+      <DragonHorn>1</DragonHorn>
+    </butcherProducts>
+    <modExtensions>
+      <li Class="DD.BreedingPoolExtension">
+        <pool>CommonDragons</pool>
+      </li>
+      <li Class="DD.GenusMarkerExtension">
+        <genus>DraconicCommon</genus>
+      </li>
+
+    </modExtensions>
+  </ThingDef>
+
+
+  <!-- =========================== Dragon =========================== -->
+
+  <ThingDef ParentName="BaseDragon" Name="RDragonRaceBase" Abstract="True">
+    <!-- Changed ParentName to BaseDragon -->
+
+    <comps>
+      <li Class="AnimalBehaviours.CompProperties_DoesntFlee"></li>
+      <li Class="DD.CompProperties_Scaleable">
+        <scaleDef>HardScale</scaleDef>
+        <minScaleableLifeStage>AnimalAdult</minScaleableLifeStage>
+        <scaleIntervalDays>15</scaleIntervalDays>
+        <scaleAmount>60</scaleAmount>
+      </li>
+    </comps>
+    <statBases>
+      <MoveSpeed>5.6</MoveSpeed>
+      <ImmunityGainSpeed>2</ImmunityGainSpeed>
+      <ComfyTemperatureMin>-150</ComfyTemperatureMin>
+      <ComfyTemperatureMax>200</ComfyTemperatureMax>
+      <ArmorRating_Blunt>1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+      <ArmorRating_Heat>1.6</ArmorRating_Heat>
+      <PainShockThreshold>.85</PainShockThreshold>
+      <MeatAmount>230</MeatAmount>
+      <LeatherAmount>75</LeatherAmount>
+      <MarketValue>7900</MarketValue>
+      <PsychicSensitivity>.5</PsychicSensitivity>
+      <ToxicResistance>0.55</ToxicResistance>
+      <Flammability>0</Flammability>
+      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
+      <IncomingDamageFactor>0.85</IncomingDamageFactor>
+      <MeleeDodgeChance>15</MeleeDodgeChance>
+      <CaravanRidingSpeedFactor>1.6</CaravanRidingSpeedFactor>
+    </statBases>
+    <uiIconScale>1.75</uiIconScale>
+    <race>
+      <packAnimal>true</packAnimal>
+      <herdAnimal>false</herdAnimal>
+      <body>QuadrupedeAnimalWithClawsDragon</body>
+      <baseBodySize>4.3</baseBodySize>
+      <baseHungerRate>1.40</baseHungerRate>
+      <baseHealthScale>16</baseHealthScale>
+      <predator>true</predator>
+      <foodType>OmnivoreAnimal</foodType>
+      <leatherDef>Rare_Dragon_Leather</leatherDef>
+      <meatLabel>Dragon meat</meatLabel>
+      <trainability>Advanced</trainability>
+      <manhunterOnDamageChance>5</manhunterOnDamageChance>
+      <nameOnTameChance>1</nameOnTameChance>
+      <gestationPeriodDays>60</gestationPeriodDays>
+      <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
+      <maxPreyBodySize>4</maxPreyBodySize>
+      <nuzzleMtbHours>275</nuzzleMtbHours>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>2000</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+          <soundWounded>Baby_Dragon_Wounded</soundWounded>
+          <soundDeath>Baby_Dragon_Death</soundDeath>
+          <soundCall>Baby_Dragon_Call</soundCall>
+          <soundAngry>Baby_Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>10</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>30</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalElder</def>
+          <minAge>700</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalAncient</def>
+          <minAge>1400</minAge>
+          <soundWounded>Dragon_Wounded</soundWounded>
+          <soundDeath>Dragon_Death</soundDeath>
+          <soundCall>Dragon_Call</soundCall>
+          <soundAngry>Dragon_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Dragon_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Dragon_HitPawn</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+          <li>(20,0)</li>
+          <li>(40,25)</li>
+          <li>(50,30)</li>
+          <li>(200,100)</li>
+          <li>(700,100)</li>
+          <li>(1000,60</li>
+          <li>(1200,40)</li>
+          <li>(1500,20)</li>
+          <li>(1800,12)</li>
+          <li>(2000,0)</li>
+        </points>
+      </ageGenerationCurve>
+    </race>
+    <tradeTags>
+      <li>AnimalExotic</li>
+    </tradeTags>
+    <butcherProducts>
+      <DragonHorn>1</DragonHorn>
+    </butcherProducts>
+    <modExtensions>
+      <li Class="DD.BreedingPoolExtension">
+        <pool>RareDragons</pool>
+      </li>
+      <li Class="DD.GenusMarkerExtension">
+        <genus>DraconicRare</genus>
+      </li>
+
+    </modExtensions>
+  </ThingDef>
+
+
+</Defs>

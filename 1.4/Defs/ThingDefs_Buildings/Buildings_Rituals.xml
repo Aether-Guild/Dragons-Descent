@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=========================== Altar ===============================-->
+
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>Altar</defName>
+    <thingClass>Building_WorkTable</thingClass>
+    <label>dragon altar</label>
+    <description>An altar to worship dragons. While dragons themselves aren't as intelligent as humans, they do respect offers and gifts in their name and will in turn give favor. This favor can in turn be used in rituals, the effects of which can banish, sustain, and calm dragons (among other things).\n\nHowever over time they will require more offerings for the same amount of favor, and more favor for your requests...</description>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Misc</designationCategory>
+    <surfaceType>Item</surfaceType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <rotatable>true</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>true</castEdgeShadows>
+    <uiIconScale>0.80</uiIconScale>
+    <fillPercent>0.15</fillPercent>
+    <pathCost>40</pathCost>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+    </researchPrerequisites>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <size>(3,2)</size>
+    <costList>
+        <Gold>10</Gold>
+    </costList>
+    <recipes>
+        <li>Ritual_Weak</li>
+        <li>Ritual_Moderate</li>
+        <li>Ritual_Large</li>
+        <li>Ritual_Major</li>
+    </recipes>
+    <inspectorTabs>
+        <li>ITab_Bills</li>
+    </inspectorTabs>
+    <graphicData>
+        <texPath>Things/Building/Misc/DragonAltar/DragonAltar</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <shaderType>CutoutComplex</shaderType>
+        <drawSize>(4,4)</drawSize>
+    <shadowData>
+      <volume>(2.22, 0.8, 0.62)</volume>
+      <offset>(0, 0, 0)</offset>
+    </shadowData>
+    </graphicData>
+    <stuffCategories>
+        <li>Stony</li>
+        <li>Woody</li>
+        <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <statBases>
+        <MaxHitPoints>100</MaxHitPoints>
+        <Flammability>0</Flammability>
+        <WorkToBuild>1000</WorkToBuild>
+        <Mass>20</Mass>
+    <Beauty>75</Beauty>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <comps>
+        <li Class="DD.CompProperties_Ritual">
+			<rituals>
+			  <li>Ritual_BanishSingleDragon</li>
+			  <li>Ritual_RemoveFerocity</li>
+			  <li>Ritual_MaintainDragonNeeds</li>
+			  <li>Ritual_BanishAllDragon</li>
+			  <li>Ritual_RemoveFerocityAll</li>
+			  <li>Ritual_MaintainAllDragonNeeds</li>
+			  <li>Ritual_WardAllDragon</li>
+			  <li>Ritual_Bombardment</li>
+			  <!-- <li>Ritual_Destroyer</li> -->
+            </rituals>
+        </li>
+    <li Class="CompProperties_Art">
+      <nameMaker>NamerArtSculpture</nameMaker>
+      <descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+      <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+    </li>
+        <li Class="DD.CompProperties_FireOverlay_Multiple">
+            <fireSize>0.6</fireSize>
+            <rotationOffsets>
+                <li>
+                    <rotation>North</rotation>
+                    <offsets>
+                        <li>(0.82, 0, 0.95)</li>
+                        <li>(-0.82, 0, 0.95)</li>
+                    </offsets>
+                </li>
+                <li>
+                    <rotation>East</rotation>
+                    <offsets>
+                        <li>(0.8, 0, 1.0)</li>
+                        <li>(0.8, 0, -0.7)</li>
+                    </offsets>
+                </li>
+                <li>
+                    <rotation>West</rotation>
+                    <offsets>
+                        <li>(-0.8, 0, -0.7)</li>
+                        <li>(-0.8, 0, 1.0)</li>
+                    </offsets>
+                </li>
+                <li>
+                    <rotation>South</rotation>
+                    <offsets>
+                        <li>(-0.84, 0, -0.3)</li>
+                        <li>(0.85, 0, -0.3)</li>
+                    </offsets>
+                </li>
+            </rotationOffsets>
+        </li>
+    <li Class="CompProperties_MeditationFocus">
+      <statDef>MeditationFocusStrength</statDef>
+      <focusTypes>
+        <li>Artistic</li>
+      </focusTypes>
+      <offsets>
+        <li Class="FocusStrengthOffset_Quality">
+          <curve>
+            <points>
+              <li>(0,0.12)</li>
+              <!-- awful -->
+              <li>(1,0.16)</li>
+              <!-- poor -->
+              <li>(2,0.20)</li>
+              <!-- normal -->
+              <li>(3,0.22)</li>
+              <!-- good -->
+              <li>(4,0.24)</li>
+              <!-- excellent -->
+              <li>(5,0.26)</li>
+              <!-- masterwork -->
+              <li>(6,0.28)</li>
+              <!-- legendary -->
+            </points>
+          </curve>
+        </li>
+      </offsets>
+    </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

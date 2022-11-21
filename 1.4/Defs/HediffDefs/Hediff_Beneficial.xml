@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- Growth hediff, applied by giver when dragon is of a certain age/lifestage. -->
+	<HediffDef>
+		<defName>DraconicGrowth</defName>
+		<label>growing pains</label>
+		<labelNoun>pains associated with growth</labelNoun>
+		<description>Experiencing pain and restlessness due to growth.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.3, 0.4, 0.7)</defaultLabelColor>
+		<initialSeverity>0.0001</initialSeverity>
+		<comps>
+			<li Class="DD.HediffCompProperties_GrowthSeverityScaling">
+				<!-- Modify interval to change how fast severity (in this case it counts as the regen healing factor) increases. (<ticks>, <severity>) -->
+				<!-- It takes 0 ticks (0 hours) to go from severity 0 to severity 0. -->
+				<!-- It takes 5,000 ticks (2 hours) to go from severity 0 to severity 2.5. -->
+				<!-- It takes 15,000 ticks (6 hours) to go from severity 0 to severity 5.0. -->
+				<!-- It takes 20,000 ticks (8 hours) to go from severity 0 to severity 7.5. -->
+				<!-- It takes 30,000 ticks (12 hours) to go from severity 0 to severity 10.0. -->
+				<interval>
+					<points>
+						<li>(0, 0)</li>
+						<li>(5000, 2.5)</li>
+						<li>(15000, 5.0)</li>
+						<li>(20000, 7.5)</li>
+						<li>(30000, 10)</li>
+					</points>
+				</interval>
+				<severityRange>0~10</severityRange>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>starting</label>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<minSeverity>0.0001</minSeverity>
+				<label>light</label>
+				<becomeVisible>true</becomeVisible>
+				<painFactor>1.1</painFactor>
+				<painOffset>1.1</painOffset>
+				<hungerRateFactor>1.1</hungerRateFactor>
+			</li>
+			<li>
+				<minSeverity>2.5</minSeverity>
+				<label>dull</label>
+				<becomeVisible>true</becomeVisible>
+				<painFactor>1.25</painFactor>
+				<painOffset>1.25</painOffset>
+				<hungerRateFactor>1.25</hungerRateFactor>
+				<restFallFactor>1.25</restFallFactor>
+			</li>
+			<li>
+				<minSeverity>5.0</minSeverity>
+				<label>intense</label>
+				<becomeVisible>true</becomeVisible>
+				<painFactor>1.5</painFactor>
+				<painOffset>1.5</painOffset>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<restFallFactor>1.5</restFallFactor>
+				<statFactors>
+					<RestRateMultiplier>0.5</RestRateMultiplier>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>7.5</minSeverity>
+				<label>unbearable</label>
+				<becomeVisible>true</becomeVisible>
+				<painFactor>2</painFactor>
+				<painOffset>2</painOffset>
+				<hungerRateFactor>2</hungerRateFactor>
+				<restFallFactor>2</restFallFactor>
+				<statFactors>
+					<RestRateMultiplier>0.1</RestRateMultiplier>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Regen hediff, applied by giver when any viable wounds are on a dragon -->
+	<HediffDef>
+		<defName>DraconicRegeneration</defName>
+		<label>regeneration</label>
+		<labelNoun>an accelerated regeneration effect</labelNoun>
+		<description>Experiencing accelerated regeneration over time</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.3, 0.4, 0.7)</defaultLabelColor>
+		<initialSeverity>0.0001</initialSeverity>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_ThoughtEffecter">
+				<radius>10</radius>
+				<tickInterval>2000</tickInterval>
+				<thoughtDef>DD_DragonNuzzled</thoughtDef>
+			</li>
+			<li Class="DD.HediffCompProperties_Tend">
+				<compClass>DD.HediffComp_TendInjury</compClass>
+				<!-- Modify tendQuality to change the quality of the tend. (age in years, tend quality) -->
+				<!-- Modify maxTendQuality to change the quality of the tend. (age in years, max tend quality) (optional: adds a bit of RNG to the quality of the tend) -->
+				<!-- Modify healIntervalTicks to change 'how often' it will try to heal. (age in years, time between each heal) -->
+				<tendQuality>
+					<points>
+						<li>(0, 0.01)</li>
+						<li>(10, 0.02)</li>
+						<li>(30, 0.05)</li>
+						<li>(700, 0.07)</li>
+						<li>(1400, 0.1)</li>
+					</points>
+				</tendQuality>
+				<maxTendQuality>
+					<points>
+						<li>(0, 0.1)</li>
+						<li>(10, 0.25)</li>
+						<li>(30, 0.50)</li>
+						<li>(700, 0.65)</li>
+						<li>(1400, 0.75)</li>
+					</points>
+				</maxTendQuality>
+				<tendIntervalTicks>
+					<points>
+						<li>(0, 10000)</li>
+						<li>(10, 6000)</li>
+						<li>(30, 3000)</li>
+						<li>(700, 2000)</li>
+						<li>(1400, 8000)</li>
+					</points>
+				</tendIntervalTicks>
+			</li>
+			<li Class="DD.HediffCompProperties_Scar">
+				<compClass>DD.HediffComp_HealScar</compClass>
+				<healIntervalTicks>
+					<points>
+						<li>(0, 100000)</li>
+						<li>(10, 95000)</li>
+						<li>(30, 90000)</li>
+						<li>(700, 80000)</li>
+						<li>(1400, 200000)</li>
+					</points>
+				</healIntervalTicks>
+			</li>
+			<li Class="DD.HediffCompProperties_RegenSeverityScaling">
+				<!-- Modify interval to change how fast severity (in this case it counts as the regen healing factor) increases. (<ticks>, <severity>) -->
+				<!-- It takes 0 ticks (0 hours) to go from severity 0 to severity 0. -->
+				<!-- It takes 5,000 ticks (2 hours) to go from severity 0 to severity 0.25. -->
+				<!-- It takes 15,000 ticks (6 hours) to go from severity 0 to severity 0.5. -->
+				<!-- It takes 20,000 ticks (8 hours) to go from severity 0 to severity 0.75. -->
+				<!-- It takes 30,000 ticks (12 hours) to go from severity 0 to severity 1. -->
+				<interval>
+					<points>
+						<li>(0, 0)</li>
+						<li>(5000, 0.25)</li>
+						<li>(15000, 0.5)</li>
+						<li>(20000, 0.75)</li>
+						<li>(30000, 1)</li>
+					</points>
+				</interval>
+			</li>
+		</comps>
+		<stages>
+			<!-- Warning: Stages are hardcoded a bit. So you can only have 3. If you want more, modify the conditions/which stage to switch to in HediffComp_RegenSeverityScaling.cs -->
+			<li Class="DD.HediffStage_Adjusting">
+				<severity>0</severity> <!-- When the pawn is supposed to be in the inactive stage, severity will move towards 0 -->
+				<label>inactive</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+			<li Class="DD.HediffStage_Adjusting">
+				<severity>0.5</severity> <!-- When the pawn is supposed to be in the inactive stage, severity will move towards 0.5 -->
+				<minSeverity>0.0001</minSeverity>
+				<label>passive</label>
+				<becomeVisible>true</becomeVisible>
+				<statFactors>
+					<RestRateMultiplier>1.25</RestRateMultiplier>
+				</statFactors>
+				<hungerRateFactorOffset>0.75</hungerRateFactorOffset>
+			</li>
+			<li Class="DD.HediffStage_Adjusting">
+				<severity>1</severity> <!-- When the pawn is supposed to be in the inactive stage, severity will move towards 1.0 -->
+				<minSeverity>1</minSeverity>
+				<label>active</label>
+				<becomeVisible>true</becomeVisible>
+				<statFactors>
+					<RestRateMultiplier>2</RestRateMultiplier>
+				</statFactors>
+				<hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+			</li>
+		</stages>
+		<modExtensions>
+			<li Class="DD.RegenHediffModExtension">
+				<keepWhileFighting>false</keepWhileFighting>
+			</li>
+		</modExtensions>
+	</HediffDef>
+
+	<!-- Aging hediff, applied by giver when dragon ages up via moonstone -->
+	<HediffDef ParentName="InfectionBase">
+		<defName>AgeSickness</defName>
+		<label>age sickness</label>
+		<labelNoun>a sickness caused by injesting moonstone</labelNoun>
+		<description>A mild illness caused by drug induced aging. Usually cures itself in less than 2 days.</description>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.3, 0.4, 0.7)</defaultLabelColor>
+		<initialSeverity>0.02</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>80000~120000</disappearsAfterTicks>
+			</li>
+			<li Class="DD.HediffCompProperties_GrowthSeverityScaling">
+				<!-- Modify interval to change how fast severity (in this case it counts as the regen healing factor) increases. (<ticks>, <severity>) -->
+				<!-- It takes 0 ticks (0 hours) to go from severity 0 to severity 0. -->
+				<!-- It takes 5,000 ticks (2 hours) to go from severity 0 to severity 2.5. -->
+				<!-- It takes 15,000 ticks (6 hours) to go from severity 0 to severity 5.0. -->
+				<!-- It takes 20,000 ticks (8 hours) to go from severity 0 to severity 7.5. -->
+				<!-- It takes 30,000 ticks (12 hours) to go from severity 0 to severity 10.0. -->
+				<interval>
+					<points>
+						<li>(0, 0)</li>
+						<li>(5000, 0.2)</li>
+						<li>(40000, 0.6)</li>
+						<li>(70000, 0.8)</li>
+						<li>(10000, 1)</li>
+					</points>
+				</interval>
+				<severityRange>0~1</severityRange>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0.02</minSeverity>
+				<label>mild</label>
+				<hungerRateFactor>1.1</hungerRateFactor>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.6</minSeverity>
+				<label>moderate</label>
+				<becomeVisible>true</becomeVisible>
+				<hungerRateFactor>1.25</hungerRateFactor>
+				<restFallFactor>1.25</restFallFactor>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.4</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<label>severe</label>
+				<becomeVisible>true</becomeVisible>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<restFallFactor>1.5</restFallFactor>
+				<vomitMtbDays>1.0</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.6</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

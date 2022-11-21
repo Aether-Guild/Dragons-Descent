@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef>
+    <defName>HaulIncubateDragonEgg</defName>
+    <label>loading dragon egg</label>
+    <description>Delivering a fertilized dragon egg to an incubator.</description>
+	<workerClass>DD.RecipeWorker_NoDestroy</workerClass>
+    <jobString>Setting up incubator.</jobString>
+    <workAmount>120</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <requiredGiverWorkType>Hauling</requiredGiverWorkType>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>EggsDragon</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>EggsDragon</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>EggsDragon</li>
+      </categories>
+    </defaultIngredientFilter>
+	<modExtensions>
+      <li Class="DD.RitualFactorModExtension">
+        <factor>5</factor>
+      </li>
+	  <li Class="DD.LoadIncubatorBillOverrideExtension" />
+	</modExtensions>
+  </RecipeDef>
+
+</Defs>

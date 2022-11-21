@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--=========================== Dragon Statue Ritual Spot  ===============================-->
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>DD_DragonStatueRitual_Grand</defName>
+		<label>Dragon Statue Ritual</label>
+		<description>A spot for carrying out certain kinds of rituals.</description>
+		<graphicData>
+		  <texPath>Things/Building/Art/SculptureGrand/sculpturegranddraconica</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(4.5,4.5)</drawSize>
+		</graphicData>
+			<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+		  <WorkToBuild>1100</WorkToBuild>
+		  <MaxHitPoints>600</MaxHitPoints>
+		  <Beauty>50</Beauty>
+		  <MeditationFocusStrength>0.38</MeditationFocusStrength>
+		  <Mass>250</Mass>
+		  <Flammability>0</Flammability>
+		</statBases>
+		<costStuffCount>450</costStuffCount>
+		<rotatable>false</rotatable>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>True</useHitPoints>
+		<designationCategory>Ideology</designationCategory>
+		<uiOrder>2000</uiOrder>
+		<passability>Standable</passability>
+		<building>
+		  <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+		  <ai_chillDestination>false</ai_chillDestination>
+		  <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+		  <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+		  <buildingTags>
+			<li>RitualFocus</li>
+		  </buildingTags>
+		  <relatedBuildCommands>
+			<li>Lectern</li>
+			<li>KneelPillow</li>
+			<li>KneelSheet</li>
+		  </relatedBuildCommands>
+		  <paintable>true</paintable>
+		</building>
+		<stuffCategories>
+			<li>Stony</li>
+			<li>Metallic</li>
+		  </stuffCategories>
+		<size>(3,3)</size>
+		<uiIconScale>0.80</uiIconScale>
+
+		<placeWorkers Inherit="False">
+			<li>PlaceWorker_RitualFocusNoArrow</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		  </placeWorkers>
+		  <drawPlaceWorkersWhileSelected>True</drawPlaceWorkersWhileSelected>
+		  <comps>
+			<li Class="CompProperties_MeditationFocus">
+			  <statDef>MeditationFocusStrength</statDef>
+			  <focusTypes>
+				<li>Artistic</li>
+			  </focusTypes>
+			</li>
+		  </comps>
+	  </ThingDef>
+
+	  <ThingDef ParentName="BuildingBase">
+		<defName>DD_DragonStatueRitual_Large</defName>
+		<label>Dragon Statue Ritual</label>
+		<description>A spot for carrying out certain kinds of rituals.</description>
+		<graphicData>
+		  <texPath>Things/Building/Art/SculptureLarge/sculpturelargedraconica</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(2.8,2.8)</drawSize>
+		</graphicData>
+			<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+		  <WorkToBuild>800</WorkToBuild>
+		  <MaxHitPoints>400</MaxHitPoints>
+		  <Beauty>30</Beauty>
+		  <MeditationFocusStrength>0.28</MeditationFocusStrength>
+		  <Mass>120</Mass>
+		  <Flammability>0</Flammability>
+		</statBases>
+		<costStuffCount>310</costStuffCount>
+		<rotatable>false</rotatable>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>True</useHitPoints>
+		<designationCategory>Ideology</designationCategory>
+		<uiOrder>2001</uiOrder>
+		<passability>Standable</passability>
+		<building>
+		  <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+		  <ai_chillDestination>false</ai_chillDestination>
+		  <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+		  <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+		  <buildingTags>
+			<li>RitualFocus</li>
+		  </buildingTags>
+		  <relatedBuildCommands>
+			<li>Lectern</li>
+			<li>KneelPillow</li>
+			<li>KneelSheet</li>
+		  </relatedBuildCommands>
+		  <paintable>true</paintable>
+		</building>
+		<stuffCategories>
+			<li>Stony</li>
+			<li>Metallic</li>
+		  </stuffCategories>
+		<size>(2,2)</size>
+		<uiIconScale>1.00</uiIconScale>
+		<placeWorkers Inherit="False">
+			<li>PlaceWorker_RitualFocusNoArrow</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		  </placeWorkers>
+		  <drawPlaceWorkersWhileSelected>True</drawPlaceWorkersWhileSelected>
+		  <comps>
+			<li Class="CompProperties_MeditationFocus">
+			  <statDef>MeditationFocusStrength</statDef>
+			  <focusTypes>
+				<li>Artistic</li>
+			  </focusTypes>
+			</li>
+		  </comps>
+	  </ThingDef>
+
+	  <ThingDef ParentName="BuildingBase">
+		<defName>DD_DragonStatueRitual_Small</defName>
+		<label>Dragon Statue Ritual</label>
+		<description>A spot for carrying out certain kinds of rituals.</description>
+		<graphicData>
+		  <texPath>Things/Building/Art/SculptureSmall/sculpturesmalldraconica</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(1.5,1.5)</drawSize>
+		</graphicData>
+			<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+		  <WorkToBuild>500</WorkToBuild>
+		  <MaxHitPoints>300</MaxHitPoints>
+		  <Beauty>10</Beauty>
+		  <MeditationFocusStrength>0.18</MeditationFocusStrength>
+		  <Mass>40</Mass>
+		  <Flammability>0</Flammability>
+		</statBases>
+		<costStuffCount>250</costStuffCount>
+		<rotatable>false</rotatable>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>True</useHitPoints>
+		<designationCategory>Ideology</designationCategory>
+		<uiOrder>2003</uiOrder>
+		<passability>Standable</passability>
+		<building>
+		  <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+		  <ai_chillDestination>false</ai_chillDestination>
+		  <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+		  <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+		  <buildingTags>
+			<li>RitualFocus</li>
+		  </buildingTags>
+		  <relatedBuildCommands>
+			<li>Lectern</li>
+			<li>KneelPillow</li>
+			<li>KneelSheet</li>
+		  </relatedBuildCommands>
+		  <paintable>true</paintable>
+		</building>
+		<stuffCategories>
+			<li>Stony</li>
+			<li>Metallic</li>
+		  </stuffCategories>
+		<size>(1,1)</size>
+		<uiIconScale>0.70</uiIconScale>
+		<placeWorkers Inherit="False">
+			<li>PlaceWorker_RitualFocusNoArrow</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		  </placeWorkers>
+		  <drawPlaceWorkersWhileSelected>True</drawPlaceWorkersWhileSelected>
+		  <comps>
+			<li Class="CompProperties_MeditationFocus">
+			  <statDef>MeditationFocusStrength</statDef>
+			  <focusTypes>
+				<li>Artistic</li>
+			  </focusTypes>
+			</li>
+		  </comps>
+	  </ThingDef>
+
+</Defs>

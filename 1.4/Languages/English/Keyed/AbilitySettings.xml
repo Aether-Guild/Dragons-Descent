@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <AbilitySetting_Label_Name>Name</AbilitySetting_Label_Name>
+  <AbilitySetting_Label_Desc>Description</AbilitySetting_Label_Desc>
+  <AbilitySetting_Label_Range>Range</AbilitySetting_Label_Range>
+  <AbilitySetting_Label_AIUse>Auto Castable</AbilitySetting_Label_AIUse>
+  <AbilitySetting_Label_Status>Status</AbilitySetting_Label_Status>
+  
+  <AbilitySetting_Label_Gain>Gain Conditions</AbilitySetting_Label_Gain>
+  <AbilitySetting_Label_Loss>Loss Conditions</AbilitySetting_Label_Loss>
+  
+  <AbilitySetting_Label_Pawns>Affected Pawns</AbilitySetting_Label_Pawns>
+  
+  <AbilitySetting_Range_Format>{MIN}~{MAX}</AbilitySetting_Range_Format>
+  
+</LanguageData>

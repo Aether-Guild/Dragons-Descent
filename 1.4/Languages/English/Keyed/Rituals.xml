@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- ========== Rituals ========== -->
+	<RitualNoFactionMessage>Claim the altar before trying to activate the a ritual effect.</RitualNoFactionMessage>
+	<RitualNoTargetMessage>No applicable targets in range.</RitualNoTargetMessage>
+
+	<RitualControlNeedsOnMessage>{TARGET} seems mystically sated. (Duration: {DURATION})</RitualControlNeedsOnMessage>
+	<RitualControlNeedsOffMessage>{TARGET} begins to hunger once more.</RitualControlNeedsOffMessage>
+
+	<RitualControlNeedsAllOnMessage>The dragons mystically feel sated. (Duration: {DURATION})</RitualControlNeedsAllOnMessage>
+	<RitualControlNeedsAllOffMessage>The dragons begin to hunger once more.</RitualControlNeedsAllOffMessage>
+
+	<RitualHediffRemoveMessage>{TARGET} recovered from {HEDIFF}.</RitualHediffRemoveMessage>
+	<RitualHediffRemoveAllMessage>{COUNT} dragon(s) recovered from {HEDIFF}.</RitualHediffRemoveAllMessage>
+
+	<RitualCalmDownMessage>{TARGET} calms down.</RitualCalmDownMessage>
+	<RitualCalmDownAllMessage>{COUNT} dragon(s) were calmed down.</RitualCalmDownAllMessage>
+
+	<RitualBanishMessage>{TARGET} was banished.</RitualBanishMessage>
+	<RitualBanishAllMessage>{COUNT} dragon(s) were banished.</RitualBanishAllMessage>
+
+	<RitualWardOnMessage>The colony is protected from draconic rage. (Duration: {DURATION})</RitualWardOnMessage>
+	<RitualWardOffMessage>The colony is no longer protected from draconic rage.</RitualWardOffMessage>
+
+	<RitualConfirmationTitle>Warning</RitualConfirmationTitle>
+	
+	<RitualTargetedGoodwillChangeMessage>Relations with the {FACTION} will change by {GOODWILL}.</RitualTargetedGoodwillChangeMessage>
+	<RitualOtherGoodwillChangeMessage>Relations with the all other factions will change by {GOODWILL}.</RitualOtherGoodwillChangeMessage>
+	
+	<RitualLabel>{LABEL} ({COST})</RitualLabel>
+	<RitualLabelType>Type: {TYPE}</RitualLabelType>
+	<RitualLabelDuration>Duration: {TIME}.</RitualLabelDuration>
+	<RitualLabelCost>Cost: {COST} favor.</RitualLabelCost>
+	<RitualLabelCooldown>Cooldown: {TIME}</RitualLabelCooldown>
+	
+	<RitualActive>- Currently Active -</RitualActive>
+	<RitualInsufficientFavor>Insufficient Favor: An additional {NEEDED} favor is required.</RitualInsufficientFavor>
+	<RitualCoolingDown>Cooling down.</RitualCoolingDown>
+	<RitualCooldownExpiry>Cooldown will expire in {TIME}</RitualCooldownExpiry>
+	<RitualDurationExpiry>Effect will expire in {TIME}</RitualDurationExpiry>
+	
+	<RitualTypeInstant>Instananeous Effect</RitualTypeInstant>
+	<RitualTypeTicking>Effect over Time</RitualTypeTicking>
+	
+	<RitualTargetLocal>(Local Target)</RitualTargetLocal>
+	<RitualTargetMap>(Map-wide)</RitualTargetMap>
+	<RitualTargetWorld>(World Target)</RitualTargetWorld>
+	<RitualTargetForeign>(Off-map Target)</RitualTargetForeign>
+	
+	<RitualGlobalLabelTargetCount>{COUNT} target(s)</RitualGlobalLabelTargetCount>
+	<RitualGlobalLabelTargetRange>~{DISTANCE} not in {RANGE} range</RitualGlobalLabelTargetRange>
+	
+</LanguageData>

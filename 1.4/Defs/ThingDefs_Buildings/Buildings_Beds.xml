@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--=========================== Dragon Nest ===============================-->
+	<ThingDef ParentName="FurnitureWithQualityBase">
+		<defName>DragonNest</defName>
+		<thingClass>DD.Building_StorageBed</thingClass>
+		<label>dragon nest</label>
+		<description>A soft bed of hay for dragons to sleep on. Fit for any dragon egg as it protects it from the elements and increases growth by 10%.</description>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<surfaceType>Item</surfaceType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<rotatable>true</rotatable>
+		<canOverlapZones>false</canOverlapZones>
+		<castEdgeShadows>true</castEdgeShadows>
+		<uiIconScale>0.80</uiIconScale>
+		<fillPercent>0.15</fillPercent>
+		<pathCost>40</pathCost>
+    <designationCategory>Furniture</designationCategory>
+		<constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+		<costList>
+			<Hay>40</Hay>
+		</costList>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
+		<graphicData>
+			<texPath>Things/Building/Misc/DragonNest/DragonNest</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.9</Flammability>
+			<WorkToBuild>700</WorkToBuild>
+			<Mass>20</Mass>
+			<BedRestEffectiveness>1.2</BedRestEffectiveness>
+			<Comfort>1</Comfort>
+			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+		</statBases>
+		<building>
+			<bed_humanlike>false</bed_humanlike>
+			<bed_showSleeperBody>true</bed_showSleeperBody>
+			<bed_healPerDay>2</bed_healPerDay>
+			<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+			<fixedStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<categories>
+						<li>EggsDragon</li>
+					</categories>
+				</filter>
+			</fixedStorageSettings>
+		</building>
+		<comps>
+			<li Class="DD.CompProperties_AssignableToPawn_Body">
+				<bodyDef>QuadrupedeAnimalWithClawsDragon</bodyDef>
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>DD.CompAssignableToPawn_Nest</compClass>
+			</li>
+			<li Class="DD.CompProperties_EggIncubatorNestBonus">
+				<compClass>DD.CompEggIncubator_Nest</compClass>
+				<!-- <debug>true</debug> -->
+				<!-- Debug tag causes the comp to log messages in the form: -->
+				<!-- <Previous Progress value> -> <New Progress value> | Δ: <Difference between previous and new value> θ: <Estimated number of ticks till progress 100%> ~ <Estimated number of seconds till progress 100%> seconds -->
+				<!-- E.g: 0.009161062 -> 0.009166405 | Δ: 5.342998E-06 θ: 185446.3 ~ 3090.767 seconds -->
+				<!-- Previous Progress value = 0.009161062 -->
+				<!-- New Progress value = 0.009166405 -->
+				<!-- Difference between previous and new value = 5.342998E-06 -->
+				<!-- Estimated number of ticks till progress 100% = 185446.3 -->
+				<!-- Estimated number of seconds till progress 100% = 3090.767 -->
+				<basePercentageDailyProgress>0.1</basePercentageDailyProgress>
+				<bonusPercentageDailyProgress>0.5~0.15</bonusPercentageDailyProgress>
+				<factionCheckInterval>
+					<days>0.5</days>
+				</factionCheckInterval>
+				<factionChangeInterval>
+					<days>5</days>
+				</factionChangeInterval>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!--=========================== Dragon Pillow ===============================-->
+	<ThingDef ParentName="FurnitureWithQualityBase">
+		<defName>DragonPillow</defName>
+		<thingClass>DD.Building_StorageBed</thingClass>
+		<label>dragon pillow</label>
+		<description>A soft bed for dragons to sleep on. Perfectly fits a dragon and a dragon egg. Grants a 13% growth bonus for dragon eggs.</description>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<surfaceType>Item</surfaceType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<rotatable>true</rotatable>
+		<canOverlapZones>false</canOverlapZones>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.15</fillPercent>
+		<pathCost>40</pathCost>
+		<uiIconScale>0.80</uiIconScale>
+		<costStuffCount>40</costStuffCount>
+    <designationCategory>Furniture</designationCategory>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>DraconicIncubation</li>
+    </researchPrerequisites>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
+		<costList>
+			<Gold>4</Gold>
+		</costList>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<graphicData>
+			<texPath>Things/Building/Misc/DragonPillow/DragonPillow</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<building>
+			<bed_humanlike>false</bed_humanlike>
+			<bed_showSleeperBody>true</bed_showSleeperBody>
+			<bed_healPerDay>3</bed_healPerDay>
+			<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+			<fixedStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<categories>
+						<li>EggsDragon</li>
+					</categories>
+				</filter>
+			</fixedStorageSettings>
+		</building>
+		<statBases>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<WorkToBuild>1000</WorkToBuild>
+			<Mass>70</Mass>
+			<BedRestEffectiveness>2.5</BedRestEffectiveness>
+			<Comfort>2</Comfort>
+			<ImmunityGainSpeedFactor>1.86</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>2</SurgerySuccessChanceFactor>
+		</statBases>
+		<comps>
+			<li Class="DD.CompProperties_AssignableToPawn_Body">
+				<bodyDef>QuadrupedeAnimalWithClawsDragon</bodyDef>
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>DD.CompAssignableToPawn_Nest</compClass>
+			</li>
+			<li Class="DD.CompProperties_EggIncubatorNestBonus">
+				<compClass>DD.CompEggIncubator_Nest</compClass>
+				<!-- <debug>true</debug> -->
+				<!-- Debug tag causes the comp to log messages in the form: -->
+				<!-- <Previous Progress value> -> <New Progress value> | Δ: <Difference between previous and new value> θ: <Estimated number of ticks till progress 100%> ~ <Estimated number of seconds till progress 100%> seconds -->
+				<!-- E.g: 0.009161062 -> 0.009166405 | Δ: 5.342998E-06 θ: 185446.3 ~ 3090.767 seconds -->
+				<!-- Previous Progress value = 0.009161062 -->
+				<!-- New Progress value = 0.009166405 -->
+				<!-- Difference between previous and new value = 5.342998E-06 -->
+				<!-- Estimated number of ticks till progress 100% = 185446.3 -->
+				<!-- Estimated number of seconds till progress 100% = 3090.767 -->
+				<basePercentageDailyProgress>0.13</basePercentageDailyProgress>
+				<bonusPercentageDailyProgress>0.15~0.25</bonusPercentageDailyProgress>
+				<factionCheckInterval>
+					<days>0.5</days>
+				</factionCheckInterval>
+				<factionChangeInterval>
+					<days>2.5</days>
+				</factionChangeInterval>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!--=========================== Incubators ===============================-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>BasicIncubator</defName>
+		<label>basic incubator</label>
+		<description>An incubator specially made for dragon eggs. Speeds up the development of the dragon embryo by 30%, allowing it to hatch a little earlier than normal.</description>
+		<graphicData>
+			<texPath>Things/Building/Misc/BasicIncubator/BasicIncubator</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>2.8</drawSize>
+		</graphicData>
+		<thingClass>Building_WorkTable</thingClass>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>1</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<placeWorkers>
+		  <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<size>(2,1)</size>
+		<statBases>
+			<WorkToBuild>1600</WorkToBuild>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0.3</Flammability>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<costList>
+			<WoodLog>50</WoodLog>
+		</costList>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<recipes>
+			<li>HaulIncubateDragonEgg</li>
+		</recipes>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<comps>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>10</heatPerSecond>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>2.2</fuelConsumptionRate>
+				<fuelCapacity>100.0</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</fuelFilter>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="DD.CompProperties_FireOverlay_RotAware">
+				<fireSize>0.4</fireSize>
+				<offset>(0,0,-0.2)</offset>
+				<rotation>
+					<li>North</li>
+					<li>South</li>
+				</rotation>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>5</glowRadius>
+				<glowColor>(217,112,33,0)</glowColor>
+			</li>
+			<li Class="DD.CompProperties_EggIncubator">
+				<compClass>DD.CompEggIncubator_Container</compClass>
+				<!-- <debug>true</debug> -->
+				<!-- Debug tag causes the comp to log messages in the form: -->
+				<!-- <Previous Progress value> -> <New Progress value> | Δ: <Difference between previous and new value> θ: <Estimated number of ticks till progress 100%> ~ <Estimated number of seconds till progress 100%> seconds -->
+				<!-- E.g: 0.009161062 -> 0.009166405 | Δ: 5.342998E-06 θ: 185446.3 ~ 3090.767 seconds -->
+				<!-- Previous Progress value = 0.009161062 -->
+				<!-- New Progress value = 0.009166405 -->
+				<!-- Difference between previous and new value = 5.342998E-06 -->
+				<!-- Estimated number of ticks till progress 100% = 185446.3 -->
+				<!-- Estimated number of seconds till progress 100% = 3090.767 -->
+				<basePercentageDailyProgress>0.3</basePercentageDailyProgress>
+				<eggDrawOffset>(0,0,0.4)</eggDrawOffset>
+				<gizmoLabel>Retrieve Egg</gizmoLabel>
+				<gizmoDesc>Removes the egg from the incubator.</gizmoDesc>
+				<gizmoIconPath>UserInterface/Rituals/TakeEgg</gizmoIconPath>
+				<factionCheckInterval>
+					<days>0.25</days>
+				</factionCheckInterval>
+				<factionChangeInterval>
+					<days>2</days>
+				</factionChangeInterval>
+			</li>
+		</comps>
+    <designationCategory>Misc</designationCategory>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>DraconicIncubation</li>
+    </researchPrerequisites>
+		<modExtensions>
+			<li Class="DD.GraphicsLayerExtension">
+				<layers>
+					<li>
+						<graphicData>
+							<texPath>Things/Building/Misc/BasicIncubator/BasicIncubatorTop</texPath>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<shaderType>CutoutComplex</shaderType>
+							<drawSize>2.8</drawSize>
+						</graphicData>
+					<layer>ItemImportant</layer>
+					</li>
+				</layers>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>AdvancedIncubator</defName>
+		<label>advanced incubator</label>
+		<description>A highly monitored and regulated machine specially made to assist in the development of a dragon embryo. Allows the egg to grow 50% faster than normal, and hence a shorter hatch wait time.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Misc/AdvancedIncubator/AdvancedIncubator</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>2.8</drawSize>
+		</graphicData>
+		<size>(2,1)</size>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>1</fillPercent>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<canOverlapZones>false</canOverlapZones>
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+    <designationCategory>Misc</designationCategory>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<placeWorkers>
+		  <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>AirConditioning</li>
+			<li>DraconicAdvancedIncubation</li>
+		</researchPrerequisites>
+		<statBases>
+			<WorkToBuild>3200</WorkToBuild>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>80</costStuffCount>
+		<costList>
+			<ComponentIndustrial>12</ComponentIndustrial>
+		</costList>
+		<recipes>
+			<li>HaulIncubateDragonEgg</li>
+		</recipes>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>500</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>5</heatPerSecond>
+			</li>
+			<li Class="CompProperties_Flickable" />
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(217,112,33,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="DD.CompProperties_EggIncubator">
+				<compClass>DD.CompEggIncubator_Container</compClass>
+				<!-- <debug>true</debug> -->
+				<!-- Debug tag causes the comp to log messages in the form: -->
+				<!-- <Previous Progress value> -> <New Progress value> | Δ: <Difference between previous and new value> θ: <Estimated number of ticks till progress 100%> ~ <Estimated number of seconds till progress 100%> seconds -->
+				<!-- E.g: 0.009161062 -> 0.009166405 | Δ: 5.342998E-06 θ: 185446.3 ~ 3090.767 seconds -->
+				<!-- Previous Progress value = 0.009161062 -->
+				<!-- New Progress value = 0.009166405 -->
+				<!-- Difference between previous and new value = 5.342998E-06 -->
+				<!-- Estimated number of ticks till progress 100% = 185446.3 -->
+				<!-- Estimated number of seconds till progress 100% = 3090.767 -->
+				<basePercentageDailyProgress>0.5</basePercentageDailyProgress>
+				<gizmoLabel>Retrieve Egg</gizmoLabel>
+				<gizmoDesc>Removes the egg from the incubator.</gizmoDesc>
+				<gizmoIconPath>UserInterface/Rituals/TakeEgg</gizmoIconPath>
+				<factionCheckInterval>
+					<days>0.1</days>
+				</factionCheckInterval>
+				<factionChangeInterval>
+					<days>1</days>
+				</factionChangeInterval>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="DD.GraphicsLayerExtension">
+				<layers>
+					<li>
+						<graphicData>
+							<texPath>Things/Building/Misc/AdvancedIncubator/AdvancedIncubatorTop</texPath>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>2.8</drawSize>
+							<shaderType>CutoutComplex</shaderType>
+						</graphicData>
+						<layer>ItemImportant</layer>
+					</li>
+					<li>
+						<graphicData>
+							<texPath>Things/Building/Misc/AdvancedIncubator/AdvancedIncubatorLid</texPath>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>2.8</drawSize>
+							<shaderType>Transparent</shaderType>
+						</graphicData>
+						<layer>ItemImportant</layer>
+					</li>
+				</layers>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- 
+  <ThingDef ParentName="BaseBullet">
+    <defName>Explode</defName>
+    <label>high plasma projectile</label>
+    <graphicData>
+      <texPath>AnimalProjectile/DragonSpit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Frostbite</damageDef>
+      <speed>45</speed>
+      <explosionRadius>2</explosionRadius>
+      <damageAmountBase>10</damageAmountBase>
+    </projectile>
+  </ThingDef> -->
+</Defs>

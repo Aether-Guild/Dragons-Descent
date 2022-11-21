@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Draconic Ambrosia -->
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>MoonStone</defName>
+		<label>moon stone</label>
+		<description>The moon stone is not a stone but is a hardend type of pill created by drying jewel berries, crushing them, then pressing the powder into a large blue circular pill./nHumans cannot injest this however as the pill is the size of a dessert plate and any smaller pills would require such accuracy to create lest the aging process would go on until only bones remained. Only dragons can safely be admistered this drug due to their size and fundamentum. Adds 3~5 years.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/MoonStone</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>800</WorkToMake>
+			<MarketValue>28</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>0.2</Flammability>
+		</statBases>
+		<techLevel>Medieval</techLevel>
+    <ingestible>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="DD.IngestionOutcomeDoer_DoIfDrugTarget">
+					<!-- Pawns with `DD.AmbrosiaTargetExtension` modExtension -->
+					<ifTrue Class="DD.IngestionOutcomeDoer_Multiple">
+						<doers>
+							<li Class="IngestionOutcomeDoer_GiveHediff">
+								<hediffDef>WeakDraconicDrug</hediffDef>
+								<severity>1</severity>
+							</li>
+							<li Class="IngestionOutcomeDoer_GiveHediff">
+								<hediffDef>AgeSickness</hediffDef>
+								<severity>0.8</severity>
+							</li>
+						</doers>
+					</ifTrue>
+					
+					<!-- Pawns without `DD.AmbrosiaTargetExtension` modExtension -->
+					<ifFalse Class="IngestionOutcomeDoer_GiveHediff">
+						<hediffDef>FoodPoisoning</hediffDef>
+						<severity>2.7</severity>
+					</ifFalse>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>DraconicDrugProduction</researchPrerequisite>
+			<recipeUsers>
+				<li>CraftingSpot</li>
+				<li>DrugLab</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<JewelBerries>9</JewelBerries>
+		</costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1000</listOrder>
+        <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+      </li>
+    </comps>
+	</ThingDef>
+  
+	<HediffDef>
+		<defName>WeakDraconicDrug</defName>
+		<label>draconic aging</label>
+		<labelNoun>an accelerated aging effect</labelNoun>
+		<description>Experiencing accelerated aging over time</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<li Class="DD.HediffCompProperties_ModifyAge">
+				<updateMethod>AddAge</updateMethod>
+				<ageAdjustment>
+					<years>2~3</years>
+				</ageAdjustment>
+				<duration>
+					<hours>6~12</hours>
+				</duration>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+  
+</Defs>

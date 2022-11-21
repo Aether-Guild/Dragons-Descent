@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<nomatch Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="DDMeleeWeapon_FocusingTome"]</xpath>
+		</nomatch>
+	</Operation>
+	
+</Patch>

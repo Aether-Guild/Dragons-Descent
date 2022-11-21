@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ScenarioDef>
+    <defName>DragonThieves</defName>
+    <label>Dragon Thieves</label>
+    <description>You have done it, you escaped capture for your crimes. Now in possession of a dragon egg you must prepare for its arrival, or simply sell it off. Thieves have to survive somehow. \n\nNote: Since you'll start poor and lack technology, this is a difficult scenario.</description>
+    <scenario>
+      <summary>Four runaway tribesmen with a very valuable egg. Difficult.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>PlayerTribe</factionDef>
+      </playerFaction>
+      <parts>
+
+        <!-- Config pages -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>4</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+
+        <!-- Player starting stuff spawn method-->
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+
+        <!-- Player pawns modifiers -->
+        <li Class="ScenPart_SetNeedLevel">
+          <def>SetNeedLevel</def>
+          <visible>false</visible>
+          <context>PlayerStarter</context>
+          <chance>1.0</chance>
+          <need>Food</need>
+          <levelRange>0~0.1</levelRange>
+        </li>
+
+        <!-- Player starting things -->
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Silver</thingDef>
+          <count>100</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Pemmican</thingDef>
+          <count>500</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineHerbal</thingDef>
+          <count>20</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MeleeWeapon_Ikwa</thingDef>
+          <stuff>Steel</stuff>
+        </li>
+        <li Class="DD.ScenPart_StartingThing_DefinedTamed">
+          <def>StartingThing_DefinedTamed_PlayerTribe</def>
+          <thingDef>EggGreenDragonFertilized</thingDef>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>DragonNest</thingDef>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Bow_Short</thingDef>
+          <count>2</count>
+        </li>
+        <li Class="ScenPart_StartingAnimal">
+          <def>StartingAnimal</def>
+          <count>1</count>
+          <bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
+        </li>
+
+        <!-- Scatter some things near player start -->
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>WoodLog</thingDef>
+          <count>500</count>
+        </li>
+
+        <!-- Game start dialog -->
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>You and your cronies had successfully snuck into the sacred temple; knowing from rumours something very valuable was hidden inside. Once the guards were alerted of your prescence you had no choice but to hide and take what you could get, or else suffer the consequences of attempted theft. When you finally escaped pursuit you decided to see what you managed to grab, and you did it. You stole the dragon egg. Now you must survive with minimal supplies, and a soon to be very hungry dragon.\n\nYour success is currently temporary, and the rest of your journey is going to be difficult, but you will have a great advantage in the future. If you make it that far.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+</Defs>

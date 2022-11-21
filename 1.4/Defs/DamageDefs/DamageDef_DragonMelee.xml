@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--=========== Toxic Bite ==========-->
+  <DamageDef>
+    <defName>Toxic_Bite</defName>
+    <label>toxic bite</label>
+    <workerClass>DamageWorker_Stab</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been bitten to death.</deathMessage>
+    <hediff>Stab</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <additionalHediffs>
+      <li>
+        <hediff>Toxic_Bite</hediff>
+        <severityPerDamageDealt>0.01</severityPerDamageDealt>
+        <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+      </li>
+    </additionalHediffs>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+  </DamageDef>
+  <!--============= Rend ===============-->
+  <DamageDef>
+    <defName>Rend</defName>
+    <label>rend</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has bled to death.</deathMessage>
+    <hediff>Filthy_Wound</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+  </DamageDef>
+  <!--============= Skull Bash ==============-->
+  <DamageDef>
+    <defName>Skull_Bash</defName>
+    <label>skull bash</label>
+    <workerClass>DamageWorker_Blunt</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been concussed to death.</deathMessage>
+    <hediff>Crush</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <additionalHediffs>
+      <li>
+        <hediff>Concussion</hediff>
+        <severityPerDamageDealt>.01</severityPerDamageDealt>
+        <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+      </li>
+    </additionalHediffs>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Blunt</armorCategory>
+  </DamageDef>
+  <!--============== Frost Bite =============-->
+  <DamageDef>
+    <defName>Frost_Bite</defName>
+    <label>frost bite</label>
+    <workerClass>DamageWorker_Stab</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been bitten to death.</deathMessage>
+    <hediff>Frostbite</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <additionalHediffs>
+      <li>
+        <hediff>Hypothermia</hediff>
+        <severityPerDamageDealt>0.02</severityPerDamageDealt>
+        <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+      </li>
+    </additionalHediffs>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+  </DamageDef>
+  <!--============ Pyro Bite =============-->
+  <DamageDef>
+    <defName>Pyro_Bite</defName>
+    <workerClass>DamageWorker_Flame</workerClass>
+    <label>pyro bite</label>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has burned to death.</deathMessage>
+    <hediff>Burn</hediff>
+    <armorCategory>Heat</armorCategory>
+    <minDamageToFragment>10</minDamageToFragment>
+    <defaultDamage>5</defaultDamage>
+    <defaultArmorPenetration>.4</defaultArmorPenetration>
+    <explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastFlame</explosionCellFleck>
+    <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+    <explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+    <soundExplosion>Explosion_Flame</soundExplosion>
+    <combatLogRules>Damage_Flame</combatLogRules>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+  </DamageDef>
+
+</Defs>

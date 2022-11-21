@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SoundDef>
+    <defName>Dragon_Call</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Dragon_Call</clipPath>
+          </li>
+        </grains>
+        <volumeRange>10~30</volumeRange>
+        <pitchRange>1~1.35</pitchRange>
+        <distRange>0~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Baby_Dragon_Call</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Baby_Dragon_Call</clipPath>
+          </li>
+        </grains>
+        <volumeRange>10~30</volumeRange>
+        <pitchRange>0.8~1.4</pitchRange>
+        <distRange>0~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Dragon_Angry</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Dragon_Angry</clipPath>
+          </li>
+        </grains>
+        <volumeRange>10~25</volumeRange>
+        <pitchRange>0.5~1.1</pitchRange>
+        <distRange>0~90</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Baby_Dragon_Angry</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Baby_Dragon_Angry</clipPath>
+          </li>
+        </grains>
+        <volumeRange>20~40</volumeRange>
+        <pitchRange>0.4~0.6</pitchRange>
+        <distRange>0~70</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Dragon_Death</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Dragon_Death</clipPath>
+          </li>
+        </grains>
+        <volumeRange>20~40</volumeRange>
+        <pitchRange>1.4~1.6</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Baby_Dragon_Death</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Baby_Dragon_Death</clipPath>
+          </li>
+        </grains>
+        <volumeRange>15~25</volumeRange>
+        <pitchRange>0.8~1.4</pitchRange>
+        <distRange>0~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Dragon_Wounded</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Dragon_Wounded</clipPath>
+          </li>
+        </grains>
+        <volumeRange>10~20</volumeRange>
+        <pitchRange>0.6~1.4</pitchRange>
+        <distRange>0~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Baby_Dragon_Wounded</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Baby_Dragon_Wounded</clipPath>
+          </li>
+        </grains>
+        <volumeRange>20~30</volumeRange>
+        <pitchRange>0.8~1.2</pitchRange>
+        <distRange>0~60</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Dragon_HitPawn</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxVoices>2</maxVoices>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Dragon_Hit</clipPath>
+          </li>
+        </grains>
+        <volumeRange>10~25</volumeRange>
+        <pitchRange>0.95~1.25</pitchRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>DragonBreathShot</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/BreathShot</clipPath>
+          </li>
+        </grains>
+        <volumeRange>10~12</volumeRange>
+        <pitchRange>0.7~1</pitchRange>
+        <distRange>0~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>DragonBreathFire</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/FlameWhoosh_8</clipPath>
+          </li>
+        </grains>
+        <volumeRange>65~90</volumeRange>
+        <pitchRange>0.3~0.9</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Dragon_Bom</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Dragon_Angry</clipPath>
+          </li>
+        </grains>
+        <volumeRange>65~70</volumeRange>
+        <pitchRange>0.3~0.4</pitchRange>
+        <distRange>0~100</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

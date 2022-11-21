@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Defs>
+<!-- <DamageDef>
+    <defName>DD_AcidSpit</defName>
+    <label>acid spit</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been corroded to death.</deathMessage>
+    <hediff>VEF_AcidBurn</hediff>
+    <additionalHediffs>
+        <li>
+            <hediff>DD_AcidBuildup</hediff>
+            <severityPerDamageDealt>0.01</severityPerDamageDealt>
+
+        </li>
+    </additionalHediffs>
+    <isRanged>true</isRanged>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <armorCategory>Heat</armorCategory>
+</DamageDef> -->
+
+</Defs>

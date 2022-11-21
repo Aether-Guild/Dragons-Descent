@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- <ThingDef ParentName="OrganicProductBase">
+		<defName>DragonKibble</defName>
+		<label>dragon kibble</label>
+		<description>Animal feed made from mixed meat and plant sources. Humans can eat it, if they want to meet an explosive end.</description>
+		<thingCategories>
+			<li>Foods</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Item/Resource/Kibble</texPath>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>10.1</MarketValue>
+			<Mass>0.15</Mass>
+			<FoodPoisonChanceFixedHuman>22</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<joyKind>Gluttonous</joyKind>
+			<joy>0.80</joy>
+			<preferability>NeverForNutrition</preferability>
+			<tasteThought>AteKibble</tasteThought>
+			<optimalityOffsetHumanlikes>-300</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>15</optimalityOffsetFeedingAnimals>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>RawVegetable_Eat</ingestSound>
+			<outcomeDoers>
+				<li Class="DD.IngestionOutcomeDoer_DoIfBody">
+					<targetDef>QuadrupedeAnimalWithClawsDragon</targetDef>
+					<doer Class="IngestionOutcomeDoer_OffsetNeed">
+						<need>Food</need>
+						<offset>10000</offset>
+					</doer>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+		</comps>
+	</ThingDef> -->
+</Defs>

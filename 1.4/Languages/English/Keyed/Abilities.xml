@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- ========== Ability ========== -->
+	<AbilityGainHediffMessage>{PAWN} has gained the {ABILITY} ability.</AbilityGainHediffMessage>
+
+	<Ability_NotifyAttackFaction>Relations with the attacked faction will change by {GOODWILL}.</Ability_NotifyAttackFaction>
+	<Ability_NotifyOtherFactions>Relations with the all other factions will change by {GOODWILL}.</Ability_NotifyOtherFactions>
+	<Ability_NotifyMapGenocide>All pawns on the map will be killed and the map will be destroyed!</Ability_NotifyMapGenocide>
+	
+	<Ability_RequiresBodyPart>{PAWN} is missing ({COUNT}) {BODYPART}.</Ability_RequiresBodyPart>
+	
+</LanguageData>

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Orbital Dragon -->
+
+  <TraderKindDef>
+    <defName>Orbital_Dragons</defName>
+    <label>draconic goods trader</label>
+    <orbital>true</orbital>
+    <stockGenerators>
+
+      <!-- Resources -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>3000~5200</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>EggsDragon</categoryDef>
+        <thingDefCountRange>1~2</thingDefCountRange>
+        <countRange>1~2</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>FoodRaw</categoryDef>
+        <excludedCategories>
+          <li>EggsFertilized</li>
+        </excludedCategories>
+        <thingDefCountRange>1~3</thingDefCountRange>
+        <totalPriceRange>800~2000</totalPriceRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Gold</thingDef>
+        <countRange>200~400</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>DragonLeathers</categoryDef>
+        <thingDefCountRange>0~2</thingDefCountRange>
+        <totalPriceRange>400~1000</totalPriceRange>
+        <countRange>10~20</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>Textiles</categoryDef>
+        <excludedCategories>
+          <li>DragonLeathers</li>
+        </excludedCategories>
+        <thingDefCountRange>1~2</thingDefCountRange>
+        <totalPriceRange>880~1000</totalPriceRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>DragonHorn</thingDef>
+        <countRange>0~2</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>MedicineIndustrial</thingDef>
+        <countRange>20~45</countRange>
+      </li>
+
+      <!-- Drugs -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>DragonsBlood</thingDef>
+        <countRange>0~5</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>DraconicAmbrosia</thingDef>
+        <countRange>0~10</countRange>
+      </li>
+
+      <!-- Weapons -->
+      <!-- <li Class="StockGenerator_WeaponsRanged">
+        <countRange>0~4</countRange>
+      </li> -->
+      <li Class="StockGenerator_Category">
+        <categoryDef>WeaponsMelee</categoryDef>
+        <thingDefCountRange>2~3</thingDefCountRange>
+        <countRange>0~4</countRange>
+      </li>
+
+      <!-- Apparel -->
+      <!-- <li Class="StockGenerator_Armor">
+        <countRange>2~5</countRange>
+      </li> -->
+
+      <!-- Implants -->
+      <!-- none -->
+
+      <!-- Buildings -->
+      <!-- none -->
+
+      <!-- Exotic -->
+      <li Class="StockGenerator_Tag">
+        <tradeTag>Artifact</tradeTag>
+        <thingDefCountRange>0~4</thingDefCountRange>
+        <countRange>0~2</countRange>
+      </li>
+
+      <!-- Slaves -->
+      <!-- none -->
+
+      <!-- Animals -->
+      <!-- none -->
+
+      <!-- Buying -->
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+      <li Class="StockGenerator_BuyTradeTag">
+        <tag>ImplantEmpireCommon</tag>
+      </li>
+      <li Class="StockGenerator_BuyTradeTag">
+        <tag>ImplantEmpireRoyal</tag>
+      </li>
+
+    </stockGenerators>
+  </TraderKindDef>
+</Defs>

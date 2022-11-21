@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+
+	<AbilityDef>
+        <defName>DraconicFlight</defName>
+        <label>draconic flight</label>
+        <description>Jet goes up, Icarus comes down.</description>
+		<iconPath>UserInterface/Abilities/Fly</iconPath>
+        <abilityClass>DD.Ability_Base</abilityClass>
+        <cooldownTicksRange>1800~5200</cooldownTicksRange>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+			<range>40</range>
+			<requireLineOfSight>false</requireLineOfSight>
+			<drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+			<warmupTime>1</warmupTime>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+        </verbProperties>
+        <comps>
+			<li Class="DD.AbilityCompProperties_Flight">
+				<compClass>DD.AbilityComp_Flight</compClass>
+				<range>100</range>
+			</li>
+			<li Class="DD.AbilityCompProperties_Cooldown">
+                <compClass>DD.AbilityComp_Cooldown</compClass>
+				<cooldownTicksRange>8000</cooldownTicksRange>
+			</li>
+			<li Class="DD.AbilityCompProperties_RequireBodyPart">
+				<compClass>DD.AbilityComp_RequireBodyPart</compClass>
+				<missing>true</missing>
+				<bodyPart>Eye</bodyPart>
+			</li>
+        </comps>
+    </AbilityDef>
+	
+	<ThingDef>
+		<defName>WingedFlyer</defName>
+		<label>dragon in flight</label>
+		<thingClass>DD.WingedFlyer</thingClass>
+		<category>Ethereal</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Weather</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<destroyOnDrop>true</destroyOnDrop>
+		<tradeability>None</tradeability>
+	</ThingDef>
+	
+
+	<!-- <AbilityDef>
+		<defName>DD_Longjump_Dragon</defName>
+		<label>mecha dragon longjump</label>
+		<description>Jump to a distant location using special wings.</description>
+		<iconPath>UI/Abilities/MechLongJump</iconPath>
+		<cooldownTicksRange>180</cooldownTicksRange>
+		<verbProperties>
+		  <verbClass>Verb_CastAbilityJump</verbClass>
+		  <label>jump</label>
+		  <violent>false</violent>
+		  <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+		  <warmupTime>0.1</warmupTime>
+		  <minRange>5.9</minRange>
+		  <range>15</range>
+		  <requireLineOfSight>false</requireLineOfSight>
+		  <soundCast>Longjump_Jump</soundCast>
+		  <soundLanding>Longjump_Land</soundLanding>
+		  <flyWithCarriedThing>false</flyWithCarriedThing>
+		  <targetParams>
+			<canTargetLocations>true</canTargetLocations>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetBuildings>false</canTargetBuildings>
+		  </targetParams>
+		</verbProperties>
+	  </AbilityDef> -->
+</Defs> 

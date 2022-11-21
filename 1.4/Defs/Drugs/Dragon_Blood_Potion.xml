@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Dragon Blood Potion -->
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>DragonsBlood</defName>
+		<label>dragon's blood</label>
+		<description>Dragons have forever been known as mythical beasts with amazing strength. Some believe this strength is stored within the eyes or claws, but in reality it is from its blood. By grinding up a handful of scales and using jewel berry pulp the blood can both be extracted and diluted at the same time, creating the perfect liquid for a potion. This potion grants some of the dragons powers; speed, pain resistence, fierce combat capabilities, and flame nullification. \n\nDue to the feeling of power this creates within those who take it may get extremely addicted. The feeling of a dragon's power coursing through your veins is hard to resist.</description>
+		<descriptionHyperlinks>
+			<HediffDef>DragonsBloodHigh</HediffDef>
+			<HediffDef>DragonsBloodTolerance</HediffDef>
+			<HediffDef>DragonsBloodAddiction</HediffDef>
+			<HediffDef>ChemicalDamageModerate</HediffDef>
+			<HediffDef>FlameNullification</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Special/DragonsBlood</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>1250</WorkToMake>
+			<MarketValue>58.2</MarketValue>
+			<Mass>0.1</Mass>
+		</statBases>
+		<techLevel>Medieval</techLevel>
+		<ingestible>
+			<joyKind>Chemical</joyKind>
+			<joy>0.40</joy>
+			<drugCategory>Hard</drugCategory>
+			<foodType>Processed, Fluid</foodType>
+			<baseIngestTicks>360</baseIngestTicks>
+			<ingestSound>Ingest_Drink</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<useEatingSpeedStat>true</useEatingSpeedStat>
+			<chairSearchRadius>0</chairSearchRadius>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>DragonsBloodHigh</hediffDef>
+					<severity>0.75</severity>
+					<toleranceChemical>DragonsBlood</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>FlameNullification</hediffDef>
+					<severity>0.75</severity>
+					<toleranceChemical>DragonsBlood</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed">
+					<need>Rest</need>
+					<offset>0.2</offset>
+					<toleranceChemical>DragonsBlood</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>DragonsBloodTolerance</hediffDef>
+					<severity>0.052</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<productCount>1</productCount>
+			<researchPrerequisite>DraconicDrugProduction</researchPrerequisite>
+			<recipeUsers>
+				<li>CraftingSpot</li>
+				<li>DrugLab</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<JewelBerries>12</JewelBerries>
+      <HardScale>5</HardScale>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>DragonsBlood</chemical>
+				<addictiveness>0.055</addictiveness>
+        <minToleranceToAddict>0.015</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+				<listOrder>200</listOrder>
+				<overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+				<largeOverdoseChance>0.01</largeOverdoseChance>
+			</li>
+		</comps>
+	</ThingDef>
+	
+  <HediffDef>
+    <defName>FlameNullification</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>nullifying flames</label>
+    <labelNoun>a flame nullifying barrier</labelNoun>
+    <description>A thin barrier normally created on a dragon's scales has been replicated via the intake of draconic blood. This barrier blocks or reduces all flames.</description>
+    <defaultLabelColor>(1,0.9,0.2)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-2.5</severityPerDay>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <statOffsets>
+            <Flammability>-0.7</Flammability>
+          </statOffsets>
+        </li>
+      </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DragonsBloodHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>high on dragon's blood</label>
+    <labelNoun>a dragon's blood high</labelNoun>
+    <description>A dragon's blood tends to over take the host's normal blood, granting higher defense, attack, and near flame immunity.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-2.5</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <painFactor>0.6</painFactor>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.20</offset>
+            </li>
+            <li>
+             <capacity>BloodFiltration</capacity>
+             <offset>0.15</offset>
+           </li>
+           <li>
+              <capacity>Moving</capacity>
+              <offset>0.10</offset>
+           </li>
+           <li>
+             <capacity>Breathing</capacity>
+             <offset>0.10</offset>
+          </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>DragonsBloodTolerance</defName>
+    <label>dragon's blood tolerance</label>
+    <description>A built-up tolerance to dragon's blood. The more severe this tolerance is, the more dragon's blood it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.015</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>DragonsBlood</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <minSeverity>0.50</minSeverity>
+        <baseMtbDays>50</baseMtbDays>
+        <partsToAffect>
+          <li>Brain</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>DragonsBloodAddiction</defName>
+    <label>dragon's blood addiction</label>
+    <description>A bodily dependence to dragon's blood. Long-term presence of dragon's blood has caused the body to rely on it, so the body, especially the brain, now needs it to function properly.\nWithout regular doses of dragon's blood, withdrawal symptoms will begin. However, extended abstinence will force the body to resume normal blood filtration and creation, flushing out the tainted blood.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>Chemical_DragonsBlood</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.04</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <painFactor>6</painFactor>
+        <restFallFactorOffset>0.6</restFallFactorOffset>
+        <hungerRateFactorOffset>0.9</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.35</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>-0.30</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.22</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_DrugExtreme</mentalState>
+            <mtbDays>40</mtbDays>
+          </li>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>7</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ChemicalDef>
+    <defName>DragonsBlood</defName>
+    <label>dragon's blood</label>
+    <addictionHediff>DragonsBloodAddiction</addictionHediff>
+    <toleranceHediff>DragonsBloodTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.2</onGeneratedAddictedToleranceChance>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_DragonsBlood</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>dragon's blood</label>
+    <description>Because of the addiction to dragon's blood, this person needs to regularly drink the potion to avoid withdrawal symptoms.</description>
+    <listPriority>45</listPriority>
+    <fallPerDay>0.333</fallPerDay>
+  </NeedDef>
+  
+	<ThoughtDef>
+		<defName>DD_DragonNuzzled</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>1</stackLimit>
+		<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>Seen Dragon nuzzled</label>
+				<description>I want to be nuzzled by a dragon too!</description>
+				<baseMoodEffect>6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+  <ThoughtDef>
+    <defName>DragonsBloodHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>DragonsBloodHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>high on dragon's blood</label>
+        <description>I feel like the mighty dragon. I can do anything. This is the feeling of true power!</description>
+        <baseMoodEffect>15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>DragonsBloodWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>DragonsBloodAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>dragon's blood withdrawal</label>
+        <description>It's all crashing down, I don't feel the strength any longer. My body has been ravaged and weakened by the blood. All I can do is sleep, eat, and be in pain, please make it stop.</description>
+        <baseMoodEffect>-35</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

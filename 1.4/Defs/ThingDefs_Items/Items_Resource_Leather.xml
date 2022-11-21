@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="LeatherBase">
+    <defName>Dragon_Leather</defName>
+    <label>dragon leather</label>
+    <description>Exotic leather of a dragon. The tanning process has converted the hide into a rich, supple, strong leather. However, the original color has been lost (like when a lobster is boiled in water) and so the skin has irreversibly changed color.</description>
+    <graphicData>
+      <color>(102,17,17)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+      <DeteriorationRate>1.2</DeteriorationRate>
+      <Mass>0.15</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>17.3</MarketValue>
+      <StuffPower_Armor_Sharp>1.42</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.64</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.20</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>28</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>35</StuffPower_Insulation_Heat>
+      <StuffPower_Armor_Harmony MayRequire="torann.arimworldofmagic">0.2</StuffPower_Armor_Harmony>
+    </statBases>
+    <thingCategories>
+      <li>DragonLeathers</li>
+    </thingCategories>
+    <stuffProps>
+      <color>(102,17,17)</color>
+      <commonality>0.001</commonality>
+      <statOffsets>
+        <Beauty>24</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>2.2</MaxHitPoints>
+        <Beauty>10</Beauty>
+        <Flammability>0.3</Flammability>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>Rare_Dragon_Leather</defName>
+    <label>rare dragon leather</label>
+    <description>The tanning process has converted these scales into a rich, supple, strong leather. However, the original color has been lost (like when a lobster is boiled in water) and so the scales and skin have irreversibly changed color.</description>
+    <graphicData>
+      <color>(159,153,247)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <DeteriorationRate>1</DeteriorationRate>
+      <Mass>0.15</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>22.8</MarketValue>
+      <StuffPower_Armor_Sharp>1.62</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.84</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.80</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>28</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>35</StuffPower_Insulation_Heat>
+      <StuffPower_Armor_Harmony MayRequire="torann.arimworldofmagic">0.3</StuffPower_Armor_Harmony>
+
+    </statBases>
+    <thingCategories>
+      <li>DragonLeathers</li>
+    </thingCategories>
+    <stuffProps>
+      <color>(159,153,247)</color>
+      <commonality>0</commonality>
+      <statOffsets>
+        <Beauty>32</Beauty>
+      </statOffsets>
+      <statFactors>
+        <Flammability>0.5</Flammability>
+        <MaxHitPoints>2.5</MaxHitPoints>
+        <Beauty>8</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>True_Dragon_Leather</defName>
+    <label>true dragon leather</label>
+    <description>The tanning process has converted these scales into a rich, supple, strong leather. And, unlike other leathers of this kind, it still holds a resemblance to its original color which is a testament of strength to the true dragon.</description>
+    <graphicData>
+      <color>(102,17,17)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <DeteriorationRate>1</DeteriorationRate>
+      <Mass>0.15</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>42.8</MarketValue>
+      <StuffPower_Armor_Sharp>1.88</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.20</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>2.80</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>28</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>35</StuffPower_Insulation_Heat>
+      <StuffPower_Armor_Harmony MayRequire="torann.arimworldofmagic">0.7</StuffPower_Armor_Harmony>
+    </statBases>
+    <thingCategories>
+      <li>DragonLeathers</li>
+    </thingCategories>
+    <stuffProps>
+      <color>(102,17,17)</color>
+      <commonality>0</commonality>
+      <statOffsets>
+        <Beauty>40</Beauty>
+      </statOffsets>
+      <statFactors>
+        <Flammability>0.9</Flammability>
+        <MaxHitPoints>2.5</MaxHitPoints>
+        <Beauty>8</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+</Defs>

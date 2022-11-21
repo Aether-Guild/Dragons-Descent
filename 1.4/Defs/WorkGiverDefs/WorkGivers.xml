@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ========== Incubators ========== -->
+	<WorkGiverDef>
+		<defName>DoBillsHaulDragonEggs</defName>
+		<label>do incubator bills</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Hauling</workType>
+		<priorityInType>40</priorityInType>
+		<fixedBillGiverDefs>
+			<li>BasicIncubator</li>
+			<li>AdvancedIncubator</li>
+		</fixedBillGiverDefs>
+		<verb>loading eggs</verb>
+		<gerund>loading eggs at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<!-- ========== Rituals ========== -->
+	<WorkGiverDef>
+		<defName>DoBillsRitual</defName>
+		<label>do rituals</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Hauling</workType>
+		<priorityInType>40</priorityInType>
+		<fixedBillGiverDefs>
+			<li>Altar</li>
+		</fixedBillGiverDefs>
+		<verb>performing rituals</verb>
+		<gerund>performing rituals at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<!-- ========== Scale ========== -->
+	<WorkGiverDef>
+		<defName>Scale</defName>
+		<label>Removing scales</label>
+		<giverClass>DD.WorkGiver_Scale</giverClass>
+		<workType>Handling</workType>
+		<verb>remove scales</verb>
+		<gerund>removing scales</gerund>
+		<priorityInType>90</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+</Defs>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DamageDef ParentName="BluntBase">
+		<defName>DD_Knockback</defName>
+		<deathMessage>{0} has been smashed to death.</deathMessage>
+		<label>Dragon attack</label>
+		<workerClass>VFECore.DamageWorker_PushBackAttackMelee</workerClass>
+		<modExtensions>
+			<li Class="VFECore.DamageExtension">
+				<pushBackDistance>3~5</pushBackDistance>
+			</li>
+		</modExtensions>
+	</DamageDef>
+    <ManeuverDef>
+        <defName>DD_Knockback</defName>
+        <requiredCapacity>DD_Knockback</requiredCapacity>
+        <verb>
+          <verbClass>Verb_MeleeAttackDamage</verbClass>
+          <meleeDamageDef>DD_Knockback</meleeDamageDef>
+        </verb>
+        <logEntryDef>MeleeAttack</logEntryDef>
+        <combatLogRulesHit>Maneuver_Stab_MeleeHit</combatLogRulesHit>
+        <combatLogRulesDeflect>Maneuver_Stab_MeleeDeflect</combatLogRulesDeflect>
+        <combatLogRulesMiss>Maneuver_Stab_MeleeMiss</combatLogRulesMiss>
+        <combatLogRulesDodge>Maneuver_Stab_MeleeDodge</combatLogRulesDodge>
+         <modExtensions>
+            <li Class="DD.VerbUsageExtension">
+                <useWhileHunting>false</useWhileHunting>
+            </li>
+         </modExtensions>
+      </ManeuverDef>
+
+
+</Defs>

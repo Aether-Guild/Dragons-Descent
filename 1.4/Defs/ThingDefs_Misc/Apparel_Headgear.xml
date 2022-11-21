@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- ===========Scale Helm============ -->
+  <ThingDef ParentName="ArmorHelmetMakeableBase">
+		<defName>DD_Apparel_ScaleHelm</defName>
+		<label>scale helmet</label>
+		<description>A helmet forged from small over lapping scales. Protects the entire head.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/ScaleHelm/ScaleHelm</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<tradeability>Sellable</tradeability>
+        <generateCommonality>0.5</generateCommonality>
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+			<li>DragonScale</li>
+      		<li>Metallic</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToMake>3800</WorkToMake>
+			<Mass>2.2</Mass>
+			<StuffEffectMultiplierArmor>0.52</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.25</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<thingCategories>
+			<li>Headgear</li>
+		</thingCategories>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/ScaleHelm/ScaleHelm</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>MedievalMilitary</li>
+				<li>MedievalArmorDecent</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<recipeMaker>
+			<researchPrerequisite>DraconicApparelAndWeapons</researchPrerequisite>
+			<useIngredientsForColor>false</useIngredientsForColor>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+			</recipeUsers>
+		</recipeMaker>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<!-- Reds -->
+					<weight>1</weight>
+					<only>(70,25,22)</only>
+				</li>
+				<li>
+					<weight>1</weight>
+					<only>(94,39,36)</only>
+				</li>
+				<li>
+					<weight>1</weight>
+					<only>(176,162,95)</only>
+				</li>
+				<li>
+					<!-- Greens -->
+					<weight>1</weight>
+					<only>(32,67,48)</only>
+				</li>
+				<li>
+					<weight>1</weight>
+					<only>(81,111,65)</only>
+				</li>
+				<li>
+					<!-- Blues -->
+					<weight>1</weight>
+					<only>(72,57,94)</only>
+				</li>
+				<li>
+					<weight>1</weight>
+					<only>(65,74,108)</only>
+				</li>
+				<li>
+					<weight>1</weight>
+					<only>(43,84,103)</only>
+				</li>
+				<li>
+					<!-- Monotone -->
+					<weight>1</weight>
+					<only>(43,41,44)</only>
+				</li>
+				<li>
+					<weight>1</weight>
+					<only>(187,191,194)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+  
+<!-- ============Dragon Crown============= -->
+  <ThingDef ParentName="ArmorHelmetMakeableBase">
+		<defName>DD_Apparel_DragonCrown</defName>
+		<label>dragon crown</label>
+		<description>A crown made out of carved dragon horns and metal. Greatly improves social impact.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/DragonCrown/DragonCrown</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<tradeability>Sellable</tradeability>
+        <generateCommonality>0.2</generateCommonality>
+		<costStuffCount>60</costStuffCount>
+		<costList>
+			<DragonHorn>1</DragonHorn>
+		</costList>
+		<stuffCategories>
+			<li>DragonScale</li>
+      		<li>Metallic</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>6200</WorkToMake>
+			<Mass>1.2</Mass>
+			<StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+      		<SocialImpact>0.35</SocialImpact>
+			<ShootingAccuracyPawn>-0.1</ShootingAccuracyPawn>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<thingCategories>
+      <li>HeadgearNoble</li>
+		</thingCategories>
+		<apparel>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/DragonCrown/DragonCrown</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>MedievalMilitary</li>
+				<li>MedievalArmorDecent</li>
+				<li>Royal</li>
+        		<li>RoyalTier5</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<recipeMaker>
+			<researchPrerequisite>DraconicApparelAndWeapons</researchPrerequisite>
+			<useIngredientsForColor>false</useIngredientsForColor>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+		</recipeMaker>
+		<stuffProps>
+			<allowColorGenerators>true</allowColorGenerators>
+		</stuffProps>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<!-- Reds -->
+					<weight>1</weight>
+					<only>(70,25,22)</only>
+				</li>
+				<li>
+					<weight>1</weight>
+					<only>(94,39,36)</only>
+				</li>
+				<li>
+					<weight>1</weight>
+					<only>(176,162,95)</only>
+				</li>
+				<li>
+					<!-- Greens -->
+					<weight>1</weight>
+					<only>(32,67,48)</only>
+				</li>
+				<li>
+					<weight>1</weight>
+					<only>(81,111,65)</only>
+				</li>
+				<li>
+					<!-- Blues -->
+					<weight>1</weight>
+					<only>(72,57,94)</only>
+				</li>
+				<li>
+					<weight>1</weight>
+					<only>(65,74,108)</only>
+				</li>
+				<li>
+					<weight>1</weight>
+					<only>(43,84,103)</only>
+				</li>
+				<li>
+					<!-- Monotone -->
+					<weight>1</weight>
+					<only>(43,41,44)</only>
+				</li>
+				<li>
+					<weight>1</weight>
+					<only>(187,191,194)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+</Defs>

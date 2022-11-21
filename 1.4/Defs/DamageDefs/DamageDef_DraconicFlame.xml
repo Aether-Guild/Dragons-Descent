@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!--========== Breath DamageDef ==========-->
+	<!-- Getting damaged with this DamageDef will attempt to apply the effect onto the pawn/thing/ground/whatever -->
+	<DamageDef>
+		<defName>DraconicFlame</defName>
+		<!-- <workerClass>DamageWorker_Blunt</workerClass> -->
+		<!-- <workerClass>DamageWorker_Flame</workerClass> -->
+         <!-- <workerClass>DD.DamageWorker_ApplyEffect</workerClass> -->
+		<workerClass>DD.DamageWorker_ApplyDamage</workerClass>
+		<!-- <workerClass>DD.DamageWorker_AbstractEffect</workerClass>  -->
+		 <!-- <workerClass>DamageWorker_AddInjury</workerClass>  -->
+		 <!-- <workerClass>DD.DamageWorker_DraconicFlame</workerClass>  -->
+
+        <label>draconic flame</label>
+		<hasForcefulImpact>true</hasForcefulImpact>
+		<makesBlood>false</makesBlood>
+		<canInterruptJobs>false</canInterruptJobs>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been burned to death.</deathMessage>
+		<hediff>Burn</hediff>
+		<hediffSolid>Burn</hediffSolid>
+		<buildingDamageFactor>1.8</buildingDamageFactor>
+		<minDamageToFragment>2</minDamageToFragment>
+		<plantDamageFactor>10</plantDamageFactor>
+		<defaultDamage>4</defaultDamage>
+		<defaultArmorPenetration>.2</defaultArmorPenetration>
+		<explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+		<explosionCellFleck>BlastFlame</explosionCellFleck>
+		<explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+		<explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+		<soundExplosion>Explosion_Flame</soundExplosion>
+		<combatLogRules>Damage_Flame</combatLogRules>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<isExplosive>true</isExplosive>
+		<modExtensions>
+			<li Class="DD.EffectDefExtension">
+				<def>DraconicFlame</def>
+			</li>
+		</modExtensions>
+		<additionalHediffs>
+			<!-- <li>
+				<hediff>DD_AcidBuildup</hediff>
+				<severityPerDamageDealt>0.01</severityPerDamageDealt>
+	
+			</li> -->
+		</additionalHediffs>
+		<isRanged>true</isRanged>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<armorCategory>Heat</armorCategory>
+	</DamageDef>
+
+	<DamageDef>
+		<defName>DraconicExplosion</defName>
+		<!-- <workerClass>DamageWorker_Flame</workerClass> -->
+         <!-- <workerClass>DD.DamageWorker_ApplyEffect</workerClass> -->
+		 <workerClass>DamageWorker_Blunt</workerClass>
+		<!-- <workerClass>DD.DamageWorker_ApplyDamage</workerClass> -->
+		<!-- <workerClass>DD.DamageWorker_AbstractEffect</workerClass>  -->
+		 <!-- <workerClass>DamageWorker_AddInjury</workerClass>  -->
+		 <!-- <workerClass>DD.DamageWorker_DraconicFlame</workerClass>  -->
+        <label>draconic Explosion</label>
+		<hasForcefulImpact>true</hasForcefulImpact>
+		<makesBlood>false</makesBlood>
+		<canInterruptJobs>false</canInterruptJobs>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been burned to death.</deathMessage>
+		<hediff>Burn</hediff>
+		<!-- <hediffSolid>Crack</hediffSolid> -->
+		<minDamageToFragment>10</minDamageToFragment>
+		<plantDamageFactor>1</plantDamageFactor>
+		<buildingDamageFactor>1</buildingDamageFactor>
+		<defaultDamage>3</defaultDamage>
+		<defaultArmorPenetration>.20</defaultArmorPenetration>
+		<explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+		<explosionCellFleck>BlastFlame</explosionCellFleck>
+		<explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+		<explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+		<buildingDamageFactorImpassable>1.4</buildingDamageFactorImpassable>
+    	<buildingDamageFactorPassable>1.2</buildingDamageFactorPassable>
+		<soundExplosion>Explosion_Flame</soundExplosion>
+		<!-- <combatLogRules>Damage_Flame</combatLogRules> -->
+		<combatLogRules>Damage_Bomb</combatLogRules>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<isExplosive>true</isExplosive>
+		<isRanged>true</isRanged>
+		<harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+		<armorCategory>Heat</armorCategory>
+		<!-- <modExtensions>
+			<li Class="DD.EffectDefExtension">
+				<def>DraconicFlame</def>
+			</li>
+		</modExtensions> -->
+		<additionalHediffs>
+			<!-- <li>
+				<hediff>DD_AcidBuildup</hediff>
+				<severityPerDamageDealt>0.01</severityPerDamageDealt>
+	
+			</li> -->
+		</additionalHediffs>
+
+	</DamageDef>
+
+	<DamageDef>
+		<defName>DraconicBlunt</defName>
+		<workerClass>DamageWorker_Blunt</workerClass>
+		<!-- <workerClass>AnimalBehaviours.DamageWorker_ExtraDamageMechanoids</workerClass> -->
+        <!-- <workerClass>DD.DamageWorker_ApplyEffect</workerClass> -->
+        <label>draconic blunt</label>
+		<hasForcefulImpact>false</hasForcefulImpact>
+		<makesBlood>true</makesBlood>
+		<canInterruptJobs>true</canInterruptJobs>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been blunted to death.</deathMessage>
+		<hediff>Crush</hediff>
+		<hediffSolid>Crack</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<armorCategory>Sharp</armorCategory>
+		<minDamageToFragment>5</minDamageToFragment>
+		<defaultDamage>15</defaultDamage>
+		<buildingDamageFactor>1.8</buildingDamageFactor>
+		<plantDamageFactor>4</plantDamageFactor>
+		<defaultArmorPenetration>.2</defaultArmorPenetration>
+		<explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+		<explosionCellFleck>BlastDry</explosionCellFleck>
+		<explosionColorCenter>(1, 0.7, 0.8)</explosionColorCenter>
+		<explosionColorEdge>(1, 1, 0.8)</explosionColorEdge>
+		<soundExplosion>Explosion_Stun</soundExplosion>
+		<combatLogRules>Damage_Flame</combatLogRules>
+		<impactSoundType>Blunt</impactSoundType>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<additionalHediffs>
+			<!-- <li>
+				<hediff>DD_AcidBuildup</hediff>
+				<severityPerDamageDealt>0.01</severityPerDamageDealt>
+	
+			</li> -->
+		</additionalHediffs>
+		<!-- <modExtensions>
+			<li Class="DD.EffectDefExtension">
+				<def>DraconicFlame</def>
+			</li>
+		</modExtensions> -->
+	</DamageDef>
+
+	<!--========== Effect ==========-->
+	<DD.EffectDef>
+		<defName>DraconicFlame</defName>
+		<label>draconic flame</label>
+		
+		<!-- ThingDef to spawn and attach to things -->
+		<thingDef>DraconicFlame</thingDef>
+		<!-- <thingDef>DraconicFlame</thingDef> -->
+
+		
+		<!-- Sound to play while the effect's thingDef is spawned -->
+		<soundDef>FireBurning</soundDef>
+		
+		<!-- Signals the game to slowdown to speed 1 when effect is attached -->
+		<causesSlowdown>true</causesSlowdown>
+		
+		<!-- Active range for the effect underMinimum/overMaximum define what to do when the current effect size goes out of range.
+		Nothing = Do nothing, Clamp = make sure size stays in range, Remove = remove the effect completely if size goes out of range -->
+		<effectSize>0~9</effectSize>
+		<underMinimum>Remove</underMinimum>
+		<overMaximum>Clamp</overMaximum>
+		
+		<!-- Updates -->
+		<!-- Updates the effect's size every X ticks -->
+		<ticksPerUpdate>60</ticksPerUpdate>
+		<!-- Each update, size changes by random amount in range -->
+		<sizeChangePerUpdate>-0.8~-0.9</sizeChangePerUpdate>
+		
+		<!-- Causes damage to attached things every X ticks -->
+		<ticksPerDamage>120</ticksPerDamage>
+		
+		<!-- DamageDef for the kind of damage the pawn gets per damage tick -->
+		<!-- <damageDef>DraconicFlame</damageDef> -->
+		<damageDef>Burn</damageDef>
+		<damageDepth>Outside</damageDepth>
+		
+		<damagePerSize>
+			<!-- (Size of the effect, amount of damage) -->
+			<points>
+			<li>(0, 0)</li>
+			<li>(1, 1)</li>
+			<li>(2, 1.25)</li>
+			<li>(5, 3.25)</li>
+			<li>(7, 4)</li>
+			<li>(10, 5)</li>
+		</points>
+		</damagePerSize>
+		
+		<damageRadius>0</damageRadius>
+		<spreadRadius>1</spreadRadius>
+		
+		<!-- Spread control -->
+		<!-- Tries to spread every X ticks (if theres something on/near it which is susceptible) -->
+		<ticksPerSpread>250~950</ticksPerSpread>
+		<spreadCount>0~1</spreadCount>
+		<spreadSize>
+			<points>
+				<li>(0, 0)</li>
+				<li>(1, 0.01)</li>
+				<li>(2.5, 0.025)</li>
+				<li>(5, 0.05)</li>
+				<li>(7.5, 0.25)</li>
+				<li>(10, 0.5)</li>
+			</points>
+		</spreadSize>
+		
+		<affectCondition Class="DD.EffectOrCondition">
+			<conditions>
+				<li Class="DD.EffectAndCondition">
+					<conditions>
+						<li Class="DD.EffectTargetCondition">
+							<targets>Things</targets>
+						</li>
+						<li Class="DD.EffectStatChanceCondition">
+							<statDef>Flammability</statDef> 
+						</li>
+					</conditions>
+				</li>
+				<li Class="DD.EffectAndCondition">
+					<conditions>
+						<li Class="DD.EffectTargetCondition">
+							<targets>Terrain</targets>
+						</li>
+						<li Class="DD.EffectChanceScaleCondition">
+							<chances>
+								<points>
+									<li>(0, 0)</li>
+									<li>(5, 0.025)</li>
+									<li>(7.5, 0.04)</li>
+									<li>(9, 0.05)</li>
+									<li>(10, 0.1)</li>
+								</points>
+							</chances>
+						</li>
+					</conditions>
+				</li>
+			</conditions>
+		</affectCondition>
+		
+		<damageCondition Class="DD.EffectStatChanceCondition">
+			<statDef>Flammability</statDef>
+		</damageCondition>
+		
+		<spreadCondition Class="DD.EffectAndCondition">
+			<conditions>
+				<li Class="DD.EffectStatChanceCondition">
+					<statDef>Flammability</statDef>
+				</li>
+				<li Class="DD.EffectOrCondition">
+					<conditions>
+						<li Class="DD.EffectAndCondition">
+							<conditions>
+								<li Class="DD.EffectTargetCondition">
+									<targets>NotPawn</targets>
+								</li>
+								<li Class="DD.EffectChanceScaleCondition">
+									<chances>
+										<points>
+											<li>(0, 0)</li>
+											<li>(5, 0.025)</li>
+											<li>(7.5, 0.04)</li>
+											<li>(9, 0.05)</li>
+											<li>(10, 0.1)</li>
+										</points>
+									</chances>
+								</li>
+							</conditions>
+						</li>
+						<li Class="DD.EffectAndCondition">
+							<conditions>
+								<li Class="DD.EffectTargetCondition">
+									<targets>Pawns</targets>
+								</li>
+								<li Class="DD.EffectChanceScaleCondition">
+									<chances>
+										<points>
+											<li>(0, 0)</li>
+											<li>(5, 0.025)</li>
+											<li>(7.5, 0.04)</li>
+											<li>(9, 0.05)</li>
+											<li>(10, 0.1)</li>
+										</points>
+									</chances>
+								</li>
+							</conditions>
+						</li>
+					</conditions>
+				</li>
+			</conditions>
+		</spreadCondition>
+					<!-- Effects that add to this effect's size (the effect with the smaller size gets consumed) -->
+
+		<boostedBy>
+			<li>DraconicFlame</li> 
+		</boostedBy>
+		<!-- <reducedBy> -->
+			<!-- Effects that reduce this effect's size (the effect with the smaller size gets consumed) -->
+			<!-- <li></li> -->
+		<!-- </reducedBy> -->
+		
+		<responses>
+			<li>
+				<minSize>2</minSize>
+				<job>PanicFlee</job>
+			</li>
+		</responses>
+		
+	</DD.EffectDef>
+<!-- DRAGON EXPLOSION -->
+	<DD.EffectDef>
+		<defName>DraconicExplosion</defName>
+		<label>draconic Explosion</label>
+		
+		<!-- ThingDef to spawn and attach to things -->
+		<thingDef>DraconicFlame</thingDef>
+		<!-- <thingDef>DraconicFlame</thingDef> -->
+
+		
+		<!-- Sound to play while the effect's thingDef is spawned -->
+		<soundDef>FireBurning</soundDef>
+		
+		<!-- Signals the game to slowdown to speed 1 when effect is attached -->
+		<causesSlowdown>true</causesSlowdown>
+		
+		<!-- Active range for the effect underMinimum/overMaximum define what to do when the current effect size goes out of range.
+		Nothing = Do nothing, Clamp = make sure size stays in range, Remove = remove the effect completely if size goes out of range -->
+		<effectSize>0~9</effectSize>
+		<underMinimum>Remove</underMinimum>
+		<overMaximum>Clamp</overMaximum>
+		
+		<!-- Updates -->
+		<!-- Updates the effect's size every X ticks -->
+		<ticksPerUpdate>160</ticksPerUpdate>
+		<!-- Each update, size changes by random amount in range -->
+		<sizeChangePerUpdate>-0.8~-0.9</sizeChangePerUpdate>
+		
+		<!-- Causes damage to attached things every X ticks -->
+		<ticksPerDamage>120</ticksPerDamage>
+		
+		<!-- DamageDef for the kind of damage the pawn gets per damage tick -->
+		<!-- <damageDef>DraconicFlame</damageDef> -->
+		<damageDef>Burn</damageDef>
+		<damageDepth>Outside</damageDepth>
+		
+		<damagePerSize>
+			<!-- (Size of the effect, amount of damage) -->
+			<points>
+			<li>(0, 0)</li>
+			<li>(1, 1)</li>
+			<li>(2, 1.25)</li>
+			<li>(5, 3.25)</li>
+			<li>(7, 4)</li>
+			<li>(10, 5)</li>
+		</points>
+		</damagePerSize>
+		
+		<damageRadius>2</damageRadius>
+		<spreadRadius>1</spreadRadius>
+		
+		<!-- Spread control -->
+		<!-- Tries to spread every X ticks (if theres something on/near it which is susceptible) -->
+		<ticksPerSpread>250~950</ticksPerSpread>
+		<spreadCount>0~1</spreadCount>
+		<spreadSize>
+			<points>
+				<li>(0, 0)</li>
+				<li>(1, 0.01)</li>
+				<li>(2.5, 0.025)</li>
+				<li>(5, 0.05)</li>
+				<li>(7.5, 0.25)</li>
+				<li>(10, 0.5)</li>
+			</points>
+		</spreadSize>
+		
+		<affectCondition Class="DD.EffectOrCondition">
+			<conditions>
+				<li Class="DD.EffectAndCondition">
+					<conditions>
+						<li Class="DD.EffectTargetCondition">
+							<targets>Things</targets>
+						</li>
+						<li Class="DD.EffectStatChanceCondition">
+							<statDef>Flammability</statDef> 
+						</li>
+					</conditions>
+				</li>
+				<li Class="DD.EffectAndCondition">
+					<conditions>
+						<li Class="DD.EffectTargetCondition">
+							<targets>Terrain</targets>
+						</li>
+						<li Class="DD.EffectChanceScaleCondition">
+							<chances>
+								<points>
+									<li>(0, 1)</li>
+									<li>(1, 1)</li>
+									<li>(5, 1)</li>
+									<li>(7.5, 1)</li>
+									<li>(10, 1)</li>
+								</points>
+							</chances>
+						</li>
+					</conditions>
+				</li>
+			</conditions>
+		</affectCondition>
+		
+		<damageCondition Class="DD.EffectStatChanceCondition">
+			<statDef>Flammability</statDef>
+		</damageCondition>
+		
+		<spreadCondition Class="DD.EffectAndCondition">
+			<conditions>
+				<li Class="DD.EffectStatChanceCondition">
+					<statDef>Flammability</statDef>
+				</li>
+				<li Class="DD.EffectOrCondition">
+					<conditions>
+						<li Class="DD.EffectAndCondition">
+							<conditions>
+								<li Class="DD.EffectTargetCondition">
+									<targets>NotPawn</targets>
+								</li>
+								<li Class="DD.EffectChanceScaleCondition">
+									<chances>
+										<points>
+											<li>(0, 0)</li>
+											<li>(5, 0.01)</li>
+											<li>(7.5, 0.04)</li>
+											<li>(9, 0.5)</li>
+											<li>(10, 1)</li>
+										</points>
+									</chances>
+								</li>
+							</conditions>
+						</li>
+						<li Class="DD.EffectAndCondition">
+							<conditions>
+								<li Class="DD.EffectTargetCondition">
+									<targets>Pawns</targets>
+								</li>
+								<li Class="DD.EffectChanceScaleCondition">
+									<chances>
+										<points>
+											<li>(0, 0)</li>
+											<li>(5, 0.035)</li>
+											<li>(7.5, 0.05)</li>
+											<li>(9, 0.1)</li>
+											<li>(10, 0.2)</li>
+										</points>
+									</chances>
+								</li>
+							</conditions>
+						</li>
+					</conditions>
+				</li>
+			</conditions>
+		</spreadCondition>
+					<!-- Effects that add to this effect's size (the effect with the smaller size gets consumed) -->
+
+		<boostedBy>
+			<li>DraconicFlame</li> 
+		</boostedBy>
+		<!-- <reducedBy> -->
+			<!-- Effects that reduce this effect's size (the effect with the smaller size gets consumed) -->
+			<!-- <li></li> -->
+		<!-- </reducedBy> -->
+		
+		<responses>
+			<li>
+				<minSize>2</minSize>
+				<job>PanicFlee</job>
+			</li>
+		</responses>
+		
+	</DD.EffectDef>
+	
+	<!--========== DraconicFlame-FleeJob ==========-->
+	<JobDef>
+		<defName>PanicFlee</defName>
+		<driverClass>DD.JobDriver_RandomFlee</driverClass>
+		<reportString>fleeing in panic.</reportString>
+		<checkOverrideOnDamage>Never</checkOverrideOnDamage>
+		<suspendable>true</suspendable>
+		<playerInterruptible>true</playerInterruptible>
+		<casualInterruptible>false</casualInterruptible>
+		<isIdle>false</isIdle>
+	</JobDef>
+	
+	<!--========== DraconicFlame ==========-->
+	<ThingDef>
+		<defName>DraconicFlame</defName>
+		<label>draconic flame</label>
+		<thingClass>DD.Effect</thingClass>
+		<category>Attachment</category>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Special/Fire</texPath>
+			<graphicClass>DD.Graphic_FlickerEffect</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(255, 100, 60)</color>
+			<colorTwo>(110, 50, 255)</colorTwo>
+		</graphicData> 
+		<altitudeLayer>PawnState</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>DraconicExplosion</defName>
+		<label>draconic flame</label>
+		<thingClass>DD.Effect</thingClass>
+		<category>Attachment</category>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Special/Fire</texPath>
+			<graphicClass>DD.Graphic_FlickerEffect</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(255, 100, 60)</color>
+			<colorTwo>(110, 50, 255)</colorTwo>
+		</graphicData> 
+		<altitudeLayer>PawnState</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+	</ThingDef>
+	
+</Defs>

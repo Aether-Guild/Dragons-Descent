@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>DD_Gun_DragonfireLauncher</defName>
+    <label>dragonfire launcher</label>
+    <description>A large bulky incediary launcher modeled after a dragon. Capable of firing two burst shots of light explosives in quick succession.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/DragonfireLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <generateCommonality>0.1</generateCommonality>
+    <statBases>
+      <MarketValue>3000</MarketValue>
+      <WorkToMake>30000</WorkToMake>
+      <Mass>4.1</Mass>
+      <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>75</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <useIngredientsForColor>false</useIngredientsForColor>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_IncendiaryLauncher</defaultProjectile>
+        <warmupTime>4.3</warmupTime>
+        <range>25</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_IncendiaryLauncher</defName>
+    <label>incendiary bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <!-- <shaderType>TransparentPostLight</shaderType> -->
+      <shaderType>MoteGlowDistortBackground</shaderType>
+      <color>(254,189,58)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>35</speed>
+      <damageDef>Flame</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>1.6</explosionRadius>
+      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>0.6</preExplosionSpawnChance>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.6</shadowSize>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>DD_Bow_DoubleCrossbow</defName>
+    <label>double crossbow</label>
+    <description>A double crossbow. Has two seperate chambers each capable of holding one arrow each, once the trigger is pulled a mechanism looses both in quick succession.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/DoubleCrossbow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      
+    </graphicData>
+    <soundInteract>Bow_Recurve</soundInteract>
+    <costList>
+      <WoodLog>45</WoodLog>
+      <Steel>30</Steel>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <MarketValue>300</MarketValue>
+      <WorkToMake>5500</WorkToMake>
+      <Mass>2.2</Mass>
+      <AccuracyTouch>0.78</AccuracyTouch>
+      <AccuracyShort>0.81</AccuracyShort>
+      <AccuracyMedium>0.64</AccuracyMedium>
+      <AccuracyLong>0.48</AccuracyLong>
+      <RangedWeapon_Cooldown>1.85</RangedWeapon_Cooldown>
+    </statBases>
+        <weaponTags>
+      <li>NeolithicRangedHeavy</li>
+      <li>NeolithicRangedChief</li>
+    </weaponTags>
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Arrow_Recurve</defaultProjectile>
+        <warmupTime>1.4</warmupTime>
+        <burstShotCount>2</burstShotCount>
+        <range>28</range>
+        <soundCast>Bow_Recurve</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Arrow_Recurve</defName>
+    <label>recurve bow arrow</label>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>ArrowHighVelocity</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>60</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<MVCF.ModDef>
+		<defName>DD_DragonsDescent</defName>
+		<label>Dragons</label>
+		<description>Adding animal ranged attacks to Dragons Descent</description>
+		<ActivateFeatures>
+			<li>RangedAnimals</li>
+			<li>IntegratedToggle</li>
+		</ActivateFeatures>
+	</MVCF.ModDef>
+</Defs>

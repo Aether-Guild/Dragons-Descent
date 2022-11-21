@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67CDDB5E-C9DA-4A80-8F16-3A88A440C950}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DD</RootNamespace>
+    <AssemblyName>DDLib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VFECore">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2023507013\1.3\Assemblies\VFECore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abilities\DD_Ability_ShootProjectile.cs" />
+    <Compile Include="Buildings\Incubation\Graphics\LayeredGraphicData.cs" />
+    <Compile Include="Buildings\Incubation\Graphics\Graphic_Multi_Layered.cs" />
+    <Compile Include="Buildings\Incubation\Graphics\IncubatorGraphicData.cs" />
+    <Compile Include="Buildings\Incubation\Graphics\Graphic_IncubatorEgg.cs" />
+    <Compile Include="Capacity\DD_MassUtility_Capacity.cs" />
+    <Compile Include="Capacity\CarryCapacityExtension.cs" />
+    <Compile Include="Common\Extensions\GenusMarkerExtension.cs" />
+    <Compile Include="DebugTests.cs" />
+    <Compile Include="Defs\DD_InternalDefOf.cs" />
+    <Compile Include="Defs\GenusDef.cs" />
+    <Compile Include="Defs\ThinktreeDefOf.cs" />
+    <Compile Include="Defs\DamageDefOf.cs" />
+    <Compile Include="Defs\ThingDefOf.cs" />
+    <Compile Include="Defs\RecordDefOf.cs" />
+    <Compile Include="Defs\RitualDefOf.cs" />
+    <Compile Include="Defs\EffectDefOf.cs" />
+    <Compile Include="Effects\DamageWorker_ApplyDamage.cs" />
+    <Compile Include="Effects\Condition\EffectAndCondition.cs" />
+    <Compile Include="Effects\Condition\EffectChanceScaleCondition.cs" />
+    <Compile Include="Effects\Condition\EffectChanceCondition.cs" />
+    <Compile Include="Effects\Condition\EffectCondition.cs" />
+    <Compile Include="Effects\Condition\EffectOrCondition.cs" />
+    <Compile Include="Effects\Condition\EffectSizeThresholdCondition.cs" />
+    <Compile Include="Effects\Condition\EffectStatChanceCondition.cs" />
+    <Compile Include="Effects\Condition\EffectStatScaleCondition.cs" />
+    <Compile Include="Effects\Condition\EffectTerrainCondition.cs" />
+    <Compile Include="Effects\Condition\EffectTargetCondition.cs" />
+    <Compile Include="Effects\Effect.cs" />
+    <Compile Include="Effects\EffectDef.cs" />
+    <Compile Include="Effects\EffectDefExtension.cs" />
+    <Compile Include="Effects\Ported\DamageWorker\DamageWorker_AbstractEffect.cs" />
+    <Compile Include="Effects\Ported\DamageWorker\DamageWorker_DraconicAcid.cs" />
+    <Compile Include="Effects\Ported\DamageWorker\DamageWorker_DraconicFlame.cs" />
+    <Compile Include="Effects\Ported\DamageWorker\DamageWorker_DraconicFrost.cs" />
+    <Compile Include="Effects\Ported\DamageWorker\DamageWorker_DraconicLightning.cs" />
+    <Compile Include="Effects\Ported\DamageWorker\DamageWorker_DraconicPoison.cs" />
+    <Compile Include="Effects\Ported\DamageWorker\DamageWorker_DraconicWater.cs" />
+    <Compile Include="Effects\Ported\DamageWorker\DamageWorker_DraconicWind.cs" />
+    <Compile Include="Effects\Ported\DamageWorker\DamageWorker_Extinguish.cs" />
+    <Compile Include="Effects\DamageWorker_Effect.cs" />
+    <Compile Include="Effects\Condition\EffectStatThresholdCondition.cs" />
+    <Compile Include="Effects\EffectInfo.cs" />
+    <Compile Include="Effects\EffectUtils.cs" />
+    <Compile Include="Effects\Graphics\Graphic_FlickerEffect.cs" />
+    <Compile Include="Effects\Patch_DD_Pawn_Kill.cs" />
+    <Compile Include="Effects\Ported\EffectUtility.cs" />
+    <Compile Include="Effects\Ported\Thing\AbstractEffect.cs" />
+    <Compile Include="Effects\Ported\Thing\DraconicAcid.cs" />
+    <Compile Include="Effects\Ported\Thing\DraconicFire.cs" />
+    <Compile Include="Effects\Ported\Thing\DraconicFrost.cs" />
+    <Compile Include="Effects\Ported\Thing\DraconicLightning.cs" />
+    <Compile Include="Effects\Ported\Thing\DraconicPoison.cs" />
+    <Compile Include="Effects\Ported\Thing\DraconicWater.cs" />
+    <Compile Include="Effects\Ported\Thing\DraconicWind.cs" />
+    <Compile Include="Misc\Patch_DD_PawnBioAndNameGenerator_GeneratePawnName.cs" />
+    <Compile Include="Misc\Patch_DD_PawnGenerator_GenerateNewName.cs" />
+    <Compile Include="Projectile\VEF_DD_FireBreathProjectil3.cs" />
+    <Compile Include="Projectile\VEF_DD_FireBreathProjectile.cs" />
+    <Compile Include="Flight\Graphics\AnimationGraphicData.cs" />
+    <Compile Include="Flight\Graphics\Graphic_MultiAnimation.cs" />
+    <Compile Include="Flight\Graphics\Graphic_Animation.cs" />
+    <Compile Include="Flight\SoaringCaravan.cs" />
+    <Compile Include="Flight\WingedFlyer.cs" />
+    <Compile Include="Flight\WingedFlyerExtension.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityCompProperties_RequireBodyPart.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityCompProperties_Flight.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityCompProperties_Cooldown.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityCompProperties_CastVerb.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityCompProperties_ReplaceWorldObject.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityComp_RequireBodyPart.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityComp_Flight.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityComp_Base.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityComp_Cooldown.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityComp_CastVerb.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\ModExtension\AbilityDefinitionExtension.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\AbilitySettingsUtility.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\ModExtension\HediffGiver_GrantAbility.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Windows\Dialog_AbilityBaseInfo.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityComp_ReplaceWorldObject.cs" />
+    <Compile Include="FW\Abilities\Patch_DD_Pawn_TryStartAttack.cs" />
+    <Compile Include="FW\Mote\Graphic_MoteController.cs" />
+    <Compile Include="FW\Mote\Graphic_MoteResizer.cs" />
+    <Compile Include="FW\Mote\MoteProperties_Controller.cs" />
+    <Compile Include="FW\Mote\Mote_Resizer.cs" />
+    <Compile Include="FW\Mote\SubMote_Particle.cs" />
+    <Compile Include="FW\Records\RecordInitializer.cs" />
+    <Compile Include="FW\Records\CompRecordInitializer.cs" />
+    <Compile Include="FW\Records\CompProperties_RecordInitializer.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Conditions\AbilityAndCondition.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Conditions\AbilityOrCondition.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Conditions\AbilityBodyPartCondition.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Conditions\AbilityRecordCondition.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Comp\CompAbilityDefinition.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Comp\CompProperties_AbilityDefinition.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\AbilityConditionEntry.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Conditions\AbilityAgeCondition.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Conditions\AbilityCondition.cs" />
+    <Compile Include="FW\Abilities\Ability_Base.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityCompProperties_AbilityControl.cs" />
+    <Compile Include="FW\Abilities\Comps\AbilityComp_AbilityControl.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Hediffs\HediffCompProperties_GrowthSeverityScaling.cs" />
+    <Compile Include="FW\Abilities\AbilityGain\Hediffs\HediffComp_GrowthSeverityScaling.cs" />
+    <Compile Include="FW\Abilities\IAttackVerb.cs" />
+    <Compile Include="FW\Abilities\Verb_Patches.cs" />
+    <Compile Include="FW\HostileResponse\CompHostileResponse.cs" />
+    <Compile Include="FW\HostileResponse\CompProperties_HostileResponse.cs" />
+    <Compile Include="FW\HostileResponse\HostileResponseOption.cs" />
+    <Compile Include="FW\HostileResponse\HostilityResponseType.cs" />
+    <Compile Include="FW\HostileResponse\HostilityStatisticRecord.cs" />
+    <Compile Include="FW\HostileResponse\Patch_DD_Pawn_MindState_CanStartFleeingBecauseOfPawnAction.cs" />
+    <Compile Include="Common\Extensions\VerbSettingExtension.cs" />
+    <Compile Include="FW\Records\Patch_DD_Pawn_PostApplyDamage.cs" />
+    <Compile Include="FW\Verb\JobGiver_Manhunter_AnyVerb.cs" />
+    <Compile Include="FW\Verb\VerbProperties_Breath.cs" />
+    <Compile Include="FW\Verb\Verb_AoE.cs" />
+    <Compile Include="FW\Verb\Verb_Breath.cs" />
+    <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_Conditional.cs" />
+    <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_Multiple.cs" />
+    <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_DoIfAmbrosiaTarget.cs" />
+    <Compile Include="Common\Extensions\TrackedIncidentExtension.cs" />
+    <Compile Include="Common\Extensions\LegacyModExtension.cs" />
+    <Compile Include="Common\Extensions\DrugTargetExtension.cs" />
+    <Compile Include="Common\Extensions\MatingTargetExtension.cs" />
+    <Compile Include="Common\Extensions\RitualTargetExtension.cs" />
+    <Compile Include="Common\Extensions\BreedingPoolExtension.cs" />
+    <Compile Include="Common\Extensions\IncidentSpawnConditionExtension.cs" />
+    <Compile Include="Misc\CompProperties_HealHediffs.cs" />
+    <Compile Include="Misc\CompTargetEffect\CompTargetEffect_HealChronic.cs" />
+    <Compile Include="Misc\CompTargetEffect\CompTargetEffect_HealHediffs.cs" />
+    <Compile Include="Misc\Patch_DD_Thing_SpawnSetup.cs" />
+    <Compile Include="Buildings\Bills\Patch_DD_BillUtility_MakeNewBill.cs" />
+    <Compile Include="FW\Abilities\Patch_DD_Pawn_TryGetAttackVerb.cs" />
+    <Compile Include="FW\Patch_DD_Pawn_GetGizmos.cs" />
+    <Compile Include="Ferocity\Patch_DD_TameUtility_CanTame.cs" />
+    <Compile Include="Ferocity\Patch_DD_PawnUtility_GetManhunterOnDamageChance.cs" />
+    <Compile Include="Ferocity\Patch_DD_Designator_Hunt_ShowDesignationWarnings.cs" />
+    <Compile Include="Misc\Patch_DD_Alert_HypothermicAnimals_get_HypothermicAnimals.cs" />
+    <Compile Include="Common\Patch_DD_PawnComponentsUtility_AddAndRemoveDynamicComponents.cs" />
+    <Compile Include="Buildings\Beds\Patch_DD_RestUtility_IsValidBedFor.cs" />
+    <Compile Include="FW\Verb\Patch_DD_JobGiver_GetFood_TryGiveJob.cs" />
+    <Compile Include="FW\Mote\Mote_ParticleController.cs" />
+    <Compile Include="Projectile\AnimalProjectile.cs" />
+    <Compile Include="Projectile\Projectile_Explode.cs" />
+    <Compile Include="Projectile\Projectile_Fire.cs" />
+    <Compile Include="Projectile\SiegeProjectile.cs" />
+    <Compile Include="Projectile\VEF_DD_DraconicFlameProjectile.cs" />
+    <Compile Include="Projectile\VEF_DD_ColdBreathProjectile.cs" />
+    <Compile Include="Projectile\VEF_DD_FireBreathProjectil2.cs" />
+    <Compile Include="Regen\Hediff\Comps\HediffCompProperties_Heal.cs" />
+    <Compile Include="Regen\Hediff\Comps\HediffCompProperties_Tend.cs" />
+    <Compile Include="Regen\Hediff\Comps\HediffComp_TendInjury.cs" />
+    <Compile Include="Ritual\Alert\Alert_RitualEffect.cs" />
+    <Compile Include="Ritual\Alert\Alert_RitualEffect_MaintainSingle.cs" />
+    <Compile Include="Ritual\Alert\Alert_RitualEffect_MaintainMultiple.cs" />
+    <Compile Include="Ritual\Alert\Alert_RitualEffect_WardMultiple.cs" />
+    <Compile Include="Ritual\RitualEffects\Ritual_WorldTargeting.cs" />
+    <Compile Include="Ritual\RitualEffects\Ritual_WorldTargetingTicking.cs" />
+    <Compile Include="Ritual\RitualEffects\Effects\Ritual_Bombardment.cs" />
+    <Compile Include="Ritual\RitualEffects\Effects\Ritual_Destroyer.cs" />
+    <Compile Include="Ritual\Extensions\RitualFactorModExtension.cs" />
+    <Compile Include="Buildings\Bills\BillGeneratorOverrideExtension.cs" />
+    <Compile Include="Ritual\Extensions\RitualBillOverrideExtension.cs" />
+    <Compile Include="Buildings\Incubation\LoadIncubatorBillOverrideExtension.cs" />
+    <Compile Include="Ritual\Bill_Ritual.cs" />
+    <Compile Include="Buildings\Incubation\Bill_LoadIncubator.cs" />
+    <Compile Include="Crossbreeding\DominantProperties.cs" />
+    <Compile Include="Regen\Hediff\Extensions\RegenHediffModExtension.cs" />
+    <Compile Include="Regen\Hediff\Comps\HediffCompProperties_BaseRegen.cs" />
+    <Compile Include="Regen\Hediff\HediffStage_Adjusting.cs" />
+    <Compile Include="Ritual\Extensions\RitualDamageModExtension.cs" />
+    <Compile Include="Ritual\Extensions\RitualWorldObjectModExtension.cs" />
+    <Compile Include="Ritual\Extensions\RitualNeedsModExtension.cs" />
+    <Compile Include="Ritual\Extensions\RitualHediffModExtension.cs" />
+    <Compile Include="Ritual\RitualEffects\Effects\Ritual_MaintainNeeds.cs" />
+    <Compile Include="Ritual\RitualEffects\Effects\Ritual_MaintainAllNeeds.cs" />
+    <Compile Include="Ritual\RitualEffects\Effects\Ritual_BanishPawn.cs" />
+    <Compile Include="Ritual\RitualEffects\Effects\Ritual_BanishAllPawns.cs" />
+    <Compile Include="Ritual\RitualEffects\Effects\Ritual_CalmDown.cs" />
+    <Compile Include="Ritual\RitualEffects\Effects\Ritual_CalmDownAll.cs" />
+    <Compile Include="Ritual\Extensions\RitualTickingModExtension.cs" />
+    <Compile Include="Ritual\Gizmos\Command_RitualEffect.cs" />
+    <Compile Include="Ritual\Gizmos\Gizmo_RitualInfo.cs" />
+    <Compile Include="Ritual\IRituals.cs" />
+    <Compile Include="Ritual\RitualEffects\Ritual.cs" />
+    <Compile Include="Ritual\RitualEffects\Ritual_Targeting.cs" />
+    <Compile Include="Ritual\RitualEffects\Ritual_MapTargeting.cs" />
+    <Compile Include="Ritual\RitualEffects\Ritual_TargetingTicking.cs" />
+    <Compile Include="Ritual\RitualEffects\Ritual_MapTargetingTicking.cs" />
+    <Compile Include="Ritual\RitualActivator.cs" />
+    <Compile Include="Ritual\RitualTargetingParameters.cs" />
+    <Compile Include="Scales\CompScaleable.cs" />
+    <Compile Include="Scales\CompProperties_Scaleable.cs" />
+    <Compile Include="Scales\JobDriver_Scale.cs" />
+    <Compile Include="Scales\WorkGiver_Scale.cs" />
+    <Compile Include="Settings\Extensions\Listing_StandardExtension.cs" />
+    <Compile Include="Settings\Extensions\SettingControlledExtension.cs" />
+    <Compile Include="Settings\Extensions\SettingControlledExtension_AnimalBiome.cs" />
+    <Compile Include="Settings\Extensions\SettingControlledExtension_PlantBiome.cs" />
+    <Compile Include="Buildings\Beds\Building_StorageBed.cs" />
+    <Compile Include="Buildings\Beds\Comps\CompProperties_AssignableToPawn_Body.cs" />
+    <Compile Include="Buildings\Incubation\Comps\CompProperties_EggIncubator.cs" />
+    <Compile Include="Buildings\Incubation\Comps\CompProperties_FireOverlay.cs" />
+    <Compile Include="Ritual\Comps\CompProperties_Ritual.cs" />
+    <Compile Include="Misc\CompTargetableLocation\CompTargetableLocation.cs" />
+    <Compile Include="Misc\CompTargetableLocation\CompTargetLocationEffect.cs" />
+    <Compile Include="Misc\CompTargetableLocation\CompTargetLocationEffect_Teleport.cs" />
+    <Compile Include="Components\MapComponent_Tracker.cs" />
+    <Compile Include="Buildings\Graphics\LayeredGraphicData.cs" />
+    <Compile Include="AI\HediffCompProperties_ExitMap.cs" />
+    <Compile Include="Regen\Hediff\Comps\HediffCompProperties_RegenSeverityScaling.cs" />
+    <Compile Include="Ferocity\HediffComp_Aggressive.cs" />
+    <Compile Include="Ferocity\HediffComp_DisableTaming.cs" />
+    <Compile Include="AI\HediffComp_ExitMap.cs" />
+    <Compile Include="Regen\Hediff\Comps\HediffComp_HealScar.cs" />
+    <Compile Include="Regen\Hediff\Comps\HediffComp_RegenSeverityScaling.cs" />
+    <Compile Include="Defs\HediffDefOf.cs" />
+    <Compile Include="Ferocity\HediffGiver_Ferocity.cs" />
+    <Compile Include="Incidents\IncidentWorker_DragonHunting.cs" />
+    <Compile Include="Incidents\TrackedIncidentWorker.cs" />
+    <Compile Include="Regen\Thinktree\JobGiver_PatientGoToBed.cs" />
+    <Compile Include="Common\Extensions\VerbUsageExtension.cs" />
+    <Compile Include="Patches\Patches.cs" />
+    <Compile Include="Patches\CompatibilityPatcher.cs" />
+    <Compile Include="Crossbreeding\CompProperties_CrossbredEggLayer.cs" />
+    <Compile Include="Misc\CompProperties_NextLifestage.cs" />
+    <Compile Include="Breeding\CompProperties_SpawnMate.cs" />
+    <Compile Include="Misc\CompProperties_Thing.cs" />
+    <Compile Include="Misc\CompProperties_Range.cs" />
+    <Compile Include="Misc\CompProperties_LifespanPercent.cs" />
+    <Compile Include="Misc\CompProperties_Value.cs" />
+    <Compile Include="Misc\CompTargetable\CompTargetables.cs" />
+    <Compile Include="Misc\CompTargetEffect\CompTargetEffect_AddAge.cs" />
+    <Compile Include="Misc\CompTargetEffect\CompTargetEffect_HealNatural.cs" />
+    <Compile Include="Misc\CompTargetEffect\CompTargetEffect_HealPermanent.cs" />
+    <Compile Include="Misc\CompTargetEffect\CompTargetEffect_PawnEquipper.cs" />
+    <Compile Include="Misc\CompTargetEffect\CompTargetEffect_SetAge.cs" />
+    <Compile Include="Misc\CompTargetEffect\CompTargetEffect_SpawnMate.cs" />
+    <Compile Include="Age\HediffCompProperties_ModifyAge.cs" />
+    <Compile Include="Regen\Hediff\Comps\HediffCompProperties_Scar.cs" />
+    <Compile Include="Age\HediffComp_ModifyAge.cs" />
+    <Compile Include="Regen\Hediff\Comps\HediffComp_HealInjury.cs" />
+    <Compile Include="Regen\Hediff\HediffGiver_Regeneration.cs" />
+    <Compile Include="Incidents\IncidentWorker_DragonPasses.cs" />
+    <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_DoIfBody.cs" />
+    <Compile Include="Defs\JobDefOf.cs" />
+    <Compile Include="Crossbreeding\JobDriver_LayCrossbredEgg.cs" />
+    <Compile Include="Crossbreeding\JobDriver_MateCrossbreed.cs" />
+    <Compile Include="FW\HostileResponse\JobGiver_HostilityResponse.cs" />
+    <Compile Include="Crossbreeding\JobGiver_LayCrossbredEgg.cs" />
+    <Compile Include="Crossbreeding\JobGiver_MateCrossbreed.cs" />
+    <Compile Include="Components\GameComponent_DD.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Buildings\Incubation\RecipeWorker\RecipeWorker_NoDestroy.cs" />
+    <Compile Include="Ritual\RitualDef.cs" />
+    <Compile Include="Ritual\RitualEffects\Effects\Ritual_WardAllPawns.cs" />
+    <Compile Include="Ritual\RitualTracker.cs" />
+    <Compile Include="Scenario\StartingThing_DefinedTamed.cs" />
+    <Compile Include="Settings\DraconicSettings.cs" />
+    <Compile Include="Settings\DraconicMod.cs" />
+    <Compile Include="Settings\DraconicOverseer.cs" />
+    <Compile Include="Settings\DraconicSettingsGUI.cs" />
+    <Compile Include="Settings\Extensions\SettingControlledExtension_IncidentChance.cs" />
+    <Compile Include="Buildings\Beds\Comps\CompAssignableToPawn_Nest.cs" />
+    <Compile Include="Crossbreeding\CompCrossBredEggLayer.cs" />
+    <Compile Include="Buildings\Incubation\Comps\CompEggIncubator.cs" />
+    <Compile Include="Ritual\Comps\CompRitualAltar.cs" />
+    <Compile Include="AI\ThinkNode_ConditionalExitTimedOutOnce.cs" />
+    <Compile Include="Regen\Thinktree\ThinkNode_ConditionalMustKeepLyingDownForRegen.cs" />
+    <Compile Include="Age\AgeUtils.cs" />
+    <Compile Include="Ferocity\FerocityUtils.cs" />
+    <Compile Include="Regen\HealthUtils.cs" />
+    <Compile Include="Breeding\MateUtils.cs" />
+    <Compile Include="FW\Verb\TimeUtils.cs" />
+    <Compile Include="FW\Verb\VerbUtils.cs" />
+    <Compile Include="FW\Verb\VerbProperties_Cooldown.cs" />
+    <Compile Include="FW\Verb\Verb_MeleeAttackDamage_Resetting.cs" />
+    <Compile Include="FW\Verb\Verb_Shoot_Cooldown.cs" />
+    <Compile Include="FW\Verb\Verb_Shoot_Limited.cs" />
+    <Compile Include="UI\UI.cs" />
+    <Compile Include="Warpflame\DamageWorker_WarpFlameNoCamShake.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony">
+      <Version>2.2.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

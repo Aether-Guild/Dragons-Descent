@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Draconic Ambrosia -->
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>DraconicAmbrosia</defName>
+		<label>draconic ambrosia</label>
+		<description>This rare drug is based off of ambrosia, granting intoxicating effects to those who injest it. However its main purpose is not for pleasure but for aging, specifically dragons.\nDragons will age from it due to their unique organ, the fundamentum, being able to properly process the drug. All other races will remain unaffected, other than slightly more potent ambrosia warmth. Adds 5~8 years.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/DraconicAmbrosia</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>36</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>0.7</Flammability>
+		</statBases>
+		<techLevel>Medieval</techLevel>
+		<ingestible>
+			<baseIngestTicks>100</baseIngestTicks>
+			<chairSearchRadius>4</chairSearchRadius>
+			<joyKind>Chemical</joyKind>
+			<joy>0.5</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="DD.IngestionOutcomeDoer_DoIfDrugTarget">
+					<ifTrue Class="IngestionOutcomeDoer_GiveHediff">
+						<hediffDef>StrongDraconicDrug</hediffDef>
+						<severity>1</severity>
+						<toleranceChemical>Ambrosia</toleranceChemical>
+					</ifTrue>
+					<ifFalse Class="DD.IngestionOutcomeDoer_Multiple">
+						<doers>
+							<li Class="IngestionOutcomeDoer_GiveHediff">
+								<hediffDef>AmbrosiaHigh</hediffDef>
+								<severity>0.68</severity>
+								<toleranceChemical>Ambrosia</toleranceChemical>
+							</li>
+							<li Class="IngestionOutcomeDoer_GiveHediff">
+								<hediffDef>AmbrosiaTolerance</hediffDef>
+								<severity>0.032</severity>
+								<divideByBodySize>true</divideByBodySize>
+							</li>
+						</doers>
+					</ifFalse>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>DraconicDrugProduction</researchPrerequisite>
+			<recipeUsers>
+				<li>CraftingSpot</li>
+				<li>DrugLab</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Ambrosia>7</Ambrosia>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Ambrosia</chemical>
+				<addictiveness>0.040</addictiveness>
+				<minToleranceToAddict>0.20</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>30</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<HediffDef>
+		<defName>StrongDraconicDrug</defName>
+		<label>draconic aging</label>
+		<labelNoun>an accelerated aging effect</labelNoun>
+		<description>Experiencing accelerated aging over time</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<li Class="DD.HediffCompProperties_ModifyAge">
+				<updateMethod>AddAge</updateMethod>
+				<ageAdjustment>
+					<years>5~8</years>
+				</ageAdjustment>
+				<duration>
+					<hours>6~12</hours>
+				</duration>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+  
+</Defs>
