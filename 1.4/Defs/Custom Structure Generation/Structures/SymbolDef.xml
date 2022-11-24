@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <KCSG.SymbolDef>
+  <!-- <KCSG.SymbolDef>
     <defName>Altar_Silver_North</defName>
     <thing>Altar</thing>
     <stuff>Silver</stuff>
@@ -26,20 +26,20 @@
     <defName>EggSilverDragonFertilized</defName>
     <thing>EggSilverDragonFertilized</thing>
   </KCSG.SymbolDef>
+   -->
   
-  
-  <KCSG.SymbolDef>
+  <!-- <KCSG.SymbolDef>
     <defName>PawnSymbol_Silver_Dragon</defName>
     <pawnKindDef>Silver_Dragon</pawnKindDef>
-    <isSlave>false</isSlave> <!-- Default:false -->
-    <spawnPartOfFaction>false</spawnPartOfFaction> <!-- To spawn part of map faction Default:true -->
-    <faction>OutlanderRough</faction> <!-- Null for wild pawn -->
+    <isSlave>false</isSlave> 
+    <spawnPartOfFaction>false</spawnPartOfFaction> 
+    <faction>OutlanderRough</faction> 
     <numberToSpawn>1</numberToSpawn>
-    <spawnDead>false</spawnDead> <!-- Default:false -->
-    <spawnRotten>false</spawnRotten> <!-- Default:false -->
-    <spawnFilthAround>false</spawnFilthAround> <!-- Default:false -->
-    <defendSpawnPoint>true</defendSpawnPoint> <!-- Default:false -->
-  </KCSG.SymbolDef>
+    <spawnDead>false</spawnDead> 
+    <spawnRotten>false</spawnRotten>
+    <spawnFilthAround>false</spawnFilthAround> 
+    <defendSpawnPoint>true</defendSpawnPoint> 
+  </KCSG.SymbolDef> -->
 
 
 </Defs>

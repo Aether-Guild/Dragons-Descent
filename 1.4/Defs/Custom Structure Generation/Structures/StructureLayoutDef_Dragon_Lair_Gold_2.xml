@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <KCSG.StructureLayoutDef>
+  <!-- <KCSG.StructureLayoutDef>
     <defName>Dragon_Lair_Gold_2</defName>
     <isStorage>true</isStorage>
     <layouts>
@@ -282,35 +282,31 @@
 <KCSG.SymbolDef>
   <defName>PawnSymbol_Gold_Dragon</defName>
   <pawnKindDef>Gold_Dragon</pawnKindDef>
-  <isSlave>false</isSlave> <!-- Default:false -->
-  <spawnPartOfFaction>false</spawnPartOfFaction> <!-- To spawn part of map faction Default:true -->
-  <faction>OutlanderRough</faction> <!-- Null for wild pawn -->
+  <isSlave>false</isSlave> 
+  <spawnPartOfFaction>false</spawnPartOfFaction> 
+  <faction>OutlanderRough</faction> 
   <numberToSpawn>1</numberToSpawn>
-  <spawnDead>false</spawnDead> <!-- Default:false -->
-  <spawnRotten>false</spawnRotten> <!-- Default:false -->
-  <spawnFilthAround>false</spawnFilthAround> <!-- Default:false -->
-  <defendSpawnPoint>true</defendSpawnPoint> <!-- Default:false -->
+  <spawnDead>false</spawnDead> 
+  <spawnRotten>false</spawnRotten>
+  <spawnFilthAround>false</spawnFilthAround> 
+  <defendSpawnPoint>true</defendSpawnPoint> 
 </KCSG.SymbolDef>
 
 <KCSG.SymbolDef>
   <defName>PawnSymbol_Pirate</defName>
   <pawnKindDef>Pirate</pawnKindDef>
-  <!-- Default:false -->
+
   <isSlave>false</isSlave>
-  <!-- To spawn part of map faction Default:true -->
+
   <spawnPartOfFaction>false</spawnPartOfFaction>
-  <!-- Null for wild pawn, or map faction if spawnPartOfFaction is true -->
   <faction>OutlanderRough</faction>
   <numberToSpawn>1</numberToSpawn>
-  <!-- Default:false -->
+  
   <spawnDead>false</spawnDead>
-  <!-- Default:false -->
   <spawnRotten>false</spawnRotten>
-  <!-- Default:false -->
   <spawnFilthAround>false</spawnFilthAround>
-  <!-- Default:false -->
   <defendSpawnPoint>true</defendSpawnPoint>
-</KCSG.SymbolDef>
+</KCSG.SymbolDef> -->
 
 
 <!-- <KCSG.SymbolDef>
@@ -324,7 +320,7 @@
 <thing>BabyDecoration</thing>
 <stuff>Jade</stuff>
 </KCSG.SymbolDef> -->
-
+<!-- 
 <KCSG.SymbolDef>
 <defName>EggGoldDragonFertilized</defName>
 <thing>EggGoldDragonFertilized</thing>
@@ -357,13 +353,13 @@
 <KCSG.SymbolDef>
 <defName>DD_Bow_DoubleCrossbow</defName>
 <thing>DD_Bow_DoubleCrossbow</thing>
-</KCSG.SymbolDef>
+</KCSG.SymbolDef> -->
 
 <!-- <KCSG.SymbolDef>
 <defName>Flamebow</defName>
 <thing>Flamebow</thing>
 </KCSG.SymbolDef> -->
-
+<!-- 
 <KCSG.SymbolDef>
 <defName>DragonPillow_Cloth_North</defName>
 <thing>DragonPillow</thing>
@@ -394,5 +390,5 @@
 <defName>Altar_HardScale_North</defName>
 <thing>Altar</thing>
 <stuff>HardScale</stuff>
-</KCSG.SymbolDef>
+</KCSG.SymbolDef> -->
 </Defs>

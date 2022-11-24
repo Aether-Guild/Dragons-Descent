@@ -69,7 +69,7 @@
     <comps>
         <li Class="DD.CompProperties_Ritual">
 			<rituals>
-			  <!-- <li>Ritual_BanishSingleDragon</li> -->
+			  <li>Ritual_BanishSingleDragon</li>
 			  <li>Ritual_RemoveFerocity</li>
 			  <li>Ritual_MaintainDragonNeeds</li>
 			  <li>Ritual_BanishAllDragon</li>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <KCSG.StructureLayoutDef>
+  <!-- <KCSG.StructureLayoutDef>
     <defName>Dragon_lair_1</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -172,5 +172,5 @@
     <tags>
       <li>Dragon_lair_1</li>
     </tags>
-</SitePartDef>
+</SitePartDef> -->
 </Defs>

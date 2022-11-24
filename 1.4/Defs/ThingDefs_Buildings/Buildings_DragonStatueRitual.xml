@@ -3,7 +3,7 @@
 
 	<!--=========================== Dragon Statue Ritual Spot  ===============================-->
 	
-	<ThingDef ParentName="BuildingBase">
+	<ThingDef ParentName="SculptureBase" Name="DD_DragonStatueRitual_Grand" MayRequire="Ludeon.RimWorld.Ideology">
 		<defName>DD_DragonStatueRitual_Grand</defName>
 		<label>Dragon Statue Ritual</label>
 		<description>A spot for carrying out certain kinds of rituals.</description>
@@ -65,7 +65,7 @@
 		  </comps>
 	  </ThingDef>
 
-	  <ThingDef ParentName="BuildingBase">
+	  <ThingDef ParentName="SculptureBase" Name="DD_DragonStatueRitual_Large" MayRequire="Ludeon.RimWorld.Ideology">
 		<defName>DD_DragonStatueRitual_Large</defName>
 		<label>Dragon Statue Ritual</label>
 		<description>A spot for carrying out certain kinds of rituals.</description>
@@ -126,7 +126,7 @@
 		  </comps>
 	  </ThingDef>
 
-	  <ThingDef ParentName="BuildingBase">
+  <ThingDef ParentName="SculptureBase" Name="DD_DragonStatueRitual_Small" MayRequire="Ludeon.RimWorld.Ideology">
 		<defName>DD_DragonStatueRitual_Small</defName>
 		<label>Dragon Statue Ritual</label>
 		<description>A spot for carrying out certain kinds of rituals.</description>
