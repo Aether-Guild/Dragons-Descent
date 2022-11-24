@@ -82,6 +82,7 @@
     <Compile Include="Capacity\DD_MassUtility_Capacity.cs" />
     <Compile Include="Capacity\CarryCapacityExtension.cs" />
     <Compile Include="Common\Extensions\GenusMarkerExtension.cs" />
+    <Compile Include="DamageWorker\DD_DamageWorker_Flame .cs" />
     <Compile Include="DebugTests.cs" />
     <Compile Include="Defs\DD_InternalDefOf.cs" />
     <Compile Include="Defs\GenusDef.cs" />
@@ -93,7 +94,7 @@
     <Compile Include="Defs\EffectDefOf.cs" />
     <Compile Include="Dungeon_lairs\Building_Lootable.cs" />
     <Compile Include="Dungeon_lairs\ModExtensions\BuildingLootableExtension.cs" />
-    <Compile Include="Effects\DamageWorker_ApplyDamage.cs" />
+    <Compile Include="DamageWorker\DD_DamageWorker_ApplyDamage.cs" />
     <Compile Include="Effects\Condition\EffectAndCondition.cs" />
     <Compile Include="Effects\Condition\EffectChanceScaleCondition.cs" />
     <Compile Include="Effects\Condition\EffectChanceCondition.cs" />
@@ -116,7 +117,7 @@
     <Compile Include="Effects\Ported\DamageWorker\DamageWorker_DraconicWater.cs" />
     <Compile Include="Effects\Ported\DamageWorker\DamageWorker_DraconicWind.cs" />
     <Compile Include="Effects\Ported\DamageWorker\DamageWorker_Extinguish.cs" />
-    <Compile Include="Effects\DamageWorker_Effect.cs" />
+    <Compile Include="DamageWorker\DamageWorker_Effect.cs" />
     <Compile Include="Effects\Condition\EffectStatThresholdCondition.cs" />
     <Compile Include="Effects\EffectInfo.cs" />
     <Compile Include="Effects\EffectUtils.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="Effects\Ported\Thing\DraconicPoison.cs" />
     <Compile Include="Effects\Ported\Thing\DraconicWater.cs" />
     <Compile Include="Effects\Ported\Thing\DraconicWind.cs" />
+    <Compile Include="FireUtility\DD_FireUtility.cs" />
     <Compile Include="Misc\Patch_DD_PawnBioAndNameGenerator_GeneratePawnName.cs" />
     <Compile Include="Misc\Patch_DD_PawnGenerator_GenerateNewName.cs" />
     <Compile Include="Projectile\VEF_DD_FireBreathProjectil3.cs" />
@@ -222,7 +224,7 @@
     <Compile Include="Projectile\Projectile_Explode.cs" />
     <Compile Include="Projectile\Projectile_Fire.cs" />
     <Compile Include="Projectile\SiegeProjectile.cs" />
-    <Compile Include="Projectile\VEF_DD_DraconicFlameProjectile.cs" />
+    <Compile Include="Projectile\VEF_DD_DraconicFlameProjectileDEFAULT.cs" />
     <Compile Include="Projectile\VEF_DD_ColdBreathProjectile.cs" />
     <Compile Include="Projectile\VEF_DD_FireBreathProjectil2.cs" />
     <Compile Include="Regen\Hediff\Comps\HediffCompProperties_Heal.cs" />

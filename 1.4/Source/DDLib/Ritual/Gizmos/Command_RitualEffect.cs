@@ -291,21 +291,21 @@ namespace DD
             return ritualRequest.Activate();
         }
 
-        public override bool GroupsWith(Gizmo other)
-        {
-            if (other is Command_RitualEffect cmd)
-            {
-                if (groupKey == cmd.groupKey && groupKey != 0)
-                {
-                    return true;
-                }
-                return false;
-            }
-            else
-            {
-                return base.GroupsWith(other);
-            }
-        }
+        //public override bool GroupsWith(Gizmo other)
+        //{
+        //    if (other is Command_RitualEffect cmd)
+        //    {
+        //        if (groupKey == cmd.groupKey && groupKey != 0)
+        //        {
+        //            return true;
+        //        }
+        //        return false;
+        //    }
+        //    else
+        //    {
+        //        return base.GroupsWith(other);
+        //    }
+        //}
 
         public override bool InheritInteractionsFrom(Gizmo other)
         {

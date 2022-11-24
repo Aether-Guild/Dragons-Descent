@@ -6,7 +6,7 @@ using Verse;
 namespace DD
 {
 	//Create explosion but no fire.
-	public class Projectile_Explode : Projectile
+	public class DD_Projectile_Explode : Projectile
 	{
 		protected override void Impact(Thing hitThing, bool blockedByShield = false)
 		{

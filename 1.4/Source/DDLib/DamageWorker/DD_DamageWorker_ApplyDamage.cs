@@ -10,7 +10,7 @@ using Verse;
 namespace DD
 {
 
-    public class DamageWorker_ApplyDamage : DamageWorker_AddInjury
+    public class DD_DamageWorker_ApplyDamage : DamageWorker_AddInjury
     {
         public EffectDef Def => def.GetModExtension<EffectDefExtension>().def;
 

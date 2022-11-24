@@ -82,7 +82,7 @@
 		<altitudeLayer>Projectile</altitudeLayer>
 		<useHitPoints>False</useHitPoints>
 		<neverMultiSelect>True</neverMultiSelect>
-		<thingClass>DD.Projectile_Explode</thingClass>
+		<thingClass>DD.DD_Projectile_Explode</thingClass>
 		<graphicData>
 			<texPath>AnimalProjectile/DragonSpit</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -91,7 +91,8 @@
 		</graphicData>
 		<projectile>
 			<speed>22</speed>
-			<damageDef>DraconicExplosion</damageDef>
+			<!-- <damageDef>DraconicExplosion</damageDef> -->
+			<damageDef>DraconicFlame</damageDef>
 			<explosionRadius>2</explosionRadius>
 			<damageAmountBase>6</damageAmountBase>
 			<preExplosionSpawnThingDef>Filth_Dirt</preExplosionSpawnThingDef>
@@ -113,8 +114,9 @@
 	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
 		<defName>Projectile_RedDragonBreath_Fire</defName>
 		<label>Fire_Breath</label>
+		<!-- <thingClass>DD.VEF_DD_DraconicFlameProjectile</thingClass> -->
 		<thingClass>DD.VEF_DD_FireBreathProjectile</thingClass>
-		<!-- <thingClass>DD.VEF_DD_FireBreathProjectile4New</thingClass> -->
+		<!-- <thingClass>DD.VEF_DD_FireBreathProjectile2</thingClass> -->
 		<!-- <thingClass>VFECore.FlamethrowProjectile</thingClass> -->
 		<!-- this class inherited from the ExpandableProjectile class, it inherits the DoDamage method, which is responsible for the appearance of fire and damaging all things under the projectile -->
 		<!-- <comps>
@@ -137,7 +139,7 @@
 		</graphicData>
 		<projectile>
 			<damageDef>DraconicFlame</damageDef>
-			<!-- <damageDef>Flame</damageDef> -->
+			<!-- <damageDef>DraconicExplosion</damageDef> -->
 			<explosionDamageFalloff>true</explosionDamageFalloff>
 			<flyOverhead>true</flyOverhead>
 			<explosionRadius>3</explosionRadius>

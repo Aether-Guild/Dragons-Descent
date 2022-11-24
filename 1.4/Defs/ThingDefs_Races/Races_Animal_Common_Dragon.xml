@@ -112,7 +112,7 @@
             <comps>
               <li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
               <compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
-              <cooldownTime>10</cooldownTime> <!--Time in seconds-->
+              <cooldownTime>180</cooldownTime> <!--Time in seconds-->
               </li>
             </comps>
           </li>
@@ -158,7 +158,6 @@
         <soundCast>DragonBreathShot</soundCast>
         <muzzleFlashScale>2</muzzleFlashScale>
         <commonality>.2</commonality>
-        <defaultCooldownTime>2</defaultCooldownTime>
       </li>
         <li>
        <verbClass>Verb_Shoot</verbClass>

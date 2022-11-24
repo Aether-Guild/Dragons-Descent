@@ -5,61 +5,35 @@
 	<!-- Getting damaged with this DamageDef will attempt to apply the effect onto the pawn/thing/ground/whatever -->
 	<DamageDef>
 		<defName>DraconicFlame</defName>
-		<!-- <workerClass>DamageWorker_Blunt</workerClass> -->
-		<!-- <workerClass>DamageWorker_Flame</workerClass> -->
-         <!-- <workerClass>DD.DamageWorker_ApplyEffect</workerClass> -->
-		<workerClass>DD.DamageWorker_ApplyDamage</workerClass>
-		<!-- <workerClass>DD.DamageWorker_AbstractEffect</workerClass>  -->
-		 <!-- <workerClass>DamageWorker_AddInjury</workerClass>  -->
-		 <!-- <workerClass>DD.DamageWorker_DraconicFlame</workerClass>  -->
-
+		<!-- <workerClass>DD.DD_DamageWorker_Flame</workerClass> -->
+		<workerClass>DamageWorker_Flame</workerClass>
+		<!-- <workerClass>DD.DD_DamageWorker_ApplyDamage</workerClass> -->
         <label>draconic flame</label>
-		<hasForcefulImpact>true</hasForcefulImpact>
+		<hasForcefulImpact>false</hasForcefulImpact>
 		<makesBlood>false</makesBlood>
 		<canInterruptJobs>false</canInterruptJobs>
 		<externalViolence>true</externalViolence>
-		<deathMessage>{0} has been burned to death.</deathMessage>
+		<deathMessage>{0} has burned to death.</deathMessage>
 		<hediff>Burn</hediff>
-		<hediffSolid>Burn</hediffSolid>
-		<buildingDamageFactor>1.8</buildingDamageFactor>
-		<minDamageToFragment>2</minDamageToFragment>
-		<plantDamageFactor>10</plantDamageFactor>
-		<defaultDamage>4</defaultDamage>
-		<defaultArmorPenetration>.2</defaultArmorPenetration>
-		<explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+		<armorCategory>Heat</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>10</defaultDamage>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
 		<explosionCellFleck>BlastFlame</explosionCellFleck>
 		<explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
 		<explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
 		<soundExplosion>Explosion_Flame</soundExplosion>
 		<combatLogRules>Damage_Flame</combatLogRules>
 		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
-		<isExplosive>true</isExplosive>
-		<modExtensions>
-			<li Class="DD.EffectDefExtension">
-				<def>DraconicFlame</def>
-			</li>
-		</modExtensions>
-		<additionalHediffs>
-			<!-- <li>
-				<hediff>DD_AcidBuildup</hediff>
-				<severityPerDamageDealt>0.01</severityPerDamageDealt>
-	
-			</li> -->
-		</additionalHediffs>
-		<isRanged>true</isRanged>
-		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
-		<armorCategory>Heat</armorCategory>
+		<plantDamageFactor>9</plantDamageFactor>
 	</DamageDef>
 
 	<DamageDef>
 		<defName>DraconicExplosion</defName>
-		<!-- <workerClass>DamageWorker_Flame</workerClass> -->
-         <!-- <workerClass>DD.DamageWorker_ApplyEffect</workerClass> -->
-		 <workerClass>DamageWorker_Blunt</workerClass>
-		<!-- <workerClass>DD.DamageWorker_ApplyDamage</workerClass> -->
-		<!-- <workerClass>DD.DamageWorker_AbstractEffect</workerClass>  -->
-		 <!-- <workerClass>DamageWorker_AddInjury</workerClass>  -->
-		 <!-- <workerClass>DD.DamageWorker_DraconicFlame</workerClass>  -->
+		 <!-- <workerClass>DamageWorker_Blunt</workerClass> -->
+		 <workerClass>DD.DD_DamageWorker_Flame</workerClass>
+		 <!-- <workerClass>DD.DD_DamageWorker_ApplyDamage</workerClass> -->		
         <label>draconic Explosion</label>
 		<hasForcefulImpact>true</hasForcefulImpact>
 		<makesBlood>false</makesBlood>
@@ -69,9 +43,9 @@
 		<hediff>Burn</hediff>
 		<!-- <hediffSolid>Crack</hediffSolid> -->
 		<minDamageToFragment>10</minDamageToFragment>
-		<plantDamageFactor>1</plantDamageFactor>
+		<plantDamageFactor>9</plantDamageFactor>
 		<buildingDamageFactor>1</buildingDamageFactor>
-		<defaultDamage>3</defaultDamage>
+		<defaultDamage>6</defaultDamage>
 		<defaultArmorPenetration>.20</defaultArmorPenetration>
 		<explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
 		<explosionCellFleck>BlastFlame</explosionCellFleck>
@@ -498,6 +472,7 @@
 		<defName>DraconicFlame</defName>
 		<label>draconic flame</label>
 		<thingClass>DD.Effect</thingClass>
+		<!-- <thingClass>Fire</thingClass> -->
 		<category>Attachment</category>
 		<tickerType>Normal</tickerType>
 		<graphicData>

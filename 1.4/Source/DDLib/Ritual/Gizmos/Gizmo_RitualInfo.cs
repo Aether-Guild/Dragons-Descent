@@ -28,10 +28,10 @@ namespace DD
             return 140f;
         }
 
-        public override bool GroupsWith(Gizmo other)
-        {
-            return other is Gizmo_RitualInfo;
-        }
+        //public override bool GroupsWith(Gizmo other)
+        //{
+        //    return other is Gizmo_RitualInfo;
+        //}
         public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
         {
             Rect rect = new Rect(topLeft.x, topLeft.y, GetWidth(maxWidth), 75f);

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <VFECore.Abilities.AbilityDef>
+        <defName>DD_DragonBreath</defName>
+        <label>Dragon Fire Breath</label>
+        <description>Rawr</description>
+        <abilityClass>DD.DD_Ability_ShootProjectile</abilityClass>
+        <targetMode>Pawn</targetMode>
+        <castTime>15</castTime>
+        <range>26</range>
+        <chance>.4</chance>
+        <radius>5</radius>
+        <cooldownTime>90</cooldownTime>
+        <iconPath>AnimalProjectile/DragonFire</iconPath>
+        <castSound>DragonBreathShot</castSound>
+        <showUndrafted>true</showUndrafted>
+        <modExtensions>
+          <li Class="VFECore.Abilities.AbilityExtension_Projectile">
+             <projectile>Projectile_DragonSpitBlunt</projectile>
+          </li>
+        </modExtensions>
+      </VFECore.Abilities.AbilityDef> 
+
+      <!-- <VFECore.Abilities.AbilityDef>
+        <defName>DD_DragonBreath_AOE</defName>
+        <label>Dragon Fire Breath NEW</label>
+        <description>Rawr</description>
+        <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
+        <targetMode>Pawn</targetMode>
+        <castTime>150</castTime>
+        <range>26</range>
+        <chance>1</chance>
+        <radius>5</radius>
+        <cooldownTime>10</cooldownTime>
+        <iconPath>AnimalProjectile/DragonFire</iconPath>
+        <castSound>DragonBreathShot</castSound>
+        <showUndrafted>true</showUndrafted>
+        <modExtensions>
+          <li Class="VFECore.Abilities.AbilityExtension_Projectile">
+             <projectile>Projectile_RedDragonBreath_Fire</projectile>
+          </li>
+        </modExtensions>
+      </VFECore.Abilities.AbilityDef> 
+
+      <VFECore.Abilities.AbilityDef>
+        <defName>DD_ElectromagneticPulse</defName>
+        <label>electro-magnetic pulse</label>
+        <description>Generate a large EMP explosion around yourself, disabling all electronics in radius.</description>
+        <abilityClass>VFECore.Abilities.Ability_Explode</abilityClass>
+        <targetMode>Self</targetMode>
+        <targetingParameters>
+          <canTargetSelf>true</canTargetSelf>
+          <canTargetBuildings>false</canTargetBuildings>
+        </targetingParameters>
+        <iconPath>AnimalProjectile/LightningC</iconPath>
+        <cooldownTime>60</cooldownTime>
+        <castTime>2</castTime>
+        <chance>1</chance>
+        <showUndrafted>true</showUndrafted>
+        <modExtensions>
+          <li Class="VFECore.Abilities.AbilityExtension_Explosion">
+            <explosionDamageDef>EMP</explosionDamageDef>
+            <explosionRadius>39.9</explosionRadius>
+            <explosionDamageAmount>50</explosionDamageAmount>
+            <onCaster>true</onCaster>
+          </li>
+        </modExtensions>
+      </VFECore.Abilities.AbilityDef> -->
+
+
+      <!-- <VFECore.Abilities.AbilityDef>
+        <defName>DD_Longjump_Dragon</defName>
+        <label>super jump</label>
+        <description>Jump over a short distance (10 cells) within line of sight to close the distance to the enemy.</description>
+        <abilityClass>VFEAncients.Ability_Jump</abilityClass>
+        <targetMode>Location</targetMode>
+        <range>10.9</range>
+        <iconPath>Powers/Superpowers/Power_SuperJump</iconPath>
+        <cooldownTime>180</cooldownTime>
+        <castTime>15</castTime>
+        <chance>0</chance>
+      </VFECore.Abilities.AbilityDef> -->
+
+      <!-- <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+        <defName>DD_IceBreath</defName>
+        <label>breathe ice</label>
+        <description>Breathe forward a stream of psychic entropy, the resulting cold cutting and inducing hypothermia scaling with the distance to the target.</description>
+        <iconPath>AnimalProjectile/DragonFire</iconPath>
+      <range>12.9</range>
+      <castTime>6</castTime>
+      <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
+      <targetingParameters>
+        <canTargetLocations>true</canTargetLocations>
+            <canTargetPawns>true</canTargetPawns>
+            <canTargetBuildings>true</canTargetBuildings>
+      </targetingParameters>
+      <castSound>DragonBreathShot</castSound>
+      <goodwillImpact>-15</goodwillImpact>
+        <modExtensions>
+          <li Class="VFECore.Abilities.AbilityExtension_Projectile">
+            <projectile>VPE_IceBreathe</projectile>
+          </li>
+        </modExtensions>
+      </VFECore.Abilities.AbilityDef> -->
+
+</Defs>

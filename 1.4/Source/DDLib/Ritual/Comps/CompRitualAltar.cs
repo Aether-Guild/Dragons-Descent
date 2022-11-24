@@ -74,72 +74,72 @@ namespace DD
                     yield return new Command_RitualEffect(parent, rituals, def);
                 }
 
-                if (Prefs.DevMode)
-                {
-                    yield return new Command_Action()
-                    {
-                        defaultLabel = "Debug: Add Favor",
-                        action = () =>
-                        {
-                            rituals.Current++;
-                        }
-                    };
-                    yield return new Command_Action()
-                    {
-                        defaultLabel = "Debug: Fill Favor",
-                        action = () =>
-                        {
-                            rituals.Current = rituals.Max;
-                        }
-                    };
-                    yield return new Command_Action()
-                    {
-                        defaultLabel = "Debug: Increment Activation Count",
-                        action = () =>
-                        {
-                            foreach (Ritual ritual in rituals)
-                            {
-                                ritual.IncrementCount();
-                            }
-                        }
-                    };
-                    yield return new Command_Action()
-                    {
-                        defaultLabel = "Debug: +" + ActivationCountIncrement + " Activation Count",
-                        action = () =>
-                        {
-                            foreach (Ritual ritual in rituals)
-                            {
-                                for (int i = 0; i < ActivationCountIncrement; i++)
-                                {
-                                    ritual.IncrementCount();
-                                }
-                            }
-                        }
-                    };
-                    yield return new Command_Action()
-                    {
-                        defaultLabel = "Debug: Reset Activation Count",
-                        action = () =>
-                        {
-                            foreach (Ritual ritual in rituals)
-                            {
-                                ritual.Reset(true);
-                            }
-                        }
-                    };
-                    yield return new Command_Action()
-                    {
-                        defaultLabel = "Debug: Finish Cooldowns",
-                        action = () =>
-                        {
-                            foreach (Ritual ritual in rituals)
-                            {
-                                ritual.Reset();
-                            }
-                        }
-                    };
-                }
+                //if (Prefs.DevMode)
+                //{
+                //    yield return new Command_Action()
+                //    {
+                //        defaultLabel = "Debug: Add Favor",
+                //        action = () =>
+                //        {
+                //            rituals.Current++;
+                //        }
+                //    };
+                //    yield return new Command_Action()
+                //    {
+                //        defaultLabel = "Debug: Fill Favor",
+                //        action = () =>
+                //        {
+                //            rituals.Current = rituals.Max;
+                //        }
+                //    };
+                //    yield return new Command_Action()
+                //    {
+                //        defaultLabel = "Debug: Increment Activation Count",
+                //        action = () =>
+                //        {
+                //            foreach (Ritual ritual in rituals)
+                //            {
+                //                ritual.IncrementCount();
+                //            }
+                //        }
+                //    };
+                //    yield return new Command_Action()
+                //    {
+                //        defaultLabel = "Debug: +" + ActivationCountIncrement + " Activation Count",
+                //        action = () =>
+                //        {
+                //            foreach (Ritual ritual in rituals)
+                //            {
+                //                for (int i = 0; i < ActivationCountIncrement; i++)
+                //                {
+                //                    ritual.IncrementCount();
+                //                }
+                //            }
+                //        }
+                //    };
+                //    yield return new Command_Action()
+                //    {
+                //        defaultLabel = "Debug: Reset Activation Count",
+                //        action = () =>
+                //        {
+                //            foreach (Ritual ritual in rituals)
+                //            {
+                //                ritual.Reset(true);
+                //            }
+                //        }
+                //    };
+                //    yield return new Command_Action()
+                //    {
+                //        defaultLabel = "Debug: Finish Cooldowns",
+                //        action = () =>
+                //        {
+                //            foreach (Ritual ritual in rituals)
+                //            {
+                //                ritual.Reset();
+                //            }
+                //        }
+                //    };
+                //}
             }
         }
     }

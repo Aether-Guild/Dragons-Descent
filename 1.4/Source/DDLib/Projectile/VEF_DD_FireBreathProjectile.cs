@@ -72,7 +72,7 @@ namespace DD
                                 FleckMaker.ThrowMicroSparks(Position.ToVector3(), launcher.Map);
 
                             }
-                            if (Rand.Chance(0.005f))
+                            if (Rand.Chance(0.0015f))
                                 GenExplosion.DoExplosion(this.Position, Map, this.def.projectile.explosionRadius, this.def.projectile.damageDef, this.launcher, this.def.projectile.GetDamageAmount(1, null), this.def.projectile.GetArmorPenetration(1, null), this.def.projectile.soundExplode, this.equipmentDef, this.def, null, this.def.projectile.postExplosionSpawnThingDef, this.def.projectile.postExplosionSpawnChance, this.def.projectile.postExplosionSpawnThingCount, null, this.def.projectile.applyDamageToExplosionCellsNeighbors, this.def.projectile.preExplosionSpawnThingDef, this.def.projectile.preExplosionSpawnChance, this.def.projectile.preExplosionSpawnThingCount, this.def.projectile.explosionChanceToStartFire, this.def.projectile.explosionDamageFalloff);
                                // Find.CameraDriver.shaker.DoShake(0f);
 
