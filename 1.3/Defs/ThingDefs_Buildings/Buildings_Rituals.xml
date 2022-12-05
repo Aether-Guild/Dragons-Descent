@@ -9,7 +9,7 @@
     <label>dragon altar</label>
     <description>An altar to worship dragons. While dragons themselves aren't as intelligent as humans, they do respect offers and gifts in their name and will in turn give favor. This favor can in turn be used in rituals, the effects of which can banish, sustain, and calm dragons (among other things).\n\nHowever over time they will require more offerings for the same amount of favor, and more favor for your requests...</description>
     <tickerType>Normal</tickerType>
-    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <designationCategory>Misc</designationCategory>
     <surfaceType>Item</surfaceType>

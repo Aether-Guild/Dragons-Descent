@@ -11,7 +11,6 @@
     <useHitPoints>False</useHitPoints>
     <neverMultiSelect>True</neverMultiSelect>
     <thingClass>DD.Projectile_Explode</thingClass>
-	<!-- <thingClass>Projectile_Explosive</thingClass> -->
     <graphicData>
 	<!-- <shaderType>MoteGlowDistortBackground</shaderType> -->
       <shaderType>TransparentPostLight</shaderType>
@@ -20,7 +19,7 @@
     </graphicData>
     <projectile>
       <speed>17</speed>
-      <damageDef>DraconicFlame</damageDef>
+      <damageDef>DraconicExplosion</damageDef>
       <explosionRadius>2</explosionRadius>
       <damageAmountBase>5</damageAmountBase>
       <preExplosionSpawnThingDef>Filth_Ash</preExplosionSpawnThingDef>
@@ -48,19 +47,18 @@
     <neverMultiSelect>True</neverMultiSelect>
     <thingClass>DD.Projectile_Explode</thingClass>
     <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
       <texPath>AnimalProjectile/DragonSpit</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <!-- <shaderType>MoteGlow</shaderType> -->
-	  <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <projectile>
-      <speed>22</speed>
-      <damageDef>DraconicExplosion</damageDef>
+      <speed>20</speed>
+      <damageDef>DraconicBlunt</damageDef>
       <explosionRadius>2</explosionRadius>
       <damageAmountBase>4</damageAmountBase>
       <preExplosionSpawnThingDef>Filth_Dirt</preExplosionSpawnThingDef>
       <preExplosionSpawnChance>.3</preExplosionSpawnChance>
-      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <ai_IsIncendiary>false</ai_IsIncendiary>
       <arcHeightFactor>0.2</arcHeightFactor>
       <shadowSize>1</shadowSize>
 	  <!-- <extraDamages>
@@ -86,7 +84,7 @@
 		<li Class="CompProperties_Glower">
 			<overlightRadius>1.0</overlightRadius>
 			<glowRadius>1</glowRadius>
-			<glowColor>(255, 161, 0, 0.19)</glowColor>
+			<glowColor>(255, 161, 0, 1)</glowColor>
 		  </li>    
 		</comps> 
 		<graphicData>
@@ -96,6 +94,7 @@
              <!-- optional, if set, fading out textures will be used in final projectile moments -->
 			<!-- <shaderType>TransparentPostLight</shaderType> -->
 			<shaderType>MoteGlow</shaderType>
+			<!-- <shaderType>DD_MoteGlowDistortBackground</shaderType> -->
              <!-- optional, if not set, it will use defaul shader>-->
 			 <!-- <color>.90,.90,.90,1</color>  -->
              <!--optional, you can set the opacity via alpha channel -->
@@ -105,8 +104,8 @@
 			<damageDef>DraconicFlame</damageDef>		
 			<flyOverhead>true</flyOverhead>
 			<explosionRadius>2</explosionRadius>
-			<damageAmountBase>7</damageAmountBase>
-			<stoppingPower>2.5</stoppingPower>
+			<damageAmountBase>18</damageAmountBase>
+			<stoppingPower>3.5</stoppingPower>
 			<ai_IsIncendiary>true</ai_IsIncendiary>
 			<speed>27</speed>
 			<extraDamages>
@@ -128,7 +127,8 @@
 		<finalTickFrameRate>7</finalTickFrameRate> <!-- speed of changing fade out textures per ticks -->
 		<tickDamageRate>1</tickDamageRate> <!-- determines through which each tick the damage is done by the custom class (fire class for example) -->
 		<dealsDamageOnce>true</dealsDamageOnce>
-		<minDistanceToAffect>2</minDistanceToAffect> <!-- can be set to ignore the affected cells nearby (useful if you do not need to burn sandbags or other buildings)-->
+		<minDistanceToAffect>1</minDistanceToAffect> <!-- can be set to ignore the affected cells nearby (useful if you do not need to burn sandbags or other buildings)-->
+		<!-- <reachMaxRangeAlways>true</reachMaxRangeAlways> -->
 	</VFECore.ExpandableProjectileDef>
 
 	<ThingDef>
@@ -149,10 +149,10 @@
 		  <graphicClass>Graphic_Flicker</graphicClass>
 		</graphicData>
 		<projectile>
-		  <speed>30</speed>
+		  <speed>60</speed>
 		  <damageDef>Flame</damageDef>
 		  <explosionRadius>1</explosionRadius>
-		  <damageAmountBase>2</damageAmountBase>
+		  <damageAmountBase>5</damageAmountBase>
 		  <!-- <preExplosionSpawnThingDef>Filth_Dirt</preExplosionSpawnThingDef>
 		  <preExplosionSpawnChance>.3</preExplosionSpawnChance>-->
 		  <ai_IsIncendiary>true</ai_IsIncendiary>
@@ -168,17 +168,37 @@
 		</projectile>
 		<modExtensions>
 			<li Class="VFEMech.TeslaChainingProps">
-				<maxBounceCount>1</maxBounceCount>
+				<maxBounceCount>3</maxBounceCount>
 				<damageDef>Flame</damageDef> <!--first target only?-->
 				<explosionDamageDef>Smoke</explosionDamageDef>
 				<impactRadius>1</impactRadius>
 				<targetFriendly>false</targetFriendly>
 				<addFire>true</addFire>
-				<bounceRange>4</bounceRange>
+				<bounceRange>15</bounceRange>
 				<maxLifetime>100</maxLifetime>
 			</li>
 		</modExtensions>
 	  </ThingDef> 
+	
+
+
+	<!-- <ThingDef Name="DragonsDescent_BaseAnimalProjectile" Abstract="True">
+		<category>Projectile</category>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Projectile_Explosive</thingClass>
+		<label>projectile</label>
+		<tickerType>Normal</tickerType>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<shaderType>Transparent</shaderType>
+		</graphicData>
+		<projectile>
+			<speed>15</speed>
+			<flyOverhead>true</flyOverhead>
+		</projectile>
+	</ThingDef> -->
+  
 
 
 </Defs>

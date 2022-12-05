@@ -75,7 +75,7 @@
 			<li Class="DD.HediffCompProperties_ModifyAge">
 				<updateMethod>AddAge</updateMethod>
 				<ageAdjustment>
-					<years>2~3</years>
+					<years>5~8</years>
 				</ageAdjustment>
 				<duration>
 					<hours>6~12</hours>

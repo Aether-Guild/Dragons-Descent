@@ -7,7 +7,7 @@
     <defName>AnimalElder</defName>
     <label>elder</label>
     <reproductive>true</reproductive>
-    <milkable>true</milkable>
+    <!-- <milkable>true</milkable> -->
     <shearable>true</shearable>
     <voxPitch>0.8</voxPitch>
     <bodySizeFactor>1.05</bodySizeFactor>
@@ -19,7 +19,6 @@
     <statFactors>
       <MoveSpeed>1.1</MoveSpeed>
     </statFactors>
-    <caravanRideable>true</caravanRideable>
   </LifeStageDef>
 
   <!-- ================ Ancient ================-->
@@ -28,7 +27,7 @@
     <defName>AnimalAncient</defName>
     <label>ancient</label>
     <reproductive>true</reproductive>
-    <milkable>true</milkable>
+    <!-- <milkable>true</milkable> -->
     <shearable>true</shearable>
     <voxPitch>0.8</voxPitch>
     <bodySizeFactor>1.25</bodySizeFactor>
@@ -40,7 +39,6 @@
     <statFactors>
       <MoveSpeed>1.2</MoveSpeed>
     </statFactors>
-    <caravanRideable>true</caravanRideable>
   </LifeStageDef>
   
 </Defs>

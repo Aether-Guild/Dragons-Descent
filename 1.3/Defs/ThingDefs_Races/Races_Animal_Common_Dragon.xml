@@ -114,46 +114,47 @@
             <description>Lightning Breath</description>
             <canBeToggled>true</canBeToggled>
             <separateToggle>true</separateToggle>
-             <toggleLabel>Lightning Breath</toggleLabel>
+             <toggleLabel>Fire Breath</toggleLabel>
              <toggleDescription> Burn it down</toggleDescription> 
           </li>  -->
         </verbProps>
       </li>
     </comps>
     <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <accuracyTouch>1</accuracyTouch>
-        <accuracyShort>1</accuracyShort>
-        <accuracyMedium>1</accuracyMedium>
-        <accuracyLong>1</accuracyLong>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Projectile_RedDragonBreath_Fire</defaultProjectile>
-        <warmupTime>1.5</warmupTime>
-        <burstShotCount>1</burstShotCount>
-        <label>Fire Breath</label>
-        <minRange>1</minRange>
-        <range>30</range>
-        <soundCast>DragonBreathShot</soundCast>
-        <muzzleFlashScale>2</muzzleFlashScale>
-        <commonality>.7</commonality>
-      </li>
+     <li>
+       <verbClass>Verb_Shoot</verbClass>
+       <accuracyTouch>1</accuracyTouch>
+       <accuracyShort>1</accuracyShort>
+       <accuracyMedium>1</accuracyMedium>
+       <accuracyLong>1</accuracyLong>
+       <hasStandardCommand>true</hasStandardCommand>
+       <defaultProjectile>Projectile_RedDragonBreath_Fire</defaultProjectile>
+       <warmupTime>1.5</warmupTime>
+       <burstShotCount>1</burstShotCount>
+       <label>Fire Breath</label>
+       <minRange>1</minRange>
+       <range>35</range>
+       <soundCast>DragonBreathFire</soundCast>
+       <muzzleFlashScale>2</muzzleFlashScale>
+       <commonality>.7</commonality>
+     </li>
       <li>
        <verbClass>Verb_Shoot</verbClass>
-       <accuracyTouch>.6</accuracyTouch>
-       <accuracyShort>.6</accuracyShort>
-       <accuracyMedium>.6</accuracyMedium>
-       <accuracyLong>.5</accuracyLong>
+       <accuracyTouch>1</accuracyTouch>
+       <accuracyShort>1</accuracyShort>
+       <accuracyMedium>.9</accuracyMedium>
+       <accuracyLong>.9</accuracyLong>
        <hasStandardCommand>true</hasStandardCommand>
-       <defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile>
-       <warmupTime>2.5</warmupTime>
-       <minRange>5</minRange>
+       <defaultProjectile>Projectile_DragonSpit</defaultProjectile>
+       <!-- <defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile> -->
+       <warmupTime>1.5</warmupTime>
+       <minRange>3</minRange>
        <range>35</range>
-       <burstShotCount>2</burstShotCount>
+       <burstShotCount>3</burstShotCount>
        <soundCast>DragonBreathFire</soundCast>
-       <muzzleFlashScale>1</muzzleFlashScale>
+       <muzzleFlashScale>3</muzzleFlashScale>
        <label>Dragon Spit</label>
-       <commonality>.1</commonality>
+       <commonality>.3</commonality>
      </li> 
   
    <!-- <li>
@@ -479,39 +480,40 @@
       </li>
     </comps>
     <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <accuracyTouch>1</accuracyTouch>
-        <accuracyShort>1</accuracyShort>
-        <accuracyMedium>1</accuracyMedium>
-        <accuracyLong>1</accuracyLong>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Projectile_RedDragonBreath_Fire</defaultProjectile>
-        <warmupTime>1.5</warmupTime>
-        <burstShotCount>1</burstShotCount>
-        <label>Fire Breath</label>
-        <minRange>1</minRange>
-        <range>30</range>
-        <soundCast>DragonBreathShot</soundCast>
-        <muzzleFlashScale>2</muzzleFlashScale>
-        <commonality>.7</commonality>
-      </li>
+     <li>
+       <verbClass>Verb_Shoot</verbClass>
+       <accuracyTouch>1</accuracyTouch>
+       <accuracyShort>1</accuracyShort>
+       <accuracyMedium>1</accuracyMedium>
+       <accuracyLong>1</accuracyLong>
+       <hasStandardCommand>true</hasStandardCommand>
+       <defaultProjectile>Projectile_RedDragonBreath_Fire</defaultProjectile>
+       <warmupTime>1.5</warmupTime>
+       <burstShotCount>1</burstShotCount>
+       <label>Fire Breath</label>
+       <minRange>1</minRange>
+       <range>35</range>
+       <soundCast>DragonBreathShot</soundCast>
+       <muzzleFlashScale>2</muzzleFlashScale>
+       <commonality>.7</commonality>
+     </li>
       <li>
        <verbClass>Verb_Shoot</verbClass>
-       <accuracyTouch>.6</accuracyTouch>
-       <accuracyShort>.6</accuracyShort>
-       <accuracyMedium>.6</accuracyMedium>
-       <accuracyLong>.5</accuracyLong>
+       <accuracyTouch>1</accuracyTouch>
+       <accuracyShort>1</accuracyShort>
+       <accuracyMedium>.9</accuracyMedium>
+       <accuracyLong>.9</accuracyLong>
        <hasStandardCommand>true</hasStandardCommand>
-       <defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile>
-       <warmupTime>2.5</warmupTime>
-       <minRange>5</minRange>
+       <defaultProjectile>Projectile_DragonSpit</defaultProjectile>
+       <!-- <defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile> -->
+       <warmupTime>1.5</warmupTime>
+       <minRange>2</minRange>
        <range>35</range>
-       <burstShotCount>2</burstShotCount>
-       <soundCast>DragonBreathFire</soundCast>
-       <muzzleFlashScale>1</muzzleFlashScale>
+       <burstShotCount>3</burstShotCount>
+       <soundCast>DragonBreathShot</soundCast>
+       <muzzleFlashScale>3</muzzleFlashScale>
        <label>Dragon Spit</label>
-       <commonality>.9</commonality>
+       <commonality>.3</commonality>
      </li> 
   
    <!-- <li>
@@ -832,39 +834,40 @@
       </li>
     </comps>
     <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <accuracyTouch>1</accuracyTouch>
-        <accuracyShort>1</accuracyShort>
-        <accuracyMedium>1</accuracyMedium>
-        <accuracyLong>1</accuracyLong>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Projectile_RedDragonBreath_Fire</defaultProjectile>
-        <warmupTime>1.5</warmupTime>
-        <burstShotCount>1</burstShotCount>
-        <label>Fire Breath</label>
-        <minRange>1</minRange>
-        <range>30</range>
-        <soundCast>DragonBreathShot</soundCast>
-        <muzzleFlashScale>2</muzzleFlashScale>
-        <commonality>.7</commonality>
-      </li>
+     <li>
+       <verbClass>Verb_Shoot</verbClass>
+       <accuracyTouch>1</accuracyTouch>
+       <accuracyShort>1</accuracyShort>
+       <accuracyMedium>1</accuracyMedium>
+       <accuracyLong>1</accuracyLong>
+       <hasStandardCommand>true</hasStandardCommand>
+       <defaultProjectile>Projectile_RedDragonBreath_Fire</defaultProjectile>
+       <warmupTime>1.5</warmupTime>
+       <burstShotCount>1</burstShotCount>
+       <label>Fire Breath</label>
+       <minRange>1</minRange>
+       <range>35</range>
+       <soundCast>DragonBreathShot</soundCast>
+       <muzzleFlashScale>2</muzzleFlashScale>
+       <commonality>.7</commonality>
+     </li>
       <li>
        <verbClass>Verb_Shoot</verbClass>
-       <accuracyTouch>.6</accuracyTouch>
-       <accuracyShort>.6</accuracyShort>
-       <accuracyMedium>.6</accuracyMedium>
-       <accuracyLong>.5</accuracyLong>
+       <accuracyTouch>1</accuracyTouch>
+       <accuracyShort>1</accuracyShort>
+       <accuracyMedium>.9</accuracyMedium>
+       <accuracyLong>.9</accuracyLong>
        <hasStandardCommand>true</hasStandardCommand>
-       <defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile>
-       <warmupTime>2.5</warmupTime>
-       <minRange>5</minRange>
+       <defaultProjectile>Projectile_DragonSpit</defaultProjectile>
+       <!-- <defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile> -->
+       <warmupTime>1.5</warmupTime>
+       <minRange>2</minRange>
        <range>35</range>
-       <burstShotCount>2</burstShotCount>
-       <soundCast>DragonBreathFire</soundCast>
-       <muzzleFlashScale>1</muzzleFlashScale>
+       <burstShotCount>3</burstShotCount>
+       <soundCast>DragonBreathShot</soundCast>
+       <muzzleFlashScale>3</muzzleFlashScale>
        <label>Dragon Spit</label>
-       <commonality>.9</commonality>
+       <commonality>.3</commonality>
      </li> 
   
    <!-- <li>
@@ -1223,39 +1226,40 @@
       </li>
     </comps>
     <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <accuracyTouch>1</accuracyTouch>
-        <accuracyShort>1</accuracyShort>
-        <accuracyMedium>1</accuracyMedium>
-        <accuracyLong>1</accuracyLong>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Projectile_RedDragonBreath_Fire</defaultProjectile>
-        <warmupTime>1.5</warmupTime>
-        <burstShotCount>1</burstShotCount>
-        <label>Fire Breath</label>
-        <minRange>1</minRange>
-        <range>30</range>
-        <soundCast>DragonBreathShot</soundCast>
-        <muzzleFlashScale>2</muzzleFlashScale>
-        <commonality>.7</commonality>
-      </li>
+     <li>
+       <verbClass>Verb_Shoot</verbClass>
+       <accuracyTouch>1</accuracyTouch>
+       <accuracyShort>1</accuracyShort>
+       <accuracyMedium>1</accuracyMedium>
+       <accuracyLong>1</accuracyLong>
+       <hasStandardCommand>true</hasStandardCommand>
+       <defaultProjectile>Projectile_RedDragonBreath_Fire</defaultProjectile>
+       <warmupTime>1.5</warmupTime>
+       <burstShotCount>1</burstShotCount>
+       <label>Fire Breath</label>
+       <minRange>1</minRange>
+       <range>35</range>
+       <soundCast>DragonBreathShot</soundCast>
+       <muzzleFlashScale>2</muzzleFlashScale>
+       <commonality>.7</commonality>
+     </li>
       <li>
        <verbClass>Verb_Shoot</verbClass>
-       <accuracyTouch>.6</accuracyTouch>
-       <accuracyShort>.6</accuracyShort>
-       <accuracyMedium>.6</accuracyMedium>
-       <accuracyLong>.5</accuracyLong>
+       <accuracyTouch>1</accuracyTouch>
+       <accuracyShort>1</accuracyShort>
+       <accuracyMedium>.9</accuracyMedium>
+       <accuracyLong>.9</accuracyLong>
        <hasStandardCommand>true</hasStandardCommand>
-       <defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile>
-       <warmupTime>2.5</warmupTime>
-       <minRange>5</minRange>
+       <defaultProjectile>Projectile_DragonSpit</defaultProjectile>
+       <!-- <defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile> -->
+       <warmupTime>1.5</warmupTime>
+       <minRange>2</minRange>
        <range>35</range>
-       <burstShotCount>2</burstShotCount>
-       <soundCast>DragonBreathFire</soundCast>
-       <muzzleFlashScale>1</muzzleFlashScale>
+       <burstShotCount>3</burstShotCount>
+       <soundCast>DragonBreathShot</soundCast>
+       <muzzleFlashScale>3</muzzleFlashScale>
        <label>Dragon Spit</label>
-       <commonality>.9</commonality>
+       <commonality>.3</commonality>
      </li> 
   
    <!-- <li>
@@ -1596,39 +1600,40 @@
       </li>
     </comps>
     <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <accuracyTouch>1</accuracyTouch>
-        <accuracyShort>1</accuracyShort>
-        <accuracyMedium>1</accuracyMedium>
-        <accuracyLong>1</accuracyLong>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Projectile_RedDragonBreath_Fire</defaultProjectile>
-        <warmupTime>1.5</warmupTime>
-        <burstShotCount>1</burstShotCount>
-        <label>Fire Breath</label>
-        <minRange>1</minRange>
-        <range>30</range>
-        <soundCast>DragonBreathShot</soundCast>
-        <muzzleFlashScale>2</muzzleFlashScale>
-        <commonality>.7</commonality>
-      </li>
+     <li>
+       <verbClass>Verb_Shoot</verbClass>
+       <accuracyTouch>1</accuracyTouch>
+       <accuracyShort>1</accuracyShort>
+       <accuracyMedium>1</accuracyMedium>
+       <accuracyLong>1</accuracyLong>
+       <hasStandardCommand>true</hasStandardCommand>
+       <defaultProjectile>Projectile_RedDragonBreath_Fire</defaultProjectile>
+       <warmupTime>1.5</warmupTime>
+       <burstShotCount>1</burstShotCount>
+       <label>Fire Breath</label>
+       <minRange>1</minRange>
+       <range>35</range>
+       <soundCast>DragonBreathShot</soundCast>
+       <muzzleFlashScale>2</muzzleFlashScale>
+       <commonality>.7</commonality>
+     </li>
       <li>
        <verbClass>Verb_Shoot</verbClass>
-       <accuracyTouch>.6</accuracyTouch>
-       <accuracyShort>.6</accuracyShort>
-       <accuracyMedium>.6</accuracyMedium>
-       <accuracyLong>.5</accuracyLong>
+       <accuracyTouch>1</accuracyTouch>
+       <accuracyShort>1</accuracyShort>
+       <accuracyMedium>.9</accuracyMedium>
+       <accuracyLong>.9</accuracyLong>
        <hasStandardCommand>true</hasStandardCommand>
-       <defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile>
-       <warmupTime>2.5</warmupTime>
-       <minRange>5</minRange>
+       <defaultProjectile>Projectile_DragonSpit</defaultProjectile>
+       <!-- <defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile> -->
+       <warmupTime>1.5</warmupTime>
+       <minRange>2</minRange>
        <range>35</range>
-       <burstShotCount>2</burstShotCount>
-       <soundCast>DragonBreathFire</soundCast>
-       <muzzleFlashScale>1</muzzleFlashScale>
+       <burstShotCount>3</burstShotCount>
+       <soundCast>DragonBreathShot</soundCast>
+       <muzzleFlashScale>3</muzzleFlashScale>
        <label>Dragon Spit</label>
-       <commonality>.9</commonality>
+       <commonality>.3</commonality>
      </li> 
   
    <!-- <li>
@@ -1988,39 +1993,40 @@
       </li>
     </comps>
     <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <accuracyTouch>1</accuracyTouch>
-        <accuracyShort>1</accuracyShort>
-        <accuracyMedium>1</accuracyMedium>
-        <accuracyLong>1</accuracyLong>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Projectile_RedDragonBreath_Fire</defaultProjectile>
-        <warmupTime>1.5</warmupTime>
-        <burstShotCount>1</burstShotCount>
-        <label>Fire Breath</label>
-        <minRange>1</minRange>
-        <range>30</range>
-        <soundCast>DragonBreathShot</soundCast>
-        <muzzleFlashScale>2</muzzleFlashScale>
-        <commonality>.7</commonality>
-      </li>
+     <li>
+       <verbClass>Verb_Shoot</verbClass>
+       <accuracyTouch>1</accuracyTouch>
+       <accuracyShort>1</accuracyShort>
+       <accuracyMedium>1</accuracyMedium>
+       <accuracyLong>1</accuracyLong>
+       <hasStandardCommand>true</hasStandardCommand>
+       <defaultProjectile>Projectile_RedDragonBreath_Fire</defaultProjectile>
+       <warmupTime>1.5</warmupTime>
+       <burstShotCount>1</burstShotCount>
+       <label>Fire Breath</label>
+       <minRange>1</minRange>
+       <range>35</range>
+       <soundCast>DragonBreathShot</soundCast>
+       <muzzleFlashScale>2</muzzleFlashScale>
+       <commonality>.7</commonality>
+     </li>
       <li>
        <verbClass>Verb_Shoot</verbClass>
-       <accuracyTouch>.6</accuracyTouch>
-       <accuracyShort>.6</accuracyShort>
-       <accuracyMedium>.6</accuracyMedium>
-       <accuracyLong>.5</accuracyLong>
+       <accuracyTouch>1</accuracyTouch>
+       <accuracyShort>1</accuracyShort>
+       <accuracyMedium>.9</accuracyMedium>
+       <accuracyLong>.9</accuracyLong>
        <hasStandardCommand>true</hasStandardCommand>
-       <defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile>
-       <warmupTime>2.5</warmupTime>
-       <minRange>5</minRange>
+       <defaultProjectile>Projectile_DragonSpit</defaultProjectile>
+       <!-- <defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile> -->
+       <warmupTime>1.5</warmupTime>
+       <minRange>2</minRange>
        <range>35</range>
-       <burstShotCount>2</burstShotCount>
-       <soundCast>DragonBreathFire</soundCast>
-       <muzzleFlashScale>1</muzzleFlashScale>
+       <burstShotCount>3</burstShotCount>
+       <soundCast>DragonBreathShot</soundCast>
+       <muzzleFlashScale>3</muzzleFlashScale>
        <label>Dragon Spit</label>
-       <commonality>.9</commonality>
+       <commonality>.3</commonality>
      </li> 
   
    <!-- <li>
@@ -2380,40 +2386,41 @@
       </li>
     </comps>
     <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <accuracyTouch>1</accuracyTouch>
-        <accuracyShort>1</accuracyShort>
-        <accuracyMedium>1</accuracyMedium>
-        <accuracyLong>1</accuracyLong>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Projectile_RedDragonBreath_Fire</defaultProjectile>
-        <warmupTime>1.5</warmupTime>
-        <burstShotCount>1</burstShotCount>
-        <label>Fire Breath</label>
-        <minRange>1</minRange>
-        <range>30</range>
-        <soundCast>DragonBreathShot</soundCast>
-        <muzzleFlashScale>2</muzzleFlashScale>
-        <commonality>.7</commonality>
-      </li>
+     <li>
+       <verbClass>Verb_Shoot</verbClass>
+       <accuracyTouch>1</accuracyTouch>
+       <accuracyShort>1</accuracyShort>
+       <accuracyMedium>1</accuracyMedium>
+       <accuracyLong>1</accuracyLong>
+       <hasStandardCommand>true</hasStandardCommand>
+       <defaultProjectile>Projectile_RedDragonBreath_Fire</defaultProjectile>
+       <warmupTime>1.5</warmupTime>
+       <burstShotCount>1</burstShotCount>
+       <label>Fire Breath</label>
+       <minRange>1</minRange>
+       <range>35</range>
+       <soundCast>DragonBreathShot</soundCast>
+       <muzzleFlashScale>2</muzzleFlashScale>
+       <commonality>.7</commonality>
+     </li>
       <li>
        <verbClass>Verb_Shoot</verbClass>
-       <accuracyTouch>.6</accuracyTouch>
-       <accuracyShort>.6</accuracyShort>
-       <accuracyMedium>.6</accuracyMedium>
-       <accuracyLong>.5</accuracyLong>
+       <accuracyTouch>1</accuracyTouch>
+       <accuracyShort>1</accuracyShort>
+       <accuracyMedium>.9</accuracyMedium>
+       <accuracyLong>.9</accuracyLong>
        <hasStandardCommand>true</hasStandardCommand>
-       <defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile>
-       <warmupTime>2.5</warmupTime>
-       <minRange>5</minRange>
+       <defaultProjectile>Projectile_DragonSpit</defaultProjectile>
+       <!-- <defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile> -->
+       <warmupTime>1.5</warmupTime>
+       <minRange>2</minRange>
        <range>35</range>
-       <burstShotCount>2</burstShotCount>
-       <soundCast>DragonBreathFire</soundCast>
-       <muzzleFlashScale>1</muzzleFlashScale>
+       <burstShotCount>3</burstShotCount>
+       <soundCast>DragonBreathShot</soundCast>
+       <muzzleFlashScale>3</muzzleFlashScale>
        <label>Dragon Spit</label>
-       <commonality>.9</commonality>
-     </li>  
+       <commonality>.3</commonality>
+     </li> 
   
    <!-- <li>
      <verbClass>Verb_Shoot</verbClass>

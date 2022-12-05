@@ -8,7 +8,7 @@
 		<label>dragon nest</label>
 		<description>A soft bed of hay for dragons to sleep on. Fit for any dragon egg as it protects it from the elements and increases growth by 10%.</description>
 		<tickerType>Normal</tickerType>
-		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<surfaceType>Item</surfaceType>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -91,7 +91,7 @@
 		<label>dragon pillow</label>
 		<description>A soft bed for dragons to sleep on. Perfectly fits a dragon and a dragon egg. Grants a 13% growth bonus for dragon eggs.</description>
 		<tickerType>Normal</tickerType>
-		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<surfaceType>Item</surfaceType>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -188,7 +188,7 @@
 			<drawSize>2.8</drawSize>
 		</graphicData>
 		<thingClass>Building_WorkTable</thingClass>
-		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<fillPercent>1</fillPercent>
 		<canOverlapZones>false</canOverlapZones>
@@ -310,7 +310,7 @@
 		</graphicData>
 		<size>(2,1)</size>
 		<tickerType>Normal</tickerType>
-		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<fillPercent>1</fillPercent>
 		<drawerType>MapMeshAndRealTime</drawerType>

@@ -275,7 +275,6 @@
 	  <PsychicSensitivity>.5</PsychicSensitivity>
 	  <ToxicSensitivity>0.25</ToxicSensitivity>
 	  <Flammability>0</Flammability>
-    <CaravanRidingSpeedFactor>1.6</CaravanRidingSpeedFactor>
     </statBases>
 	<uiIconScale>1.75</uiIconScale>
     <race>
@@ -382,14 +381,7 @@
   <ThingDef ParentName="BaseDragon" Name="RDragonRaceBase" Abstract="True">
 			<!-- Changed ParentName to BaseDragon -->
 
-      <comps>
-      <li Class="DD.CompProperties_Scaleable">
-      <scaleDef>HardScale</scaleDef>
-      <minScaleableLifeStage>AnimalAdult</minScaleableLifeStage>
-      <scaleIntervalDays>15</scaleIntervalDays>
-      <scaleAmount>60</scaleAmount>
-      </li>
-      </comps>
+ 
     <statBases>
       <MoveSpeed>5.6</MoveSpeed>
       <ImmunityGainSpeed>2</ImmunityGainSpeed>
@@ -405,7 +397,6 @@
  	  <PsychicSensitivity>.5</PsychicSensitivity>
 	  <ToxicSensitivity>0.25</ToxicSensitivity>
 	  <Flammability>0</Flammability>
-    <CaravanRidingSpeedFactor>1.6</CaravanRidingSpeedFactor>
     </statBases>
 	<uiIconScale>1.75</uiIconScale>
     <race>

@@ -3,7 +3,7 @@
 
 	<ThingDef ParentName="ResourceBase">
 		<defName>HardScale</defName>
-		<label>hard dragon scale</label>
+		<label>hard scale</label>
 		<description>An incredibly heat resistant scale shed from a dragon. Besides being moderately above steel in terms of strength the scales also exhibit a curious ability to change hue when forged in a certain way. Unfortunately this does not apply to furniture or buildings, resulting in a dull gray as the scales cannot properly overlap.\n\nThe scales can be dull red, red, yellow, purple, blue, cyan, dark green, light green, dark gray, and white.</description>
 		<stackLimit>100</stackLimit>
 		<minRewardCount>60</minRewardCount>

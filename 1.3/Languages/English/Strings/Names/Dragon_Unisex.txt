@@ -1,17 +1,11 @@
 Aether
-Aiatar
-Albion
-Borealis
 Calamity
 Darunaak
 Faeryl
-Glasya-Labolas
 Haku
 Istina
-Krigartius
 Mizu
 Murder
-Nox Eternis
 Orision
 Precious
 Raegal
@@ -20,12 +14,8 @@ Ryu
 Splat
 Strah
 Trillial
-Tonelico
 Vish
-Vishap
 Voda
 Vrta
 Zillin
 Zlato
-
-
