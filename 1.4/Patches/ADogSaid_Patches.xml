@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<!--
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					
+-->
+<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>A Dog Said... Animal Prosthetics</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name = "OldWoundsAnimal"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallPowerClawAnimal"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallPegLegAnimal"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticLegAnimal"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallBionicLegAnimal"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallNoseAnimalSimple"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallBionicEyeAnimal"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallEarAnimalSimple"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallEarAnimalBionic"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallJawAnimalSimple"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallJawAnimalBionic"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallSpineAnimalSimple"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallSpineAnimalBionic"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallAnimalBrainStimulator"]/recipeUsers</xpath>
+					<value> 
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallBionicAnimalHeart"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallBionicAnimalLung"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallBionicAnimalLiver"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallBionicAnimalKidney"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "InstallBionicAnimalStomach"]/recipeUsers</xpath>
+					<value>
+						<li>Black_Dragon</li>
+						<li>Blue_Dragon</li>
+						<li>Green_Dragon</li>
+						<li>Purple_Dragon</li>
+						<li>Red_Dragon</li>
+						<li>White_Dragon</li>
+						<li>Yellow_Dragon</li>
+						<li>Gold_Dragon</li>
+						<li>Silver_Dragon</li>
+						<li>Jade_Dragon</li>
+						<li>True_Dragon</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
