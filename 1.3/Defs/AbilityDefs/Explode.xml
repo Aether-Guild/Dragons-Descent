@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
+<!-- 
   <ThingDef ParentName="BaseBullet">
     <defName>Explode</defName>
     <label>high plasma projectile</label>
@@ -16,5 +16,5 @@
       <explosionRadius>2</explosionRadius>
       <damageAmountBase>10</damageAmountBase>
     </projectile>
-  </ThingDef>
+  </ThingDef> -->
 </Defs>

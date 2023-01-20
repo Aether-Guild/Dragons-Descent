@@ -29,4 +29,6 @@
   <Setting_FightingJobs_Add>Add JobDef Entry</Setting_FightingJobs_Add>
   <Setting_FightingJobs_Remove>Remove</Setting_FightingJobs_Remove>
   
+  <Setting_SpawnsNamed>Spawns with names</Setting_SpawnsNamed>
+  <Setting_SpawnsNamed_Title>Spawn already named [{0}] chance: {1}%</Setting_SpawnsNamed_Title>
 </LanguageData>

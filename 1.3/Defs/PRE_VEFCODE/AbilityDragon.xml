@@ -148,7 +148,7 @@
 			<accuracyMedium>0.30</accuracyMedium>
 			<accuracyLong>0.10</accuracyLong>
 			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-			<defaultProjectile>Projectile_DragonSpit</defaultProjectile>
+			<defaultProjectile>Projectile_DragonSpitBlunt</defaultProjectile>
 			<range>23</range>
 			<burstShotCount>3</burstShotCount>
 			<ticksBetweenBurstShots>18</ticksBetweenBurstShots>
