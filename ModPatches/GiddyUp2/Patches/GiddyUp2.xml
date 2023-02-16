@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>
+					Defs/ThingDef[
+					defName = "Black_Dragon"
+					or 	defName = "Blue_Dragon"
+					or 	defName = "Jade_Dragon"
+					or 	defName = "Gold_Dragon"
+					or 	defName = "Green_Dragon"
+					or 	defName = "Purple_Dragon"
+					or 	defName = "Red_Dragon"
+					or 	defName = "Silver_Dragon"
+					or 	defName = "True_Dragon"
+					or 	defName = "White_Dragon"
+					or 	defName = "Yellow_Dragon"]
+				</xpath>
+				<value>
+					<li Class="GiddyUp.DrawInFront" />
+					<li Class="GiddyUp.AllowedLifeStages">
+						<allowedLifeStagesCSV>2,3,4</allowedLifeStagesCSV>
+					</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>
