@@ -68,6 +68,25 @@
         </surpriseAttack>
       </li>
       <li>
+        <label>tail whip</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Cut</li>
+        </capacities>
+        <power>5</power>
+        <armorPenetration>.4</armorPenetration>
+        <cooldownTime>5.0</cooldownTime>
+        <linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
         <label>DD_Knockback</label>
         <capacities>
           <li>DD_Knockback</li>
@@ -431,6 +450,25 @@
         </surpriseAttack>
       </li>
       <li>
+        <label>tail whip</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Cut</li>
+        </capacities>
+        <power>5</power>
+        <armorPenetration>.4</armorPenetration>
+        <cooldownTime>5.0</cooldownTime>
+        <linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
         <label>DD_Knockback</label>
         <capacities>
           <li>DD_Knockback</li>
@@ -784,6 +822,25 @@
         <armorPenetration>.8</armorPenetration>
         <cooldownTime>5.0</cooldownTime>
         <linkedBodyPartsGroup>Horns</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>tail whip</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Cut</li>
+        </capacities>
+        <power>5</power>
+        <armorPenetration>.4</armorPenetration>
+        <cooldownTime>5.0</cooldownTime>
+        <linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
         <surpriseAttack>
           <extraMeleeDamages>
             <li>
