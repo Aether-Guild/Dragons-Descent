@@ -48,7 +48,9 @@
     <Compile Include="Abilities\Charge\Ability_DragonJump.cs" />
     <Compile Include="Abilities\Ability_ShootProjectile_Dragon.cs" />
     <Compile Include="Abilities\Ability_Explode_Fire.cs" />
+    <Compile Include="Abilities\DisabledAbilityExtension.cs" />
     <Compile Include="Abilities\Gainabilities.cs" />
+    <Compile Include="Abilities\MinimumAgeExtension.cs" />
     <Compile Include="Abilities\ProjectileMultiple.cs" />
     <Compile Include="Abilities\RequireBodyPartExtension.cs" />
     <Compile Include="Abilities\Stance\DD_Stance_Stand.cs" />

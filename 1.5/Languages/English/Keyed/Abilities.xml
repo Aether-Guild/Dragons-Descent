@@ -12,5 +12,6 @@
 	<Ability_CannotUseWhileFormingCaravan>{PAWN} cannot use this ability while forming a caravan.</Ability_CannotUseWhileFormingCaravan>
 	<Ability_CannotStartFlyingUnderRoof>Cannot fly when under a roof.</Ability_CannotStartFlyingUnderRoof>
 	<Ability_CannotEndFlyingUnderRoof>Cannot target a roofed tile.</Ability_CannotEndFlyingUnderRoof>
+	<Ability_UnderMinimumAge>{PAWN} needs to be at least {AGE} to use this ability.</Ability_UnderMinimumAge>
 	
 </LanguageData>

@@ -35,11 +35,6 @@ namespace DD
                 //}, "DragonJumpAbility", false, null);
             }, "DragonJumpAbility", false, null);
         }
-
-        public override bool ShowGizmoOnPawn()
-        {
-            return this.pawn != null && this.pawn.Faction == Faction.OfPlayer;
-        }
     }
 
 

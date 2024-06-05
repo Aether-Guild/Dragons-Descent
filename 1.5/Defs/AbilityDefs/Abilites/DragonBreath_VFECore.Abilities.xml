@@ -83,6 +83,10 @@
         <range>30</range>
         <cooldownTime>1250</cooldownTime>
         <iconPath>UserInterface/Abilities/Fly</iconPath>
+        <showUndrafted>true</showUndrafted>
+        <modExtensions>
+            <li Class="DD.DisabledAbilityExtension" />
+        </modExtensions>
       </VFECore.Abilities.AbilityDef>
       <!-- 
       <VFECore.Abilities.AbilityDef>
@@ -262,6 +266,9 @@
             <!-- Prevent use of the ability while forming caravan, just like it worked in the past. -->
             <!-- disableMessageKey will default to Ability_CannotUseWhileFormingCaravan -->
             <li Class="DD.CannotUseWhileFormingCaravanExtension" />
+            <li Class="DD.MinimumAgeExtension" >
+                <minAge>35</minAge>
+            </li>
         </modExtensions>
     </VFECore.Abilities.AbilityDef>
 
