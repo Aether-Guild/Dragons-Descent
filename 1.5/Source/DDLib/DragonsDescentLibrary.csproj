@@ -244,9 +244,7 @@
     <Compile Include="Ritual\RitualEffects\Effects\Ritual_CalmDownAll.cs" />
     <Compile Include="Ritual\Extensions\RitualTickingModExtension.cs" />
     <Compile Include="Ritual\Gizmos\Command_RitualEffect.cs" />
-    <Compile Include="C:\Users\Otter\Desktop\Gizmo_RitualInfo.cs">
-      <Link>Ritual\Gizmos\Gizmo_RitualInfo.cs</Link>
-    </Compile>
+    <Compile Include="Ritual\Gizmos\Gizmo_RitualInfo.cs" />
     <Compile Include="Ritual\IRituals.cs" />
     <Compile Include="Ritual\RitualEffects\Ritual.cs" />
     <Compile Include="Ritual\RitualEffects\Ritual_Targeting.cs" />

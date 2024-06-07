@@ -32,7 +32,7 @@ namespace DD
                     {
                         abilitiesComp.GiveAbility(DD_DragonBreath_Fire);
                     }
-                    VFECore.Abilities.AbilityDef DD_DragonJump = DefDatabase<VFECore.Abilities.AbilityDef>.GetNamed("DD_DragonJump");
+                    VFECore.Abilities.AbilityDef DD_DragonJump = DefDatabase<VFECore.Abilities.AbilityDef>.GetNamed("DD_DraconicFlight");
                     if (DD_DragonJump == null)
                     {
                         Log.ErrorOnce("Could not find the DragonJump ability.", 18463572);
