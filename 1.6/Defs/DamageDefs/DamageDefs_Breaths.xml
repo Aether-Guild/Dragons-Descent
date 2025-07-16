@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DamageDef>
+    <defName>DD_DamageDef_Frost</defName>
+    <label>frost breath</label>
+    <workerClass>DamageWorker_Stab</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been bitten to death.</deathMessage>
+    <hediff>Frostbite</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <additionalHediffs>
+      <li>
+        <hediff>Hypothermia</hediff>
+        <severityPerDamageDealt>0.02</severityPerDamageDealt>
+        <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+      </li>
+    </additionalHediffs>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <plantDamageFactor>9</plantDamageFactor>
+  </DamageDef>
+
+</Defs>

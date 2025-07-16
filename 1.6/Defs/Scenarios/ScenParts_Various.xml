@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ScenPartDef>
+		<defName>StartingThing_DefinedTamed_PlayerColony</defName>
+		<label>start with egg (player colony)</label>
+		<scenPartClass>DD.ScenPart_StartingThing_DefinedTamed</scenPartClass>
+		<category>StartingItem</category>
+		<selectionWeight>1.0</selectionWeight>
+		<summaryPriority>300</summaryPriority>
+		<modExtensions>
+			<li Class="DD.TamingFactionExtension">
+				<tamingFaction>PlayerColony</tamingFaction>
+			</li>
+		</modExtensions>
+	</ScenPartDef>
+
+	<ScenPartDef>
+		<defName>StartingThing_DefinedTamed_PlayerTribe</defName>
+		<label>start with egg (player tribe)</label>
+		<scenPartClass>DD.ScenPart_StartingThing_DefinedTamed</scenPartClass>
+		<category>StartingItem</category>
+		<selectionWeight>1.0</selectionWeight>
+		<summaryPriority>300</summaryPriority>
+		<modExtensions>
+			<li Class="DD.TamingFactionExtension">
+				<tamingFaction>PlayerTribe</tamingFaction>
+			</li>
+		</modExtensions>
+	</ScenPartDef>
+
+	<ScenPartDef>
+		<defName>StartingThing_DefinedTamed_Ancients</defName>
+		<label>start with egg (ancients)</label>
+		<scenPartClass>DD.ScenPart_StartingThing_DefinedTamed</scenPartClass>
+		<category>StartingItem</category>
+		<selectionWeight>1.0</selectionWeight>
+		<summaryPriority>300</summaryPriority>
+		<modExtensions>
+			<li Class="DD.TamingFactionExtension">
+				<tamingFaction>Ancients</tamingFaction>
+			</li>
+		</modExtensions>
+	</ScenPartDef>
+
+	<ScenPartDef>
+		<defName>StartingThing_DefinedTamed_AncientsHostile</defName>
+		<label>start with egg (hostile ancients)</label>
+		<scenPartClass>DD.ScenPart_StartingThing_DefinedTamed</scenPartClass>
+		<category>StartingItem</category>
+		<selectionWeight>1.0</selectionWeight>
+		<summaryPriority>300</summaryPriority>
+		<modExtensions>
+			<li Class="DD.TamingFactionExtension">
+				<tamingFaction>AncientsHostile</tamingFaction>
+			</li>
+		</modExtensions>
+	</ScenPartDef>
+
+	<ScenPartDef>
+		<defName>StartingThing_DefinedTamed_Mechanoid</defName>
+		<label>start with egg (mechanoid)</label>
+		<scenPartClass>DD.ScenPart_StartingThing_DefinedTamed</scenPartClass>
+		<category>StartingItem</category>
+		<selectionWeight>1.0</selectionWeight>
+		<summaryPriority>300</summaryPriority>
+		<modExtensions>
+			<li Class="DD.TamingFactionExtension">
+				<tamingFaction>Mechanoid</tamingFaction>
+			</li>
+		</modExtensions>
+	</ScenPartDef>
+
+	<ScenPartDef>
+		<defName>StartingThing_DefinedTamed_Insect</defName>
+		<label>start with egg (insect)</label>
+		<scenPartClass>DD.ScenPart_StartingThing_DefinedTamed</scenPartClass>
+		<category>StartingItem</category>
+		<selectionWeight>1.0</selectionWeight>
+		<summaryPriority>300</summaryPriority>
+		<modExtensions>
+			<li Class="DD.TamingFactionExtension">
+				<tamingFaction>Insect</tamingFaction>
+			</li>
+		</modExtensions>
+	</ScenPartDef>
+
+</Defs>

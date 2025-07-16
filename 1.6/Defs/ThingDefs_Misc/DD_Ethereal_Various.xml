@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>DD_IncineratorSpray_Dragon</defName>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <thingClass>IncineratorSpray</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
+  
+</Defs>

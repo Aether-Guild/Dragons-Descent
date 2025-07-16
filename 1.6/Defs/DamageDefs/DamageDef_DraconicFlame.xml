@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--========== Breath DamageDef ==========-->
+	<!-- Getting damaged with this DamageDef will attempt to apply the effect onto the pawn/thing/ground/whatever -->
+	<DamageDef>
+		<defName>DraconicFlame</defName>
+		<workerClass>DD.DD_DamageWorker_Flame</workerClass>
+		<label>draconic flame</label>
+		<hasForcefulImpact>false</hasForcefulImpact>
+		<makesBlood>false</makesBlood>
+		<canInterruptJobs>false</canInterruptJobs>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has burned to death.</deathMessage>
+		<hediff>Burn</hediff>
+		<armorCategory>Heat</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>10</defaultDamage>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+		<explosionCellFleck>BlastFlame</explosionCellFleck>
+		<explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+		<explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+		<soundExplosion>Explosion_Flame</soundExplosion>
+		<combatLogRules>Damage_Flame</combatLogRules>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<plantDamageFactor>9</plantDamageFactor>
+	</DamageDef>
+
+
+	<DamageDef>
+		<defName>DraconicExplosion</defName>
+		<!-- <workerClass>DamageWorker_Blunt</workerClass> -->
+		<workerClass>DD.DD_DamageWorker_Flame</workerClass>
+		<!-- <workerClass>DD.DD_DamageWorker_ApplyDamage</workerClass> -->
+		<label>draconic Explosion</label>
+		<hasForcefulImpact>true</hasForcefulImpact>
+		<makesBlood>false</makesBlood>
+		<canInterruptJobs>false</canInterruptJobs>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been burned to death.</deathMessage>
+		<hediff>Burn</hediff>
+		<!-- <hediffSolid>Crack</hediffSolid> -->
+		<minDamageToFragment>10</minDamageToFragment>
+		<plantDamageFactor>9</plantDamageFactor>
+		<buildingDamageFactor>1</buildingDamageFactor>
+		<defaultDamage>6</defaultDamage>
+		<defaultArmorPenetration>.20</defaultArmorPenetration>
+		<explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+		<explosionCellFleck>BlastFlame</explosionCellFleck>
+		<explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+		<explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+		<buildingDamageFactorImpassable>1.4</buildingDamageFactorImpassable>
+		<buildingDamageFactorPassable>1.2</buildingDamageFactorPassable>
+		<soundExplosion>Explosion_Flame</soundExplosion>
+		<!-- <combatLogRules>Damage_Flame</combatLogRules> -->
+		<combatLogRules>Damage_Bomb</combatLogRules>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<isExplosive>true</isExplosive>
+		<isRanged>true</isRanged>
+		<harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+		<armorCategory>Heat</armorCategory>
+		<!-- <modExtensions>
+			<li Class="DD.EffectDefExtension">
+				<def>DraconicFlame</def>
+			</li>
+		</modExtensions> -->
+		<additionalHediffs>
+			<!-- <li>
+				<hediff>DD_AcidBuildup</hediff>
+				<severityPerDamageDealt>0.01</severityPerDamageDealt>
+	
+			</li> -->
+		</additionalHediffs>
+
+	</DamageDef>
+
+	<DamageDef>
+		<defName>DraconicBlunt</defName>
+		<workerClass>DamageWorker_Blunt</workerClass>
+		<!-- <workerClass>VEF.AnimalBehaviours.DamageWorker_ExtraDamageMechanoids</workerClass> -->
+		<!-- <workerClass>DD.DamageWorker_ApplyEffect</workerClass> -->
+		<label>draconic blunt</label>
+		<hasForcefulImpact>false</hasForcefulImpact>
+		<makesBlood>true</makesBlood>
+		<canInterruptJobs>true</canInterruptJobs>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been blunted to death.</deathMessage>
+		<hediff>Crush</hediff>
+		<hediffSolid>Crack</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<armorCategory>Sharp</armorCategory>
+		<minDamageToFragment>5</minDamageToFragment>
+		<defaultDamage>15</defaultDamage>
+		<buildingDamageFactor>1.8</buildingDamageFactor>
+		<plantDamageFactor>4</plantDamageFactor>
+		<defaultArmorPenetration>.2</defaultArmorPenetration>
+		<explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+		<explosionCellFleck>BlastDry</explosionCellFleck>
+		<explosionColorCenter>(1, 0.7, 0.8)</explosionColorCenter>
+		<explosionColorEdge>(1, 1, 0.8)</explosionColorEdge>
+		<soundExplosion>Explosion_Stun</soundExplosion>
+		<combatLogRules>Damage_Flame</combatLogRules>
+		<impactSoundType>Blunt</impactSoundType>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<additionalHediffs>
+
+		</additionalHediffs>
+
+	</DamageDef>
+
+
+
+	<!--========== DraconicFlame ==========-->
+	<ThingDef>
+		<defName>DraconicFlame</defName>
+		<label>draconic flame</label>
+		<!-- <thingClass>DD.Effect</thingClass> -->
+		<thingClass>Fire</thingClass>
+		<category>Attachment</category>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Special/Fire</texPath>
+			<!-- <graphicClass>DD.Graphic_FlickerEffect</graphicClass> -->
+			<graphicClass>Graphic_Flicker</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(255, 100, 60)</color>
+			<colorTwo>(110, 50, 255)</colorTwo>
+		</graphicData>
+		<altitudeLayer>PawnState</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>DraconicExplosion</defName>
+		<label>draconic flame</label>
+		<!-- <thingClass>DD.Effect</thingClass> -->
+		<thingClass>Fire</thingClass>
+		<category>Attachment</category>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Special/Fire</texPath>
+			<!-- <graphicClass>DD.Graphic_FlickerEffect</graphicClass> -->
+			<graphicClass>Graphic_Flicker</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(255, 100, 60)</color>
+			<colorTwo>(110, 50, 255)</colorTwo>
+		</graphicData>
+		<altitudeLayer>PawnState</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+	</ThingDef>
+
+</Defs> 

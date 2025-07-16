@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- ========== Rituals ========== -->
+  <AlertRitualSustainSingle_Label>Ritual: Sustaining Dragon</AlertRitualSustainSingle_Label>
+  <AlertRitualSustainSingle_Desc>A dragon on the map will not go hungry for {DURATION}.</AlertRitualSustainSingle_Desc>
+  
+  <AlertRitualSustainMultiple_Label>Ritual: Sustaining Dragons</AlertRitualSustainMultiple_Label>
+  <AlertRitualSustainMultiple_Desc>None of the dragons on the map will go hungry for {DURATION}.</AlertRitualSustainMultiple_Desc>
+  
+  <AlertRitualWardMultiple_Label>Ritual: Warding against Dragons</AlertRitualWardMultiple_Label>
+  <AlertRitualWardMultiple_Desc>Wild dragons will leave, faction dragons will not gain mental states for {DURATION}.</AlertRitualWardMultiple_Desc>
+  
+</LanguageData>

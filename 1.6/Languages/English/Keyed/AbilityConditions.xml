@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- ===== System ===== -->
+  <ConditionSatisfied>{CONDITION}: Satisfied</ConditionSatisfied>
+  <ConditionFulfilled>{CONDITION}: Fulfilled</ConditionFulfilled>
+  
+  <!-- ===== Multi ===== -->
+  <ConditionAnd>({CONDITION_A} AND {CONDITION_B})</ConditionAnd>
+  <ConditionOr>({CONDITION_A} OR {CONDITION_B})</ConditionOr>
+
+  <!-- ===== Specific ===== -->
+  <ConditionAge>Must be at least {AGE}</ConditionAge>
+  
+  <ConditionBodyPart>Must have {BODY_PART}</ConditionBodyPart>
+  <ConditionBodyPart_Missing>Must not have {BODY_PART}</ConditionBodyPart_Missing>
+  
+  <ConditionRecord>Must have at least {VALUE} {RECORD}</ConditionRecord>
+  
+</LanguageData>

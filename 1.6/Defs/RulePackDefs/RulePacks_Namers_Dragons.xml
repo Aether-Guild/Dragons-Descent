@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerAnimalDragon</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>NameDragonUnisex->Names/Dragon_Unisex</li>
+        <li>NameDragonMale->Names/Dragon_Male</li>
+        <li>NameDragonFemale->Names/Dragon_Female</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerAnimalDragonMale</defName>
+    <include>
+      <li>NamerAnimalDragon</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=6)->[NameDragonUnisex]</li>
+        <li>r_name(p=6)->[NameDragonMale]</li>
+
+        <li>exoticname(p=2)->[AdjectiveBadass]</li>
+        <li>exoticname->[ConceptAny]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerAnimalDragonFemale</defName>
+     <include>
+      <li>NamerAnimalDragon</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=6)->[NameDragonUnisex]</li>
+        <li>r_name(p=6)->[NameDragonFemale]</li>
+        <li>r_name->[exoticname]</li>
+        
+        <li>exoticname(p=2)->[AdjectiveBadass]</li>
+        <li>exoticname->[ConceptAny]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

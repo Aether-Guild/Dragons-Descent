@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DD.GenusDef>
+		<defName>DraconicCommon</defName>
+		<label>draconic</label>
+		<description>Of the draconic bloodline.</description>
+		<spawnNamedByDefaultChance>0.25</spawnNamedByDefaultChance>
+	</DD.GenusDef>
+	
+	<DD.GenusDef>
+		<defName>DraconicRare</defName>
+		<label>rare draconic</label>
+		<description>Of the superior draconic bloodline.</description>
+		<spawnNamedByDefaultChance>0.75</spawnNamedByDefaultChance>
+	</DD.GenusDef>
+</Defs>

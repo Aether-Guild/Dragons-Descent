@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!-- DragonBreath -->
+  <VEF.Abilities.AbilityDef>
+    <defName>DD_DragonSpit_Fire</defName>
+    <label>Dragon Fire Spit</label>
+    <description>Pew</description>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetBuildings>true</canTargetBuildings>
+      <canTargetPawns>true</canTargetPawns>
+      <canTargetMechs>true</canTargetMechs>
+    </targetingParameters>
+    <abilityClass>DD.Ability_ShootProjectile_Multiple_Dragon</abilityClass>
+    <targetMode>Pawn</targetMode>
+    <castTime>75</castTime>
+    <range>26</range>
+    <chance>.3</chance>
+    <radius>5</radius>
+    <cooldownTime>700</cooldownTime>
+    <iconPath>AnimalProjectile/DragonFire</iconPath>
+    <castSound>DragonBreathShot</castSound>
+    <showUndrafted>true</showUndrafted>
+    <modExtensions>
+        <li Class="DD.AbilityExtension_Projectile_Multiple_Dragon">
+        <projectile>DD_Projectile_DragonSpit</projectile>
+        <forcedMissRadius>.9</forcedMissRadius>
+      </li>
+    </modExtensions>
+
+  </VEF.Abilities.AbilityDef>
+
+  <!-- DragonBreath_Fire -->
+
+  <VEF.Abilities.AbilityDef>
+    <defName>DD_DragonBreath_Fire</defName>
+    <label>Dragon Fire Breath</label>
+    <description>Rawr</description>
+    <abilityClass>DD.Ability_ShootProjectile_Dragon</abilityClass>
+    <targetMode>Pawn</targetMode>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetBuildings>true</canTargetBuildings>
+      <canTargetPawns>true</canTargetPawns>
+      <canTargetMechs>true</canTargetMechs>
+    </targetingParameters>
+    <castTime>100</castTime>
+    <durationTime>200</durationTime>
+    <cooldownTime>1100</cooldownTime>
+    <minRange>2</minRange>
+    <range>35</range>
+    <chance>.8</chance>
+    <radius>5</radius>
+    <iconPath>AnimalProjectile/DragonBreath_Fire</iconPath>
+    <castSound>DragonBreathShot</castSound>
+    <showUndrafted>true</showUndrafted>
+    <modExtensions>
+      <li Class="DD.AbilityExtension_Projectile_Dragon">
+        <projectile>DD_Projectile_DragonBreath_Fire</projectile>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <VEF.Abilities.AbilityDef>
+    <defName>DD_DraconicFlight</defName>
+    <label>winged flight</label>
+    <description>Jet goes up, Icarus comes down.</description>
+    <abilityClass>DD.Ability_WingedFlyer</abilityClass>
+    <targetMode>Location</targetMode>
+    <targetingParameters>
+      <canTargetPawns>true</canTargetPawns>
+      <canTargetLocations>true</canTargetLocations>
+    </targetingParameters>
+    <iconPath>UserInterface/Abilities/Fly</iconPath>
+    <cooldownTime>5200</cooldownTime>
+    <castTime>60</castTime>
+    <!-- 40 doesn't allow targeting all highlighted tiles, so a slightly bigger value is needed. -->
+    <range>40.01</range>
+    <showUndrafted>true</showUndrafted>
+    <requireLineOfSight>false</requireLineOfSight>
+
+    <modExtensions>
+      <!-- Require wings to use, just like it worked previously. -->
+      <li Class="DD.RequireBodyPartExtension">
+        <missing>true</missing>
+        <bodyPart>Wing</bodyPart>
+      </li>
+      <li Class="DD.WingedFlyerAbilityExtension">
+        <!-- Currently DD will automatically use WingedFlyer, but a custom flyer will be needed if made standalone. -->
+        <flyerDef>WingedFlyer</flyerDef>
+        <!-- Defaults to false, if true will skip the check for roof. -->
+        <ignoreRoofCheck>false</ignoreRoofCheck>
+        <!-- If present, this is the messages that will be displayed when trying to fly while under a roof/targeting a tile under a roof. -->
+        <!-- If not set/left empty only a sound will be played. -->
+        <underRoofStartKey>Ability_CannotStartFlyingUnderRoof</underRoofStartKey>
+        <underRoofEndKey>Ability_CannotEndFlyingUnderRoof</underRoofEndKey>
+      </li>
+      <!-- Prevent use of the ability while forming caravan, just like it worked in the past. -->
+      <!-- disableMessageKey will default to Ability_CannotUseWhileFormingCaravan -->
+      <li Class="DD.CannotUseWhileFormingCaravanExtension" />
+      <li Class="DD.MinimumAgeExtension">
+        <minAge>35</minAge>
+      </li>
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+  <!-- Disabled -->
+  <VEF.Abilities.AbilityDef>
+    <defName>DD_DragonJump</defName>
+    <label>Dragon Jump</label>
+    <description>This hybrid can charge into combat, quickly closing the distance between it and its enemies and damaging them.</description>
+    <abilityClass>DD.Ability_DragonJump</abilityClass>
+    <targetMode>Pawn</targetMode>
+    <targetingParameters>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetBuildings>true</canTargetBuildings>
+      <canTargetPawns>true</canTargetPawns>
+      <canTargetMechs>true</canTargetMechs>
+    </targetingParameters>
+    <castTime>120</castTime>
+    <power>20</power>
+    <range>30</range>
+    <cooldownTime>1250</cooldownTime>
+    <iconPath>UserInterface/Abilities/Fly</iconPath>
+    <showUndrafted>true</showUndrafted>
+    <modExtensions>
+      <li Class="DD.DisabledAbilityExtension" />
+    </modExtensions>
+  </VEF.Abilities.AbilityDef>
+
+
+
+</Defs>

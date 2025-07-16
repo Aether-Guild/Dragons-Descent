@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+<ToolCapacityDef>
+		<defName>Toxic_Bite</defName>
+		<label>toxic bite</label>
+	</ToolCapacityDef>
+	
+
+  <ToolCapacityDef>
+    <defName>Frost_Bite</defName>
+    <label>frost bite</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>Skull_Bash</defName>
+    <label>skull bash</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>Pyro_Bite</defName>
+    <label>pyro bite</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>Rend</defName>
+    <label>rend</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>Tail_Whip</defName>
+    <label>tail whip</label>
+  </ToolCapacityDef>
+  
+  
+  <ToolCapacityDef>
+    <defName>Life_Sap</defName>
+    <label>life sap</label>
+  </ToolCapacityDef>
+  
+  <ToolCapacityDef>
+		<defName>DD_Knockback</defName>
+		<label>Knockback attack</label>
+	</ToolCapacityDef>
+	
+</Defs>

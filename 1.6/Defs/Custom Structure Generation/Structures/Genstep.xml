@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- <GenStepDef>
+    <defName>Dragon_lair_1</defName>
+    <linkWithSite>Dragon_lair_1</linkWithSite>
+    <order>460</order>
+    <genStep Class="KCSG.GenStep_CustomStructureGen">
+      <structureLayoutDefs>
+        <li>Dragon_lair_1</li>
+      </structureLayoutDefs>
+  
+      <fullClear>true</fullClear> 
+      <clearFogInRect>false</clearFogInRect> 
+      <preventBridgeable>true</preventBridgeable> 
+    </genStep>
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>Dragon_Lair_Gold_2</defName>
+    <linkWithSite>Dragon_Lair_Gold_2</linkWithSite>
+    <order>461</order>
+    <genStep Class="KCSG.GenStep_CustomStructureGen">
+      <structureLayoutDefs>
+        <li>Dragon_Lair_Gold_2</li>
+      </structureLayoutDefs>
+      <fullClear>true</fullClear> 
+      <clearFogInRect>false</clearFogInRect> 
+      <preventBridgeable>true</preventBridgeable> 
+    </genStep>
+  </GenStepDef> -->
+</Defs>

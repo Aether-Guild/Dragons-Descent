@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- <AbilityDef>
+    <defName>FireSpew_Dragon</defName>
+    <label>fire spew</label>
+    <description>Spit a stream of sticky, flammable bile from the mouth. The bile can ignite anything or anyone it hits, and also form flaming pools on the ground.\n\nThe bile is generated and stored by an organ in the neck, along with a separate pouch of hypergolic reactant for ignition.</description>
+    <iconPath>AnimalProjectile/DragonBreath_Fire</iconPath>
+    <cooldownTicksRange>10</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>50</range>
+      <warmupTime>1</warmupTime>
+      <soundCast>DragonBreathShot</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="DD.CompProperties_Ability_Dragon_Fire">
+        <range>51</range>
+        <lineWidthEnd>7</lineWidthEnd>
+        <filthDef>Filth_FlammableBile</filthDef>
+        <effecterDef>Fire_Spew_Dragon</effecterDef>
+        <canHitFilledCells>true</canHitFilledCells>
+      </li>
+    </comps>
+  </AbilityDef>
+  <AbilityDef>
+    <defName>IncineratorBurner_Dragon</defName>
+    <label>incinerator burner</label>
+    <description>Expend a pressurized bioferrite charge to create a massive cone of flame.</description>
+    <iconPath>UI/Abilities/Burner</iconPath>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>11.9</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <flammabilityAttachFireChanceCurve>
+        <points>
+          <li>(0.2, 0)</li>
+          <li>(1, 1)</li>
+        </points>
+      </flammabilityAttachFireChanceCurve>
+    </verbProperties>
+    <comps>
+      <li Class="DD.CompProperties_Ability_Dragon_Fire">
+        <range>11.9</range>
+        <lineWidthEnd>5</lineWidthEnd>
+        <filthDef>Filth_Ash</filthDef>
+        <damAmount>16</damAmount>
+        <canHitFilledCells>true</canHitFilledCells>
+      </li>
+      <li Class="DD.CompProperties_AbilityBurner_Dragon">
+        <numStreams>15</numStreams>
+        <range>13</range>        
+        <coneSizeDegrees>12</coneSizeDegrees>
+        <moteDef>Mote_IncineratorBurst</moteDef>
+        <barrelOffsetDistance>6</barrelOffsetDistance>
+        <sizeReductionDistanceThreshold>8</sizeReductionDistanceThreshold>
+        <lifespanNoise>40</lifespanNoise>
+        <rangeNoise>.4</rangeNoise>
+        <effecterDef>BurnerUsed</effecterDef>
+      </li>
+    </comps>
+  </AbilityDef> -->
+  <!-- <verbs>
+      <li>
+        <verbClass>Verb_ShootBeam</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.0</warmupTime>
+        <range>24.9</range>
+        <minRange>3.9</minRange>
+        <beamFullWidthRange>6.9</beamFullWidthRange>
+        <burstShotCount>5</burstShotCount>
+        <showBurstShotStats>false</showBurstShotStats>
+        <beamWidth>6</beamWidth>
+        <ticksBetweenBurstShots>22</ticksBetweenBurstShots>
+        <beamDamageDef>Beam</beamDamageDef>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
+        <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
+        <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+        <beamMaxDeviation>1.5</beamMaxDeviation>
+        <beamCurvature>0.6</beamCurvature>
+        <beamMoteDef>Mote_GraserBeamBase</beamMoteDef>
+        <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
+        <beamChanceToStartFire>0.85</beamChanceToStartFire>
+        <beamChanceToAttachFire>0.85</beamChanceToAttachFire>
+        <beamFireSizeRange>0.55~0.85</beamFireSizeRange>
+        <beamLineFleckDef>Fleck_BeamSpark</beamLineFleckDef>
+        <beamStartOffset>0.8</beamStartOffset>
+        <beamLineFleckChanceCurve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(0.65, 0.4)</li>
+            <li>(1, 0.75)</li>
+          </points>
+        </beamLineFleckChanceCurve>
+      </li>
+    </verbs> -->
+
+
+
+
+  <!-- <AbilityDef>
+        <defName>DraconicFlight</defName>
+        <label>draconic flight</label>
+        <description>Jet goes up, Icarus comes down.</description>
+		<iconPath>UserInterface/Abilities/Fly</iconPath>
+        <abilityClass>DD.Ability_Base</abilityClass>
+        <cooldownTicksRange>1800~5200</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+			<range>40</range>
+			<requireLineOfSight>false</requireLineOfSight>
+			<drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+			<warmupTime>1</warmupTime>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+        </verbProperties>
+        <comps>
+			<li Class="DD.AbilityCompProperties_Flight">
+				<compClass>DD.AbilityComp_Flight</compClass>
+				<range>100</range>
+			</li>
+			<li Class="DD.AbilityCompProperties_Cooldown">
+                <compClass>DD.AbilityComp_Cooldown</compClass>
+				<cooldownTicksRange>8000</cooldownTicksRange>
+			</li>
+			<li Class="DD.AbilityCompProperties_RequireBodyPart">
+				<compClass>DD.AbilityComp_RequireBodyPart</compClass>
+				<missing>true</missing>
+				<bodyPart>Wing</bodyPart>
+			</li>
+        </comps>
+    </AbilityDef> -->
+
+  <ThingDef>
+    <defName>WingedFlyer</defName>
+    <label>dragon in flight</label>
+    <thingClass>DD.WingedFlyer</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Weather</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <destroyOnDrop>true</destroyOnDrop>
+    <tradeability>None</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="PawnFlyerBase">
+    <defName>DD_DragonJumpFlyer</defName>
+    <thingClass>VEF.Abilities.AbilityPawnFlyer</thingClass>
+    <pawnFlyer>
+      <flightDurationMin>0.5</flightDurationMin>
+      <flightSpeed>15</flightSpeed>
+    </pawnFlyer>
+  </ThingDef>
+  <!-- <ThingDef ParentName="EtherealThingBase">
+    <defName>IncineratorSpray_Dragon</defName>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <thingClass>DD.IncineratorSpray_Dragon</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef> -->
+
+</Defs> 

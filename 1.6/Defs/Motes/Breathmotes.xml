@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- <ThingDef ParentName="MoteBase" MayRequire="Ludeon.RimWorld.Anomaly">
+  <defName>DD_Mote_FirePuff</defName>
+  <altitudeLayer>MoteOverhead</altitudeLayer>
+  <mote>
+    <growthRate>0.53</growthRate>
+    <collide>true</collide>
+    <speedPerTime>-0.32</speedPerTime>
+    <fadeOutTime>.6</fadeOutTime>
+    <solidTime>20</solidTime>
+  </mote>
+  <graphicData>
+    <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+    <shaderType>CutoutAnimated</shaderType>
+    <texPath>Things/Building/Misc/Lightball/Lightball_Overlay</texPath>
+    <shaderParameters>
+      <_NumFrames>4</_NumFrames>
+      <_FramesPerSec>7</_FramesPerSec>
+    </shaderParameters>
+    <drawSize>5</drawSize>
+  </graphicData>
+</ThingDef> -->
+
+<ThingDef ParentName="MoteBase">
+  <defName>DD_Mote_ExplosionPuff</defName>
+  <altitudeLayer>MoteOverhead</altitudeLayer>
+  <mote>
+    <fadeInTime>0.06</fadeInTime>
+    <solidTime>0.4</solidTime>
+    <fadeOutTime>.6</fadeOutTime>
+    <growthRate>.63</growthRate>
+  </mote>
+  <graphicData>
+    <texPath>Things/Mote/ShieldBubble_BrokenFlash</texPath>
+    <shaderType>MoteGlow</shaderType>
+    <!-- <texPath>Things/Mote/PowerBeam</texPath> -->
+    <!-- <shaderType>MoteGlow</shaderType> -->
+  </graphicData>
+</ThingDef>
+
+
+
+  
+
+<!-- so you'll define the size within the actual fire itself -->
+<ThingDef ParentName="MoteBase" MayRequire="Ludeon.RimWorld.Anomaly">
+  <defName>DD_Mote_IncineratorBurst_Fire</defName>
+  <thingClass>MoteDualAttached</thingClass>
+  <altitudeLayer>MoteOverhead</altitudeLayer>
+  <isSaveable>false</isSaveable> <!-- because it's pure-vis, and weirdly constructed, it's better to not persist them at all -->
+  <mote>
+    <fadeInTime>0</fadeInTime>
+    <fadeOutTime>1</fadeOutTime>
+    <solidTime>999999</solidTime>
+    <needsMaintenance>True</needsMaintenance>
+    <rotateTowardsTarget>True</rotateTowardsTarget>
+    <scaleToConnectTargets>False</scaleToConnectTargets>
+    <fadeOutUnmaintained>True</fadeOutUnmaintained>
+  </mote>
+  <drawOffscreen>true</drawOffscreen>
+  <graphicData>
+    <texPath>Things/Mote/IncineratorFlameSheet</texPath>
+    <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+    <shaderType>MoteIncineratorBeam</shaderType>
+    <shaderParameters>
+      <_GradientTex>/Things/BreathMotes/DragonBeamGradient_Fire</_GradientTex>
+      <_AgeScalarNoise>/Things/BreathMotes/DragonBeamAgeNoise_Fire</_AgeScalarNoise>
+      <_ScrollSpeedA>-4 </_ScrollSpeedA>
+      <_ScrollSpeedB>3</_ScrollSpeedB>
+      <_Intensity>0</_Intensity>
+      <_NumFrames>12</_NumFrames>
+      <_FramesPerSec>12</_FramesPerSec>
+    </shaderParameters>
+    <drawSize>10</drawSize>
+  </graphicData>
+</ThingDef>
+
+<ThingDef ParentName="MoteBase" MayRequire="Ludeon.RimWorld.Anomaly">
+  <defName>DD_Mote_IncineratorBurst_Necro</defName>
+  <thingClass>MoteDualAttached</thingClass>
+  <altitudeLayer>MoteOverhead</altitudeLayer>
+  <isSaveable>false</isSaveable> 
+  <mote>
+    <fadeInTime>0</fadeInTime>
+    <fadeOutTime>1</fadeOutTime>
+    <solidTime>999999</solidTime>
+    <needsMaintenance>True</needsMaintenance>
+    <rotateTowardsTarget>True</rotateTowardsTarget>
+    <scaleToConnectTargets>False</scaleToConnectTargets>
+    <fadeOutUnmaintained>True</fadeOutUnmaintained>
+  </mote>
+  <drawOffscreen>true</drawOffscreen>
+  <graphicData>
+    <texPath>Things/Mote/IncineratorFlameSheet</texPath>
+    <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+    <shaderType>MoteIncineratorBeam</shaderType>
+    <shaderParameters>
+      <_GradientTex>/Things/BreathMotes/DragonBeamGradient_Purple</_GradientTex>
+      <_AgeScalarNoise>/Things/BreathMotes/DragonBeamAgeNoise_Purple</_AgeScalarNoise>
+      <_ScrollSpeedA>-4 </_ScrollSpeedA>
+      <_ScrollSpeedB>3</_ScrollSpeedB>
+      <_Intensity>0</_Intensity>
+      <_NumFrames>12</_NumFrames>
+      <_FramesPerSec>12</_FramesPerSec>
+    </shaderParameters>
+    <drawSize>10</drawSize>
+  </graphicData>
+</ThingDef>
+<!-- The effector def is best when it's thought of a spawner of the mote/fleck -->
+
+<FleckDef ParentName="FleckBase_Thrown" MayRequire="Ludeon.RimWorld.Anomaly">
+  <defName>DD_Fleck_BurnerUsedSmoke</defName>
+  <fadeInTime>.2</fadeInTime>
+  <solidTime>3</solidTime>
+  <fadeOutTime>2</fadeOutTime>
+  <altitudeLayer>MoteOverhead</altitudeLayer>
+  <growthRate>.75</growthRate>
+  <graphicData>
+    <graphicClass>Graphic_FleckPulse</graphicClass>
+    <texPath>Things/Mote/Smoke</texPath>
+    <shaderType>TransparentColorLerp</shaderType>
+    <drawSize>1</drawSize>
+    <shaderParameters>
+      <_ColorLerp>/Things/Mote/IncineratorSmokeColorLerp</_ColorLerp>
+      <_Duration>1</_Duration>
+    </shaderParameters>
+  </graphicData>
+  <acceleration>(0, 0, 0)</acceleration>
+  <speedPerTime>0</speedPerTime>
+</FleckDef>
+
+<FleckDef ParentName="FleckBase_Thrown" MayRequire="Ludeon.RimWorld.Anomaly">
+  <defName>DD_Fleck_BurnerUsedEmber</defName>
+  <altitudeLayer>MoteOverhead</altitudeLayer>
+  <fadeInTime>0</fadeInTime>
+  <solidTime>3</solidTime>
+  <fadeOutTime>3</fadeOutTime>
+  <graphicData>
+    <graphicClass>Graphic_FleckPulse</graphicClass>
+    <texPath>Things/Mote/Ember</texPath>
+    <shaderType>EmberGlow</shaderType>
+    <drawSize>.3</drawSize>
+    <shaderParameters>
+      <_Color2>(.96, .6, .2, 1)</_Color2>
+      <_Interval>0.05</_Interval>
+    </shaderParameters>
+  </graphicData>
+  <scalers>
+    <li>
+      <scaleAmt>1~3</scaleAmt>
+      <scaleTime>.2~6</scaleTime>
+      <curve>
+        <points>
+          <li>(0,0)</li>
+          <li>(0.04,0.305448)</li>
+          <li>(0.08,0.6668836)</li>
+          <li>(0.12,0.9360147)</li>
+          <li>(0.16,0.9911547)</li>
+          <li>(0.2,0.9870781)</li>
+          <li>(0.24,0.9784655)</li>
+          <li>(0.28,0.9653521)</li>
+          <li>(0.32,0.9477734)</li>
+          <li>(0.36,0.9257647)</li>
+          <li>(0.3999999,0.8993613)</li>
+          <li>(0.4399999,0.8685986)</li>
+          <li>(0.4799999,0.8335121)</li>
+          <li>(0.5199999,0.7941369)</li>
+          <li>(0.5599999,0.7505086)</li>
+          <li>(0.6,0.7026625)</li>
+          <li>(0.64,0.6506338)</li>
+          <li>(0.68,0.594458)</li>
+          <li>(0.72,0.5341705)</li>
+          <li>(0.7600001,0.4698067)</li>
+          <li>(0.8000001,0.4014017)</li>
+          <li>(0.8400001,0.3289912)</li>
+          <li>(0.8800001,0.2526103)</li>
+          <li>(0.9200001,0.1722946)</li>
+          <li>(0.9600002,0.08807921)</li>
+          <li>(1,0)</li>
+        </points>
+      </curve>
+    </li>
+  </scalers>
+  
+</FleckDef>
+
+<FleckDef ParentName="FleckBase_Thrown" MayRequire="Ludeon.RimWorld.Anomaly">
+  <defName>DD_Fleck_BurnerUsedEmberBlack</defName>
+  <altitudeLayer>MoteOverhead</altitudeLayer>
+  <fadeInTime>0</fadeInTime>
+  <solidTime>3</solidTime>
+  <fadeOutTime>3</fadeOutTime>
+  <graphicData>
+    <drawSize>.5</drawSize>
+    <graphicClass>Graphic_FleckPulse</graphicClass>
+    <texPath>Things/Mote/Ember</texPath>
+    <shaderType>Ember</shaderType>
+    <shaderParameters>
+      <_Color2>(0, 0, 0, 1)</_Color2>
+      <_Interval>0.05</_Interval>
+    </shaderParameters>
+  </graphicData>
+  <scalers>
+    <li>
+      <scaleAmt>.8~1</scaleAmt>
+      <scaleTime>2~6</scaleTime>
+      <curve>
+        <points>
+          <li>(0,0)</li>
+          <li>(0.04,0.305448)</li>
+          <li>(0.08,0.6668836)</li>
+          <li>(0.12,0.9360147)</li>
+          <li>(0.16,0.9911547)</li>
+          <li>(0.2,0.9870781)</li>
+          <li>(0.24,0.9784655)</li>
+          <li>(0.28,0.9653521)</li>
+          <li>(0.32,0.9477734)</li>
+          <li>(0.36,0.9257647)</li>
+          <li>(0.3999999,0.8993613)</li>
+          <li>(0.4399999,0.8685986)</li>
+          <li>(0.4799999,0.8335121)</li>
+          <li>(0.5199999,0.7941369)</li>
+          <li>(0.5599999,0.7505086)</li>
+          <li>(0.6,0.7026625)</li>
+          <li>(0.64,0.6506338)</li>
+          <li>(0.68,0.594458)</li>
+          <li>(0.72,0.5341705)</li>
+          <li>(0.7600001,0.4698067)</li>
+          <li>(0.8000001,0.4014017)</li>
+          <li>(0.8400001,0.3289912)</li>
+          <li>(0.8800001,0.2526103)</li>
+          <li>(0.9200001,0.1722946)</li>
+          <li>(0.9600002,0.08807921)</li>
+          <li>(1,0)</li>
+        </points>
+      </curve>
+    </li>
+  </scalers>
+ 
+</FleckDef>
+
+<FleckDef ParentName="FleckBase" MayRequire="Ludeon.RimWorld.Anomaly">
+  <defName>DD_NociosphereDepartCompleteDistortion</defName>
+  <altitudeLayer>MoteOverhead</altitudeLayer>
+  <fadeInTime>0.04</fadeInTime>
+  <solidTime>1</solidTime>
+  <fadeOutTime>1</fadeOutTime>
+  <growthRate>1</growthRate>
+  <graphicData>
+    <graphicClass>Graphic_FleckPulse</graphicClass>
+    <texPath>Things/Mote/Black</texPath>
+    <shaderType>MoteLargeDistortionWave</shaderType>
+    <shaderParameters>
+      <_DistortionTex>/Things/Mote/PsychicDistortionCurrents</_DistortionTex>
+      <_NoiseTex>/Things/Mote/PsycastNoise</_NoiseTex>
+      <_distortionIntensity>0.12</_distortionIntensity>
+      <_brightnessMultiplier>1.15</_brightnessMultiplier>
+      <_noiseIntensity>10</_noiseIntensity>
+      <_ageToNoiseRatio>0</_ageToNoiseRatio>
+    </shaderParameters>
+    <drawSize>10.0</drawSize>
+  </graphicData>
+</FleckDef>
+</Defs>

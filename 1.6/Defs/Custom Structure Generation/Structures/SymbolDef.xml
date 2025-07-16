@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- <KCSG.SymbolDef>
+    <defName>Altar_Silver_North</defName>
+    <thing>Altar</thing>
+    <stuff>Silver</stuff>
+  </KCSG.SymbolDef>
+  
+  <KCSG.SymbolDef>
+    <defName>Silver_Dragon</defName>
+    <pawnKindDef>Silver_Dragon</pawnKindDef>
+  </KCSG.SymbolDef>
+  
+  <KCSG.SymbolDef>
+    <defName>DragonPillow_Rare_Dragon_Leather_North</defName>
+    <thing>DragonPillow</thing>
+    <stuff>Rare_Dragon_Leather</stuff>
+  </KCSG.SymbolDef>
+  
+  <KCSG.SymbolDef>
+    <defName>DragonsBlood</defName>
+    <thing>DragonsBlood</thing>
+  </KCSG.SymbolDef>
+  
+  <KCSG.SymbolDef>
+    <defName>EggSilverDragonFertilized</defName>
+    <thing>EggSilverDragonFertilized</thing>
+  </KCSG.SymbolDef>
+   -->
+  
+  <!-- <KCSG.SymbolDef>
+    <defName>PawnSymbol_Silver_Dragon</defName>
+    <pawnKindDef>Silver_Dragon</pawnKindDef>
+    <isSlave>false</isSlave> 
+    <spawnPartOfFaction>false</spawnPartOfFaction> 
+    <faction>OutlanderRough</faction> 
+    <numberToSpawn>1</numberToSpawn>
+    <spawnDead>false</spawnDead> 
+    <spawnRotten>false</spawnRotten>
+    <spawnFilthAround>false</spawnFilthAround> 
+    <defendSpawnPoint>true</defendSpawnPoint> 
+  </KCSG.SymbolDef> -->
+
+
+</Defs>

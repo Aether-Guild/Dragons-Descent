@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!--=========================== Dragon
+	Statue Ritual Spot  ===============================-->
+
+
+	<ThingDef ParentName="BuildingBase" Name="DD_DragonStatueRitual_Base" Abstract="True">
+		<thingClass>Building_Art</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<useHitPoints>true</useHitPoints>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsArt</li>
+		</thingCategories>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<statBases>
+			<Flammability>1.0</Flammability>
+			<SellPriceFactor>1.10</SellPriceFactor>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+		</statBases>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtSculpture</nameMaker>
+				<descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+			</li>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Artistic</li>
+				</focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_Quality">
+						<curve>
+							<points>
+								<li>(0,0.12)</li> 
+								<li>(1,0.16)</li> 
+								<li>(2,0.20)</li> 
+								<li>(3,0.22)</li> 
+								<li>(4,0.24)</li> 
+								<li>(5,0.26)</li> 
+								<li>(6,0.28)</li> 
+							</points>
+						</curve>
+					</li>
+					<li Class="FocusStrengthOffset_BuildingDefsWithQuality">
+						<defs>
+							<li MayRequire="Ludeon.RimWorld.Ideology">DD_DragonStatueRitual_Small</li>
+							<li MayRequire="Ludeon.RimWorld.Ideology">DD_DragonStatueRitual_Large</li>
+							<li MayRequire="Ludeon.RimWorld.Ideology">DD_DragonStatueRitual_Grand</li>
+						</defs>
+						<radius>9.9</radius>
+						<maxBuildings>8</maxBuildings>
+						<focusPerQuality>
+							<points>
+								<li>(0,0.0)</li> <!-- awful -->
+								<li>(1,0.0)</li> <!-- poor -->
+								<li>(2,0.01)</li> <!-- normal -->
+								<li>(3,0.01)</li> <!-- good -->
+								<li>(4,0.01)</li> <!-- excellent -->
+								<li>(5,0.02)</li> <!-- masterwork -->
+								<li>(6,0.02)</li> <!-- legendary -->
+							</points>
+						</focusPerQuality>
+						<explanationKey>MeditationFocusPerSculpture</explanationKey>
+						<explanationKeyAbstract>MeditationFocusPerSculptureAbstract</explanationKeyAbstract>
+					</li>
+				</offsets>
+			</li>
+			
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+		</placeWorkers>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<tradeTags>
+			<li>Art</li>
+		</tradeTags>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Artistic</workSkill>
+			<unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+			<effectWorking>Sculpt</effectWorking>
+			<soundWorking>Recipe_Sculpt</soundWorking>
+			<recipeUsers>
+				<li>TableSculpting</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Gold</li>
+					<li>Silver</li>
+					<li>Plasteel</li>
+					<li>Jade</li>
+					<li>Uranium</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</recipeMaker>
+		<ideoBuildingNamerBase MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoSculpture</ideoBuildingNamerBase>
+		<ritualFocus>
+			<spectateDistance>2</spectateDistance>
+			<allowedSpectateSides>Down</allowedSpectateSides>
+		</ritualFocus>
+		<building>
+			<paintable>true</paintable>
+		</building>
+	</ThingDef>
+
+
+	<ThingDef ParentName="DD_DragonStatueRitual_Base">
+		<defName>DD_DragonStatueRitual_Grand</defName>
+		<label>Dragon Statue Ritual</label>
+		<description>A spot for carrying out certain kinds of rituals.</description>
+		<graphicData>
+			<texPath>Things/Building/Art/SculptureGrand/sculpturegranddraconica</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4.5,4.5)</drawSize>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<WorkToMake>105000</WorkToMake>
+			<MaxHitPoints>600</MaxHitPoints>
+			<Beauty>500</Beauty>
+			<MeditationFocusStrength>0.38</MeditationFocusStrength>
+			<Mass>40</Mass>
+			<Flammability>0</Flammability>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">40</StyleDominance>
+		</statBases>
+		<costStuffCount>550</costStuffCount>
+		<rotatable>false</rotatable>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>True</useHitPoints>
+		<designationCategory MayRequire="Ludeon.RimWorld.Ideology">Ideology</designationCategory>
+		<uiOrder>2000</uiOrder>
+		<passability>Standable</passability>
+		<building>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<buildingTags>
+				<li>RitualFocus</li>
+			</buildingTags>
+			<relatedBuildCommands>
+				<li MayRequire="Ludeon.RimWorld.Ideology">Lectern</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">KneelPillow</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">KneelSheet</li>
+			</relatedBuildCommands>
+			<paintable>true</paintable>
+		</building>
+		<stuffCategories>
+			<li>Stony</li>
+			<li>Metallic</li>
+		</stuffCategories>
+		<size>(3,3)</size>
+		<uiIconScale>0.80</uiIconScale>
+
+		<placeWorkers Inherit="False">
+			<li>PlaceWorker_RitualFocusNoArrow</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>True</drawPlaceWorkersWhileSelected>
+		<comps>
+
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="DD_DragonStatueRitual_Base">
+		<defName>DD_DragonStatueRitual_Large</defName>
+		<label>Dragon Statue Ritual</label>
+		<description>A spot for carrying out certain kinds of rituals.</description>
+		<graphicData>
+			<texPath>Things/Building/Art/SculptureLarge/sculpturelargedraconica</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2.8,2.8)</drawSize>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<WorkToMake>30000</WorkToMake>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Beauty>130</Beauty>
+			<MeditationFocusStrength>0.28</MeditationFocusStrength>
+			<Mass>15</Mass>
+			<Flammability>0</Flammability>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">30</StyleDominance>
+
+		</statBases>
+		<costStuffCount>200</costStuffCount>
+		<rotatable>false</rotatable>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>True</useHitPoints>
+		<designationCategory MayRequire="Ludeon.RimWorld.Ideology">Ideology</designationCategory>
+		<uiOrder>2001</uiOrder>
+		<passability>Standable</passability>
+		<building>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<buildingTags>
+				<li>RitualFocus</li>
+			</buildingTags>
+			<relatedBuildCommands>
+				<li MayRequire="Ludeon.RimWorld.Ideology">Lectern</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">KneelPillow</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">KneelSheet</li>
+			</relatedBuildCommands>
+			<paintable>true</paintable>
+		</building>
+		<stuffCategories>
+			<li>Stony</li>
+			<li>Metallic</li>
+		</stuffCategories>
+		<size>(2,2)</size>
+		<uiIconScale>1.00</uiIconScale>
+		<placeWorkers Inherit="False">
+			<li>PlaceWorker_RitualFocusNoArrow</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>True</drawPlaceWorkersWhileSelected>
+		<comps>
+
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="DD_DragonStatueRitual_Base">
+		<defName MayRequire="Ludeon.RimWorld.Ideology">DD_DragonStatueRitual_Small</defName>
+		<label>Dragon Statue Ritual</label>
+		<description>A spot for carrying out certain kinds of rituals.</description>
+		<graphicData>
+			<texPath>Things/Building/Art/SculptureSmall/sculpturesmalldraconica</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.5,1.5)</drawSize>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<WorkToMake>18000</WorkToMake>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Beauty>80</Beauty>
+			<MeditationFocusStrength>0.18</MeditationFocusStrength>
+			<Mass>8</Mass>
+			<Flammability>0</Flammability>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">20</StyleDominance>
+		</statBases>
+		<costStuffCount>90</costStuffCount>
+		<rotatable>false</rotatable>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>True</useHitPoints>
+		<designationCategory MayRequire="Ludeon.RimWorld.Ideology">Ideology</designationCategory>
+		<uiOrder>2003</uiOrder>
+		<passability>Standable</passability>
+		<building>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<buildingTags>
+				<li>RitualFocus</li>
+			</buildingTags>
+			<relatedBuildCommands>
+				<li MayRequire="Ludeon.RimWorld.Ideology">Lectern</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">KneelPillow</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">KneelSheet</li>
+			</relatedBuildCommands>
+			<paintable>true</paintable>
+		</building>
+		<stuffCategories>
+			<li>Stony</li>
+			<li>Metallic</li>
+		</stuffCategories>
+		<size>(1,1)</size>
+		<uiIconScale>0.70</uiIconScale>
+		<placeWorkers Inherit="False">
+			<li>PlaceWorker_RitualFocusNoArrow</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>True</drawPlaceWorkersWhileSelected>
+		<comps>
+
+		</comps>
+	</ThingDef>
+
+</Defs>

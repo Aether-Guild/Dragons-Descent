@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Dragon passes -->
+  <LetterLabelDragonsPasses>Wandering Dragon</LetterLabelDragonsPasses>
+  <LetterDragonsPasses>A wandering {DRAGON} has appeared on your doorstep, majestic and strong. You could attempt to tame it but beware though, they may attack even those who offer gifts. Or you could hunt it for its valuable horns and leather which are powerful and rare. It will leave in around 2-3 of days.\n\nYou can also use an altar to banish the dragon if you do not wish them to be around.</LetterDragonsPasses>
+  
+  <!-- Dragon hunting -->
+  <LetterLabelDragonsHunting>Hunting Dragon</LetterLabelDragonsHunting>
+  <LetterDragonsHunting>A hungry dragon has been tracking a herd of animals, and it just so happens that you are in the middle of it. You could attempt to tame it but beware though, they may attack even those who offer gifts. Or you could hunt it for its valuable horns and leather which are powerful and rare. It will leave in around 3-5 days.\n\nYou can also use an altar to banish the dragon if you do not wish them to be around.</LetterDragonsHunting>
+  
+</LanguageData>

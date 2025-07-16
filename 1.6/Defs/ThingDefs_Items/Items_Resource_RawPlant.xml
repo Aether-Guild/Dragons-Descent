@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>JewelBerries</defName>
+    <label>jewel berries</label>
+    <description>Jewel berries are in fact not berries, but instead they are the pseudobulbs from the jewel orchid. They are quite nutritious but they do have a higher chance of food poisoning and have a long grow time, making them a bad choice for a staple crop. Their main use is in draconic recipes.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/JewelBerries</texPath>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.075</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.1</FoodPoisonChanceFixedHuman>
+      <MarketValue>1.8</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>25</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+      <ingestible>
+        <foodType>VegetableOrFruit</foodType>
+        <preferability>RawTasty</preferability>
+      </ingestible>
+  </ThingDef>
+  
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>Jeweledrhizomeraw</defName>
+    <label>Jeweled Rhizome</label>
+    <description>The root tubers of a Jewel orchid.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Jeweledrhizome</texPath>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.175</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.1</FoodPoisonChanceFixedHuman>
+      <MarketValue>1.8</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>25</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+      <ingestible>
+        <foodType>VegetableOrFruit</foodType>
+        <preferability>RawBad</preferability>
+      </ingestible>
+  </ThingDef>
+  
+</Defs>

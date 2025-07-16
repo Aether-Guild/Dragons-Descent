@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Alpha Biomes</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationAdd"> 
+             <xpath>/Defs/BiomeDefs[defName="AB_FeraliskInfestedJungle"]/wildAnimals</xpath> 
+                <value>
+                    <li>
+         <Black_Dragon>0.001</Black_Dragon>
+        <Green_Dragon>0.001</Green_Dragon>
+		<Purple_Dragon>0.001</Purple_Dragon>
+        <Red_Dragon>0.001</Red_Dragon> 
+		<Blue_Dragon>0.001</Blue_Dragon>
+        <White_Dragon>0.001</White_Dragon> 
+		<Yellow_Dragon>0.001</Yellow_Dragon>
+        <True_Dragon>0.001</True_Dragon> 
+		<Silver_Dragon>0.001</Silver_Dragon>
+        <Gold_Dragon>0.001</Gold_Dragon> 
+		<Jade_Dragon>0.001</Jade_Dragon>
+
+</li>                        
+                </value>
+            </li>
+            <li Class="PatchOperationAdd"> 
+				 <xpath>/Defs/BiomeDefs[defName="AB_MycoticJungle"]/wildAnimals</xpath> 
+                <value>
+                    <li>
+        <Black_Dragon>0.001</Black_Dragon>
+        <Green_Dragon>0.001</Green_Dragon>
+		<Purple_Dragon>0.001</Purple_Dragon>
+        <Red_Dragon>0.001</Red_Dragon> 
+		<Blue_Dragon>0.001</Blue_Dragon>
+        <White_Dragon>0.001</White_Dragon> 
+		<Yellow_Dragon>0.001</Yellow_Dragon>
+        <True_Dragon>0.001</True_Dragon> 
+		<Silver_Dragon>0.001</Silver_Dragon>
+        <Gold_Dragon>0.001</Gold_Dragon> 
+		<Jade_Dragon>0.001</Jade_Dragon>
+</li>                        
+                </value>
+            </li>
+     
+		
+		   <li Class="PatchOperationAdd"> 
+				 <xpath>/Defs/BiomeDefs[defName="AB_OcularForest"]/wildAnimals</xpath> 
+                <value>
+                    <li>
+        <Black_Dragon>0.001</Black_Dragon>
+        <Green_Dragon>0.001</Green_Dragon>
+		<Purple_Dragon>0.001</Purple_Dragon>
+        <Red_Dragon>0.001</Red_Dragon> 
+		<Blue_Dragon>0.001</Blue_Dragon>
+        <White_Dragon>0.001</White_Dragon> 
+		<Yellow_Dragon>0.001</Yellow_Dragon>
+        <True_Dragon>0.001</True_Dragon> 
+		<Silver_Dragon>0.001</Silver_Dragon>
+        <Gold_Dragon>0.001</Gold_Dragon> 
+		<Jade_Dragon>0.001</Jade_Dragon>
+</li>                        
+                </value>
+            </li>
+     
+		
+		   <li Class="PatchOperationAdd"> 
+				 <xpath>/Defs/BiomeDefs[defName="AB_GelatinousSuperorganism"]/wildAnimals</xpath> 
+                <value>
+                    <li>
+        <Black_Dragon>0.001</Black_Dragon>
+        <Green_Dragon>0.001</Green_Dragon>
+		<Purple_Dragon>0.001</Purple_Dragon>
+        <Red_Dragon>0.001</Red_Dragon> 
+		<Blue_Dragon>0.001</Blue_Dragon>
+        <White_Dragon>0.001</White_Dragon> 
+		<Yellow_Dragon>0.001</Yellow_Dragon>
+        <True_Dragon>0.001</True_Dragon> 
+		<Silver_Dragon>0.001</Silver_Dragon>
+        <Gold_Dragon>0.001</Gold_Dragon> 
+		<Jade_Dragon>0.001</Jade_Dragon>
+</li>                        
+                </value>
+            </li>
+ 
+		
+		   <li Class="PatchOperationAdd"> 
+				 <xpath>/Defs/BiomeDefs[defName="AB_GallatrossGraveyard"]/wildAnimals</xpath> 
+                <value>
+                    <li>
+        <Black_Dragon>0.001</Black_Dragon>
+        <Green_Dragon>0.001</Green_Dragon>
+		<Purple_Dragon>0.001</Purple_Dragon>
+        <Red_Dragon>0.001</Red_Dragon> 
+		<Blue_Dragon>0.001</Blue_Dragon>
+        <White_Dragon>0.001</White_Dragon> 
+		<Yellow_Dragon>0.001</Yellow_Dragon>
+        <True_Dragon>0.001</True_Dragon> 
+		<Silver_Dragon>0.001</Silver_Dragon>
+        <Gold_Dragon>0.001</Gold_Dragon> 
+		<Jade_Dragon>0.001</Jade_Dragon>
+</li>                        
+                </value>
+            </li>
+   
+		
+		   <li Class="PatchOperationAdd"> 
+				 <xpath>/Defs/BiomeDefs[defName="AB_MechanoidIntrusion"]/wildAnimals</xpath> 
+                <value>
+                    <li>
+        <Black_Dragon>0.001</Black_Dragon>
+        <Green_Dragon>0.001</Green_Dragon>
+		<Purple_Dragon>0.001</Purple_Dragon>
+        <Red_Dragon>0.001</Red_Dragon> 
+		<Blue_Dragon>0.001</Blue_Dragon>
+        <White_Dragon>0.001</White_Dragon> 
+		<Yellow_Dragon>0.001</Yellow_Dragon>
+        <True_Dragon>0.001</True_Dragon> 
+		<Silver_Dragon>0.001</Silver_Dragon>
+        <Gold_Dragon>0.001</Gold_Dragon> 
+		<Jade_Dragon>0.001</Jade_Dragon>
+</li>                        
+                </value>
+            </li>
+    
+		
+		   <li Class="PatchOperationAdd"> 
+				 <xpath>/Defs/BiomeDefs[defName="AB_PropaneLakes"]/wildAnimals</xpath> 
+                <value>
+                    <li>
+        <Black_Dragon>0.001</Black_Dragon>
+        <Green_Dragon>0.001</Green_Dragon>
+		<Purple_Dragon>0.001</Purple_Dragon>
+        <Red_Dragon>0.001</Red_Dragon> 
+		<Blue_Dragon>0.001</Blue_Dragon>
+        <White_Dragon>0.001</White_Dragon> 
+		<Yellow_Dragon>0.001</Yellow_Dragon>
+        <True_Dragon>0.001</True_Dragon> 
+		<Silver_Dragon>0.001</Silver_Dragon>
+        <Gold_Dragon>0.001</Gold_Dragon> 
+		<Jade_Dragon>0.001</Jade_Dragon>
+</li>                        
+                </value>
+            </li>
+   
+		   <li Class="PatchOperationAdd"> 
+				 <xpath>/Defs/BiomeDefs[defName="AB_RockyCrags"]/wildAnimals</xpath> 
+                <value>
+                    <li>
+        <Black_Dragon>0.001</Black_Dragon>
+        <Green_Dragon>0.001</Green_Dragon>
+		<Purple_Dragon>0.001</Purple_Dragon>
+        <Red_Dragon>0.001</Red_Dragon> 
+		<Blue_Dragon>0.001</Blue_Dragon>
+        <White_Dragon>0.001</White_Dragon> 
+		<Yellow_Dragon>0.001</Yellow_Dragon>
+        <True_Dragon>0.001</True_Dragon> 
+		<Silver_Dragon>0.001</Silver_Dragon>
+        <Gold_Dragon>0.001</Gold_Dragon> 
+		<Jade_Dragon>0.001</Jade_Dragon>
+</li>                        
+                </value>
+            </li>
+    
+				   <li Class="PatchOperationAdd"> 
+				 <xpath>/Defs/BiomeDefs[defName=" AB_PyroclasticConflagration"]/wildAnimals</xpath> 
+                <value>
+                    <li>
+        <Black_Dragon>0.001</Black_Dragon>
+        <Green_Dragon>0.001</Green_Dragon>
+		<Purple_Dragon>0.001</Purple_Dragon>
+        <Red_Dragon>0.001</Red_Dragon> 
+		<Blue_Dragon>0.001</Blue_Dragon>
+        <White_Dragon>0.001</White_Dragon> 
+		<Yellow_Dragon>0.001</Yellow_Dragon>
+        <True_Dragon>0.001</True_Dragon> 
+		<Silver_Dragon>0.001</Silver_Dragon>
+        <Gold_Dragon>0.001</Gold_Dragon> 
+		<Jade_Dragon>0.001</Jade_Dragon>
+</li>                        
+                </value>
+            </li>
+    
+				   <li Class="PatchOperationAdd"> 
+				 <xpath>/Defs/BiomeDefs[defName="AB_TarPits"]/wildAnimals</xpath> 
+                <value>
+                    <li>
+        <Black_Dragon>0.001</Black_Dragon>
+        <Green_Dragon>0.001</Green_Dragon>
+		<Purple_Dragon>0.001</Purple_Dragon>
+        <Red_Dragon>0.001</Red_Dragon> 
+		<Blue_Dragon>0.001</Blue_Dragon>
+        <White_Dragon>0.001</White_Dragon> 
+		<Yellow_Dragon>0.001</Yellow_Dragon>
+        <True_Dragon>0.001</True_Dragon> 
+		<Silver_Dragon>0.001</Silver_Dragon>
+        <Gold_Dragon>0.001</Gold_Dragon> 
+		<Jade_Dragon>0.001</Jade_Dragon>
+</li>                        
+                </value>
+            </li>
+     
+		
+		   </operations>
+        </match>
+    </Operation>
+
+</Patch>

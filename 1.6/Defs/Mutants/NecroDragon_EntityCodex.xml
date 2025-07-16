@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- <EntityCodexEntryDef>
+    <defName>NecroDragon</defName>
+    <label>Necro Dragon</label>
+    <description>Hideous creatures composed of masses of cancerous flesh. Some contain multiple nervous systems, allowing them to split into smaller fleshbeasts.</description>
+    <uiIconPath>UI/CodexEntries/VoidMonolith</uiIconPath>
+    <category>Basic</category>
+    <linkedThings>
+
+    </linkedThings>
+    <discoveredResearchProjects>
+      <li>SummonFleshbeastsPlayer</li>
+    </discoveredResearchProjects>
+    <provocationIncidents>
+      <li>FleshbeastAttack</li>
+    </provocationIncidents>
+    <orderInCategory>205</orderInCategory>
+  </EntityCodexEntryDef> -->
+
+
+
+</Defs>

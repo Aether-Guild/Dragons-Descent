@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--============= Abilities ============-->
+  <!-- <ThinkTreeDef>
+    <defName>DD_Abilities_Escape</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_ConditionalColonist">
+          <invert>true</invert>
+          <subNodes>
+
+            
+            <li Class="ThinkNode_ConditionalHasAbility">
+              <ability>DD_DragonJump</ability>
+              <subNodes>
+                <li Class="ThinkNode_ConditionalTotalDamage">
+                  <thresholdPercent>0.25</thresholdPercent>
+                  <subNodes>
+                    <li Class="ThinkNode_HarmedRecently">
+                      <thresholdTicks>120</thresholdTicks>
+                      <subNodes>
+                        <li Class="ThinkNode_ConditionalUnderCombatPressure">
+                          <maxThreatDistance>2</maxThreatDistance>
+                          <minCloseTargets>2</minCloseTargets>
+                          <subNodes>
+                            <li Class="JobGiver_AIJumpEscapeEnemies">
+                              <ability>DD_DragonJump</ability>
+                            </li>
+                          </subNodes>
+                        </li>
+                      </subNodes>
+                    </li>
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
+
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef> -->
+</Defs>

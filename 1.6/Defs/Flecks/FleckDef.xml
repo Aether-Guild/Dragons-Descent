@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>DD_FireGlow</defName>
+		<graphicData>
+			<texPath>Things/Mote/FireGlow</texPath>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.75</fadeInTime>
+		<solidTime>5.08</solidTime>
+		<fadeOutTime>0.8</fadeOutTime>
+	</FleckDef>
+
+	<FleckDef ParentName="FleckGlowDistortBackground" Name="FleckPsycastAreaEffect">
+		<defName>DD_PsycastAreaEffect</defName>
+		<altitudeLayer>MoteLow</altitudeLayer>
+		<fadeInTime>0.02</fadeInTime>
+		<fadeOutTime>0.6</fadeOutTime>
+		<solidTime>0.12</solidTime>
+		<growthRate>1.5</growthRate>
+		<graphicData>
+			<texPath>Things/Mote/Black</texPath>
+			<shaderParameters>
+				<_distortionIntensity>0.03</_distortionIntensity>
+				<_brightnessMultiplier>.90</_brightnessMultiplier>
+			</shaderParameters>
+			<drawSize>2.3</drawSize>
+		</graphicData>
+	</FleckDef>
+
+	<FleckDef ParentName="FleckBase_Thrown" MayRequire="Ludeon.RimWorld.Anomaly">
+		<defName>DD_StressSpikes</defName>
+		<growthRate>-1</growthRate>
+		<useAttachLink>true</useAttachLink>
+		<graphicData>
+			<texPath>Things/Mote/StressSpikes</texPath>
+			<shaderType>Mote</shaderType>
+			<graphicClass>Graphic_Fleck</graphicClass>
+			<renderInstanced>false</renderInstanced>
+			<color>(1, 1, 1, 1)</color>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0</solidTime>
+		<fadeOutTime>.2</fadeOutTime>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_RandomGraphic_Thrown" MayRequire="Ludeon.RimWorld.Anomaly">
+		<defName>DD_TerrifyingHallucinationsHigh</defName>
+		<useAttachLink>True</useAttachLink>
+		<randomGraphics>
+			<li>
+				<texPath>Things/Mote/TerrifyingHallucinations/TerrifyingHallucinationA</texPath>
+				<graphicClass>Graphic_FleckPulse</graphicClass>
+				<shaderType>Mote</shaderType>
+			</li>
+			<li>
+				<texPath>Things/Mote/TerrifyingHallucinations/TerrifyingHallucinationB</texPath>
+				<graphicClass>Graphic_FleckPulse</graphicClass>
+				<shaderType>Mote</shaderType>
+			</li>
+		</randomGraphics>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>.25</fadeInTime>
+		<solidTime>1</solidTime>
+		<fadeOutTime>.25</fadeOutTime>
+	</FleckDef>
+
+
+	<FleckDef ParentName="FleckBase_Thrown" MayRequire="Ludeon.RimWorld.Anomaly">
+		<defName>DD_HeatDistortion</defName>
+		<graphicData>
+			<graphicClass>Graphic_FleckPulse</graphicClass>
+			<texPath>Things/Mote/HeatDistortion</texPath>
+			<shaderType>MoteHeatDistortion</shaderType>
+			<shaderParameters>
+				<_distortionIntensity>.01</_distortionIntensity>
+			</shaderParameters>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>2</fadeInTime>
+		<solidTime>5</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<growthRate>0</growthRate>
+	</FleckDef>
+
+	<FleckDef ParentName="FleckBase_Thrown" MayRequire="Ludeon.RimWorld.Anomaly">
+		<defName>DD_Fleck_IncineratorBeamSmoke_Dragon</defName>
+		<fadeInTime>.1</fadeInTime>
+		<solidTime>.01</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<growthRate>1</growthRate>
+		<graphicData>
+			<texPath>Things/Mote/Smoke</texPath>
+			<shaderType>Transparent</shaderType>
+			<drawSize>1</drawSize>
+			<color>(.1, .1, .1, 1)</color>
+			<renderQueue>3200</renderQueue>
+		</graphicData>
+		<acceleration>(0, 10, 0.0)</acceleration>
+		<speedPerTime>-6~10</speedPerTime>
+	</FleckDef>
+
+	<FleckDef ParentName="FleckBase_RandomGraphic_Thrown" MayRequire="Ludeon.RimWorld.Anomaly">
+		<defName>DD_Fleck_IncineratorBeamBurn_Dragon</defName>
+		<altitudeLayer>MoteLow</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>8</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<randomGraphics>
+			<li>
+				<graphicClass>Graphic_Fleck</graphicClass>
+				<texPath>Things/Mote/IncineratorBeamBurn/BeamBurn_A</texPath>
+				<shaderType>Transparent</shaderType>
+				<drawSize>0.65</drawSize>
+			</li>
+			<li>
+				<graphicClass>Graphic_Fleck</graphicClass>
+				<texPath>Things/Mote/IncineratorBeamBurn/BeamBurn_B</texPath>
+				<shaderType>Transparent</shaderType>
+				<drawSize>0.65</drawSize>
+			</li>
+			<li>
+				<graphicClass>Graphic_Fleck</graphicClass>
+				<texPath>Things/Mote/IncineratorBeamBurn/BeamBurn_C</texPath>
+				<shaderType>Transparent</shaderType>
+				<drawSize>0.65</drawSize>
+			</li>
+		</randomGraphics>
+	</FleckDef>
+
+</Defs>

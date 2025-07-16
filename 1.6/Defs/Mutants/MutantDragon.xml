@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+
+      <!-- <PawnKindDef ParentName="BaseFleshbeastKind">
+        <defName>NecroDragon</defName>
+        <label>NecroDragon</label>
+        <race>Devourer</race>
+        <overrideDeathOnDownedChance>0.99</overrideDeathOnDownedChance>
+        <abilities>
+          <li>DD_IncineratorBurner_NecroBreath</li>
+        </abilities>
+        <combatPower>270</combatPower>
+        <lifeStages>
+          <li>
+            <bodyGraphicData>
+              <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawSize>8</drawSize>
+            </bodyGraphicData>
+            <dessicatedBodyGraphicData>
+              <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+              <drawSize>8</drawSize>
+              <attachPoints>
+                <li>
+                  <offset>(-.4, 0, .85)</offset>
+                  <type>PlatformRestraint0</type>
+                </li>
+                <li>
+                  <offset>(.45, 0, .85)</offset>
+                  <type>PlatformRestraint1</type>
+                </li>
+                <li>
+                  <offset>(.5, 0, -.85)</offset>
+                  <type>PlatformRestraint2</type>
+                </li>
+                <li>
+                  <offset>(-.5, 0, -.85)</offset>
+                  <type>PlatformRestraint3</type>
+                </li>
+              </attachPoints>
+            </dessicatedBodyGraphicData>
+            <silhouetteGraphicData>
+              <texPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike_MenuIcon</texPath>
+              <graphicClass>Graphic_Single</graphicClass>
+              <drawSize>6</drawSize>
+            </silhouetteGraphicData>
+          </li>
+        </lifeStages>
+      </PawnKindDef> -->
+
+  </Defs>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>DraconicDrugProduction</defName>
+    <label>draconic drug production</label>
+    <description>Allows for the creation of dragonic drugs and sowing of jewel orchids. Draconic ambrosia assists in the aging of dragons and dragon's blood is a combat enchancing potion for your colonists.</description>
+    <baseCost>300</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>0</researchViewX>
+    <researchViewY>0</researchViewY>
+	<tab>DragonsDescent</tab>
+        <prerequisites>
+			<li>Pemmican</li>
+		</prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>DraconicIncubation</defName>
+    <label>draconic incubation</label>
+    <description>Build basic draconic furniture and buildings like basic incubators and, dragon pillows.</description>
+    <baseCost>450</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>0</researchViewX>
+    <researchViewY>1</researchViewY>
+    <tab>DragonsDescent</tab>
+    <prerequisites>
+      <li>ComplexFurniture</li>
+	  <li>Smithing</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>DraconicApparelAndWeapons</defName>
+    <label>draconic apparel and weapons</label>
+    <description>Craft draconic armor and weapons.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>0</researchViewX>
+    <researchViewY>2</researchViewY>
+    <tab>DragonsDescent</tab>
+    <prerequisites>
+      <li>PlateArmor</li>
+      <li>Smithing</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>DraconicAdvancedIncubation</defName>
+    <label>draconic advanced incubation</label>
+    <description>Build draconic machines like the advanced incubator.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>1</researchViewX>
+    <researchViewY>1</researchViewY>
+    <tab>DragonsDescent</tab>
+    <prerequisites>
+	  <li>MicroelectronicsBasics</li>
+      <li>DraconicIncubation</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+  </ResearchProjectDef>
+  
+</Defs>

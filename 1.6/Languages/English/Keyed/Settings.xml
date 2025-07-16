@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <Settings_DragonCategory>Dragon's Descent</Settings_DragonCategory>
+  
+  <Setting_Select>Select All</Setting_Select>
+  <Setting_Deselect>Deselect All</Setting_Deselect>
+  <Setting_Reset>Reset All</Setting_Reset>
+
+  <Setting_WildSpawn>Wild Spawns</Setting_WildSpawn>
+  <Setting_WildSpawn_Title>Spawn Wild Dragons [{0}]</Setting_WildSpawn_Title>
+  <Setting_WildSpawn_Description>Allow/deny wild {0} spawn from biome rules.</Setting_WildSpawn_Description>
+  
+  <Setting_EventSpawn>Incidents</Setting_EventSpawn>
+  <Setting_EventSpawn_Title>Allow Incident [{0}]</Setting_EventSpawn_Title>
+  <Setting_EventSpawn_Description>Control whether the event will trigger or not.</Setting_EventSpawn_Description>
+  
+  <Setting_Compatibility>Compatibility Patches</Setting_Compatibility>
+  <Setting_Compatibility_KFM_Range_Title>[Kill For Me]: Use Ability Verbs</Setting_Compatibility_KFM_Range_Title>
+  <Setting_Compatibility_KFM_Range_Description>Includes ability verbs when dispatched to kill.</Setting_Compatibility_KFM_Range_Description>
+  <Setting_Compatibility_HFM_Range_Title>[Hunt For Me]: Use Ability Verbs</Setting_Compatibility_HFM_Range_Title>
+  <Setting_Compatibility_HFM_Range_Description>Includes ability verbs when dispatched to hunt.</Setting_Compatibility_HFM_Range_Description>
+  <Setting_Compatibility_ARA_VerbCheck_Title>[Alpha Animals (OLD)]: Replace old VerbCheck patch</Setting_Compatibility_ARA_VerbCheck_Title>
+  <Setting_Compatibility_ARA_VerbCheck_Description>Detects an old prefix patch ARA__VerbCheck_Patch in AA and replaces it with a more compatible version.\n\n(AA has since been updated to use a more compatible version, this patch exists for other mods that are still using the old version)</Setting_Compatibility_ARA_VerbCheck_Description>
+  <Setting_Compatibility_Warning>Changes will not be applied until the game is restarted.</Setting_Compatibility_Warning>
+  
+  <Setting_FightingJobs>Compatibility Patch [Fighting Jobs]</Setting_FightingJobs>
+  <Setting_FightingJobs_Note>Some functionality depends on whether the current job that the pawn has is considered a job for 'fighting'.\nIf there is a modded job that a dragon can start doing which involves making the dragon fight, then it should either be patched by the mod maker in PawnUtility.IsFighting(), or added to this compatibility list.</Setting_FightingJobs_Note>
+  <Setting_FightingJobs_Add>Add JobDef Entry</Setting_FightingJobs_Add>
+  <Setting_FightingJobs_Remove>Remove</Setting_FightingJobs_Remove>
+  
+  <Setting_SpawnsNamed>Spawns with names</Setting_SpawnsNamed>
+  <Setting_SpawnsNamed_Title>Spawn already named [{0}] chance: {1}%</Setting_SpawnsNamed_Title>
+</LanguageData>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="ResourceVerbBase">
+    <defName>DragonHorn</defName>
+    <label>dragon horn</label>
+    <description>A dragon horn. To obtain one you must battle to the death with one of the fiercest animals on the rim. They are very durable and sharp, making it an excellent choice as a melee weapon.</description>
+    <graphicData>
+      <texPath>Things/Item/Special/DragonHorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>70</equippedAngleOffset>
+    <statBases>
+      <MarketValue>870</MarketValue>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>3</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+    </statBases>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>1</stackLimit>
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Stab</li>
+        </capacities>
+        <power>31</power>
+        <cooldownTime>2.8</cooldownTime>
+      </li>
+      <li>
+        <label>base</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>AnimalPart</li>
+    </thingSetMakerTags>
+  </ThingDef>
+</Defs>

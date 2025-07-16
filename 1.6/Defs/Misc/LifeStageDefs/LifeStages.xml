@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--================ Elder =================-->
+
+  <LifeStageDef>
+    <defName>AnimalElder</defName>
+    <label>elder</label>
+    <reproductive>true</reproductive>
+    <milkable>true</milkable>
+    <shearable>true</shearable>
+    <voxPitch>0.8</voxPitch>
+    <bodySizeFactor>1.05</bodySizeFactor>
+    <foodMaxFactor>1.011</foodMaxFactor>
+    <healthScaleFactor>1.2</healthScaleFactor>
+    <hungerRateFactor>1.20</hungerRateFactor>
+    <marketValueFactor>1.4</marketValueFactor>
+    <meleeDamageFactor>1.45</meleeDamageFactor>
+    <statFactors>
+      <MoveSpeed>1.1</MoveSpeed>
+    </statFactors>
+    <caravanRideable>true</caravanRideable>
+  </LifeStageDef>
+
+  <!-- ================ Ancient ================-->
+  
+  <LifeStageDef>
+    <defName>AnimalAncient</defName>
+    <label>ancient</label>
+    <reproductive>true</reproductive>
+    <milkable>true</milkable>
+    <shearable>true</shearable>
+    <voxPitch>0.8</voxPitch>
+    <bodySizeFactor>1.25</bodySizeFactor>
+    <foodMaxFactor>.95</foodMaxFactor>
+    <healthScaleFactor>1.45</healthScaleFactor>
+    <hungerRateFactor>1.36</hungerRateFactor>
+    <marketValueFactor>2.0</marketValueFactor>
+    <meleeDamageFactor>1.65</meleeDamageFactor>
+    <statFactors>
+      <MoveSpeed>1.2</MoveSpeed>
+    </statFactors>
+    <caravanRideable>true</caravanRideable>
+  </LifeStageDef>
+  
+</Defs>

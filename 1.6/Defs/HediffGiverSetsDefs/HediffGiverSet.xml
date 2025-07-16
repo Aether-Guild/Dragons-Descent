@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffGiverSetDef>
+		<defName>OrganicDragon</defName>
+		<hediffGivers>
+			<li Class="DD.HediffGiver_Regeneration">
+				<hediff>DraconicRegeneration</hediff>
+				<regenTimeout>10</regenTimeout>
+				<startInBed>false</startInBed>
+				<partsToAffect>
+					<li>Fundamentum</li>
+				</partsToAffect>
+			</li>
+			<li Class="DD.HediffGiver_Ferocity">
+				<penaltyMentalDef>Manhunter</penaltyMentalDef>
+				<penaltyReason>Really?</penaltyReason>
+				<penaltyThreshold>1</penaltyThreshold>
+			</li>
+			<!-- Environmental -->
+			<li Class="HediffGiver_Bleeding">
+				<hediff>BloodLoss</hediff>
+			</li>
+			<li Class="HediffGiver_Hypothermia">
+				<hediff>Hypothermia</hediff>
+			</li>
+			<li Class="HediffGiver_Heat">
+				<hediff>Heatstroke</hediff>
+			</li>
+				
+			<li Class="HediffGiver_RandomAgeCurved">
+				<hediff>HeartAttack</hediff>
+				<partsToAffect>
+					<li>Heart</li>
+				</partsToAffect>
+				<minPlayerPopulation>2</minPlayerPopulation>
+				<ageFractionMtbDaysCurve>
+				<points>
+					<li>(0.6, 9999999)</li>
+					<li>(0.8, 2500)</li>
+					<li>(1, 300)</li>
+				</points>
+				</ageFractionMtbDaysCurve>
+			</li>
+		</hediffGivers>
+	</HediffGiverSetDef>
+
+</Defs>

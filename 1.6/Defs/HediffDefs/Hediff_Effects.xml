@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- ===================== Base HediffDef ===================== -->
+	<!-- ===================== Formally named Ferocious ===================== -->
+	<HediffDef Name="DraconicFerocityBase" Abstract="True">
+		<label>Enraged</label>
+		<labelNoun>Enraged</labelNoun>
+		<description>A dragon driven to the limits, mind still intact if undisturbed but will shatter into a frenzy if provoked. Extremely dangerous for weeks.\nIts constant cries affect other dragons in the area.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<li>
+				<compClass>DD.HediffComp_DisableTaming</compClass>
+			</li>
+			<li>
+				<compClass>DD.HediffComp_Aggressive</compClass>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<!-- 240000 ticks = 4 days, 420000 ticks = 7 days -->
+				<disappearsAfterTicks>200000~320000</disappearsAfterTicks>
+			</li>
+			<li Class="DD.HediffCompProperties_ExitMap">
+				<!-- 420000 ticks = 7 days, 900000 ticks = 15 days (1 quadrum) -->
+				<exitAfterTicks>620000~900000</exitAfterTicks>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef Name="DraconicPackFerocityBase" Abstract="True">
+		<label>Enraged (pack)</label>
+		<labelNoun>Enraged</labelNoun>
+		<description>A dragon on edge due to the maddened cries of a fellow dragon. Extremely dangerous until the cries cease.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.85, 0.8, 0.2)</defaultLabelColor>
+		<comps>
+			<li>
+				<compClass>DD.HediffComp_DisableTaming</compClass>
+			</li>
+			<li>
+				<compClass>DD.HediffComp_Aggressive</compClass>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- ===================== HediffDefs ===================== -->
+
+	<HediffDef ParentName="DraconicFerocityBase">
+		<defName>DraconicFerocity_Male</defName>
+		<labelNounPretty>Enraged [Male]</labelNounPretty>
+		<stages>
+			<li>
+				<statFactors>
+					<EatingSpeed>2</EatingSpeed>
+					<RestRateMultiplier>2</RestRateMultiplier>
+					<MoveSpeed>5</MoveSpeed>
+				</statFactors>
+				<becomeVisible>true</becomeVisible>
+				<hungerRateFactorOffset>3</hungerRateFactorOffset>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="DraconicFerocityBase">
+		<defName>DraconicFerocity_Female</defName>
+		<labelNounPretty>Enraged [Female]</labelNounPretty>
+		<stages>
+			<li>
+				<statFactors>
+					<EatingSpeed>2</EatingSpeed>
+					<RestRateMultiplier>0.5</RestRateMultiplier>
+					<MoveSpeed>5</MoveSpeed>
+				</statFactors>
+				<becomeVisible>true</becomeVisible>
+				<hungerRateFactorOffset>3</hungerRateFactorOffset>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- ===================== Pack HediffDefs ===================== -->
+
+	<HediffDef ParentName="DraconicPackFerocityBase">
+		<defName>DraconicPackFerocity_Male</defName>
+		<labelNounPretty>Enraged (pack) [Male]</labelNounPretty>
+		<stages>
+			<li>
+				<statFactors>
+					<EatingSpeed>1.5</EatingSpeed>
+					<RestRateMultiplier>1.5</RestRateMultiplier>
+				</statFactors>
+				<becomeVisible>true</becomeVisible>
+				<hungerRateFactorOffset>2</hungerRateFactorOffset>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="DraconicPackFerocityBase">
+		<defName>DraconicPackFerocity_Female</defName>
+		<labelNounPretty>Enraged (pack) [Female]</labelNounPretty>
+		<stages>
+			<li>
+				<statFactors>
+					<EatingSpeed>1.5</EatingSpeed>
+					<RestRateMultiplier>0.75</RestRateMultiplier>
+				</statFactors>
+				<becomeVisible>true</becomeVisible>
+				<hungerRateFactorOffset>2</hungerRateFactorOffset>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>
