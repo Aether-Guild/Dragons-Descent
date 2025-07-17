@@ -27,6 +27,9 @@
 			<li Class="HediffGiver_Heat">
 				<hediff>Heatstroke</hediff>
 			</li>
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="HediffGiver_VacuumBurn">
+				<hediff MayRequire="Ludeon.RimWorld.Odyssey">VacuumExposure</hediff>
+			</li>
 				
 			<li Class="HediffGiver_RandomAgeCurved">
 				<hediff>HeartAttack</hediff>
