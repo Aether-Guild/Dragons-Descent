@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>DD_Gun_DragonfireLauncher</defName>
     <label>dragonfire launcher</label>
@@ -15,7 +14,7 @@
       <MarketValue>3000</MarketValue>
       <WorkToMake>30000</WorkToMake>
       <Mass>4.1</Mass>
-      <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
     </statBases>
     <costList>
       <Steel>75</Steel>
@@ -27,6 +26,23 @@
       </skillRequirements>
       <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_IncendiaryLauncher</defaultProjectile>
+        <warmupTime>3.3</warmupTime>
+        <range>30</range>
+        <forcedMissRadius>1.4</forcedMissRadius>
+        <burstShotCount>4</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
     <tools>
       <li>
         <label>stock</label>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="BaseHumanMakeableGun">
+<ThingDef ParentName="BaseHumanMakeableGun">
     <defName>DD_Gun_DragonfireLauncher</defName>
     <label>dragonfire launcher</label>
     <description>A large bulky incediary launcher modeled after a dragon. Capable of firing two burst shots of light explosives in quick succession.</description>
@@ -27,6 +27,23 @@
       </skillRequirements>
       <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_IncendiaryLauncher</defaultProjectile>
+        <warmupTime>4.3</warmupTime>
+        <range>25</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
     <tools>
       <li>
         <label>stock</label>
