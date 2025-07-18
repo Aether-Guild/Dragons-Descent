@@ -2,18 +2,19 @@
 <Defs>
 
   <EffecterDef>
-    <defName>Fire_Spew_Dragon</defName>
+    <defName>Fire_Spew_EffecterDragon</defName>
     <children>
       <li>
         <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
         <positionRadius>0.15</positionRadius>
         <fleckDef>FireSpew_A</fleckDef>
-        <chancePerTick>0.9</chancePerTick>
-        <speed>30</speed>
-        <scale>0.8~1.2</scale>
+        <chancePerTick>10</chancePerTick>
+        <speed>5</speed>
+        <scale>0.8~3</scale>
         <angle>-15~15</angle>
         <positionLerpFactor>0.85</positionLerpFactor>
         <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+        <burstCount>30</burstCount>
       </li>
       <li>
         <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
@@ -21,7 +22,7 @@
         <fleckDef>FireSpew_Base</fleckDef>
         <chancePerTick>0.1</chancePerTick>
         <speed>30</speed>
-        <scale>0.8</scale>
+        <scale>4</scale>
         <angle>-9~9</angle>
         <positionLerpFactor>0.75</positionLerpFactor>
         <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
@@ -31,7 +32,7 @@
         <positionRadius>0.1</positionRadius>
         <moteDef>Mote_SparkThrownFast</moteDef>
         <chancePerTick>0.5</chancePerTick>
-        <speed>3.3~5</speed>
+        <speed>3.3~30</speed>
         <scale>0.1~0.2</scale>
         <angle>-12~12</angle>
         <positionLerpFactor>0.8</positionLerpFactor>
@@ -44,7 +45,7 @@
         <chancePerTick>0.16</chancePerTick>
         <positionLerpFactor>0.65</positionLerpFactor>
       </li>
-      <li>
+      <!-- <li>
         <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
         <fleckDef>DD_Fleck_BurnerUsedSmoke</fleckDef>
         <initialDelayTicks>5</initialDelayTicks>
@@ -55,12 +56,12 @@
         <positionRadius>2.5</positionRadius>
         <positionRadiusMin>0</positionRadiusMin>
         <angle>0</angle>
-        <speed>0~.9</speed>
+        <speed>0~30</speed>
         <rotation>0~360</rotation>
         <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
-      </li>
+      </li> -->
 
-      <li>
+      <!-- <li>
         <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
         <fleckDef>DD_Fleck_BurnerUsedEmber</fleckDef>
         <initialDelayTicks>7</initialDelayTicks>
@@ -74,9 +75,9 @@
         <speed>.1~.2</speed>
         <rotation>0~360</rotation>
         <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
-      </li>
+      </li> -->
 
-      <li>
+      <!-- <li>
         <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
         <fleckDef>DD_Fleck_BurnerUsedEmberBlack</fleckDef>
         <initialDelayTicks>7</initialDelayTicks>
@@ -90,7 +91,7 @@
         <speed>.3~.4</speed>
         <rotation>0~360</rotation>
         <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
-      </li>
+      </li> -->
       <li>
         <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
         <fleckDef>DD_HeatDistortion</fleckDef>
@@ -270,6 +271,56 @@
         <scale>0.8</scale>
       </li>
 
+    </children>
+  </EffecterDef>
+
+    <EffecterDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>GraserBeam_End_Dragon</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>Smoke</fleckDef>
+        <chancePerTick>0.4</chancePerTick>
+        <scale>0.6~1.1</scale>
+        <spawnLocType>OnSource</spawnLocType>
+        <absoluteAngle>true</absoluteAngle>
+        <angle>30~70</angle>
+        <speed>0.2~0.35</speed>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <positionRadius>0.1</positionRadius>
+        <moteDef>Mote_SparkThrownFast</moteDef>
+        <spawnLocType>OnSource</spawnLocType>
+        <chancePerTick>0.9</chancePerTick>
+        <speed>3.3~5</speed>
+        <scale>0.1~0.2</scale>
+        <angle>88~104</angle>
+        <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <positionRadius>0.1</positionRadius>
+        <spawnLocType>OnSource</spawnLocType>
+        <fleckDef>Beam_Glow</fleckDef>
+        <chancePerTick>0.5</chancePerTick>
+        <scale>0.8</scale>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
+        <fleckDef>DD_HeatDistortion</fleckDef>
+        <initialDelayTicks>5</initialDelayTicks>
+        <scale>.1~1</scale>
+        <burstCount>2~6</burstCount>
+        <spawnLocType>OnSource</spawnLocType>
+        <absoluteAngle>True</absoluteAngle>
+        <positionRadius>2.5</positionRadius>
+        <positionRadiusMin>0</positionRadiusMin>
+        <angle>0</angle>
+        <speed>0~.9</speed>
+        <rotation>0~360</rotation>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+      </li>
     </children>
   </EffecterDef>
 

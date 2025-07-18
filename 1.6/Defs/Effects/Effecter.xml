@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="MoteBase">
+    <defName>Mote_GraserBeamBase_Dragon</defName>
+    <thingClass>MoteDualAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.2</fadeInTime>
+      <fadeOutTime>0.3</fadeOutTime>
+      <solidTime>999999</solidTime>
+      <needsMaintenance>True</needsMaintenance>
+      <rotateTowardsTarget>True</rotateTowardsTarget>
+      <scaleToConnectTargets>True</scaleToConnectTargets>
+      <fadeOutUnmaintained>True</fadeOutUnmaintained>
+    </mote>
+    <drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <texPath>Things/Mote/GraserBeam</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <shaderType>MoteBeam</shaderType>
+      <shaderParameters>
+        <_ExtraTexA>/Things/Motes/BeamSecondaryNoise_A</_ExtraTexA>
+        <_ExtraTexB>/Things/Motes/BeamSecondaryNoise_B</_ExtraTexB>
+        <_ScrollSpeedA>-4 </_ScrollSpeedA>
+        <_ScrollSpeedB>3</_ScrollSpeedB>
+        <_Intensity>2</_Intensity>
+      </shaderParameters>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_IncineratorBurst_Dragon</defName>
+    <thingClass>MoteDualAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <isSaveable>false</isSaveable> <!-- because it's pure-vis, and weirdly constructed, it's better to not persist them at all -->
+    <mote>
+      <fadeInTime>0</fadeInTime>
+      <fadeOutTime>1</fadeOutTime>
+      <solidTime>999999</solidTime>
+      <needsMaintenance>True</needsMaintenance>
+      <rotateTowardsTarget>True</rotateTowardsTarget>
+      <scaleToConnectTargets>False</scaleToConnectTargets>
+      <fadeOutUnmaintained>True</fadeOutUnmaintained>
+    </mote>
+    <drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <texPath>Things/Mote/IncineratorFlameSheet</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <shaderType>MoteIncineratorBeam</shaderType>
+      <shaderParameters>
+        <_GradientTex>/Things/Mote/IncineratorBeamGradient</_GradientTex>
+        <_AgeScalarNoise>/Things/Mote/IncineratorBeamAgeNoise</_AgeScalarNoise>
+        <_ScrollSpeedA>-4 </_ScrollSpeedA>
+        <_ScrollSpeedB>3</_ScrollSpeedB>
+        <_Intensity>0</_Intensity>
+        <_NumFrames>12</_NumFrames>
+        <_FramesPerSec>12</_FramesPerSec>
+      </shaderParameters>
+      <drawSize>10</drawSize>
+    </graphicData>
+  </ThingDef>
+</Defs>

@@ -194,8 +194,9 @@
     <label>black dragon</label>
     <race>Black_Dragon</race>
     <abilities>
-      <!-- <li>FireSpew_Dragon</li> -->
-      <!-- <li>IncineratorBurner_Dragon</li> -->
+    <!-- <li>GraserBeam_Dragon</li> -->
+      <!-- <li>FireSpew_Dragon</li>
+      <li>IncineratorBurner_Dragon</li> -->
     </abilities>
     <combatPower>1260</combatPower>
     <canArriveManhunter>false</canArriveManhunter>

@@ -11,7 +11,7 @@
         <def>PlayerFaction</def>
         <factionDef>PlayerTribe</factionDef>
       </playerFaction>
-            <surfaceLayer>
+      <surfaceLayer>
         <def>SurfaceLayerFixed</def>
         <tag>Surface</tag>
         <layer>Surface</layer>
