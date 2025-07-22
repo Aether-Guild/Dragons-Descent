@@ -17,7 +17,7 @@ namespace DD
     {
 
         public DD_Stance_Stand(int ticks, LocalTargetInfo focusTarg, Verb verb)
-            : base(1000, focusTarg, verb)
+            : base(ticks, focusTarg, verb)
 
         {
 

@@ -12,20 +12,27 @@ namespace DD
 {
     public class Ability_ShootProjectile_Dragon : Ability
     {
-             public override void Cast(params GlobalTargetInfo[] targets)
+        public override void Cast(params GlobalTargetInfo[] targets)
         {
             base.Cast(targets);
             foreach (GlobalTargetInfo target in targets)
             {
                 ShootProjectile(target);
+
+                // Patch for wild animals using firebreath, forcing to completion to prevent NRE by flying during animation
+                if (this.def.defName == "DD_DragonBreath_Fire" && this.pawn.IsAnimal && !this.pawn.IsPlayerControlled)
+                {
+                    this.pawn.stances.SetStance(new DD_Stance_Stand(100, target.HasThing ? target.Thing : target.Cell, verb));
+                }
+
             }
         }
         protected virtual Projectile ShootProjectile(GlobalTargetInfo target)
         {
             var extension = this.def.GetModExtension<AbilityExtension_Projectile_Dragon>();
             var origin = pawn.DrawPosHeld ?? pawn.PositionHeld.ToVector3Shifted();
-            var source = this.pawn.PositionHeld; 
-            
+            var source = this.pawn.PositionHeld;
+
             Projectile projectile = GenSpawn.Spawn(extension.projectile, source, this.pawn.MapHeld) as Projectile;
             if (projectile is AbilityProjectile abilityProjectile)
             {

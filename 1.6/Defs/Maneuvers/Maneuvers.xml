@@ -49,7 +49,7 @@
   </ManeuverDef>
                 <!--======== Tail Whip =========-->
   <ManeuverDef>
-    <defName>Slash</defName>
+    <defName>DD_Slash</defName>
     <requiredCapacity>Cut</requiredCapacity>
     <verb>
       <verbClass>Verb_MeleeAttackDamage</verbClass>

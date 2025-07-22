@@ -102,7 +102,7 @@
 
     </tools>
     <comps>
-            <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
+      <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
         <makeNonFleeingToo>true</makeNonFleeingToo>
       </li>
       <li Class="VEF.Apparels.CompProperties_ShieldBubble">
@@ -126,7 +126,7 @@
 
     </comps>
     <race>
-    
+
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <TemperateForest>0.003</TemperateForest>
@@ -135,7 +135,7 @@
         <TemperateSwamp>0.0043</TemperateSwamp>
         <Grasslands MayRequire="Ludeon.RimWorld.Odyssey">0.001</Grasslands>
         <Glowforest MayRequire="Ludeon.RimWorld.Odyssey">0.001</Glowforest>
-      
+
         <Desert>0.002</Desert>
       </wildBiomes>
     </race>
@@ -147,7 +147,7 @@
           <graphicClass>DD.Graphic_Animation</graphicClass>
           <drawSize>5.2</drawSize>
           <ticksPerFrame>25</ticksPerFrame>
-        <shadowData>
+          <shadowData>
             <volume>(2, 1.5, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
           </shadowData>
@@ -194,9 +194,10 @@
     <label>black dragon</label>
     <race>Black_Dragon</race>
     <abilities>
-    <!-- <li>GraserBeam_Dragon</li> -->
-      <!-- <li>FireSpew_Dragon</li>
-      <li>IncineratorBurner_Dragon</li> -->
+      <!-- <li>FireBurst_Dragon</li>
+      <li>FireSpew_Dragon</li> -->
+      <!-- <li>FireBurst_Dragon</li>  -->
+      <!-- <li>IncineratorBurner_Dragon</li>  -->
     </abilities>
     <combatPower>1260</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
@@ -430,7 +431,7 @@
       </li>
     </tools>
     <comps>
-            <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
+      <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
         <makeNonFleeingToo>true</makeNonFleeingToo>
       </li>
       <li Class="VEF.Apparels.CompProperties_ShieldBubble">
@@ -457,7 +458,7 @@
 
     </verbs>
     <race>
-     
+
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <Tundra>0.004</Tundra>
@@ -477,7 +478,7 @@
           <graphicClass>DD.Graphic_Animation</graphicClass>
           <drawSize>5.2</drawSize>
           <ticksPerFrame>25</ticksPerFrame>
-        <shadowData>
+          <shadowData>
             <volume>(2, 1.5, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
           </shadowData>
@@ -748,7 +749,7 @@
       </li>
     </tools>
     <comps>
-            <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
+      <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
         <makeNonFleeingToo>true</makeNonFleeingToo>
       </li>
       <li Class="VEF.Apparels.CompProperties_ShieldBubble">
@@ -775,7 +776,7 @@
 
     </verbs>
     <race>
-     
+
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <TemperateForest>0.0042</TemperateForest>
@@ -795,7 +796,7 @@
           <graphicClass>DD.Graphic_Animation</graphicClass>
           <drawSize>5.2</drawSize>
           <ticksPerFrame>25</ticksPerFrame>
-        <shadowData>
+          <shadowData>
             <volume>(2, 1.5, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
           </shadowData>
@@ -1085,7 +1086,7 @@
       </li>
     </tools>
     <comps>
-            <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
+      <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
         <makeNonFleeingToo>true</makeNonFleeingToo>
       </li>
       <li Class="VEF.Apparels.CompProperties_ShieldBubble">
@@ -1112,7 +1113,7 @@
 
     </verbs>
     <race>
-     
+
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <TemperateForest>0.003</TemperateForest>
@@ -1122,7 +1123,7 @@
         <ColdBog>0.002</ColdBog>
         <Grasslands MayRequire="Ludeon.RimWorld.Odyssey">0.001</Grasslands>
         <Glowforest MayRequire="Ludeon.RimWorld.Odyssey">0.001</Glowforest>
-        
+
       </wildBiomes>
     </race>
     <modExtensions>
@@ -1133,7 +1134,7 @@
           <graphicClass>DD.Graphic_Animation</graphicClass>
           <drawSize>5.2</drawSize>
           <ticksPerFrame>25</ticksPerFrame>
-        <shadowData>
+          <shadowData>
             <volume>(2, 1.5, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
           </shadowData>
@@ -1406,7 +1407,7 @@
       </li>
     </tools>
     <comps>
-            <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
+      <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
         <makeNonFleeingToo>true</makeNonFleeingToo>
       </li>
       <li Class="VEF.Apparels.CompProperties_ShieldBubble">
@@ -1435,7 +1436,7 @@
     </verbs>
 
     <race>
-      
+
       <wildBiomes>
         <TemperateForest>0.001</TemperateForest>
         <TropicalRainforest>0.002</TropicalRainforest>
@@ -1455,7 +1456,7 @@
           <graphicClass>DD.Graphic_Animation</graphicClass>
           <drawSize>5.2</drawSize>
           <ticksPerFrame>25</ticksPerFrame>
-        <shadowData>
+          <shadowData>
             <volume>(2, 1.5, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
           </shadowData>
@@ -1746,7 +1747,7 @@
       </li>
     </tools>
     <comps>
-            <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
+      <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
         <makeNonFleeingToo>true</makeNonFleeingToo>
       </li>
       <li Class="VEF.Apparels.CompProperties_ShieldBubble">
@@ -1773,7 +1774,7 @@
 
     </verbs>
     <race>
-      
+
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <Tundra>0.003</Tundra>
@@ -1794,7 +1795,7 @@
           <graphicClass>DD.Graphic_Animation</graphicClass>
           <drawSize>5.2</drawSize>
           <ticksPerFrame>25</ticksPerFrame>
-        <shadowData>
+          <shadowData>
             <volume>(2, 1.5, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
           </shadowData>
@@ -2085,7 +2086,7 @@
       </li>
     </tools>
     <comps>
-            <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
+      <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
         <makeNonFleeingToo>true</makeNonFleeingToo>
       </li>
       <li Class="VEF.Apparels.CompProperties_ShieldBubble">
@@ -2113,7 +2114,7 @@
 
     </verbs>
     <race>
-      
+
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <TropicalRainforest>0.003</TropicalRainforest>
@@ -2132,7 +2133,7 @@
           <graphicClass>DD.Graphic_Animation</graphicClass>
           <drawSize>5.2</drawSize>
           <ticksPerFrame>25</ticksPerFrame>
-        <shadowData>
+          <shadowData>
             <volume>(2, 1.5, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
           </shadowData>

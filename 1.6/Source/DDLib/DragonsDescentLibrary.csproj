@@ -60,17 +60,20 @@
     <Compile Include="Common\Extensions\GenusMarkerExtension.cs" />
     <Compile Include="Common\Extensions\Giveability.cs" />
     <Compile Include="Common\Extensions\PawnkindAbilityExtension.cs" />
-    <Compile Include="CompAbilityEffect\CompAbilityEffect_Dragon_Fire.cs" />
-    <Compile Include="CompAbilityEffect\CompProperties_Ability_Dragon_Fire.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_FireSpew.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_FireBurst.cs" />
     <Compile Include="Components\WorldComponent_Tracker.cs" />
+    <Compile Include="CompProperties_Ability_Dragon\AbilityFireBurst\CompProperties_AbilityFireBurst_Dragon.cs" />
+    <Compile Include="CompProperties_Ability_Dragon\AbilityFireSpew\CompProperties_AbilityFireSpew_Dragon.cs" />
     <Compile Include="CompProperties_Ability_Dragon\IncineratorSpray\IncineratorSpray_Dragon.cs" />
     <Compile Include="DamageWorker\DD_DamageWorker_Flame .cs" />
+    <Compile Include="DefOf\DD_EffecterDefOf.cs" />
+    <Compile Include="DefOf\DD_ThingDefOf.cs" />
     <Compile Include="Defs\DD_InternalDefOf.cs" />
     <Compile Include="Defs\GenusDef.cs" />
     <Compile Include="Defs\DD_BiomeRoof.cs" />
     <Compile Include="Defs\DD_ThinktreeDefOf.cs" />
     <Compile Include="Defs\DD_DamageDefOf.cs" />
-    <Compile Include="Defs\DD_ThingDefOf.cs" />
     <Compile Include="Defs\DD_RecordDefOf.cs" />
     <Compile Include="Defs\DD_RitualDefOf.cs" />
     <Compile Include="Defs\DD_EffectDefOf.cs" />
@@ -341,6 +344,7 @@
     <Compile Include="FW\Verb\Verb_MeleeAttackDamage_Resetting.cs" />
     <Compile Include="FW\Verb\Verb_Shoot_Cooldown.cs" />
     <Compile Include="FW\Verb\Verb_Shoot_Limited.cs" />
+    <Compile Include="Thing\UI.cs" />
     <Compile Include="UI\UI.cs" />
     <Compile Include="Verb\IncineratorSpray_Dragon.cs" />
     <Compile Include="Flight\WingedFlyer.cs" />
@@ -373,7 +377,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\DLC Required\" />
-    <Folder Include="Thing\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

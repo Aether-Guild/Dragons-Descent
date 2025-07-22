@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<!-- <DamageDef ParentName="BluntBase">
+	<DamageDef ParentName="BluntBase">
 		<defName>DD_Knockback</defName>
 		<deathMessage>{0} has been smashed to death.</deathMessage>
 		<label>Dragon attack</label>
-		<workerClass>VEF.DamageWorker_PushBackAttackMelee</workerClass>
+		<workerClass>VEF.Weapons.DamageWorker_PushBackAttackMelee</workerClass>
 		<modExtensions>
-			<li Class="VEF.DamageExtension">
+			<li Class="VEF.Weapons.DamageExtension">
 				<pushBackDistance>3~5</pushBackDistance>
 			</li>
 		</modExtensions>
@@ -28,7 +28,7 @@
                 <useWhileHunting>false</useWhileHunting>
             </li>
          </modExtensions>
-      </ManeuverDef> -->
+      </ManeuverDef>
 
 
 </Defs>

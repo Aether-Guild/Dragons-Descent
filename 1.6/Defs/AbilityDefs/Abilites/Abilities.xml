@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
  <Defs>
-   <AbilityDef>
+   <!-- <AbilityDef>
     <defName>FireSpew_Dragon</defName>
     <label>fire spew</label>
     <description>Spit a stream of sticky, flammable bile from the mouth. The bile can ignite anything or anyone it hits, and also form flaming pools on the ground.\n\nThe bile is generated and stored by an organ in the neck, along with a separate pouch of hypergolic reactant for ignition.</description>
@@ -10,6 +10,8 @@
     <ai_IsIncendiary>true</ai_IsIncendiary>
     <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
     <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>30</range>
@@ -20,16 +22,46 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="DD.CompProperties_Ability_Dragon_Fire">
+      <li Class="DD.CompProperties_AbilityFireSpew_Dragon">
         <range>30</range>
         <lineWidthEnd>7</lineWidthEnd>
         <filthDef>Filth_FlammableBile</filthDef> 
-         <effecterDef>Fire_Spew_EffecterDragon</effecterDef> 
-         <effecterDef>Fire_SpewBioferrite</effecterDef>
+         <effecterDef>Fire_Spew_Effecter_Dragon</effecterDef> 
         <canHitFilledCells>true</canHitFilledCells>
       </li>
     </comps>
-  </AbilityDef> 
+  </AbilityDef>  -->
+
+    <!-- <AbilityDef>
+    <defName>FireBurst_Dragon</defName>
+    <label>fire burst</label>
+    <description>Emit a burst of burning fuel in all directions to form puddles of ignited liquid on the ground.</description>
+    <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+    <iconPath>UI/Abilities/FireBurst</iconPath>
+    <cooldownTicksRange>27</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+    <targetRequired>false</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupEffecter>Fire_Burst_Warmup</warmupEffecter>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <range>5.9</range>
+      <drawAimPie>false</drawAimPie>      
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="DD.CompProperties_AbilityFireBurst_Dragon">
+        <radius>5.9</radius>
+      </li>
+    </comps>
+  </AbilityDef>  -->
   <!-- <AbilityDef>
     <defName>IncineratorBurner_Dragon</defName>
     <label>incinerator burner</label>
@@ -54,7 +86,7 @@
       </flammabilityAttachFireChanceCurve>
     </verbProperties>
     <comps>
-      <li Class="DD.CompProperties_Ability_Dragon_Fire">
+      <li Class="DD.CompProperties_AbilityFireSpew_Dragon">
         <range>11.9</range>
         <lineWidthEnd>5</lineWidthEnd>
         <filthDef>Filth_Ash</filthDef>
@@ -74,15 +106,14 @@
       </li>
     </comps>
   </AbilityDef>  -->
-   
- <AbilityDef>
+   <!-- May Require Biotech -->
+ <!-- <AbilityDef>
     <defName>GraserBeam_Dragon</defName>
     <label>Dragon Beam</label>
     <description>LASER</description>
     <iconPath>UI/Abilities/Burner</iconPath>
     <aiCanUse>true</aiCanUse>
     <ai_IsIncendiary>true</ai_IsIncendiary>
-    <!-- <warmupStartSound>FireSpew_Warmup</warmupStartSound> -->
     <verbProperties>
         <verbClass>Verb_ShootBeam</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
@@ -131,7 +162,7 @@
     <comps>
      
     </comps>
-  </AbilityDef>  
+  </AbilityDef>   -->
 
 
 
@@ -192,12 +223,12 @@
       <flightSpeed>15</flightSpeed>
     </pawnFlyer>
   </ThingDef>
-  <ThingDef ParentName="EtherealThingBase">
+  <!-- <ThingDef ParentName="EtherealThingBase">
     <defName>IncineratorSpray_Dragon</defName>
     <selectable>false</selectable>
     <tickerType>Normal</tickerType>
     <thingClass>DD.IncineratorSpray_Dragon</thingClass>
     <drawOffscreen>true</drawOffscreen>
-  </ThingDef>
+  </ThingDef> -->
 
 </Defs> 

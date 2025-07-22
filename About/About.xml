@@ -30,17 +30,16 @@
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
 	<incompatibleWith>
-		<li>hatena.rangeanimalframework</li>
-		<li>bustedbunny.throwthem</li>
+		
 	</incompatibleWith>
 	<description>
 		<![CDATA[
-Version 5.3
-<color=#9E2611><size=26>The <b>Dragons</b> Have Come.</size></color>
+<color=#E0D83C><size=18>Version: 5.8</size></color>
+<color=#9E2611><size=26>The <b>Dragons</b>Renewal!</size></color>
 
 The Rimworld is a harsh and dangerous place. Its environment can be lush and giving or disasterous and desolate, and has such bred certain races to adapt to both. One such race is the dragon, these beasts are quite powerful and rare; making them valuable for any colony to capture and tame. Some curious offworld glittertech civilizations have even bred their own types which have recently escaped into the wild. Even if they were once in captivity taming any dragon is an extreme risk, fighting and angering one even moreso.
 
-<color=#E0D83C><size=18>Version: 5:</size></color>
+
 
 <color=#E0D83C><size=18>Dependencies</size></color>
 
@@ -66,7 +65,7 @@ Thanks and credit to the helpful <b>Walking Problem</b> for figuring out some co
 	
 Thanks to jecrell, Sarg Bjornson, [KOR]Bichang, and Ogliss. Their mods have been a huge inspiration to me and they've been super helpful, check them out!
 
-Special credits and thanks: It would have been far more difficult and a lot less fun without the hard work from our amazing testers, Zentimental, Stormtail, Elude, Zer0 Requim, and many more! This list also includes you, who are currently playing this mod. Thank you all for your hard work! If any issues arise please contact us via discord  https://discord.gg/XuVz7Pq
+Special credits and thanks: It would have been far more difficult and a lot less fun without the hard work from our amazing testers, Zaljerem, Ra'ini, Zentimental, Stormtail, Elude, Zer0 Requim, and many more! This list also includes you, who are currently playing this mod. Thank you all for your hard work! If any issues arise please contact us via discord  https://discord.gg/XuVz7Pq
     
 Original mod found here http://steamcommunity.com/sharedfiles/filedetails/?id=1163162658
 

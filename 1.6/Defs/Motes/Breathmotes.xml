@@ -1,30 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!-- <ThingDef ParentName="MoteBase" MayRequire="Ludeon.RimWorld.Anomaly">
-  <defName>DD_Mote_FirePuff</defName>
-  <altitudeLayer>MoteOverhead</altitudeLayer>
-  <mote>
-    <growthRate>0.53</growthRate>
-    <collide>true</collide>
-    <speedPerTime>-0.32</speedPerTime>
-    <fadeOutTime>.6</fadeOutTime>
-    <solidTime>20</solidTime>
-  </mote>
-  <graphicData>
-    <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
-    <shaderType>CutoutAnimated</shaderType>
-    <texPath>Things/Building/Misc/Lightball/Lightball_Overlay</texPath>
-    <shaderParameters>
-      <_NumFrames>4</_NumFrames>
-      <_FramesPerSec>7</_FramesPerSec>
-    </shaderParameters>
-    <drawSize>5</drawSize>
-  </graphicData>
-</ThingDef> -->
+
 
 <ThingDef ParentName="MoteBase">
-  <defName>DD_Mote_ExplosionPuff</defName>
+  <defName>Mote_ExplosionPuff_Dragon</defName>
   <altitudeLayer>MoteOverhead</altitudeLayer>
   <mote>
     <fadeInTime>0.06</fadeInTime>
@@ -40,16 +20,89 @@
   </graphicData>
 </ThingDef>
 
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_HellsphereCannon_Aim_Dragon</defName>
+    <thingClass>MoteDualAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.15</fadeInTime>
+      <fadeOutTime>0.3</fadeOutTime>
+      <solidTime>999999</solidTime>
+      <needsMaintenance>True</needsMaintenance>
+      <rotateTowardsTarget>True</rotateTowardsTarget>
+      <scaleToConnectTargets>True</scaleToConnectTargets>
+      <fadeOutUnmaintained>True</fadeOutUnmaintained>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/HellsphereCannon_Aim</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <shaderType>MoteHellfireCannon_Aim</shaderType>
+      <shaderParameters>
+        <_DistortionTex>/Things/Mote/Cloudy_C</_DistortionTex>
+        <_NumFrames>10</_NumFrames>
+        <_FramesPerSec>1.35</_FramesPerSec>
+        <_DistortionScrollSpeed>(1.35, 1.35)</_DistortionScrollSpeed>
+        <_Intensity>3</_Intensity>
+        <_DistortionScale>0.082</_DistortionScale>
+      </shaderParameters>
+      <drawSize>(3, 0.9)</drawSize>
+    </graphicData>
+  </ThingDef>
 
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_HellsphereCannon_Charge_Dragon</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.15</fadeInTime>
+      <fadeOutTime>0.3</fadeOutTime>
+      <solidTime>999999</solidTime>
+      <needsMaintenance>True</needsMaintenance>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/HellsphereCannon_ChargeGlow</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <shaderType>MoteHellfireCannon_Charge</shaderType>
+      <shaderParameters>
+        <_RandomTex>/Things/Mote/RandomFlicker</_RandomTex>
+        <_FlickerFrequency>0.25</_FlickerFrequency>
+        <_FlickerAmount>0.6</_FlickerAmount>
+        <_InnerCircleIntensity>0.1</_InnerCircleIntensity>
+        <_InnerCircleSize>0.4</_InnerCircleSize>
+        <_InnerCircleShimmerAmount>0.14</_InnerCircleShimmerAmount>
+      </shaderParameters>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_HellsphereCannon_Target_Dragon</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.5</fadeInTime>
+      <fadeOutTime>0.3</fadeOutTime>
+      <solidTime>999999</solidTime>
+      <needsMaintenance>True</needsMaintenance>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/MoteHellfireCannon_Target</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <shaderType>MoteHellfireCannon_Target</shaderType>
+      <shaderParameters>
+        <_ScanTex>/Things/Mote/MoteHellfireCannon_Target_Scan</_ScanTex>
+        <_ScanMask>/Things/Mote/MoteHellfireCannon_Target_Scan_Mask</_ScanMask>
+      </shaderParameters>
+      <drawSize>(8, 8)</drawSize>
+    </graphicData>
+  </ThingDef>
 
   
-
-<!-- so you'll define the size within the actual fire itself -->
+<!-- 
 <ThingDef ParentName="MoteBase" MayRequire="Ludeon.RimWorld.Anomaly">
   <defName>DD_Mote_IncineratorBurst_Fire</defName>
   <thingClass>MoteDualAttached</thingClass>
   <altitudeLayer>MoteOverhead</altitudeLayer>
-  <isSaveable>false</isSaveable> <!-- because it's pure-vis, and weirdly constructed, it's better to not persist them at all -->
+  <isSaveable>false</isSaveable> 
   <mote>
     <fadeInTime>0</fadeInTime>
     <fadeOutTime>1</fadeOutTime>
@@ -108,7 +161,6 @@
     <drawSize>10</drawSize>
   </graphicData>
 </ThingDef>
-<!-- The effector def is best when it's thought of a spawner of the mote/fleck -->
 
 <FleckDef ParentName="FleckBase_Thrown" MayRequire="Ludeon.RimWorld.Anomaly">
   <defName>DD_Fleck_BurnerUsedSmoke</defName>
@@ -262,5 +314,26 @@
     </shaderParameters>
     <drawSize>10.0</drawSize>
   </graphicData>
-</FleckDef>
+</FleckDef> -->
+<!-- <ThingDef ParentName="MoteBase" MayRequire="Ludeon.RimWorld.Anomaly">
+  <defName>DD_Mote_FirePuff</defName>
+  <altitudeLayer>MoteOverhead</altitudeLayer>
+  <mote>
+    <growthRate>0.53</growthRate>
+    <collide>true</collide>
+    <speedPerTime>-0.32</speedPerTime>
+    <fadeOutTime>.6</fadeOutTime>
+    <solidTime>20</solidTime>
+  </mote>
+  <graphicData>
+    <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+    <shaderType>CutoutAnimated</shaderType>
+    <texPath>Things/Building/Misc/Lightball/Lightball_Overlay</texPath>
+    <shaderParameters>
+      <_NumFrames>4</_NumFrames>
+      <_FramesPerSec>7</_FramesPerSec>
+    </shaderParameters>
+    <drawSize>5</drawSize>
+  </graphicData>
+</ThingDef> -->
 </Defs>
