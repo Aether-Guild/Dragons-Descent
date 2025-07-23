@@ -177,6 +177,31 @@
               <texPath>Things/Pawn/Animal/BDragon/Flight/Flight4</texPath>
             </variantData>
           </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/BDragon/BDragon1</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/BDragon/Flight/Flight1</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/BDragon/BDragon2</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/BDragon/Flight/Flight2</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/BDragon/BDragon3</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/BDragon/Flight/Flight3</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/BDragon/BDragon4</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/BDragon/Flight/Flight4</texPath>
+            </variantData>
+          </li>
+          
         </variants>
       </li>
       <li Class="DD.CarryCapacityExtension">
@@ -204,7 +229,7 @@
     <ecoSystemWeight>2</ecoSystemWeight>
     <alternateGraphicChance>1</alternateGraphicChance>
     <alternateGraphics>
-      <li>
+    <li>
         <texPath>Things/Pawn/Animal/BDragon/BDragon1</texPath>
         <weight>0.33</weight>
       </li>
@@ -220,13 +245,29 @@
         <texPath>Things/Pawn/Animal/BDragon/BDragon4</texPath>
         <weight>0.22</weight>
       </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/BDragon/BDragon1</texPath>
+        <weight>0.33</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/BDragon/BDragon2</texPath>
+        <weight>0.11</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/BDragon/BDragon3</texPath>
+        <weight>0.33</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/BDragon/BDragon4</texPath>
+        <weight>0.22</weight>
+      </li>
     </alternateGraphics>
     <lifeStages>
       <li>
         <label>Black dragon whelp</label>
         <labelPlural>Black dragon whelps</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BDragon/BDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/BDragon/BDragon1</texPath>
           <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
@@ -248,7 +289,7 @@
         <label>Black dragon wyrmling</label>
         <labelPlural>Black dragon wyrmlings</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BDragon/BDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/BDragon/BDragon1</texPath>
           <drawSize>3.3</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
@@ -264,7 +305,7 @@
         <label>Black dragon</label>
         <labelPlural>Black dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BDragon/BDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/BDragon/BDragon1</texPath>
           <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -284,7 +325,7 @@
         <label>Elder black dragon</label>
         <labelPlural>Elder black dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BDragon/BDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/BDragon/BDragon1</texPath>
           <drawSize>4.4</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -304,7 +345,7 @@
         <label>Ancient black dragon</label>
         <labelPlural>Ancient black dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BDragon/BDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/BDragon/BDragon1</texPath>
           <drawSize>4.6</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -484,7 +525,7 @@
           </shadowData>
         </flyingGraphicData>
         <variants>
-          <li>
+         <li>
             <variantPath>Things/Pawn/Animal/BLDragon/BLDragon1</variantPath>
             <variantData>
               <texPath>Things/Pawn/Animal/BLDragon/Flight/Flight1</texPath>
@@ -508,6 +549,30 @@
               <texPath>Things/Pawn/Animal/BLDragon/Flight/Flight4</texPath>
             </variantData>
           </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/BLDragon/BLDragon1</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/BLDragon/Flight/Flight1</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/BLDragon/BLDragon2</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/BLDragon/Flight/Flight2</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/BLDragon/BLDragon3</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/BLDragon/Flight/Flight3</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/BLDragon/BLDragon4</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/BLDragon/Flight/Flight4</texPath>
+            </variantData>
+          </li>
         </variants>
       </li>
       <li Class="DD.CarryCapacityExtension">
@@ -529,7 +594,7 @@
     <ecoSystemWeight>2</ecoSystemWeight>
     <alternateGraphicChance>1</alternateGraphicChance>
     <alternateGraphics>
-      <li>
+         <li>
         <texPath>Things/Pawn/Animal/BLDragon/BLDragon1</texPath>
         <weight>0.33</weight>
       </li>
@@ -545,13 +610,29 @@
         <texPath>Things/Pawn/Animal/BLDragon/BLDragon4</texPath>
         <weight>0.22</weight>
       </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/BLDragon/BLDragon1</texPath>
+        <weight>0.33</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/BLDragon/BLDragon2</texPath>
+        <weight>0.11</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/BLDragon/BLDragon3</texPath>
+        <weight>0.33</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/BLDragon/BLDragon4</texPath>
+        <weight>0.22</weight>
+      </li>
     </alternateGraphics>
     <lifeStages>
       <li>
         <label>Blue dragon whelp</label>
         <labelPlural>Blue dragon whelps</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BLDragon/BLDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/BLDragon/BLDragon1</texPath>
           <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
@@ -567,7 +648,7 @@
         <label>Blue dragon wyrmling</label>
         <labelPlural>Blue dragon wyrmlings</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BLDragon/BLDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/BLDragon/BLDragon1</texPath>
           <drawSize>3.3</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
@@ -583,7 +664,7 @@
         <label>Blue dragon</label>
         <labelPlural>Blue dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BLDragon/BLDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/BLDragon/BLDragon1</texPath>
           <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -603,7 +684,7 @@
         <label>Elder blue dragon</label>
         <labelPlural>Elder blue dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BLDragon/BLDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/BLDragon/BLDragon1</texPath>
           <drawSize>4.4</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -623,7 +704,7 @@
         <label>Ancient blue dragon</label>
         <labelPlural>Ancient blue dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BLDragon/BLDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/BLDragon/BLDragon1</texPath>
           <drawSize>4.6</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -802,7 +883,7 @@
           </shadowData>
         </flyingGraphicData>
         <variants>
-          <li>
+           <li>
             <variantPath>Things/Pawn/Animal/GDragon/GDragon1</variantPath>
             <variantData>
               <texPath>Things/Pawn/Animal/GDragon/Flight/Flight1</texPath>
@@ -826,6 +907,30 @@
               <texPath>Things/Pawn/Animal/GDragon/Flight/Flight4</texPath>
             </variantData>
           </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/GDragon/GDragon1</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/GDragon/Flight/Flight1</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/GDragon/GDragon2</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/GDragon/Flight/Flight2</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/GDragon/GDragon3</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/GDragon/Flight/Flight3</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/GDragon/GDragon4</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/GDragon/Flight/Flight4</texPath>
+            </variantData>
+          </li>
         </variants>
       </li>
       <li Class="DD.CarryCapacityExtension">
@@ -846,7 +951,7 @@
     <ecoSystemWeight>2</ecoSystemWeight>
     <alternateGraphicChance>1</alternateGraphicChance>
     <alternateGraphics>
-      <li>
+     <li>
         <texPath>Things/Pawn/Animal/GDragon/GDragon1</texPath>
         <weight>0.33</weight>
       </li>
@@ -862,13 +967,29 @@
         <texPath>Things/Pawn/Animal/GDragon/GDragon4</texPath>
         <weight>0.22</weight>
       </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/GDragon/GDragon1</texPath>
+        <weight>0.33</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/GDragon/GDragon2</texPath>
+        <weight>0.22</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/GDragon/GDragon3</texPath>
+        <weight>0.22</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/GDragon/GDragon4</texPath>
+        <weight>0.22</weight>
+      </li>
     </alternateGraphics>
     <lifeStages>
       <li>
         <label>Green dragon whelp</label>
         <labelPlural>Green dragon whelps</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/GDragon/GDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/GDragon/GDragon1</texPath>
           <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
@@ -884,7 +1005,7 @@
         <label>Green dragon wyrmling</label>
         <labelPlural>Green dragon wyrmlings</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/GDragon/GDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/GDragon/GDragon1</texPath>
           <drawSize>3.3</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
@@ -900,7 +1021,7 @@
         <label>Green dragon</label>
         <labelPlural>Green dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/GDragon/GDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/GDragon/GDragon1</texPath>
           <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -920,7 +1041,7 @@
         <label>Elder green dragon</label>
         <labelPlural>Elder green dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/GDragon/GDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/GDragon/GDragon1</texPath>
           <drawSize>4.4</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -940,7 +1061,7 @@
         <label>Ancient green dragon</label>
         <labelPlural>Ancient green dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/GDragon/GDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/GDragon/GDragon1</texPath>
           <drawSize>4.6</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -1140,7 +1261,7 @@
           </shadowData>
         </flyingGraphicData>
         <variants>
-          <li>
+         <li>
             <variantPath>Things/Pawn/Animal/PDragon/PDragon1</variantPath>
             <variantData>
               <texPath>Things/Pawn/Animal/PDragon/Flight/Flight1</texPath>
@@ -1164,6 +1285,30 @@
               <texPath>Things/Pawn/Animal/PDragon/Flight/Flight4</texPath>
             </variantData>
           </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/PDragon/PDragon1</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/PDragon/Flight/Flight1</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/PDragon/PDragon2</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/PDragon/Flight/Flight2</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/PDragon/PDragon3</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/PDragon/Flight/Flight3</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/PDragon/PDragon4</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/PDragon/Flight/Flight4</texPath>
+            </variantData>
+          </li>
         </variants>
       </li>
       <li Class="DD.CarryCapacityExtension">
@@ -1184,7 +1329,7 @@
     <ecoSystemWeight>2</ecoSystemWeight>
     <alternateGraphicChance>1</alternateGraphicChance>
     <alternateGraphics>
-      <li>
+     <li>
         <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
         <weight>0.33</weight>
       </li>
@@ -1200,13 +1345,29 @@
         <texPath>Things/Pawn/Animal/PDragon/PDragon4</texPath>
         <weight>0.33</weight>
       </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/PDragon/PDragon1</texPath>
+        <weight>0.33</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/PDragon/PDragon2</texPath>
+        <weight>0.11</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/PDragon/PDragon3</texPath>
+        <weight>0.22</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/PDragon/PDragon4</texPath>
+        <weight>0.33</weight>
+      </li>
     </alternateGraphics>
     <lifeStages>
       <li>
         <label>Purple dragon whelp</label>
         <labelPlural>Purple dragon whelps</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/PDragon/PDragon1</texPath>
           <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
@@ -1222,7 +1383,7 @@
         <label>Purple dragon wyrmling</label>
         <labelPlural>Purple dragon wyrmlings</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/PDragon/PDragon1</texPath>
           <drawSize>3.3</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
@@ -1238,7 +1399,7 @@
         <label>Purple dragon</label>
         <labelPlural>Purple dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/PDragon/PDragon1</texPath>
           <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -1258,7 +1419,7 @@
         <label>Elder purple dragon</label>
         <labelPlural>Elder purple dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/PDragon/PDragon1</texPath>
           <drawSize>4.4</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -1278,7 +1439,7 @@
         <label>Ancient purple dragon</label>
         <labelPlural>Ancient purple dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/PDragon/PDragon1</texPath>
           <drawSize>4.6</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -1462,7 +1623,7 @@
           </shadowData>
         </flyingGraphicData>
         <variants>
-          <li>
+            <li>
             <variantPath>Things/Pawn/Animal/RDragon/RDragon1</variantPath>
             <variantData>
               <texPath>Things/Pawn/Animal/RDragon/Flight/Flight1</texPath>
@@ -1484,6 +1645,30 @@
             <variantPath>Things/Pawn/Animal/RDragon/RDragon4</variantPath>
             <variantData>
               <texPath>Things/Pawn/Animal/RDragon/Flight/Flight4</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/RDragon/RDragon1</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/RDragon/Flight/Flight1</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/RDragon/RDragon2</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/RDragon/Flight/Flight2</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/RDragon/RDragon3</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/RDragon/Flight/Flight3</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/RDragon/RDragon4</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/RDragon/Flight/Flight4</texPath>
             </variantData>
           </li>
         </variants>
@@ -1523,13 +1708,29 @@
         <texPath>Things/Pawn/Animal/RDragon/RDragon4</texPath>
         <weight>0.11</weight>
       </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/RDragon/RDragon1</texPath>
+        <weight>0.33</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/RDragon/RDragon2</texPath>
+        <weight>0.22</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/RDragon/RDragon3</texPath>
+        <weight>0.33</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/RDragon/RDragon4</texPath>
+        <weight>0.11</weight>
+      </li>
     </alternateGraphics>
     <lifeStages>
       <li>
         <label>Red dragon whelp</label>
         <labelPlural>Red dragon whelps</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon/RDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/RDragon/RDragon1</texPath>
           <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
@@ -1545,7 +1746,7 @@
         <label>Red dragon wyrmling</label>
         <labelPlural>Red dragon wyrmlings</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon/RDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/RDragon/RDragon1</texPath>
           <drawSize>3.3</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
@@ -1561,7 +1762,7 @@
         <label>Red dragon</label>
         <labelPlural>Red dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon/RDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/RDragon/RDragon1</texPath>
           <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -1581,7 +1782,7 @@
         <label>Elder red dragon</label>
         <labelPlural>Elder red dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon/RDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/RDragon/RDragon1</texPath>
           <drawSize>4.4</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -1601,7 +1802,7 @@
         <label>Ancient red dragon</label>
         <labelPlural>Ancient red dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/RDragon/RDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/RDragon/RDragon1</texPath>
           <drawSize>4.6</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -1801,7 +2002,7 @@
           </shadowData>
         </flyingGraphicData>
         <variants>
-          <li>
+         <li>
             <variantPath>Things/Pawn/Animal/WDragon/WDragon1</variantPath>
             <variantData>
               <texPath>Things/Pawn/Animal/WDragon/Flight/Flight1</texPath>
@@ -1823,6 +2024,30 @@
             <variantPath>Things/Pawn/Animal/WDragon/WDragon4</variantPath>
             <variantData>
               <texPath>Things/Pawn/Animal/WDragon/Flight/Flight4</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/WDragon/WDragon1</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/WDragon/Flight/Flight1</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/WDragon/WDragon2</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/WDragon/Flight/Flight2</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/WDragon/WDragon3</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/WDragon/Flight/Flight3</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/WDragon/WDragon4</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/WDragon/Flight/Flight4</texPath>
             </variantData>
           </li>
         </variants>
@@ -1861,13 +2086,29 @@
         <texPath>Things/Pawn/Animal/WDragon/WDragon4</texPath>
         <weight>0.22</weight>
       </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/WDragon/WDragon1</texPath>
+        <weight>0.33</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/WDragon/WDragon2</texPath>
+        <weight>0.22</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/WDragon/WDragon3</texPath>
+        <weight>0.22</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/WDragon/WDragon4</texPath>
+        <weight>0.22</weight>
+      </li>
     </alternateGraphics>
     <lifeStages>
       <li>
         <label>White dragon whelp</label>
         <labelPlural>White dragon whelps</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/WDragon/WDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/WDragon/WDragon1</texPath>
           <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
@@ -1883,7 +2124,7 @@
         <label>White dragon wyrmling</label>
         <labelPlural>White dragon wyrmlings</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/WDragon/WDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/WDragon/WDragon1</texPath>
           <drawSize>3.3</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
@@ -1899,7 +2140,7 @@
         <label>White dragon</label>
         <labelPlural>White dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/WDragon/WDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/WDragon/WDragon1</texPath>
           <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -1919,7 +2160,7 @@
         <label>Elder white dragon</label>
         <labelPlural>Elder white dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/WDragon/WDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/WDragon/WDragon1</texPath>
           <drawSize>4.4</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -1939,7 +2180,7 @@
         <label>Ancient white dragon</label>
         <labelPlural>Anicnet white dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/WDragon/WDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/WDragon/WDragon1</texPath>
           <drawSize>4.6</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -2139,7 +2380,7 @@
           </shadowData>
         </flyingGraphicData>
         <variants>
-          <li>
+         <li>
             <variantPath>Things/Pawn/Animal/YDragon/YDragon1</variantPath>
             <variantData>
               <texPath>Things/Pawn/Animal/YDragon/Flight/Flight1</texPath>
@@ -2163,6 +2404,30 @@
               <texPath>Things/Pawn/Animal/YDragon/Flight/Flight4</texPath>
             </variantData>
           </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/YDragon/YDragon1</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/YDragon/Flight/Flight1</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/YDragon/YDragon2</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/YDragon/Flight/Flight2</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/YDragon/YDragon3</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/YDragon/Flight/Flight3</texPath>
+            </variantData>
+          </li>
+          <li>
+            <variantPath>Things/Pawn/Animal/Detailed/YDragon/YDragon4</variantPath>
+            <variantData>
+              <texPath>Things/Pawn/Animal/Detailed/YDragon/Flight/Flight4</texPath>
+            </variantData>
+          </li>
         </variants>
       </li>
       <li Class="DD.CarryCapacityExtension">
@@ -2183,7 +2448,7 @@
     <ecoSystemWeight>2</ecoSystemWeight>
     <alternateGraphicChance>1</alternateGraphicChance>
     <alternateGraphics>
-      <li>
+     <li>
         <texPath>Things/Pawn/Animal/YDragon/YDragon1</texPath>
         <weight>0.33</weight>
       </li>
@@ -2199,13 +2464,29 @@
         <texPath>Things/Pawn/Animal/YDragon/YDragon4</texPath>
         <weight>0.33</weight>
       </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/YDragon/YDragon1</texPath>
+        <weight>0.33</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/YDragon/YDragon2</texPath>
+        <weight>0.22</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/YDragon/YDragon3</texPath>
+        <weight>0.11</weight>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Animal/Detailed/YDragon/YDragon4</texPath>
+        <weight>0.33</weight>
+      </li>
     </alternateGraphics>
     <lifeStages>
       <li>
         <label>Yellow dragon whelp</label>
         <labelPlural>Yellow dragon whelps</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/YDragon/YDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/YDragon/YDragon1</texPath>
           <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
@@ -2221,7 +2502,7 @@
         <label>Yellow dragon wyrmling</label>
         <labelPlural>Yellow dragon wyrmlings</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/YDragon/YDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/YDragon/YDragon1</texPath>
           <drawSize>3.3</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
@@ -2237,7 +2518,7 @@
         <label>Yellow dragon</label>
         <labelPlural>Yellow dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/YDragon/YDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/YDragon/YDragon1</texPath>
           <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -2257,7 +2538,7 @@
         <label>Elder yellow dragon</label>
         <labelPlural>Elder yellow dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/YDragon/YDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/YDragon/YDragon1</texPath>
           <drawSize>4.4</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -2277,7 +2558,7 @@
         <label>Ancient yellow dragon</label>
         <labelPlural>Ancient yellow dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/YDragon/YDragon1</texPath>
+          <texPath>Things/Pawn/Animal/Detailed/YDragon/YDragon1</texPath>
           <drawSize>4.6</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
