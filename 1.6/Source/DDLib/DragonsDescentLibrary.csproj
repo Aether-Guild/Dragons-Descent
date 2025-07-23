@@ -129,6 +129,7 @@
     <Compile Include="Misc\Patch_DD_PawnBioAndNameGenerator_GeneratePawnName.cs" />
     <Compile Include="Misc\Patch_DD_PawnGenerator_GenerateNewName.cs" />
     <Compile Include="Patches\Patch_DD_PawnComponentsUtility_AddAndRemoveDynamicComponents.cs" />
+    <Compile Include="Patches\Patch_DD_Pawn_InteractionsTracker_CanInteractNowWith.cs" />
     <Compile Include="Projectile\Expandable Projectiles\ExpandableProjectile_IceBreathBeam.cs" />
     <Compile Include="Projectile\Expandable Projectiles\ExpandableProjectile_IceBreath.cs" />
     <Compile Include="Projectile\Expandable Projectiles\ExpandableProjectile_FireBreath.cs" />
