@@ -5,7 +5,7 @@
 	<ThingDef ParentName="MakeableDrugPillBase">
 		<defName>MoonStone</defName>
 		<label>moon stone</label>
-		<description>The moon stone is not a stone but is a hardend type of pill created by drying jewel berries, crushing them, then pressing the powder into a large blue circular pill./nHumans cannot injest this however as the pill is the size of a dessert plate and any smaller pills would require such accuracy to create lest the aging process would go on until only bones remained. Only dragons can safely be admistered this drug due to their size and fundamentum. Adds 3~5 years.</description>
+		<description>The moon stone is not a stone but is a hardend type of pill created by drying jewel berries, crushing them, then pressing the powder into a large blue circular pill. Humans cannot injest this however as the pill is the size of a dessert plate and any smaller pills would require such accuracy to create lest the aging process would go on until only bones remained. Only dragons can safely be admistered this drug due to their size and fundamentum. Adds 3~5 years.</description>
 		<graphicData>
 			<texPath>Things/Item/Special/MoonStone</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
