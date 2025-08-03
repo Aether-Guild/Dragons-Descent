@@ -11,7 +11,6 @@
       <hediffGiverSets Inherit="false">
         <li>OrganicDragon</li> <!-- Moved here since its the same on both common and rare dragons -->
       </hediffGiverSets>
-      <!-- <overrideShouldHaveAbilityTracker>true</overrideShouldHaveAbilityTracker> -->
 
       <!-- Moved here since its the same on both common and rare dragons -->
       <lifeExpectancy>2000</lifeExpectancy>

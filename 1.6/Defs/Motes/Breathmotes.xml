@@ -3,7 +3,7 @@
 
 
 
-<ThingDef ParentName="MoteBase">
+<!-- <ThingDef ParentName="MoteBase">
   <defName>Mote_ExplosionPuff_Dragon</defName>
   <altitudeLayer>MoteOverhead</altitudeLayer>
   <mote>
@@ -15,12 +15,10 @@
   <graphicData>
     <texPath>Things/Mote/ShieldBubble_BrokenFlash</texPath>
     <shaderType>MoteGlow</shaderType>
-    <!-- <texPath>Things/Mote/PowerBeam</texPath> -->
-    <!-- <shaderType>MoteGlow</shaderType> -->
   </graphicData>
-</ThingDef>
+</ThingDef> -->
 
-  <ThingDef ParentName="MoteBase">
+  <!-- <ThingDef ParentName="MoteBase">
     <defName>Mote_HellsphereCannon_Aim_Dragon</defName>
     <thingClass>MoteDualAttached</thingClass>
     <altitudeLayer>MoteOverhead</altitudeLayer>
@@ -94,7 +92,7 @@
       </shaderParameters>
       <drawSize>(8, 8)</drawSize>
     </graphicData>
-  </ThingDef>
+  </ThingDef> -->
 
   
 <!-- 

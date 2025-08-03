@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-<EffecterDef>
+ <EffecterDef>
     <defName>Fire_Burst_Dragon</defName>
     <children>
-      <li>
+      <!-- <li>
         <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
         <positionRadius>0.15</positionRadius>
         <fleckDef>FireSpew_A</fleckDef>
@@ -14,8 +14,8 @@
         <burstCount>30</burstCount>
         <positionLerpFactor>0.85</positionLerpFactor>
         <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
-      </li>
-            <li>
+      </li> -->
+             <li>
         <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
         <positionRadius>0.1</positionRadius>
         <moteDef>Mote_SparkThrownFast</moteDef>
@@ -27,7 +27,7 @@
         <positionLerpFactor>0.8</positionLerpFactor>
         <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
       </li>
-      <li>
+      <!--<li>
         <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
         <positionRadius>0.1</positionRadius>
         <fleckDef>FireSpew_Base</fleckDef>
@@ -56,11 +56,11 @@
         <scale>0.8~1.2</scale>
         <angle>0~360</angle>
         <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
-      </li>
+      </li> -->
     </children>
-  </EffecterDef>
+  </EffecterDef> 
 
- <EffecterDef>
+ <!-- <EffecterDef>
     <defName>Fire_Burst_Warmup_Dragon</defName>
     <children>
       <li>
@@ -90,11 +90,11 @@
         <soundDef>FireBurst_Warmup</soundDef>
       </li>
     </children>
-  </EffecterDef>
+  </EffecterDef> -->
 
 
 
-  <EffecterDef>
+  <!-- <EffecterDef>
     <defName>Fire_Spew_Effecter_Dragon</defName>
     <children>
       <li>
@@ -155,7 +155,7 @@
         <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
       </li>
     </children>
-  </EffecterDef>
+  </EffecterDef> -->
 
     <!-- <EffecterDef MayRequire="Ludeon.RimWorld.Biotech">
     <defName>GraserBeam_End_Dragon</defName>
