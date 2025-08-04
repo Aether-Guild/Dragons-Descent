@@ -43,6 +43,7 @@ namespace DD
         public override void CompTick()
         {
             base.CompTick();
+            if (parent?.Map?.GetComponent<MapComponent_Tracker>() == null) return;
 
             RitualTracker rituals = parent.Map.GetComponent<MapComponent_Tracker>().Rituals;
             Active = !rituals.Full;
