@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<!-- ======================= Talbuk =============================== -->
+
+
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>Talbuk</defName>
+		<label>talbuk</label>
+		<description>Described as a mix between a horse and a goat, these fluffy beasts excell in long distance travel and hauling. Their thick necks lend to powerful headbutts and their long legs allow for speedy travel.</description>
+		<statBases>
+			<MoveSpeed>5.7</MoveSpeed>
+			<MarketValue>600</MarketValue>
+			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
+			<ComfyTemperatureMax>40</ComfyTemperatureMax>
+			<FilthRate>16</FilthRate>
+			<CaravanRidingSpeedFactor>1.5</CaravanRidingSpeedFactor>
+			<Wildness>0.5</Wildness>
+		</statBases>
+		<uiIconScale>1.2</uiIconScale>
+		<race>
+			<body>QuadrupedAnimalWithHooves</body>
+			<herdAnimal>true</herdAnimal>
+			<baseBodySize>1.0</baseBodySize>
+			<baseHealthScale>2.0</baseHealthScale>
+			<baseHungerRate>0.375</baseHungerRate>
+			<foodType>VegetarianRoughAnimal</foodType>
+			<leatherDef>Leather_Plain</leatherDef>
+			<roamMtbDays>2</roamMtbDays>
+			<petness>0.4</petness>
+			<manhunterOnDamageChance>0.1</manhunterOnDamageChance>
+			<gestationPeriodDays>6.66</gestationPeriodDays>
+			<trainability>None</trainability>
+			<meatLabel>horse meat</meatLabel>
+			<packAnimal>true</packAnimal>
+			<lifeExpectancy>16</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.2</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.3</minAge>
+					<soundWounded>Pawn_Elk_Wounded</soundWounded>
+					<soundDeath>Pawn_Elk_Death</soundDeath>
+					<soundCall>Pawn_Elk_Call</soundCall>
+					<soundAngry>Pawn_Elk_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+			<soundEating>Herbivore_Eat</soundEating>
+			<headPosPerRotation>
+				<li>(0.0, 0, 0.1)</li>
+				<li>(0.16, 0, 0.03)</li>
+				<li>(0.0, 0, -0.02)</li>
+				<li>(-0.16, 0, 0.03)</li>
+			</headPosPerRotation>
+		</race>
+		<tradeTags>
+			<li>AnimalCommon</li>
+			<li>AnimalFarm</li>
+		</tradeTags>
+		<tools>
+			<li>
+				<label>left hoof</label>
+				<labelNoLocation>hoof</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right hoof</label>
+				<labelNoLocation>hoof</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<PawnKindDef Name="Talbuk" ParentName="AnimalKindBase">
+		<defName>Talbuk</defName>
+		<label>talbuk</label>
+		<labelPlural>talbuks</labelPlural>
+		<race>Talbuk</race>
+		<combatPower>130</combatPower>
+		<ecoSystemWeight>1.1</ecoSystemWeight>
+		<wildGroupSize>3~6</wildGroupSize>
+		<alternateGraphicChance>0.8</alternateGraphicChance>
+		<alternateGraphics>
+			<li>
+				<texPath>Things/Pawn/Animal/Talbuk/Talbuk1</texPath>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/Talbuk/Talbuk2</texPath>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/Talbuk/Talbuk3</texPath>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/Talbuk/Talbuk4</texPath>
+			</li>
+		</alternateGraphics>
+		<lifeStages>
+			<li>
+				<label>talbuk calf</label>
+				<labelPlural>talbuk calves</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Talbuk/Talbuk1</texPath>
+					<drawSize>1.9</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Horse/Dessicated_Horse</texPath>
+					<drawSize>1.9</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Talbuk/Talbuk1</texPath>
+					<drawSize>2.8</drawSize>
+					<shadowData>
+						<volume>(0.375, 0.375, 0.375)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Horse/Dessicated_Horse</texPath>
+					<drawSize>2.8</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Talbuk/Talbuk1</texPath>
+					<drawSize>3.5</drawSize>
+					<shadowData>
+						<volume>(0.5, 0.5, 0.5)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Horse/Dessicated_Horse</texPath>
+					<drawSize>3.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>
