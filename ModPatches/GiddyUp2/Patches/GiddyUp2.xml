@@ -15,7 +15,8 @@
 					or 	defName = "Silver_Dragon"
 					or 	defName = "True_Dragon"
 					or 	defName = "White_Dragon"
-					or 	defName = "Yellow_Dragon"]
+					or 	defName = "Yellow_Dragon"
+					or 	defName = "Talbuk"]
 				</xpath>
 				<value>
 					<li Class="GiddyUp.DrawInFront" />
