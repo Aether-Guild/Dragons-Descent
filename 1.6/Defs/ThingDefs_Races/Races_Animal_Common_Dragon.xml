@@ -126,7 +126,7 @@
 
     </comps>
     <race>
-
+      <renderTree>DD_Dragon</renderTree>
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <TemperateForest>0.003</TemperateForest>
@@ -210,7 +210,13 @@
         <factor>2.4</factor>
         <cap>1~1000</cap>
       </li>
-
+      <li Class="DD.AlternativeRenderingExtension">
+        <pathReplacement>
+          <from>Animal/(Detailed/)?BDragon/BDragon(\d+)</from>
+          <to>Animal/BabyDragon/BabyDragon</to>
+        </pathReplacement>
+        <ageRange>0~34</ageRange>
+      </li>
     </modExtensions>
   </ThingDef>
 
@@ -499,7 +505,7 @@
 
     </verbs>
     <race>
-
+      <renderTree>DD_Dragon</renderTree>
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <Tundra>0.004</Tundra>
@@ -580,6 +586,13 @@
         <offset>100</offset>
         <factor>2.4</factor>
         <cap>1~1000</cap>
+      </li>
+      <li Class="DD.AlternativeRenderingExtension">
+        <pathReplacement>
+          <from>Animal/(Detailed/)?BLDragon/BLDragon(\d+)</from>
+          <to>Animal/BabyDragon/BabyDragon</to>
+        </pathReplacement>
+        <ageRange>0~34</ageRange>
       </li>
 
     </modExtensions>
@@ -857,7 +870,7 @@
 
     </verbs>
     <race>
-
+      <renderTree>DD_Dragon</renderTree>
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <TemperateForest>0.0042</TemperateForest>
@@ -938,6 +951,13 @@
         <offset>100</offset>
         <factor>2.4</factor>
         <cap>1~1000</cap>
+      </li>
+      <li Class="DD.AlternativeRenderingExtension">
+        <pathReplacement>
+          <from>Animal/(Detailed/)?GDragon/GDragon(\d+)</from>
+          <to>Animal/BabyDragon/BabyDragon</to>
+        </pathReplacement>
+        <ageRange>0~34</ageRange>
       </li>
     </modExtensions>
   </ThingDef>
@@ -1234,7 +1254,7 @@
 
     </verbs>
     <race>
-
+      <renderTree>DD_Dragon</renderTree>
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <TemperateForest>0.003</TemperateForest>
@@ -1316,6 +1336,13 @@
         <offset>100</offset>
         <factor>2.4</factor>
         <cap>1~1000</cap>
+      </li>
+      <li Class="DD.AlternativeRenderingExtension">
+        <pathReplacement>
+          <from>Animal/(Detailed/)?PDragon/PDragon(\d+)</from>
+          <to>Animal/BabyDragon/BabyDragon</to>
+        </pathReplacement>
+        <ageRange>0~34</ageRange>
       </li>
     </modExtensions>
   </ThingDef>
@@ -1597,7 +1624,7 @@
     </verbs>
 
     <race>
-
+      <renderTree>DD_Dragon</renderTree>
       <wildBiomes>
         <TemperateForest>0.001</TemperateForest>
         <TropicalRainforest>0.002</TropicalRainforest>
@@ -1678,6 +1705,13 @@
         <offset>100</offset>
         <factor>2.4</factor>
         <cap>1~1000</cap>
+      </li>
+      <li Class="DD.AlternativeRenderingExtension">
+        <pathReplacement>
+          <from>Animal/(Detailed/)?RDragon/RDragon(\d+)</from>
+          <to>Animal/BabyDragon/BabyDragon</to>
+        </pathReplacement>
+        <ageRange>0~34</ageRange>
       </li>
     </modExtensions>
 
@@ -1975,7 +2009,7 @@
 
     </verbs>
     <race>
-
+      <renderTree>DD_Dragon</renderTree>
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <Tundra>0.003</Tundra>
@@ -2057,6 +2091,13 @@
         <offset>100</offset>
         <factor>2.4</factor>
         <cap>1~1000</cap>
+      </li>
+      <li Class="DD.AlternativeRenderingExtension">
+        <pathReplacement>
+          <from>Animal/(Detailed/)?WDragon/WDragon(\d+)</from>
+          <to>Animal/BabyDragon/BabyDragon</to>
+        </pathReplacement>
+        <ageRange>0~34</ageRange>
       </li>
     </modExtensions>
   </ThingDef>
@@ -2355,7 +2396,7 @@
 
     </verbs>
     <race>
-
+      <renderTree>DD_Dragon</renderTree>
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <TropicalRainforest>0.003</TropicalRainforest>
@@ -2435,6 +2476,13 @@
         <offset>100</offset>
         <factor>2.4</factor>
         <cap>1~1000</cap>
+      </li>
+      <li Class="DD.AlternativeRenderingExtension">
+        <pathReplacement>
+          <from>Animal/(Detailed/)?YDragon/YDragon(\d+)</from>
+          <to>Animal/BabyDragon/BabyDragon</to>
+        </pathReplacement>
+        <ageRange>0~34</ageRange>
       </li>
     </modExtensions>
   </ThingDef>

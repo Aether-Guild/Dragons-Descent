@@ -124,7 +124,7 @@
 
     </verbs>
     <race>
-      
+      <renderTree>DD_Dragon</renderTree>
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <TropicalRainforest>0.001</TropicalRainforest>
@@ -174,6 +174,13 @@
         <offset>100</offset>
         <factor>2.4</factor>
         <cap>1~1000</cap>
+      </li>
+      <li Class="DD.AlternativeRenderingExtension">
+        <pathReplacement>
+          <from>Animal/(Detailed/)?GDDragon/GDDragon(\d+)</from>
+          <to>Animal/BabyDragon/BabyDragon</to>
+        </pathReplacement>
+        <ageRange>0~34</ageRange>
       </li>
     </modExtensions>
   </ThingDef>
@@ -432,7 +439,7 @@
 
     </verbs>
     <race>
-     
+      <renderTree>DD_Dragon</renderTree>
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <TemperateForest>0.001</TemperateForest>
@@ -484,6 +491,13 @@
         <offset>100</offset>
         <factor>2.4</factor>
         <cap>1~1000</cap>
+      </li>
+      <li Class="DD.AlternativeRenderingExtension">
+        <pathReplacement>
+          <from>Animal/(Detailed/)?SDragon/SDragon(\d+)</from>
+          <to>Animal/BabyDragon/BabyDragon</to>
+        </pathReplacement>
+        <ageRange>0~34</ageRange>
       </li>
     </modExtensions>
   </ThingDef>
@@ -738,7 +752,7 @@
 
     </verbs>
     <race>
-      
+      <renderTree>DD_Dragon</renderTree>
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
         <TemperateSwamp>0.002</TemperateSwamp>
@@ -788,6 +802,13 @@
         <offset>100</offset>
         <factor>2.4</factor>
         <cap>1~1000</cap>
+      </li>
+      <li Class="DD.AlternativeRenderingExtension">
+        <pathReplacement>
+          <from>Animal/(Detailed/)?JDragon/JDragon(\d+)</from>
+          <to>Animal/BabyDragon/BabyDragon</to>
+        </pathReplacement>
+        <ageRange>0~34</ageRange>
       </li>
     </modExtensions>
   </ThingDef>
@@ -1072,8 +1093,8 @@
 
     </verbs>
     <race>
+      <renderTree>DD_Dragon</renderTree>
       <baseBodySize>4.6</baseBodySize>
-     
       <leatherDef>True_Dragon_Leather</leatherDef>
       <useMeatFrom>Red_Dragon</useMeatFrom>
       <wildBiomes>
@@ -1128,6 +1149,13 @@
         <offset>100</offset>
         <factor>2.4</factor>
         <cap>1~1000</cap>
+      </li>
+      <li Class="DD.AlternativeRenderingExtension">
+        <pathReplacement>
+          <from>Animal/(Detailed/)?TDragon/TDragon(\d+)</from>
+          <to>Animal/BabyDragon/BabyDragon</to>
+        </pathReplacement>
+        <ageRange>0~34</ageRange>
       </li>
     </modExtensions>
   </ThingDef>
