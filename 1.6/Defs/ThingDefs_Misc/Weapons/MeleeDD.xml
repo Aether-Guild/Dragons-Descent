@@ -46,26 +46,25 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>10</power>
+        <power>8</power>
         <cooldownTime>2</cooldownTime>
-        <armorPenetration>0.10</armorPenetration>
       </li>
       <li>
         <label>point</label>
         <capacities>
           <li>Stab</li>
         </capacities>
-        <power>24</power>
-        <cooldownTime>2.5</cooldownTime>
-        <armorPenetration>0.30</armorPenetration>
+        <power>32</power>
+        <cooldownTime>2.2</cooldownTime>
+        <armorPenetration>0.50</armorPenetration>
       </li>
       <li>
         <label>edge</label>
         <capacities>
           <li>Cut</li>
         </capacities>
-        <power>19</power>
-        <cooldownTime>2.5</cooldownTime>
+        <power>16</power>
+        <cooldownTime>2.8</cooldownTime>
         <armorPenetration>0.30</armorPenetration>
       </li>
     </tools>
@@ -161,16 +160,15 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>13</power>
+        <power>8</power>
         <cooldownTime>1.9</cooldownTime>
-        <armorPenetration>0.05</armorPenetration>
       </li>
       <li>
         <label>point</label>
         <capacities>
           <li>Stab</li>
         </capacities>
-        <power>19</power>
+        <power>20</power>
         <cooldownTime>1.9</cooldownTime>
         <armorPenetration>0.40</armorPenetration>
       </li>
@@ -179,9 +177,9 @@
         <capacities>
           <li>Cut</li>
         </capacities>
-        <power>19</power>
-        <cooldownTime>1.9</cooldownTime>
-        <armorPenetration>0.40</armorPenetration>
+        <power>21</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0.30</armorPenetration>
       </li>
     </tools>
     <recipeMaker>
@@ -299,18 +297,18 @@
         <capacities>
           <li>Stab</li>
         </capacities>
-        <power>18</power>
-        <cooldownTime>3</cooldownTime>
-        <armorPenetration>0.20</armorPenetration>
+        <power>20</power>
+        <cooldownTime>2.8</cooldownTime>
+        <armorPenetration>0.45</armorPenetration>
       </li>
       <li>
         <label>edge</label>
         <capacities>
           <li>Cut</li>
         </capacities>
-        <power>18</power>
-        <cooldownTime>2.8</cooldownTime>
-        <armorPenetration>0.20</armorPenetration>
+        <power>35</power>
+        <cooldownTime>3</cooldownTime>
+        <armorPenetration>0.40</armorPenetration>
       </li>
     </tools>
     <recipeMaker>
