@@ -15,12 +15,12 @@
         <lifeStages>
           <li>
             <bodyGraphicData>
-              <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+              <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
               <graphicClass>Graphic_Multi</graphicClass>
               <drawSize>8</drawSize>
             </bodyGraphicData>
             <dessicatedBodyGraphicData>
-              <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+              <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
               <drawSize>8</drawSize>
               <attachPoints>
                 <li>

@@ -31,4 +31,11 @@
   
   <Setting_SpawnsNamed>Spawns with names</Setting_SpawnsNamed>
   <Setting_SpawnsNamed_Title>Spawn already named [{0}] chance: {1}%</Setting_SpawnsNamed_Title>
+  
+    <Setting_VariantStyles>Dragon Variant Styles</Setting_VariantStyles>
+    <Setting_SimpleVariants_Title>Enable Simple Dragon Variants</Setting_SimpleVariants_Title>
+    <Setting_SimpleVariants_Description>Toggle simple texture variants for dragons</Setting_SimpleVariants_Description>
+    <Setting_DetailedVariants_Title>Enable Detailed Dragon Variants</Setting_DetailedVariants_Title>
+    <Setting_DetailedVariants_Description>Toggle detailed texture variants for dragons</Setting_DetailedVariants_Description>
+
 </LanguageData>
