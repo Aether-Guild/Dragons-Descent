@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <!-- <Operation Class="PatchOperationConditional"> -->
+    <!--     <xpath>/Defs/PawnKindDef[alternateGraphics]/modExtensions/li[@Class="DD.AlternateGraphicsExtension"]</xpath> -->
+    <!--     <match Class="PatchOperationSequence"> -->
+    <!--         <operations> -->
+    <!--             <li Class="PatchOperationAdd"> -->
+    <!--                 <xpath>/Defs/PawnKindDef[alternateGraphics]/modExtensions/li[@Class="DD.AlternateGraphicsExtension"]</xpath> -->
+    <!--                 <value> -->
+    <!--                     <showFilePath>$(simpleGraphicsOnly)</showFilePath> -->
+    <!--                     <hideFilePath>$(detailedGraphicsOnly)</hideFilePath> -->
+    <!--                 </value> -->
+    <!--             </li> -->
+    <!--         </operations> -->
+    <!--     </match> -->
+    <!--     <nomatch Class="PatchOperationAdd"> -->
+    <!--         <xpath>/Defs/PawnKindDef[alternateGraphics]/modExtensions</xpath> -->
+    <!--         <value> -->
+    <!--             <li Class="DD.AlternateGraphicsExtension"> -->
+    <!--                 <showFilePath>$(simpleGraphicsOnly)</showFilePath> -->
+    <!--                 <hideFilePath>$(detailedGraphicsOnly)</hideFilePath> -->
+    <!--             </li> -->
+    <!--         </value> -->
+    <!--     </nomatch> -->
+    <!-- </Operation> -->
+
+</Patch>

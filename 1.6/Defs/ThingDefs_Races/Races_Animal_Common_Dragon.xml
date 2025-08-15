@@ -154,27 +154,27 @@
         </flyingGraphicData>
         <variants>
           <li>
-            <variantPath>Things/Pawn/Animal/BDragon/BDragon1</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/BDragon/BDragon1</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/BDragon/Flight/Flight1</texPath>
+              <texPath>Things/Pawn/Animal/Simple/BDragon/Flight/Flight1</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/BDragon/BDragon2</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/BDragon/BDragon2</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/BDragon/Flight/Flight2</texPath>
+              <texPath>Things/Pawn/Animal/Simple/BDragon/Flight/Flight2</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/BDragon/BDragon3</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/BDragon/BDragon3</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/BDragon/Flight/Flight3</texPath>
+              <texPath>Things/Pawn/Animal/Simple/BDragon/Flight/Flight3</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/BDragon/BDragon4</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/BDragon/BDragon4</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/BDragon/Flight/Flight4</texPath>
+              <texPath>Things/Pawn/Animal/Simple/BDragon/Flight/Flight4</texPath>
             </variantData>
           </li>
           <li>
@@ -219,8 +219,8 @@
     <label>black dragon</label>
     <race>Black_Dragon</race>
     <abilities>
-      <!-- <li>FireBurst_Dragon</li>
-      <li>FireSpew_Dragon</li> -->
+      <li>FireBurst_Dragon</li>
+      <li>FireSpew_Dragon</li>
       <!-- <li>FireBurst_Dragon</li>  -->
       <!-- <li>IncineratorBurner_Dragon</li>  -->
     </abilities>
@@ -230,19 +230,19 @@
     <alternateGraphicChance>1</alternateGraphicChance>
     <alternateGraphics>
     <li>
-        <texPath>Things/Pawn/Animal/BDragon/BDragon1</texPath>
+        <texPath>Things/Pawn/Animal/Simple/BDragon/BDragon1</texPath>
         <weight>0.33</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/BDragon/BDragon2</texPath>
+        <texPath>Things/Pawn/Animal/Simple/BDragon/BDragon2</texPath>
         <weight>0.11</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/BDragon/BDragon3</texPath>
+        <texPath>Things/Pawn/Animal/Simple/BDragon/BDragon3</texPath>
         <weight>0.33</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/BDragon/BDragon4</texPath>
+        <texPath>Things/Pawn/Animal/Simple/BDragon/BDragon4</texPath>
         <weight>0.22</weight>
       </li>
       <li>
@@ -267,7 +267,7 @@
         <label>Black dragon whelp</label>
         <labelPlural>Black dragon whelps</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Detailed/BDragon/BDragon1</texPath>
+          <texPath>Things/Pawn/Animal/BDragonB</texPath>
           <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
@@ -275,12 +275,12 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>1.5</drawSize>
           <graphicClass>Graphic_Multi</graphicClass>
         </dessicatedBodyGraphicData>
         <corpseGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>1.5</drawSize>
           <graphicClass>Graphic_Multi</graphicClass>
         </corpseGraphicData>
@@ -297,7 +297,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -313,7 +313,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -333,7 +333,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>3.2</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -353,7 +353,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>4.2</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -363,6 +363,8 @@
       </li>
     </lifeStages>
     <modExtensions>
+
+      
       <li Class="DD.IncidentSpawnConditionExtension">
         <temperature>31~62</temperature>
       </li>
@@ -526,27 +528,27 @@
         </flyingGraphicData>
         <variants>
          <li>
-            <variantPath>Things/Pawn/Animal/BLDragon/BLDragon1</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/BLDragon/BLDragon1</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/BLDragon/Flight/Flight1</texPath>
+              <texPath>Things/Pawn/Animal/Simple/BLDragon/Flight/Flight1</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/BLDragon/BLDragon2</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/BLDragon/BLDragon2</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/BLDragon/Flight/Flight2</texPath>
+              <texPath>Things/Pawn/Animal/Simple/BLDragon/Flight/Flight2</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/BLDragon/BLDragon3</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/BLDragon/BLDragon3</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/BLDragon/Flight/Flight3</texPath>
+              <texPath>Things/Pawn/Animal/Simple/BLDragon/Flight/Flight3</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/BLDragon/BLDragon4</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/BLDragon/BLDragon4</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/BLDragon/Flight/Flight4</texPath>
+              <texPath>Things/Pawn/Animal/Simple/BLDragon/Flight/Flight4</texPath>
             </variantData>
           </li>
           <li>
@@ -595,19 +597,19 @@
     <alternateGraphicChance>1</alternateGraphicChance>
     <alternateGraphics>
          <li>
-        <texPath>Things/Pawn/Animal/BLDragon/BLDragon1</texPath>
+        <texPath>Things/Pawn/Animal/Simple/BLDragon/BLDragon1</texPath>
         <weight>0.33</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/BLDragon/BLDragon2</texPath>
+        <texPath>Things/Pawn/Animal/Simple/BLDragon/BLDragon2</texPath>
         <weight>0.11</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/BLDragon/BLDragon3</texPath>
+        <texPath>Things/Pawn/Animal/Simple/BLDragon/BLDragon3</texPath>
         <weight>0.33</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/BLDragon/BLDragon4</texPath>
+        <texPath>Things/Pawn/Animal/Simple/BLDragon/BLDragon4</texPath>
         <weight>0.22</weight>
       </li>
       <li>
@@ -640,7 +642,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -656,7 +658,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -672,7 +674,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -692,7 +694,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -712,7 +714,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>4.2</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -884,27 +886,27 @@
         </flyingGraphicData>
         <variants>
            <li>
-            <variantPath>Things/Pawn/Animal/GDragon/GDragon1</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/GDragon/GDragon1</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/GDragon/Flight/Flight1</texPath>
+              <texPath>Things/Pawn/Animal/Simple/GDragon/Flight/Flight1</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/GDragon/GDragon2</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/GDragon/GDragon2</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/GDragon/Flight/Flight2</texPath>
+              <texPath>Things/Pawn/Animal/Simple/GDragon/Flight/Flight2</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/GDragon/GDragon3</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/GDragon/GDragon3</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/GDragon/Flight/Flight3</texPath>
+              <texPath>Things/Pawn/Animal/Simple/GDragon/Flight/Flight3</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/GDragon/GDragon4</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/GDragon/GDragon4</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/GDragon/Flight/Flight4</texPath>
+              <texPath>Things/Pawn/Animal/Simple/GDragon/Flight/Flight4</texPath>
             </variantData>
           </li>
           <li>
@@ -952,19 +954,19 @@
     <alternateGraphicChance>1</alternateGraphicChance>
     <alternateGraphics>
      <li>
-        <texPath>Things/Pawn/Animal/GDragon/GDragon1</texPath>
+        <texPath>Things/Pawn/Animal/Simple/GDragon/GDragon1</texPath>
         <weight>0.33</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/GDragon/GDragon2</texPath>
+        <texPath>Things/Pawn/Animal/Simple/GDragon/GDragon2</texPath>
         <weight>0.22</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/GDragon/GDragon3</texPath>
+        <texPath>Things/Pawn/Animal/Simple/GDragon/GDragon3</texPath>
         <weight>0.22</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/GDragon/GDragon4</texPath>
+        <texPath>Things/Pawn/Animal/Simple/GDragon/GDragon4</texPath>
         <weight>0.22</weight>
       </li>
       <li>
@@ -997,7 +999,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -1013,7 +1015,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -1029,7 +1031,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -1049,7 +1051,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -1069,7 +1071,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>5.8</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -1262,27 +1264,27 @@
         </flyingGraphicData>
         <variants>
          <li>
-            <variantPath>Things/Pawn/Animal/PDragon/PDragon1</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/PDragon/PDragon1</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/PDragon/Flight/Flight1</texPath>
+              <texPath>Things/Pawn/Animal/Simple/PDragon/Flight/Flight1</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/PDragon/PDragon2</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/PDragon/PDragon2</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/PDragon/Flight/Flight2</texPath>
+              <texPath>Things/Pawn/Animal/Simple/PDragon/Flight/Flight2</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/PDragon/PDragon3</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/PDragon/PDragon3</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/PDragon/Flight/Flight3</texPath>
+              <texPath>Things/Pawn/Animal/Simple/PDragon/Flight/Flight3</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/PDragon/PDragon4</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/PDragon/PDragon4</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/PDragon/Flight/Flight4</texPath>
+              <texPath>Things/Pawn/Animal/Simple/PDragon/Flight/Flight4</texPath>
             </variantData>
           </li>
           <li>
@@ -1330,19 +1332,19 @@
     <alternateGraphicChance>1</alternateGraphicChance>
     <alternateGraphics>
      <li>
-        <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+        <texPath>Things/Pawn/Animal/Simple/PDragon/PDragon1</texPath>
         <weight>0.33</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/PDragon/PDragon2</texPath>
+        <texPath>Things/Pawn/Animal/Simple/PDragon/PDragon2</texPath>
         <weight>0.11</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/PDragon/PDragon3</texPath>
+        <texPath>Things/Pawn/Animal/Simple/PDragon/PDragon3</texPath>
         <weight>0.22</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/PDragon/PDragon4</texPath>
+        <texPath>Things/Pawn/Animal/Simple/PDragon/PDragon4</texPath>
         <weight>0.33</weight>
       </li>
       <li>
@@ -1375,7 +1377,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -1391,7 +1393,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -1407,7 +1409,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -1427,7 +1429,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -1447,7 +1449,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>5.8</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -1624,27 +1626,27 @@
         </flyingGraphicData>
         <variants>
             <li>
-            <variantPath>Things/Pawn/Animal/RDragon/RDragon1</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/RDragon/RDragon1</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/RDragon/Flight/Flight1</texPath>
+              <texPath>Things/Pawn/Animal/Simple/RDragon/Flight/Flight1</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/RDragon/RDragon2</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/RDragon/RDragon2</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/RDragon/Flight/Flight2</texPath>
+              <texPath>Things/Pawn/Animal/Simple/RDragon/Flight/Flight2</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/RDragon/RDragon3</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/RDragon/RDragon3</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/RDragon/Flight/Flight3</texPath>
+              <texPath>Things/Pawn/Animal/Simple/RDragon/Flight/Flight3</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/RDragon/RDragon4</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/RDragon/RDragon4</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/RDragon/Flight/Flight4</texPath>
+              <texPath>Things/Pawn/Animal/Simple/RDragon/Flight/Flight4</texPath>
             </variantData>
           </li>
           <li>
@@ -1693,19 +1695,19 @@
     <alternateGraphicChance>1</alternateGraphicChance>
     <alternateGraphics>
       <li>
-        <texPath>Things/Pawn/Animal/RDragon/RDragon1</texPath>
+        <texPath>Things/Pawn/Animal/Simple/RDragon/RDragon1</texPath>
         <weight>0.33</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/RDragon/RDragon2</texPath>
+        <texPath>Things/Pawn/Animal/Simple/RDragon/RDragon2</texPath>
         <weight>0.22</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/RDragon/RDragon3</texPath>
+        <texPath>Things/Pawn/Animal/Simple/RDragon/RDragon3</texPath>
         <weight>0.33</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/RDragon/RDragon4</texPath>
+        <texPath>Things/Pawn/Animal/Simple/RDragon/RDragon4</texPath>
         <weight>0.11</weight>
       </li>
       <li>
@@ -1738,7 +1740,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -1754,7 +1756,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -1770,7 +1772,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -1790,7 +1792,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -1810,7 +1812,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>4.2</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -2003,27 +2005,27 @@
         </flyingGraphicData>
         <variants>
          <li>
-            <variantPath>Things/Pawn/Animal/WDragon/WDragon1</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/WDragon/WDragon1</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/WDragon/Flight/Flight1</texPath>
+              <texPath>Things/Pawn/Animal/Simple/WDragon/Flight/Flight1</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/WDragon/WDragon2</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/WDragon/WDragon2</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/WDragon/Flight/Flight2</texPath>
+              <texPath>Things/Pawn/Animal/Simple/WDragon/Flight/Flight2</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/WDragon/WDragon3</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/WDragon/WDragon3</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/WDragon/Flight/Flight3</texPath>
+              <texPath>Things/Pawn/Animal/Simple/WDragon/Flight/Flight3</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/WDragon/WDragon4</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/WDragon/WDragon4</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/WDragon/Flight/Flight4</texPath>
+              <texPath>Things/Pawn/Animal/Simple/WDragon/Flight/Flight4</texPath>
             </variantData>
           </li>
           <li>
@@ -2071,19 +2073,19 @@
     <alternateGraphicChance>1</alternateGraphicChance>
     <alternateGraphics>
       <li>
-        <texPath>Things/Pawn/Animal/WDragon/WDragon1</texPath>
+        <texPath>Things/Pawn/Animal/Simple/WDragon/WDragon1</texPath>
         <weight>0.33</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/WDragon/WDragon2</texPath>
+        <texPath>Things/Pawn/Animal/Simple/WDragon/WDragon2</texPath>
         <weight>0.22</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/WDragon/WDragon3</texPath>
+        <texPath>Things/Pawn/Animal/Simple/WDragon/WDragon3</texPath>
         <weight>0.22</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/WDragon/WDragon4</texPath>
+        <texPath>Things/Pawn/Animal/Simple/WDragon/WDragon4</texPath>
         <weight>0.22</weight>
       </li>
       <li>
@@ -2116,7 +2118,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -2132,7 +2134,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -2148,7 +2150,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -2168,7 +2170,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -2188,7 +2190,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>5.8</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -2381,27 +2383,27 @@
         </flyingGraphicData>
         <variants>
          <li>
-            <variantPath>Things/Pawn/Animal/YDragon/YDragon1</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/YDragon/YDragon1</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/YDragon/Flight/Flight1</texPath>
+              <texPath>Things/Pawn/Animal/Simple/YDragon/Flight/Flight1</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/YDragon/YDragon2</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/YDragon/YDragon2</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/YDragon/Flight/Flight2</texPath>
+              <texPath>Things/Pawn/Animal/Simple/YDragon/Flight/Flight2</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/YDragon/YDragon3</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/YDragon/YDragon3</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/YDragon/Flight/Flight3</texPath>
+              <texPath>Things/Pawn/Animal/Simple/YDragon/Flight/Flight3</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/YDragon/YDragon4</variantPath>
+            <variantPath>Things/Pawn/Animal/Simple/YDragon/YDragon4</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/YDragon/Flight/Flight4</texPath>
+              <texPath>Things/Pawn/Animal/Simple/YDragon/Flight/Flight4</texPath>
             </variantData>
           </li>
           <li>
@@ -2449,19 +2451,19 @@
     <alternateGraphicChance>1</alternateGraphicChance>
     <alternateGraphics>
      <li>
-        <texPath>Things/Pawn/Animal/YDragon/YDragon1</texPath>
+        <texPath>Things/Pawn/Animal/Simple/YDragon/YDragon1</texPath>
         <weight>0.33</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/YDragon/YDragon2</texPath>
+        <texPath>Things/Pawn/Animal/Simple/YDragon/YDragon2</texPath>
         <weight>0.22</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/YDragon/YDragon3</texPath>
+        <texPath>Things/Pawn/Animal/Simple/YDragon/YDragon3</texPath>
         <weight>0.11</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/YDragon/YDragon4</texPath>
+        <texPath>Things/Pawn/Animal/Simple/YDragon/YDragon4</texPath>
         <weight>0.33</weight>
       </li>
       <li>
@@ -2494,7 +2496,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -2510,7 +2512,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -2526,7 +2528,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -2546,7 +2548,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
@@ -2566,7 +2568,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <texPath>Things/Pawn/Animal/Simple/CDragon_skeleton</texPath>
           <drawSize>5.2</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>

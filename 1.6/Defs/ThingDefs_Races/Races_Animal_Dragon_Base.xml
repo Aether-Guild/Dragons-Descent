@@ -11,6 +11,7 @@
       <hediffGiverSets Inherit="false">
         <li>OrganicDragon</li> <!-- Moved here since its the same on both common and rare dragons -->
       </hediffGiverSets>
+      <!-- <overrideShouldHaveAbilityTracker>true</overrideShouldHaveAbilityTracker> -->
 
       <!-- Moved here since its the same on both common and rare dragons -->
       <lifeExpectancy>2000</lifeExpectancy>
@@ -108,6 +109,9 @@
   <PawnKindDef ParentName="AnimalKindBase" Name="BaseDragonKind" Abstract="True">
     <canArriveManhunter>false</canArriveManhunter>
     <modExtensions>
+
+
+    
       <!--       <li Class="DD.VerbSettingExtension">
         <useExtendedVerbs>false</useExtendedVerbs>
       </li> -->
