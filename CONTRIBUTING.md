@@ -6,9 +6,10 @@ This document explains how to set up your development environment and build asse
 
 ### Software Requirements
 
-- **.NET SDK** (6.0 or later) - Required for running the build script
+- **.NET SDK** (9.0 or later) - Required for running the build script
 - **dotnet-script** - Global tool for running C# scripts
-- **Unity 2022.3.35f1** - The specific Unity version used for building asset bundles
+- **Unity Hub** - Tool for downloading Unity. Will get automatically downloaded and installed by the script
+- **Unity 2022.3.35f1** - The specific Unity version used for building asset bundles. Will get automatically installed by the script if you don't have it
 
 ### Installation
 
@@ -19,7 +20,7 @@ This document explains how to set up your development environment and build asse
    dotnet tool install -g dotnet-script
    ```
 
-3. The build script will automatically install the required AssetBundleBuilder tool when first run.
+3. The build script will automatically install the required AssetBundleBuilder tool, and Unity when first run.
 
 ## Project Structure
 
@@ -27,8 +28,8 @@ This document explains how to set up your development environment and build asse
 Dragons-Descent/
 ├── Assets/                 # Unity assets to be bundled
 │   ├── Materials/
-│   ├── Prefabs/
 │   ├── Textures/
+│   ├── Sounds/
 │   └── ...
 ├── AssetBundles/          # Generated asset bundles (auto-created)
 ├── buildAssets.csx        # Asset bundle build script
@@ -57,10 +58,9 @@ dotnet script buildAssets.csx -- --force
 ### What the Build Script Does
 
 1. **Checks for changes** - Uses file hashing to detect if assets have changed since last build
-2. **Installs tools** - Automatically installs/updates the AssetBundleBuilder tool (v1.2.0)
+2. **Installs tools** - Automatically installs/updates the AssetBundleBuilder tool (v1.3.0)
 3. **Builds bundle** - Creates an asset bundle from all files in the `Assets` directory
-4. **Removes platform suffix** - Renames the output from `onyxae.dragonsdescent_<platform>` to just `onyxae.dragonsdescent`
-5. **Updates cache** - Saves build hash for incremental builds
+4. **Updates cache** - Saves build hash for incremental builds
 
 ### Output
 
@@ -99,19 +99,10 @@ Organize your assets logically within the `Assets` directory:
 
 ```
 Assets/
-├── Materials/
-│   ├── DragonScales.mat
-│   └── FireEffect.mat
-├── Prefabs/
-│   ├── DragonBreath.prefab
-│   └── IceProjectile.prefab
 ├── Textures/
 │   ├── Dragons/
 │   ├── Effects/
 │   └── UI/
-└── Animations/
-    ├── DragonFlight/
-    └── BreathWeapons/
 ```
 
 ### What to Commit

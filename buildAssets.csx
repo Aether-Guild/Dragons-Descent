@@ -182,20 +182,6 @@ if (!RunCommand("assetbundlebuilder", buildArgs, root))
     Environment.Exit(1);
 }
 
-// Rename the asset bundle to remove platform suffix
-var bundleFiles = Directory.GetFiles(bundlesDir, $"{bundleName}_*")
-    .Where(f => !Path.GetFileName(f).Contains(".manifest"))
-    .ToArray();
-
-foreach (var bundleFile in bundleFiles)
-{
-    var newName = Path.Combine(bundlesDir, bundleName);
-    if (File.Exists(newName))
-        File.Delete(newName);
-    File.Move(bundleFile, newName);
-    Console.WriteLine($"    Renamed {Path.GetFileName(bundleFile)} to {bundleName}");
-}
-
 // Save hash for next build
 Directory.CreateDirectory(bundlesDir);
 File.WriteAllText(hashFile, currentHash, Encoding.ASCII);
