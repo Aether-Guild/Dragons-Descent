@@ -304,6 +304,8 @@
     <Compile Include="Misc\CompTargetEffect\CompTargetEffect_PawnEquipper.cs" />
     <Compile Include="Misc\CompTargetEffect\CompTargetEffect_SetAge.cs" />
     <Compile Include="Misc\CompTargetEffect\CompTargetEffect_SpawnMate.cs" />
+    <Compile Include="Misc\PawnRenderNode_AlternativeRenderingExtension.cs" />
+    <Compile Include="Misc\AlternativeRenderingExtension.cs" />
     <Compile Include="Age\HediffCompProperties_ModifyAge.cs" />
     <Compile Include="Regen\Hediff\Comps\HediffCompProperties_Scar.cs" />
     <Compile Include="Age\HediffComp_ModifyAge.cs" />
