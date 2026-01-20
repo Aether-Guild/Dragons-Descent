@@ -21,7 +21,7 @@
 		<race>
 			<body>QuadrupedAnimalWithHooves</body>
 			<herdAnimal>true</herdAnimal>
-			<baseBodySize>1.0</baseBodySize>
+			<baseBodySize>2.4</baseBodySize>
 			<baseHealthScale>2.0</baseHealthScale>
 			<baseHungerRate>0.375</baseHungerRate>
 			<foodType>VegetarianRoughAnimal</foodType>
@@ -32,6 +32,7 @@
 			<gestationPeriodDays>6.66</gestationPeriodDays>
 			<trainability>None</trainability>
 			<meatLabel>horse meat</meatLabel>
+			<herdAnimal>true</herdAnimal>
 			<packAnimal>true</packAnimal>
 			<lifeExpectancy>16</lifeExpectancy>
 			<lifeStageAges>
