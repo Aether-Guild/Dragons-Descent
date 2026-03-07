@@ -66,28 +66,31 @@ namespace DD
 
         protected override bool CanFireNowSub(IncidentParms parms)
         {
+            SpawnIncidentExtension settings = def.GetModExtension<SpawnIncidentExtension>();
 
-
-            if (!this.def.HasModExtension<SpawnIncidentExtension>() || !this.def.HasModExtension<SpawnHerdIncidentExtension>())
+            if (settings==null)
             {
                 //Doesn't have the settings for the incident defined.
+                return false;
+            }
+            SpawnHerdIncidentExtension herdSettings = def.GetModExtension<SpawnHerdIncidentExtension>();
+            if (herdSettings==null)
+            {
+                //Doesn't have the settings for the herd defined.
                 return false;
             }
 
             Map map = (Map)parms.target;
 
-            if (!IncidentPawnPool.Any(map))
-            {
-                //Doesn't have a pawn pool to spawn pawns from.
-                return false;
-            }
-
-            SpawnIncidentExtension settings = this.def.GetModExtension<SpawnIncidentExtension>();
-            SpawnHerdIncidentExtension herdSettings = this.def.GetModExtension<SpawnHerdIncidentExtension>();
-
             if (map.gameConditionManager.ConditionIsActive(GameConditionDefOf.ToxicFallout))
             {
                 //No toxic fallout
+                return false;
+            }
+            
+            if (!IncidentPawnPool.Any(map))
+            {
+                //Doesn't have a pawn pool to spawn pawns from.
                 return false;
             }
 

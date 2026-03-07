@@ -18,7 +18,7 @@ namespace DD
         public virtual void Init() { }
         public virtual void Tick() { }
 
-        public virtual int NextTick => Find.TickManager.TicksGame + 1;
+        //public virtual int NextTick => Find.TickManager.TicksGame + 1;
     }
 
     public class MapComponent_Tracker : MapComponent
@@ -48,7 +48,7 @@ namespace DD
             //Only process this in player's maps.
             if(map.ParentFaction != null && map.ParentFaction.IsPlayer)
             {
-                if (incidents.CooledDown && incidents.NextTick <= Find.TickManager.TicksGame)
+                if (incidents.CooledDown)
                 {
                     incidents.Tick();
                 }
