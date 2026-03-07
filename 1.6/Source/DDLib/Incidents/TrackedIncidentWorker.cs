@@ -34,7 +34,7 @@ namespace DD
         private TimeKeeper cooldownTimer;
 
         public bool CooledDown => cooldownTimer.Expired;
-        public override int NextTick => !lastActivated.EnumerableNullOrEmpty() ? lastActivated.Min(entry => entry.Value.ticks) : 0;
+        //public override int NextTick => !lastActivated.EnumerableNullOrEmpty() ? lastActivated.Min(entry => entry.Value.ticks) : 0;
 
         public IncidentWatcher(Map map)
         {
@@ -68,18 +68,28 @@ namespace DD
             }
             
             //Select an incident and trigger it. (Sort the relevant incidents by their chance, and find one to trigger that can be triggered.
-            foreach(Tuple<IncidentDef, IncidentParms> entry in lastActivated.Where(entry => entry.Value.Expired).Select(entry => (entry.Key, StorytellerUtility.DefaultParmsNow(entry.Key.category, map)).ToTuple()).Where(entry => entry.Item1.HasModExtension<TrackedIncidentExtension>() && entry.Item1.Worker.CanFireNow(entry.Item2)).OrderByDescending(entry => entry.Item1.Worker.BaseChanceThisGame))
-            {
-                IncidentDef def = entry.Item1;
-                IncidentParms parms = entry.Item2;
+            bool foundAnEventToTrigger = false;
+            foreach ((IncidentDef incident, TimeKeeper timeKeeper) in lastActivated) {
+                if (timeKeeper.Expired) {
 
-                //Failsafe; Only cooldown and exit from loop if the incident reports that it successfully triggered.
-                if (def.Worker.TryExecute(parms))
-                {
-                    TrackedIncidentExtension ext = def.GetModExtension<TrackedIncidentExtension>();
-                    cooldownTimer.Update(ext.CooldownTicks);
-                    break;
+
+                    var incidentParms = StorytellerUtility.DefaultParmsNow(incident.category, map);
+                    if (incident.Worker.CanFireNow(incidentParms
+                            )) {
+                        if (incident.Worker.TryExecute(incidentParms))
+                        {
+                            TrackedIncidentExtension ext = incident.GetModExtension<TrackedIncidentExtension>();
+                            cooldownTimer.Update(ext.CooldownTicks);
+                            foundAnEventToTrigger = true;
+                            break;
+                        }
+                    }
                 }
+            }
+
+            if (!foundAnEventToTrigger) {
+                //If an incident isn't found try again in roughly 1.25 - 2 in game hours
+                cooldownTimer.Update(Rand.Range(3000,5000));
             }
         }
 
