@@ -177,8 +177,8 @@
       </li>
       <li Class="DD.AlternativeRenderingExtension">
         <pathReplacement>
-          <from>Animal/(Detailed/)?GDDragon/GDDragon(\d+)</from>
-          <to>Animal/BabyDragon/BabyDragon</to>
+          <from>Animal/GDDragon/GDDragon(\d+)</from>
+          <to>Animal/GDDragon/GDDragonB</to>
         </pathReplacement>
         <ageRange>0~34</ageRange>
       </li>
@@ -494,8 +494,8 @@
       </li>
       <li Class="DD.AlternativeRenderingExtension">
         <pathReplacement>
-          <from>Animal/(Detailed/)?SDragon/SDragon(\d+)</from>
-          <to>Animal/BabyDragon/BabyDragon</to>
+          <from>Animal/SDragon/SDragon(\d+)</from>
+          <to>Animal/SDragon/SDragonB</to>
         </pathReplacement>
         <ageRange>0~34</ageRange>
       </li>
@@ -805,8 +805,8 @@
       </li>
       <li Class="DD.AlternativeRenderingExtension">
         <pathReplacement>
-          <from>Animal/(Detailed/)?JDragon/JDragon(\d+)</from>
-          <to>Animal/BabyDragon/BabyDragon</to>
+          <from>Animal/JDragon/JDragon(\d+)</from>
+          <to>Animal/JDragon/JDragonB</to>
         </pathReplacement>
         <ageRange>0~34</ageRange>
       </li>
@@ -1152,8 +1152,8 @@
       </li>
       <li Class="DD.AlternativeRenderingExtension">
         <pathReplacement>
-          <from>Animal/(Detailed/)?TDragon/TDragon(\d+)</from>
-          <to>Animal/BabyDragon/BabyDragon</to>
+          <from>Animal/TDragon/TDragon(\d+)</from>
+          <to>Animal/TDragon/TDragonB</to>
         </pathReplacement>
         <ageRange>0~34</ageRange>
       </li>
