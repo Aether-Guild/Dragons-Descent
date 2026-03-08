@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <!--========= Weak ==========-->
   <RecipeDef>
@@ -29,7 +29,7 @@
             <li>MeatRaw</li>
           </categories>
         </filter>
-        <count>40</count>
+        <count>15</count>
       </li>
       <li>
         <filter>
@@ -37,7 +37,7 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>52</count>
+        <count>25</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
@@ -92,7 +92,7 @@
             <li>Silver</li>
           </thingDefs>
         </filter>
-        <count>6</count>
+        <count>4</count>
       </li>
       <li>
         <filter>
@@ -100,7 +100,7 @@
             <li>MeatRaw</li>
           </categories>
         </filter>
-        <count>65</count>
+        <count>30</count>
       </li>
       <li>
         <filter>
@@ -108,7 +108,7 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>86</count>
+        <count>50</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
@@ -163,7 +163,7 @@
             <li>Silver</li>
           </thingDefs>
         </filter>
-        <count>10</count>
+        <count>6</count>
       </li>
       <li>
         <filter>
@@ -171,7 +171,7 @@
             <li>MeatRaw</li>
           </categories>
         </filter>
-        <count>90</count>
+        <count>45</count>
       </li>
       <li>
         <filter>
@@ -179,7 +179,7 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>104</count>
+        <count>75</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
@@ -234,7 +234,7 @@
             <li>Silver</li>
           </thingDefs>
         </filter>
-        <count>19</count>
+        <count>10</count>
       </li>
       <li>
         <filter>
@@ -242,7 +242,7 @@
             <li>MeatRaw</li>
           </categories>
         </filter>
-        <count>140</count>
+        <count>75</count>
       </li>
       <li>
         <filter>
@@ -250,7 +250,7 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>180</count>
+        <count>125</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
