@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <!--=========================== Altar ===============================-->
@@ -9,7 +9,7 @@
     <label>dragon altar</label>
     <description>An altar to worship dragons. While dragons themselves aren't as intelligent as humans, they do respect offers and gifts in their name and will in turn give favor. This favor can in turn be used in rituals, the effects of which can banish, sustain, and calm dragons (among other things).\n\nHowever over time they will require more offerings for the same amount of favor, and more favor for your requests...</description>
     <tickerType>Normal</tickerType>
-    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <designationCategory>Misc</designationCategory>
     <surfaceType>Item</surfaceType>
@@ -149,6 +149,59 @@
     </li>
     </comps>
   </ThingDef>
+
+	<!--=========================== Offering Spot ===============================-->
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>DDOfferingSpot</defName>
+		<thingClass>Building_WorkTable</thingClass>
+		<label>draconic offering spot</label>
+		<description>A simple bowl used for meager offerings to the dragons.\n\nHowever over time they will require more offerings for the same amount of favor, and more favor for your requests...</description>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Standable</passability>
+		<designationCategory>Misc</designationCategory>
+		<surfaceType>Item</surfaceType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<rotatable>true</rotatable>
+		<uiIconScale>0.7</uiIconScale>
+		<constructionSkillPrerequisite>1</constructionSkillPrerequisite>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<size>(1,1)</size>
+		<recipes>
+			<li>Ritual_Weak</li>
+		</recipes>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<graphicData>
+			<texPath>Things/Building/Misc/DragonOfferingSpot/DragonOfferingSpot</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1.5,1.5)</drawSize>
+		</graphicData>
+		<costList>
+			<WoodLog>5</WoodLog>
+		</costList>
+		<statBases>
+			<MaxHitPoints>25</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<WorkToBuild>25</WorkToBuild>
+			<Mass>2</Mass>
+		</statBases>
+		<placeWorkers>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<comps>
+			<li Class="DD.CompProperties_Ritual">
+				<rituals>
+					<li>Ritual_BanishSingleDragon</li>
+					<li>Ritual_RemoveFerocity</li>
+					<li>Ritual_MaintainDragonNeeds</li>
+				</rituals>
+			</li>
+		</comps>
+	</ThingDef>
 
 <!--   <ThingDef ParentName="AltarBase">
     <defName>DD_AltarIdeo</defName>
