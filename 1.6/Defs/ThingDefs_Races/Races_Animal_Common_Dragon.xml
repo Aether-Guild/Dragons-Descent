@@ -340,7 +340,7 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>3.2</drawSize>
+          <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -360,7 +360,7 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>4.2</drawSize>
+          <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -724,7 +724,7 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>4.2</drawSize>
+          <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -1088,7 +1088,7 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>5.8</drawSize>
+          <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -1112,14 +1112,396 @@
     </modExtensions>
   </PawnKindDef>
 
-  <!-- =========================== Purple Dragon =========================== -->
+	<!-- =========================== Purple Dragon =========================== -->
+
+	<ThingDef ParentName="DragonRaceBase">
+		<defName>Purple_Dragon</defName>
+		<label>purple dragon</label>
+		<description>Purple dragons were originally bred in captivity by combining red and blue
+			varieties. It wasn't until a tribe member, Venn, released them from captivity that they became
+			free, roaming the Rimworld as wild dragons. The altar rituals effect these dragons.</description>
+		<tools>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>18</power>
+				<armorPenetration>0.2</armorPenetration>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+			</li>
+
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>18</power>
+				<armorPenetration>0.2</armorPenetration>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+			</li>
+
+			<li>
+				<label>bite</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>35</power>
+				<armorPenetration>0.6</armorPenetration>
+				<cooldownTime>3.0</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			</li>
+
+			<li>
+				<label>skull bash</label>
+				<capacities>
+					<li>Skull_Bash</li>
+				</capacities>
+				<power>15</power>
+				<armorPenetration>0.6</armorPenetration>
+				<cooldownTime>6</cooldownTime>
+				<linkedBodyPartsGroup>Horns</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>20</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+
+			<li>
+				<label>tail whip</label>
+				<capacities>
+					<li>Scratch</li>
+					<li>Cut</li>
+				</capacities>
+				<power>5</power>
+				<armorPenetration>.4</armorPenetration>
+				<cooldownTime>5.0</cooldownTime>
+				<linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>20</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+
+			<li>
+				<label>horn</label>
+				<capacities>
+					<li>Scratch</li>
+					<li>Stab</li>
+				</capacities>
+				<power>10</power>
+				<armorPenetration>.8</armorPenetration>
+				<cooldownTime>5.0</cooldownTime>
+				<linkedBodyPartsGroup>Horns</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>20</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>DD_Knockback</label>
+				<capacities>
+					<li>DD_Knockback</li>
+				</capacities>
+				<power>15</power>
+				<armorPenetration>0.9</armorPenetration>
+				<cooldownTime>1.0</cooldownTime>
+				<linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
+				<chanceFactor>.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			<li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+			<li Class="VEF.Apparels.CompProperties_ShieldBubble">
+				<compClass>VEF.Abilities.CompAbilities</compClass>
+				<blockRangedAttack>False</blockRangedAttack>
+				<blockMeleeAttack>False</blockMeleeAttack>
+				<showAlways>True</showAlways>
+			</li>
+
+			<li Class="DD.CompProperties_CrossbredEggLayer">
+				<eggUnfertilizedDef>EggDragonUnfertilized</eggUnfertilizedDef>
+				<eggFertilizedDef>EggPurpleDragonFertilized</eggFertilizedDef>
+				<eggFertilizationCountMax>1</eggFertilizationCountMax>
+				<eggLayIntervalDays>40</eggLayIntervalDays>
+				<eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+				<eggCountRange>1</eggCountRange>
+				<failChance>0.25</failChance>
+				<paternalChance>0.5</paternalChance>
+				<maternalChance>0.5</maternalChance>
+			</li>
+
+		</comps>
+
+		<race>
+			<renderTree>DD_Dragon</renderTree>
+			<useMeatFrom>Red_Dragon</useMeatFrom>
+			<wildBiomes>
+				<TemperateForest>0.003</TemperateForest>
+				<TropicalRainforest>0.003</TropicalRainforest>
+				<TemperateSwamp>0.003</TemperateSwamp>
+				<TropicalSwamp>0.004</TropicalSwamp>
+				<ColdBog>0.002</ColdBog>
+				<Grasslands MayRequire="Ludeon.RimWorld.Odyssey">0.001</Grasslands>
+				<Glowforest MayRequire="Ludeon.RimWorld.Odyssey">0.001</Glowforest>
+
+			</wildBiomes>
+		</race>
+		<modExtensions>
+			<li Class="DD.WingedFlyerExtension">
+				<flightSpeed>14</flightSpeed>
+				<flyingGraphicData Class="DD.AnimationGraphicData">
+					<texPath>Things/Pawn/Animal/Flight</texPath>
+					<graphicClass>DD.Graphic_Animation</graphicClass>
+					<drawSize>5.2</drawSize>
+					<ticksPerFrame>25</ticksPerFrame>
+					<shadowData>
+						<volume>(2, 1.5, 0.5)</volume>
+						<offset>(0,0,-0.5)</offset>
+					</shadowData>
+				</flyingGraphicData>
+				<variants>
+					<li>
+						<variantPath>Things/Pawn/Animal/PDragon/PDragon1</variantPath>
+						<variantData>
+							<texPath>Things/Pawn/Animal/PDragon/Flight/Flight1</texPath>
+						</variantData>
+					</li>
+					<li>
+						<variantPath>Things/Pawn/Animal/PDragon/PDragon2</variantPath>
+						<variantData>
+							<texPath>Things/Pawn/Animal/PDragon/Flight/Flight2</texPath>
+						</variantData>
+					</li>
+					<li>
+						<variantPath>Things/Pawn/Animal/PDragon/PDragon3</variantPath>
+						<variantData>
+							<texPath>Things/Pawn/Animal/PDragon/Flight/Flight3</texPath>
+						</variantData>
+					</li>
+					<li>
+						<variantPath>Things/Pawn/Animal/PDragon/PDragon4</variantPath>
+						<variantData>
+							<texPath>Things/Pawn/Animal/PDragon/Flight/Flight4</texPath>
+						</variantData>
+					</li>
+					<li>
+						<variantPath>Things/Pawn/Animal/PDragon/PDragon1</variantPath>
+						<variantData>
+							<texPath>Things/Pawn/Animal/PDragon/Flight/Flight1</texPath>
+						</variantData>
+					</li>
+					<li>
+						<variantPath>Things/Pawn/Animal/PDragon/PDragon2</variantPath>
+						<variantData>
+							<texPath>Things/Pawn/Animal/PDragon/Flight/Flight2</texPath>
+						</variantData>
+					</li>
+					<li>
+						<variantPath>Things/Pawn/Animal/PDragon/PDragon3</variantPath>
+						<variantData>
+							<texPath>Things/Pawn/Animal/PDragon/Flight/Flight3</texPath>
+						</variantData>
+					</li>
+					<li>
+						<variantPath>Things/Pawn/Animal/PDragon/PDragon4</variantPath>
+						<variantData>
+							<texPath>Things/Pawn/Animal/PDragon/Flight/Flight4</texPath>
+						</variantData>
+					</li>
+				</variants>
+			</li>
+			<li Class="DD.CarryCapacityExtension">
+				<constant>360</constant>
+				<offset>100</offset>
+				<factor>2.4</factor>
+				<cap>1~1000</cap>
+			</li>
+			<li Class="DD.AlternativeRenderingExtension">
+				<pathReplacement>
+					<from>Animal/PDragon/PDragon(\d+)</from>
+					<to>Animal/PDragon/PDragonB</to>
+				</pathReplacement>
+				<ageRange>0~29</ageRange>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<PawnKindDef ParentName="BaseDragonKind">
+		<defName>Purple_Dragon</defName>
+		<label>purple dragon</label>
+		<race>Purple_Dragon</race>
+		<combatPower>1260</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>2</ecoSystemWeight>
+		<alternateGraphicChance>1</alternateGraphicChance>
+		<alternateGraphics>
+			<li>
+				<texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+				<weight>0.33</weight>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/PDragon/PDragon2</texPath>
+				<weight>0.11</weight>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/PDragon/PDragon3</texPath>
+				<weight>0.22</weight>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/PDragon/PDragon4</texPath>
+				<weight>0.33</weight>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+				<weight>0.33</weight>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/PDragon/PDragon2</texPath>
+				<weight>0.11</weight>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/PDragon/PDragon3</texPath>
+				<weight>0.22</weight>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/PDragon/PDragon4</texPath>
+				<weight>0.33</weight>
+			</li>
+		</alternateGraphics>
+		<lifeStages>
+			<li>
+				<label>Purple dragon whelp</label>
+				<labelPlural>Purple dragon whelps</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+					<drawSize>2.2</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>Purple dragon wyrmling</label>
+				<labelPlural>Purple dragon wyrmlings</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+					<drawSize>2.6</drawSize>
+					<shadowData>
+						<volume>(0.7, 0.6, 0.4)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+					<drawSize>2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>Purple dragon</label>
+				<labelPlural>Purple dragons</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+					<drawSize>4.0</drawSize>
+					<shadowData>
+						<volume>(1, 0.8, 0.5)</volume>
+						<offset>(0,0,-0.5)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+					<drawSize>3.3</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>HornAttackTool</bodyPartGroup>
+					<thing>DragonHorn</thing>
+				</butcherBodyPart>
+			</li>
+			<li>
+				<label>Elder purple dragon</label>
+				<labelPlural>Elder purple dragons</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+					<drawSize>4.2</drawSize>
+					<shadowData>
+						<volume>(1, 0.8, 0.5)</volume>
+						<offset>(0,0,-0.5)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+					<drawSize>3.3</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>HornAttackTool</bodyPartGroup>
+					<thing>DragonHorn</thing>
+				</butcherBodyPart>
+			</li>
+			<li>
+				<label>Ancient purple dragon</label>
+				<labelPlural>Ancient purple dragons</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+					<drawSize>4.4</drawSize>
+					<shadowData>
+						<volume>(1, 0.8, 0.5)</volume>
+						<offset>(0,0,-0.5)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+					<drawSize>3.3</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>HornAttackTool</bodyPartGroup>
+					<thing>DragonHorn</thing>
+				</butcherBodyPart>
+			</li>
+		</lifeStages>
+		<modExtensions>
+			<li Class="DD.IncidentSpawnConditionExtension">
+				<temperature>7~35</temperature>
+			</li>
+			<li Class="VEF.Abilities.PawnKindAbilityExtension">
+				<giveAbilities>
+					<li>DD_DragonJump</li>
+					<li>DD_DragonBreath_Fire</li>
+					<li>DD_DragonSpit_Fire</li>
+					<li>DD_DraconicFlight</li>
+				</giveAbilities>
+				<giveRandomAbilities>false</giveRandomAbilities>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	
+  <!-- =========================== Orange Dragon =========================== -->
 
   <ThingDef ParentName="DragonRaceBase">
-    <defName>Purple_Dragon</defName>
-    <label>purple dragon</label>
-    <description>Purple dragons were originally bred in captivity by combining red and blue
-      varieties. It wasn't until a tribe member, Venn, released them from captivity that they became
-      free, roaming the Rimworld as wild dragons. The altar rituals effect these dragons.</description>
+    <defName>DD_Orange_Dragon</defName>
+    <label>orange dragon</label>
+    <description>The orange dragon is an exquisitely vibrant race of dragons. Known far and wide for their distinct plumage and vibrant scales, they are known to be
+		some of the more friendly hot climate dragons, unfortunately making poaching and hunting common. The altar rituals effect these dragons.</description>
     <tools>
       <li>
         <label>left claw</label>
@@ -1237,7 +1619,7 @@
 
       <li Class="DD.CompProperties_CrossbredEggLayer">
         <eggUnfertilizedDef>EggDragonUnfertilized</eggUnfertilizedDef>
-        <eggFertilizedDef>EggPurpleDragonFertilized</eggFertilizedDef>
+        <eggFertilizedDef>EggOrangeDragonFertilized</eggFertilizedDef>
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>40</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
@@ -1252,20 +1634,20 @@
     <race>
       <renderTree>DD_Dragon</renderTree>
       <useMeatFrom>Red_Dragon</useMeatFrom>
-      <wildBiomes>
-        <TemperateForest>0.003</TemperateForest>
-        <TropicalRainforest>0.003</TropicalRainforest>
-        <TemperateSwamp>0.003</TemperateSwamp>
-        <TropicalSwamp>0.004</TropicalSwamp>
-        <ColdBog>0.002</ColdBog>
-        <Grasslands MayRequire="Ludeon.RimWorld.Odyssey">0.001</Grasslands>
-        <Glowforest MayRequire="Ludeon.RimWorld.Odyssey">0.001</Glowforest>
-
-      </wildBiomes>
+		<wildBiomes>
+			<TemperateForest>0.001</TemperateForest>
+			<TropicalRainforest>0.002</TropicalRainforest>
+			<AridShrubland>0.003</AridShrubland>
+			<Desert>0.004</Desert>
+			<ExtremeDesert>0.003</ExtremeDesert>
+			<Glowforest MayRequire="Ludeon.RimWorld.Odyssey">0.001</Glowforest>
+			<LavaField MayRequire="Ludeon.RimWorld.Odyssey">0.001</LavaField>
+			<Scarlands MayRequire="Ludeon.RimWorld.Odyssey">0.001</Scarlands>
+		</wildBiomes>
     </race>
     <modExtensions>
       <li Class="DD.WingedFlyerExtension">
-        <flightSpeed>14</flightSpeed>
+        <flightSpeed>16</flightSpeed>
         <flyingGraphicData Class="DD.AnimationGraphicData">
           <texPath>Things/Pawn/Animal/Flight</texPath>
           <graphicClass>DD.Graphic_Animation</graphicClass>
@@ -1278,51 +1660,51 @@
         </flyingGraphicData>
         <variants>
          <li>
-            <variantPath>Things/Pawn/Animal/PDragon/PDragon1</variantPath>
+            <variantPath>Things/Pawn/Animal/ODragon/ODragon1</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/PDragon/Flight/Flight1</texPath>
+              <texPath>Things/Pawn/Animal/ODragon/Flight/Flight1</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/PDragon/PDragon2</variantPath>
+            <variantPath>Things/Pawn/Animal/ODragon/ODragon2</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/PDragon/Flight/Flight2</texPath>
+              <texPath>Things/Pawn/Animal/ODragon/Flight/Flight2</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/PDragon/PDragon3</variantPath>
+            <variantPath>Things/Pawn/Animal/ODragon/ODragon3</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/PDragon/Flight/Flight3</texPath>
+              <texPath>Things/Pawn/Animal/ODragon/Flight/Flight3</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/PDragon/PDragon4</variantPath>
+            <variantPath>Things/Pawn/Animal/ODragon/ODragon4</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/PDragon/Flight/Flight4</texPath>
+              <texPath>Things/Pawn/Animal/ODragon/Flight/Flight4</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/PDragon/PDragon1</variantPath>
+            <variantPath>Things/Pawn/Animal/ODragon/ODragon1</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/PDragon/Flight/Flight1</texPath>
+              <texPath>Things/Pawn/Animal/ODragon/Flight/Flight1</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/PDragon/PDragon2</variantPath>
+            <variantPath>Things/Pawn/Animal/ODragon/ODragon2</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/PDragon/Flight/Flight2</texPath>
+              <texPath>Things/Pawn/Animal/ODragon/Flight/Flight2</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/PDragon/PDragon3</variantPath>
+            <variantPath>Things/Pawn/Animal/ODragon/ODragon3</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/PDragon/Flight/Flight3</texPath>
+              <texPath>Things/Pawn/Animal/ODragon/Flight/Flight3</texPath>
             </variantData>
           </li>
           <li>
-            <variantPath>Things/Pawn/Animal/PDragon/PDragon4</variantPath>
+            <variantPath>Things/Pawn/Animal/ODragon/PDragon4</variantPath>
             <variantData>
-              <texPath>Things/Pawn/Animal/PDragon/Flight/Flight4</texPath>
+              <texPath>Things/Pawn/Animal/0Dragon/Flight/Flight4</texPath>
             </variantData>
           </li>
         </variants>
@@ -1335,8 +1717,8 @@
       </li>
       <li Class="DD.AlternativeRenderingExtension">
         <pathReplacement>
-          <from>Animal/PDragon/PDragon(\d+)</from>
-          <to>Animal/PDragon/PDragonB</to>
+          <from>Animal/ODragon/ODragon(\d+)</from>
+          <to>Animal/ODragon/ODragonB</to>
         </pathReplacement>
 		<ageRange>0~29</ageRange>
       </li>
@@ -1344,54 +1726,54 @@
   </ThingDef>
 
   <PawnKindDef ParentName="BaseDragonKind">
-    <defName>Purple_Dragon</defName>
-    <label>purple dragon</label>
-    <race>Purple_Dragon</race>
+    <defName>DD_Orange_Dragon</defName>
+    <label>orange dragon</label>
+    <race>DD_Orange_Dragon</race>
     <combatPower>1260</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
     <ecoSystemWeight>2</ecoSystemWeight>
     <alternateGraphicChance>1</alternateGraphicChance>
     <alternateGraphics>
      <li>
-        <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+        <texPath>Things/Pawn/Animal/ODragon/ODragon1</texPath>
         <weight>0.33</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/PDragon/PDragon2</texPath>
+        <texPath>Things/Pawn/Animal/ODragon/ODragon2</texPath>
         <weight>0.11</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/PDragon/PDragon3</texPath>
+        <texPath>Things/Pawn/Animal/ODragon/ODragon3</texPath>
         <weight>0.22</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/PDragon/PDragon4</texPath>
+        <texPath>Things/Pawn/Animal/ODragon/ODragon4</texPath>
         <weight>0.33</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+        <texPath>Things/Pawn/Animal/ODragon/ODragon1</texPath>
         <weight>0.33</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/PDragon/PDragon2</texPath>
+        <texPath>Things/Pawn/Animal/ODragon/ODragon2</texPath>
         <weight>0.11</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/PDragon/PDragon3</texPath>
+        <texPath>Things/Pawn/Animal/ODragon/ODragon3</texPath>
         <weight>0.22</weight>
       </li>
       <li>
-        <texPath>Things/Pawn/Animal/PDragon/PDragon4</texPath>
+        <texPath>Things/Pawn/Animal/ODragon/ODragon4</texPath>
         <weight>0.33</weight>
       </li>
     </alternateGraphics>
     <lifeStages>
       <li>
-        <label>Purple dragon whelp</label>
-        <labelPlural>Purple dragon whelps</labelPlural>
+        <label>Orange dragon whelp</label>
+        <labelPlural>Orange dragon whelps</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
-          <drawSize>2.2</drawSize>
+          <texPath>Things/Pawn/Animal/ODragon/ODragon1</texPath>
+          <drawSize>2.0</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -1403,11 +1785,11 @@
         </dessicatedBodyGraphicData>
       </li>
       <li>
-        <label>Purple dragon wyrmling</label>
-        <labelPlural>Purple dragon wyrmlings</labelPlural>
+        <label>Orange dragon wyrmling</label>
+        <labelPlural>Orange dragon wyrmlings</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
-          <drawSize>2.6</drawSize>
+          <texPath>Things/Pawn/Animal/ODragon/ODragon1</texPath>
+          <drawSize>2.4</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -1419,10 +1801,30 @@
         </dessicatedBodyGraphicData>
       </li>
       <li>
-        <label>Purple dragon</label>
-        <labelPlural>Purple dragons</labelPlural>
+        <label>Orange dragon</label>
+        <labelPlural>Orange dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+          <texPath>Things/Pawn/Animal/ODragon/ODragon1</texPath>
+          <drawSize>3.8</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
+          <drawSize>3.3</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>DragonHorn</thing>
+        </butcherBodyPart>
+      </li>
+      <li>
+        <label>Elder orange dragon</label>
+        <labelPlural>Elder orange dragons</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/ODragon/ODragon1</texPath>
           <drawSize>4.0</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -1439,10 +1841,10 @@
         </butcherBodyPart>
       </li>
       <li>
-        <label>Elder purple dragon</label>
-        <labelPlural>Elder purple dragons</labelPlural>
+        <label>Ancient orange dragon</label>
+        <labelPlural>Ancient orange dragons</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
+          <texPath>Things/Pawn/Animal/ODragon/ODragon1</texPath>
           <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
@@ -1458,30 +1860,10 @@
           <thing>DragonHorn</thing>
         </butcherBodyPart>
       </li>
-      <li>
-        <label>Ancient purple dragon</label>
-        <labelPlural>Ancient purple dragons</labelPlural>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
-          <drawSize>4.4</drawSize>
-          <shadowData>
-            <volume>(1, 0.8, 0.5)</volume>
-            <offset>(0,0,-0.5)</offset>
-          </shadowData>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>5.8</drawSize>
-        </dessicatedBodyGraphicData>
-        <butcherBodyPart>
-          <bodyPartGroup>HornAttackTool</bodyPartGroup>
-          <thing>DragonHorn</thing>
-        </butcherBodyPart>
-      </li>
     </lifeStages>
     <modExtensions>
       <li Class="DD.IncidentSpawnConditionExtension">
-        <temperature>7~35</temperature>
+        <temperature>31~62</temperature>
       </li>
       <li Class="VEF.Abilities.PawnKindAbilityExtension">
         <giveAbilities>
@@ -1612,8 +1994,6 @@
         <paternalChance>0.5</paternalChance>
         <maternalChance>0.5</maternalChance>
       </li>
-
-
     </comps>
 
     <race>
@@ -1838,7 +2218,7 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>4.2</drawSize>
+          <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -2210,7 +2590,7 @@
       </li>
       <li>
         <label>Ancient white dragon</label>
-        <labelPlural>Anicnet white dragons</labelPlural>
+        <labelPlural>Ancient white dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/WDragon/WDragon1</texPath>
           <drawSize>4.2</drawSize>
@@ -2221,7 +2601,7 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>5.8</drawSize>
+          <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
@@ -2380,7 +2760,6 @@
         <paternalChance>0.5</paternalChance>
         <maternalChance>0.5</maternalChance>
       </li>
-
     </comps>
 
     <race>
@@ -2603,7 +2982,7 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/CDragon_skeleton</texPath>
-          <drawSize>5.2</drawSize>
+          <drawSize>3.3</drawSize>
         </dessicatedBodyGraphicData>
         <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
