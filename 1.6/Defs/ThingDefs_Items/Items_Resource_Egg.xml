@@ -416,8 +416,8 @@
 		</stuffProps>
 		<comps>
 			<li Class="CompProperties_Hatcher">
-				<hatcherDaystoHatch>12</hatcherDaystoHatch>
-				<hatcherPawn>Drake</hatcherPawn>
+				<hatcherDaystoHatch>8</hatcherDaystoHatch>
+				<hatcherPawn>DD_Drake</hatcherPawn>
 			</li>
 		</comps>
 	</ThingDef>
