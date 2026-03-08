@@ -17,7 +17,7 @@
 		<comps>
 			<li Class="CompProperties_EggLayer">
 				<eggUnfertilizedDef>EggDragonUnfertilized</eggUnfertilizedDef>
-				<eggFertilizedDef>EggDrakeFertilized</eggFertilizedDef>
+				<eggFertilizedDef>DD_EggDrakeFertilized</eggFertilizedDef>
 				<eggFertilizationCountMax>1</eggFertilizationCountMax>
 				<eggLayIntervalDays>20</eggLayIntervalDays>
 				<eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
@@ -166,7 +166,7 @@
   <PawnKindDef Name="DD_Drake" ParentName="AnimalKindBase">
     <defName>DD_Drake</defName>
     <label>drake</label>
-    <race>Drake</race>
+    <race>DD_Drake</race>
     <combatPower>160</combatPower>
     <ecoSystemWeight>0.5</ecoSystemWeight>
 	  <alternateGraphicChance>1</alternateGraphicChance>
