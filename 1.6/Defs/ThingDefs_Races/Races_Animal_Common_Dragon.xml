@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
   <!-- =========================== Black Dragon =========================== -->
@@ -215,7 +215,7 @@
           <from>Animal/BDragon/BDragon(\d+)</from>
           <to>Animal/BDragon/BDragonB</to>
         </pathReplacement>
-        <ageRange>0~34</ageRange>
+		<ageRange>0~29</ageRange>
       </li>
     </modExtensions>
   </ThingDef>
@@ -274,7 +274,7 @@
         <labelPlural>Black dragon whelps</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/BDragon/BDragon1</texPath>
-          <drawSize>2</drawSize>
+          <drawSize>2.2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -296,7 +296,7 @@
         <labelPlural>Black dragon wyrmlings</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/BDragon/BDragon1</texPath>
-          <drawSize>3.3</drawSize>
+          <drawSize>2.6</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -312,7 +312,7 @@
         <labelPlural>Black dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/BDragon/BDragon1</texPath>
-          <drawSize>4.2</drawSize>
+          <drawSize>4.0</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -332,7 +332,7 @@
         <labelPlural>Elder black dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/BDragon/BDragon1</texPath>
-          <drawSize>4.4</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -352,7 +352,7 @@
         <labelPlural>Ancient black dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/BDragon/BDragon1</texPath>
-          <drawSize>4.6</drawSize>
+          <drawSize>4.4</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -501,9 +501,7 @@
       </li>
 
     </comps>
-    <verbs>
-
-    </verbs>
+	  
     <race>
       <renderTree>DD_Dragon</renderTree>
       <useMeatFrom>Red_Dragon</useMeatFrom>
@@ -592,7 +590,7 @@
           <from>Animal/BLDragon/BLDragon(\d+)</from>
           <to>Animal/BLDragon/BLDragonB</to>
         </pathReplacement>
-        <ageRange>0~34</ageRange>
+        <ageRange>0~29</ageRange>
       </li>
 
     </modExtensions>
@@ -662,7 +660,7 @@
         <labelPlural>Blue dragon wyrmlings</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/BLDragon/BLDragon1</texPath>
-          <drawSize>3.3</drawSize>
+          <drawSize>2.4</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -678,7 +676,7 @@
         <labelPlural>Blue dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/BLDragon/BLDragon1</texPath>
-          <drawSize>4.2</drawSize>
+          <drawSize>3.8</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -698,7 +696,7 @@
         <labelPlural>Elder blue dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/BLDragon/BLDragon1</texPath>
-          <drawSize>4.4</drawSize>
+          <drawSize>4.0</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -718,7 +716,7 @@
         <labelPlural>Ancient blue dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/BLDragon/BLDragon1</texPath>
-          <drawSize>4.6</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -957,7 +955,7 @@
           <from>Animal/GDragon/GDragon(\d+)</from>
           <to>Animal/GDragon/GDragonB</to>
         </pathReplacement>
-        <ageRange>0~34</ageRange>
+		<ageRange>0~29</ageRange>
       </li>
     </modExtensions>
   </ThingDef>
@@ -1010,7 +1008,7 @@
         <labelPlural>Green dragon whelps</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/GDragon/GDragon1</texPath>
-          <drawSize>2</drawSize>
+          <drawSize>2.2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -1026,7 +1024,7 @@
         <labelPlural>Green dragon wyrmlings</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/GDragon/GDragon1</texPath>
-          <drawSize>3.3</drawSize>
+          <drawSize>2.6</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -1042,7 +1040,7 @@
         <labelPlural>Green dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/GDragon/GDragon1</texPath>
-          <drawSize>4.2</drawSize>
+          <drawSize>4.0</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -1062,7 +1060,7 @@
         <labelPlural>Elder green dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/GDragon/GDragon1</texPath>
-          <drawSize>4.4</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -1082,7 +1080,7 @@
         <labelPlural>Ancient green dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/GDragon/GDragon1</texPath>
-          <drawSize>4.6</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -1250,9 +1248,7 @@
       </li>
 
     </comps>
-    <verbs>
 
-    </verbs>
     <race>
       <renderTree>DD_Dragon</renderTree>
       <useMeatFrom>Red_Dragon</useMeatFrom>
@@ -1342,7 +1338,7 @@
           <from>Animal/PDragon/PDragon(\d+)</from>
           <to>Animal/PDragon/PDragonB</to>
         </pathReplacement>
-        <ageRange>0~34</ageRange>
+		<ageRange>0~29</ageRange>
       </li>
     </modExtensions>
   </ThingDef>
@@ -1395,7 +1391,7 @@
         <labelPlural>Purple dragon whelps</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
-          <drawSize>2</drawSize>
+          <drawSize>2.2</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -1411,7 +1407,7 @@
         <labelPlural>Purple dragon wyrmlings</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
-          <drawSize>3.3</drawSize>
+          <drawSize>2.6</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -1427,7 +1423,7 @@
         <labelPlural>Purple dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
-          <drawSize>4.2</drawSize>
+          <drawSize>4.0</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -1447,7 +1443,7 @@
         <labelPlural>Elder purple dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
-          <drawSize>4.4</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -1467,7 +1463,7 @@
         <labelPlural>Ancient purple dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/PDragon/PDragon1</texPath>
-          <drawSize>4.6</drawSize>
+          <drawSize>4.4</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -1619,9 +1615,6 @@
 
 
     </comps>
-    <verbs>
-
-    </verbs>
 
     <race>
       <renderTree>DD_Dragon</renderTree>
@@ -1711,7 +1704,7 @@
           <from>Animal/RDragon/RDragon(\d+)</from>
           <to>Animal/RDragon/RDragonB</to>
         </pathReplacement>
-        <ageRange>0~34</ageRange>
+		<ageRange>0~29</ageRange>
       </li>
     </modExtensions>
 
@@ -1765,7 +1758,7 @@
         <labelPlural>Red dragon whelps</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/RDragon/RDragon1</texPath>
-          <drawSize>2</drawSize>
+          <drawSize>2.3</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -1781,7 +1774,7 @@
         <labelPlural>Red dragon wyrmlings</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/RDragon/RDragon1</texPath>
-          <drawSize>3.3</drawSize>
+          <drawSize>2.7</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -1797,7 +1790,7 @@
         <labelPlural>Red dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/RDragon/RDragon1</texPath>
-          <drawSize>4.2</drawSize>
+          <drawSize>4.1</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -1817,7 +1810,7 @@
         <labelPlural>Elder red dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/RDragon/RDragon1</texPath>
-          <drawSize>4.4</drawSize>
+          <drawSize>4.3</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -1837,7 +1830,7 @@
         <labelPlural>Ancient red dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/RDragon/RDragon1</texPath>
-          <drawSize>4.6</drawSize>
+          <drawSize>4.5</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -2005,9 +1998,7 @@
       </li>
 
     </comps>
-    <verbs>
 
-    </verbs>
     <race>
       <renderTree>DD_Dragon</renderTree>
       <useMeatFrom>Red_Dragon</useMeatFrom>
@@ -2097,7 +2088,7 @@
           <from>Animal/WDragon/WDragon(\d+)</from>
           <to>Animal/WDragon/WDragonB</to>
         </pathReplacement>
-        <ageRange>0~34</ageRange>
+		<ageRange>0~29</ageRange>
       </li>
     </modExtensions>
   </ThingDef>
@@ -2166,7 +2157,7 @@
         <labelPlural>White dragon wyrmlings</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/WDragon/WDragon1</texPath>
-          <drawSize>3.3</drawSize>
+          <drawSize>2.4</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -2182,7 +2173,7 @@
         <labelPlural>White dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/WDragon/WDragon1</texPath>
-          <drawSize>4.2</drawSize>
+          <drawSize>3.8</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -2202,7 +2193,7 @@
         <labelPlural>Elder white dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/WDragon/WDragon1</texPath>
-          <drawSize>4.4</drawSize>
+          <drawSize>4.0</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -2222,7 +2213,7 @@
         <labelPlural>Anicnet white dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/WDragon/WDragon1</texPath>
-          <drawSize>4.6</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -2391,10 +2382,7 @@
       </li>
 
     </comps>
-    <verbs>
 
-
-    </verbs>
     <race>
       <renderTree>DD_Dragon</renderTree>
       <useMeatFrom>Red_Dragon</useMeatFrom>
@@ -2482,7 +2470,7 @@
           <from>Animal/YDragon/YDragon(\d+)</from>
           <to>Animal/YDragon/YDragonB</to>
         </pathReplacement>
-        <ageRange>0~34</ageRange>
+		<ageRange>0~29</ageRange>
       </li>
     </modExtensions>
   </ThingDef>
@@ -2551,7 +2539,7 @@
         <labelPlural>Yellow dragon wyrmlings</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/YDragon/YDragon1</texPath>
-          <drawSize>3.3</drawSize>
+          <drawSize>2.4</drawSize>
           <shadowData>
             <volume>(0.7, 0.6, 0.4)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -2567,7 +2555,7 @@
         <labelPlural>Yellow dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/YDragon/YDragon1</texPath>
-          <drawSize>4.2</drawSize>
+          <drawSize>3.8</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -2587,7 +2575,7 @@
         <labelPlural>Elder yellow dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/YDragon/YDragon1</texPath>
-          <drawSize>4.4</drawSize>
+          <drawSize>4.0</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -2607,7 +2595,7 @@
         <labelPlural>Ancient yellow dragons</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/YDragon/YDragon1</texPath>
-          <drawSize>4.6</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1, 0.8, 0.5)</volume>
             <offset>(0,0,-0.5)</offset>
