@@ -163,7 +163,7 @@
 		</modExtensions>
 	</ThingDef>
   
-  <PawnKindDef Name="Drake" ParentName="AnimalKindBase">
+  <PawnKindDef Name="DD_Drake" ParentName="AnimalKindBase">
     <defName>DD_Drake</defName>
     <label>drake</label>
     <race>Drake</race>
