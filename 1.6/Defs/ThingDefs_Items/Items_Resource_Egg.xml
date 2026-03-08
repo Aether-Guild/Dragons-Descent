@@ -203,6 +203,33 @@
       </li>
     </comps>
   </ThingDef>
+	        <!-- =========================== Orange Dragon Egg =========================== -->
+     <ThingDef ParentName="DEggFertBase">
+    <defName>EggOrangeDragonFertilized</defName>
+    <label>purple dragon egg (fert.)</label>
+    <description>Vibrant orange eggs, teetering on neon, it is a wonder how these eggs don't get stolen more often. Come from the sunny orange dragon.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
+      <color>(224,126,23)</color>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>12</Beauty>
+      <Mass>12.25</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>2500</MarketValue>
+    </statBases>
+	<stuffProps>
+      <color>(224,126,23)</color>
+	  <commonality>0.012</commonality>
+	</stuffProps>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>42</hatcherDaystoHatch>
+        <hatcherPawn>DD_Orange_Dragon</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
         <!-- =========================== Purple Dragon Egg =========================== -->
      <ThingDef ParentName="DEggFertBase">
     <defName>EggPurpleDragonFertilized</defName>
