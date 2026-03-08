@@ -393,5 +393,34 @@
       </li>
     </comps>
   </ThingDef>
-  
+
+	<!-- =========================== Drake Egg =========================== -->
+	<ThingDef ParentName="DEggFertBase">
+		<defName>DD_EggDrakeFertilized</defName>
+		<label>drake egg (fert.)</label>
+		<description>Commonly confused with True Dragon eggs, these little seeds actually house the flame of life for a Drake.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/AnimalProduct/DragonEgg</texPath>
+			<color>(234,208,182)</color>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+		<statBases>
+			<Beauty>0</Beauty>
+			<Mass>5.25</Mass>
+			<Flammability>0.5</Flammability>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<stuffProps>
+			<color>(234,208,182)</color>
+			<commonality>0.5</commonality>
+		</stuffProps>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>12</hatcherDaystoHatch>
+				<hatcherPawn>Drake</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+
 </Defs>
