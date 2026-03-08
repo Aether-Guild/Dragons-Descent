@@ -19,7 +19,7 @@
 				<eggUnfertilizedDef>EggDragonUnfertilized</eggUnfertilizedDef>
 				<eggFertilizedDef>DD_EggDrakeFertilized</eggFertilizedDef>
 				<eggFertilizationCountMax>1</eggFertilizationCountMax>
-				<eggLayIntervalDays>20</eggLayIntervalDays>
+				<eggLayIntervalDays>10</eggLayIntervalDays>
 				<eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
 				<eggCountRange>1~2</eggCountRange>
 			</li>
@@ -36,7 +36,7 @@
 			<foodType>OmnivoreAnimal</foodType>
 			<leatherDef>Dragon_Leather</leatherDef>
 			<meatLabel>Dragon meat</meatLabel>
-			<gestationPeriodDays>8</gestationPeriodDays>
+			<gestationPeriodDays>5</gestationPeriodDays>
 			<nameOnTameChance>1</nameOnTameChance>
 			<trainability>Intermediate</trainability>
 			<specialTrainables>
