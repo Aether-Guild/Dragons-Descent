@@ -3,6 +3,7 @@
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Giddy-Up 2 Forked</li>
+			<li>Giddy-Up 2 - Continued</li>
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
