@@ -29,6 +29,7 @@
 		<priorityInType>40</priorityInType>
 		<fixedBillGiverDefs>
 			<li>Altar</li>
+			<li>DDOfferingSpot</li>
 		</fixedBillGiverDefs>
 		<verb>performing rituals</verb>
 		<gerund>performing rituals at</gerund>
@@ -37,6 +38,7 @@
 		</requiredCapacities>
 		<prioritizeSustains>true</prioritizeSustains>
 	</WorkGiverDef>
+
 
 	<!-- ========== Scale ========== -->
 	<WorkGiverDef>
