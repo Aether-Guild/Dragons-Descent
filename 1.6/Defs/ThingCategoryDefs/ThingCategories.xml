@@ -11,7 +11,7 @@
   <ThingCategoryDef>
     <defName>EggsDragon</defName>
     <label>dragon eggs (fert.)</label>
-    <parent>DD_Root</parent>
+    <parent>EggsFertilized</parent>
     <resourceReadoutRoot>true</resourceReadoutRoot>
     <iconPath>UI/Icons/ThingCategories/EggsFertilized</iconPath>
   </ThingCategoryDef>
