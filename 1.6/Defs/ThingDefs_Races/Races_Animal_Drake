@@ -154,9 +154,9 @@
 			</li>
 		</tools>
 		<modExtensions>
-			<li MayRequire="Owlchemist.GiddyUp" Class="GiddyUp.DrawingOffset">
-				<northOffset>(0.0, 0.0, 0.0)</northOffset>
-				<southOffset>(0.0, 0.0, 0.0)</southOffset>
+			li MayRequire="memegoddess.giddyup" Class="GiddyUp.DrawingOffset">
+				<northOffset>(0.0, 0.0, 0.10)</northOffset>
+				<southOffset>(0.0, 0.0, -0.05)</southOffset>
 				<eastOffset>(0.20, 0.0, 0.0)</eastOffset>
 				<westOffset>(-0.20, 0.0, 0.0)</westOffset>
 			</li>
