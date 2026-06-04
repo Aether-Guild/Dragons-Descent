@@ -220,7 +220,6 @@
 			<li>ITab_Bills</li>
 		</inspectorTabs>
 		<comps>
-			<li Class="CompProperties_Breakdownable"/>
 			<li Class="CompProperties_HeatPusher">
 				<compClass>CompHeatPusherPowered</compClass>
 				<heatPerSecond>10</heatPerSecond>
@@ -360,7 +359,6 @@
 				<glowRadius>6</glowRadius>
 				<glowColor>(217,112,33,0)</glowColor>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
 			<li Class="DD.CompProperties_EggIncubator">
 				<compClass>DD.CompEggIncubator_Container</compClass>
 				<!-- <debug>true</debug> -->
